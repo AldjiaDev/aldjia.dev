@@ -11,7 +11,7 @@ image: /assets/images/articlejekyll.jpeg
 </p>
 
 Il y a encore quelques semaines, je pensais naturellement créer mon site vitrine avec Ruby on Rails.
-Après tout, c’est le langage que j’ai appris, que j’ai pratiqué, et que je respecte énormément.
+Après tout, c’est le framework que j’ai appris, que j’ai pratiqué, et que je respecte énormément.
 
 Mais voilà : la simplicité, la logique, et la beauté de Jekyll m’ont attrapée au vol.
 Et j’ai compris que créer son site, c’est aussi faire un **choix de posture**, de fluidité, d’intention.
