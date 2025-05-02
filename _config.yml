@@ -20,17 +20,19 @@
 
 title: Aldjia Dev
 email: boughias-aldjia@live.fr
+
 description: >-
   Site d’Aldjia Boughias — développeuse web et mobile.
   Projets, articles, podcasts et plus encore.
 
-baseurl: "/aldjia.dev"
-url: "https://aldjiadev.github.io"
+baseurl: ""
+url: "https://aldjia.dev"
 
-twitter_username: ""
+instagram_username: ""
 github_username: AldjiaDev
 
 theme: minima
+
 plugins:
   - jekyll-feed
 
