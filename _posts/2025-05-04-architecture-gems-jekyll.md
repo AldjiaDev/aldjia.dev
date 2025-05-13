@@ -15,7 +15,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
   <img src="/assets/images/gemjekyll.jpg" alt="Illustration du Gemfile Jekyll" style="max-width: 100%; border-radius: 10px;">
 </p>
 
-## 🔧 1. `github-pages` : la gem d’intégration continue
+## 1. `github-pages` : la gem d’intégration continue
 
 **Rôle :** Cette gem vous garantit une compatibilité parfaite avec GitHub Pages. Elle regroupe une suite de gems approuvées (y compris Jekyll, jekyll-feed, jekyll-sitemap, etc.), et fige leurs versions pour éviter les conflits.
 
@@ -23,7 +23,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [GitHub Pages Dependencies](https://github.com/github/pages-gem)
 
-## 🎨 2. `minima` : le thème par défaut, sobre et efficace
+## 2. `minima` : le thème par défaut, sobre et efficace
 
 **Rôle :** Minima est le thème de base fourni avec Jekyll. Il offre une mise en page responsive, une navigation claire, un design épuré — bref, une base idéale pour démarrer.
 
@@ -31,7 +31,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [minima sur GitHub](https://github.com/jekyll/minima)
 
-## 📡 3. `jekyll-feed` : pour diffuser votre contenu via RSS
+## 3. `jekyll-feed` : pour diffuser votre contenu via RSS
 
 **Rôle :** Ce plugin génère un flux Atom automatiquement, sans configuration particulière.
 
@@ -39,7 +39,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [jekyll-feed sur GitHub](https://github.com/jekyll/jekyll-feed)
 
-## 🗺️ 4. `jekyll-sitemap` : visibilité et SEO
+## 4. `jekyll-sitemap` : visibilité et SEO
 
 **Rôle :** Ce plugin crée un fichier `sitemap.xml` contenant la liste de toutes les pages de votre site.
 
@@ -47,7 +47,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [jekyll-sitemap sur GitHub](https://github.com/jekyll/jekyll-sitemap)
 
-## 🌍 5. `tzinfo` et `tzinfo-data` : la gestion des fuseaux horaires
+## 5. `tzinfo` et `tzinfo-data` : la gestion des fuseaux horaires
 
 **Rôle :** Ces gems sont nécessaires pour gérer correctement les dates et fuseaux horaires, notamment sous Windows ou JRuby, où les données timezone ne sont pas incluses par défaut.
 
@@ -55,7 +55,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [tzinfo](https://github.com/rubysl/tzinfo) & [tzinfo-data](https://github.com/tzinfo/tzinfo-data)
 
-## 🖥️ 6. `wdm` : pour surveiller vos fichiers sous Windows
+## 6. `wdm` : pour surveiller vos fichiers sous Windows
 
 **Rôle :** Ce plugin améliore la détection de fichiers modifiés sur les systèmes Windows via l’API Win32.
 
@@ -63,7 +63,7 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [wdm sur RubyGems](https://rubygems.org/gems/wdm)
 
-## 🔍 7. `http_parser.rb` : pour JRuby uniquement
+## 7. `http_parser.rb` : pour JRuby uniquement
 
 **Rôle :** Cette gem parse les requêtes HTTP, une tâche essentielle dans tout environnement serveur. Pour JRuby, on verrouille la version à `~> 0.6.0` pour éviter les incompatibilités avec les implémentations Java.
 
@@ -71,8 +71,8 @@ Dans cet article, on explore les gems utilisées dans un site Jekyll classique h
 
 **Source :** [http_parser.rb sur GitHub](https://github.com/tmm1/http_parser.rb)
 
-## 📦 Conclusion : une stack légère mais robuste
+## Une stack légère mais robuste
 
 Ces gems sont invisibles pour vos visiteurs, mais elles sont le socle technique de votre site. De la génération de contenu à l’optimisation SEO, en passant par la compatibilité multiplateforme, elles font tout le boulot en coulisse.
 
-👉 En les comprenant, vous gagnez en maîtrise. En les personnalisant, vous donnez une identité unique à votre site.
+En les comprenant, vous gagnez en maîtrise. En les personnalisant, vous donnez une identité unique à votre site.
