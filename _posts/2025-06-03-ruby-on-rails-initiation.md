@@ -44,10 +44,6 @@ image: /assets/images/Ruby.jpg
 
 <p>Mais petit à petit, au milieu des erreurs de syntaxe, des gems introuvables, et des contrôleurs mal nommés, quelque chose a changé. Rails commençait à faire sens. Parce qu’il est pensé pour guider. Pour apprendre en pratiquant. Pour permettre à quelqu’un, même sans diplôme d’informatique, de construire une vraie application web.</p>
 
-<p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/rails-learning.jpg" alt="Apprentissage de Ruby on Rails" style="max-width: 100%; border-radius: 10px;">
-</p>
-
 <h2>Rails, un outil humain pour créer des produits humains</h2>
 
 <p>Ce qui distingue Rails, c’est son humanité. Le langage Ruby, imaginé par Yukihiro "Matz" Matsumoto, a été conçu pour "rendre les développeurs heureux".</p>
@@ -77,3 +73,10 @@ image: /assets/images/Ruby.jpg
 </blockquote>
 
 <p>Et pour moi, tout a commencé entre des larmes, une ligne de commande… et une persévérance farouche.</p>
+
+<h2>Sources / pour aller plus loin :</h2>
+
+- **David Heinemeier Hansson** – “Rails Doctrine”
+- **Yukihiro Matsumoto** sur Ruby – Conférence OSCON 2005
+- **Basecamp & l’histoire de Rails** – Signal v. Noise
+- **Ruby on Rails Guides** – [https://guides.rubyonrails.org/](https://guides.rubyonrails.org/)
