@@ -32,7 +32,7 @@ Ruby se distingue par :
 Voici un exemple simple mais parlant :
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/exemple%201.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/exemple1.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 
@@ -58,7 +58,7 @@ Là où d'autres outils demandent beaucoup de configuration ou de code “colle�
 Un exemple ? Créer un modèle `Article` avec un titre et un contenu :
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/exemple%202.jpg" alt="Illustration Ruby et Rails 2" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/exemple2.jpg" alt="Illustration Ruby et Rails 2" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 Et le code associé est déjà prêt à être utilisé, connecté à ta base de données, et même testé.
