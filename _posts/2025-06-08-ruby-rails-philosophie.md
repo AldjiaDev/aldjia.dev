@@ -12,7 +12,7 @@ image: /assets/images/rubyonrails.jpg
 
 Ruby et Ruby on Rails sont souvent confondus, surtout lorsqu’on débute. Et pourtant, ces deux entités, bien que liées, sont profondément distinctes. Ruby est un langage. Rails est un framework. L’un est la langue, l’autre le roman qu’on écrit avec. Ensemble, ils forment un couple iconique du développement web, un duo harmonieux qui a séduit toute une génération de développeurs… moi y compris.
 
-Quand j’ai commencé à coder, Ruby me paraissait poétique, Rails, magique. Mais très vite, j’ai compris que derrière cette apparente simplicité se cache une vraie philosophie de création, une vision assumée de ce que devrait être le code.
+Quand j’ai commencé à coder, Ruby me semblait presque poétique, Rails, mystérieusement magique. Mais la réalité du début était tout autre : sans aucune expérience préalable, chaque ligne me paraissait un défi. Pourtant, au fil des erreurs et des essais, j’ai compris qu’au-delà de la syntaxe se cachait une vraie philosophie de création, une vision assumée de ce que devrait être le code.
 
 <p style="text-align:center; margin-bottom: 2rem;">
   <img src="/assets/images/rubyonrails.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
