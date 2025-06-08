@@ -15,7 +15,7 @@ Ruby et Ruby on Rails sont souvent confondus, surtout lorsqu’on débute. Et po
 Quand j’ai commencé à coder, Ruby me paraissait poétique, Rails, magique. Mais très vite, j’ai compris que derrière cette apparente simplicité se cache une vraie philosophie de création, une vision assumée de ce que devrait être le code.
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/exemple%201.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/rubyonrails.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 ## Ruby – Un langage pensé pour les humains
@@ -31,11 +31,10 @@ Ruby se distingue par :
 
 Voici un exemple simple mais parlant :
 
-```ruby
-5.times do
-  puts "Ruby est élégant"
-end
-```
+<p style="text-align:center; margin-bottom: 2rem;">
+  <img src="/assets/images/exemple%201.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
+</p>
+
 
 Lisible. Expressif. Presque poétique. Pour moi, apprendre Ruby, c’était comme apprendre une langue étrangère qui me parlait déjà un peu.
 
