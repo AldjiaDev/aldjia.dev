@@ -69,23 +69,19 @@ a:hover {
   padding-left: 0;
 }
 
-.site-footer {
+.footer {
   background-color: var(--bg-light);
-  padding: 2rem 0;
-  border-top: 1px solid #e0ddd7;
-  text-align: center;
-  color: var(--text-dark);
   font-size: 0.9rem;
+  border-top: 1px solid #e6e6e6;
 }
 
-.site-footer a {
-  color: var(--primary);
+.footer a {
+  color: var(--text-dark);
   text-decoration: none;
-  font-weight: 500;
 }
 
-.site-footer a:hover {
-  color: var(--accent);
+.footer a:hover {
+  color: var(--primary);
   text-decoration: underline;
 }
 
