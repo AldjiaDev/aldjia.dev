@@ -7,35 +7,17 @@ title: Mes Réalisations
   <h1 class="text-center mb-5">Mes Réalisations</h1>
 
   <div class="row g-4 justify-content-center">
-
-    {% for real in site.realisations %}
+    {% for projet in site.realisations %}
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm border-0 rounded-4">
-          {% if real.image %}
-            <img src="{{ real.image }}" class="card-img-top" alt="{{ real.title }}">
-          {% endif %}
+          <img src="{{ projet.image }}" class="card-img-top" alt="{{ projet.title }}">
           <div class="card-body">
-            <h5 class="card-title">{{ real.title }}</h5>
-            <p class="card-text">{{ real.excerpt | strip_html | truncatewords: 25 }}</p>
-            <a href="{{ real.url }}" class="btn btn-outline-primary">Lire l'article</a>
+            <h5 class="card-title">{{ projet.title }}</h5>
+            <p class="card-text">{{ projet.description }}</p>
+            <a href="{{ projet.url }}" class="btn btn-primary mt-3">Découvrir</a>
           </div>
         </div>
       </div>
     {% endfor %}
-
-    <!-- Card teaser : projet en cours -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 shadow-sm border-0 rounded-4">
-        <img src="/assets/images/projet.jpg" class="card-img-top" alt="Projet en cours">
-        <div class="card-body">
-          <h5 class="card-title">🚧 Un nouveau projet arrive bientôt</h5>
-          <p class="card-text">
-            Je travaille actuellement sur un projet qui me tient particulièrement à cœur. Il est en cours de création, pensé avec soin, et je suis impatiente de vous le dévoiler.
-          </p>
-          <p class="text-muted small">Restez connecté·e, ça arrive très bientôt 👀</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>

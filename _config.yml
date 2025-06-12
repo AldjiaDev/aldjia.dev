@@ -40,7 +40,6 @@ plugins:
 collections:
   realisations:
     output: true
-    permalink: /realisations/:title/
 
 
 # Exclude from processing.
