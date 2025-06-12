@@ -7,6 +7,15 @@
   --text-dark: #2E2E2E;   /* Texte lisible */
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
 /* Typographie globale */
 body, .card, .list-group-item, .navbar, .btn, .lead, h1, h2, h3, h4, h5, h6, p, a, li, span {
   font-family: 'Poppins', sans-serif !important;
@@ -59,3 +68,24 @@ a:hover {
   border: none;
   padding-left: 0;
 }
+
+.site-footer {
+  background-color: var(--bg-light);
+  padding: 2rem 0;
+  border-top: 1px solid #e0ddd7;
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
