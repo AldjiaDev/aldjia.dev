@@ -15,7 +15,7 @@ Avec Ruby on Rails, cette magie devient accessible.
 
 Mais derrière cette accessibilité se cachent des choix, des outils, une méthode. Et surtout : un apprentissage continu.
 Cet article n’est pas un tutoriel pas-à-pas, mais un partage d’expérience. Mon expérience.
-Celle d’une développeuse encore en chemin, qui construit en ce moment même une application et qui apprend, à chaque ligne de code.
+Celle d’une développeuse encore en chemin, qui vient de construire une application et qui apprend, à chaque ligne de code.
 
 <p style="text-align:center; margin-bottom: 2rem;">
   <img src="/assets/images/rails.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
