@@ -4,40 +4,26 @@ title: Dev Zone
 ---
 
 <section class="container py-5">
-  <h1 class="text-center display-5 mb-4">Dev Zone</h1>
+  <h1 class="text-center display-5 mb-5">Dev Zone</h1>
 
   <p class="text-center mb-5">
     <strong>Dev Zone</strong> est un podcast dédié à celles et ceux qui vivent le développement web au quotidien.<br>
     Des interviews, des retours d’expérience, des parcours inspirants.
   </p>
 
-  <h2 class="text-center mb-4">Épisode disponible</h2>
-
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card text-center shadow-sm border-0 rounded-4 p-4">
-        <img src="/assets/images/devzone.jpeg" alt="Dev Zone Podcast" class="img-fluid rounded mb-4">
-
-        <div class="card-body">
-          <h5 class="card-title">Dev Zone — Épisode 0 : On entre dans la Zone !</h5>
-
-          <p class="card-text text-start">
-            Salut. Moi, c’est Aldjia Boughias.<br>
-            Je suis développeuse, mais pas seulement.<br><br>
-
-            J’aime les bonnes conversations. Tu sais, celles qui commencent sur un bug mal placé et finissent en réflexions sur le sens du travail, la place des femmes en tech, ou les rêves de reconversion à 35 ans.<br><br>
-
-            C’est pour ça que Dev Zone existe. Ce podcast est ma façon de donner la parole à celles et ceux qui font la tech — qui la vivent, qui la questionnent, qui la transforment.
-          </p>
-
-          <a href="https://open.spotify.com/episode/4p1JlnFEONylzl9UnMC4U7?si=CCzYUr9iSzen2v24AUDv9w" target="_blank" class="btn btn-primary mt-3">
-            Écouter l’épisode sur Spotify
-          </a>
-        </div>
-      </div>
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-6 col-lg-4 d-flex">
+      {% include card.html
+        title="Dev Zone — Épisode 0 : On entre dans la Zone !"
+        description="Un podcast humain dans un monde numérique. Aldjia Boughias vous embarque dans une conversation sur la tech, les choix de vie et les récits inspirants."
+        image="/assets/images/devzone.jpeg"
+        url="https://open.spotify.com/episode/4p1JlnFEONylzl9UnMC4U7?si=CCzYUr9iSzen2v24AUDv9w"
+        cta="Écouter l’épisode" %}
     </div>
   </div>
 </section>
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

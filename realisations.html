@@ -8,15 +8,12 @@ title: Mes Réalisations
 
   <div class="row g-4 justify-content-center">
     {% for projet in site.realisations %}
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4">
-          <img src="{{ projet.image }}" class="card-img-top" alt="{{ projet.title }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ projet.title }}</h5>
-            <p class="card-text">{{ projet.description }}</p>
-            <a href="{{ projet.url }}" class="btn btn-primary mt-3">Découvrir</a>
-          </div>
-        </div>
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title=projet.title
+          description=projet.description
+          image=projet.image
+          url=projet.url %}
       </div>
     {% endfor %}
   </div>
