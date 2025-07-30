@@ -39,6 +39,19 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/style.css" />
+
+  {% if jekyll.environment == "production" %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ5JJ91PQX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HJ5JJ91PQX');
+  </script>
+{% endif %}
+
 </head>
 
 
