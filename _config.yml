@@ -72,8 +72,8 @@ exclude:
 
 # Permaliens lisibles
 permalink: pretty
-
-
+include:
+  - podcasts
 
 # Exclude from processing.
 # The following items will not be processed, by default.
