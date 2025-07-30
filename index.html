@@ -3,12 +3,12 @@ layout: default
 title: Accueil
 ---
 
-<!-- HERO CENTRÉ SANS IMAGE -->
+<!-- HERO AVEC MOT CLÉ ANIMÉ -->
 <section class="py-5 text-center" style="background-color: var(--primary); color: white;">
   <div class="container">
     <h1 class="display-3 fw-bold mb-4 text-white">
       Je développe des interfaces<br>
-      <span style="color: var(--accent);">solides, utiles et accessibles.</span>
+      <span id="mot-clé" style="color: var(--accent);">solides</span>
     </h1>
     <p class="lead text-white-50 mb-4">
       Le code au service de projets concrets, humains, engagés.
@@ -70,3 +70,17 @@ title: Accueil
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
   </a>
 </section>
+
+<!-- Script pour changer le mot-clé -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mots = ["Solides", "Utiles", "Accessibles", "Humaines", "Créatives"];
+    let index = 0;
+    const motCle = document.getElementById("mot-clé");
+
+    setInterval(() => {
+      index = (index + 1) % mots.length;
+      motCle.textContent = mots[index];
+    }, 1000);
+  });
+</script>
