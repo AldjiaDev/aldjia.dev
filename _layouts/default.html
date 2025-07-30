@@ -4,31 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Title + Description dynamiques -->
   <title>{% if page.title %}{{ page.title }} | {% endif %}Aldjia Dev</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="author" content="Aldjia Boughias" />
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
   <!-- Favicon PNG -->
   <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title | default: site.title }} | Aldjia Dev" />
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:image" content="{{ page.image | default: site.default_image }}" />
 
-  <!-- Twitter Cards -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ page.title | default: site.title }} | Aldjia Dev" />
   <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
   <meta name="twitter:image" content="{{ page.image | default: site.default_image }}" />
 
-  <!-- Jekyll SEO tag plugin (if enabled in _config.yml) -->
   {% seo %}
 
   <!-- Bootstrap CSS -->
@@ -47,13 +43,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-HJ5JJ91PQX');
   </script>
-{% endif %}
-
+  {% endif %}
 </head>
-
 
 <body>
 
@@ -80,26 +73,31 @@
     </div>
   </nav>
 
-  <!-- Contenu principal -->
-  <main class="container py-5">
+  <!-- Contenu -->
+  <main class="py-4">
     {{ content }}
   </main>
 
   <!-- Footer -->
-  <footer class="footer mt-auto py-4 bg-light border-top">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6 text-md-start mb-2 mb-md-0">
-          <p class="mb-0 text-muted small">
-            © {{ site.time | date: '%Y' }} Aldjia Dev — Développeuse Full Stack à Lille
+  <footer class="mt-auto py-5" style="background-color: #FEF9F3; border-top: 1px solid #eee;">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+
+        <!-- Col gauche -->
+        <div class="col-md-6 text-md-start text-center">
+          <p class="mb-0 small text-muted">
+            © {{ site.time | date: '%Y' }} Aldjia Dev — Développeuse Full Stack
           </p>
         </div>
-        <div class="col-md-6 text-md-end">
-          <a href="/about" class="text-muted small me-3">À propos</a>
-          <a href="/realisations" class="text-muted small me-3">Réalisations</a>
-          <a href="/blog" class="text-muted small me-3">Articles</a>
-          <a href="/contact" class="text-muted small">Contact</a>
+
+        <!-- Col droite -->
+        <div class="col-md-6 text-md-end text-center">
+          <a href="/about" class="text-muted small me-3 text-decoration-none">À propos</a>
+          <a href="/realisations" class="text-muted small me-3 text-decoration-none">Réalisations</a>
+          <a href="/blog" class="text-muted small me-3 text-decoration-none">Articles</a>
+          <a href="/contact" class="text-muted small text-decoration-none">Contact</a>
         </div>
+
       </div>
     </div>
   </footer>
