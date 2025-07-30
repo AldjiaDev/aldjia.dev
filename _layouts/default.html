@@ -46,6 +46,15 @@
     gtag('config', 'G-HJ5JJ91PQX');
   </script>
   {% endif %}
+
+   {% if page.layout == "post" %}
+    {% include jsonld-post.html %}
+  {% endif %}
+
+  {% if page.title == "Dev Zone" or page.title == "Art au féminin" %}
+    {% include jsonld-podcast.html %}
+  {% endif %}
+
 </head>
 
 <body>
