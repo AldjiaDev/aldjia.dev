@@ -1,6 +1,6 @@
 # aldjia.dev
 
-## Getting started
+## Getting started
 
 ```
 bundle install
