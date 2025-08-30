@@ -3,3 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+aldjia-dev/
+_site/
+.jekyll-cache/
+vendor/
