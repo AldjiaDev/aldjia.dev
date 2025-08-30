@@ -18,62 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Aldjia Dev
-email: boughias-aldjia@live.fr
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
 
-description: >-
-  Site d’Aldjia Boughias — développeuse web full stack à Lille.
-  Projets, articles, podcasts et réflexions sur le code, l'UX et les parcours inspirants.
-
-baseurl: "" # Ne rien mettre si le site est à la racine du domaine
-url: "https://aldjia.dev" # Lien de ton site en ligne
-
-author: Aldjia Boughias
-
-# Image par défaut pour les partages (Open Graph, Twitter)
-default_image: /assets/images/preview.jpg
-
-# Réseaux sociaux (personnalise si tu les utilises)
-github_username: AldjiaDev
-instagram_username: ""
-linkedin_username: aldjiaboughias
-twitter_username: ""
-
-# Langue par défaut
-lang: fr-FR
-
-# Collections
-collections:
-  realisations:
-    output: true
-  episodes:
-    output: true
-
-# Plugins (important pour SEO et flux RSS)
+# Build settings
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Markdown + syntax highlighting
-markdown: kramdown
-highlighter: rouge
-
-# Exclude from production build
-exclude:
-  - node_modules
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - package.json
-  - yarn.lock
-  - .env
-  - .gitignore
-
-# Permaliens lisibles
-permalink: pretty
-include:
-  - podcasts
 
 # Exclude from processing.
 # The following items will not be processed, by default.
