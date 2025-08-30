@@ -1,0 +1,87 @@
+/* 🌈 Palette Aldjia Dev */
+:root {
+  --primary: #F4A261;     /* Orange doux = motivation */
+  --secondary: #A3B18A;   /* Vert sauge = curiosité, calme */
+  --accent: #FFD369;      /* Jaune lumineux = énergie */
+  --bg-light: #FEF9F3;    /* Fond clair doux */
+  --text-dark: #2E2E2E;   /* Texte lisible */
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+/* Typographie globale */
+body, .card, .list-group-item, .navbar, .btn, .lead, h1, h2, h3, h4, h5, h6, p, a, li, span {
+  font-family: 'Poppins', sans-serif !important;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+body {
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Liens */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+}
+
+/* Boutons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: #e26b00;
+  border-color: #e26b00;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 1rem;
+}
+
+/* List group */
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+}
+
+.footer {
+  background-color: var(--bg-light);
+  font-size: 0.9rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.footer a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
