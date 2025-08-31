@@ -10,7 +10,15 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
   <!-- Favicon PNG -->
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png" />
+  {%- comment -%} Favicon robustes + cache-busting {%- endcomment -%}
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/png" />
+
+  {# Optionnel mais utile : copie aussi un PNG et/ou ICO à la racine #}
+  <link rel="icon" href="{{ '/favicon.png' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/png" />
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/x-icon" />
+
+  {# Apple touch (si tu as le fichier) #}
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 
   <!-- Open Graph -->
