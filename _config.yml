@@ -94,3 +94,9 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  - scope:
+      path: ""
+      type: posts  
+    values:
+      layout: post
