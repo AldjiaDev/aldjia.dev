@@ -4,22 +4,49 @@ layout: page
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
+  .container-404 {
+    margin: 60px auto;
     max-width: 600px;
     text-align: center;
   }
-  h1 {
-    margin: 30px 0;
+  .container-404 img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .container-404 h1 {
+    margin: 20px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
+    color: var(--primary);
+  }
+  .container-404 p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="container-404">
+  <!-- Logo -->
+  <img src="/assets/images/favicon.png" alt="Logo Aldjia">
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <!-- Message -->
+  <h1>404</h1>
+  <p><strong>Oups, cette page n’existe pas…</strong></p>
+  <p>En attendant, vous pouvez me retrouver ici :</p>
+
+  <!-- Liens sociaux -->
+  <div class="social-links mt-3">
+    <a href="https://github.com/AldjiaDev" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
+    </a>
+    <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
+    </a>
+  </div>
 </div>
