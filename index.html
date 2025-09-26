@@ -3,40 +3,57 @@ layout: default
 title: Accueil
 ---
 
-<!-- HERO AVEC ANIMATION -->
-<section class="py-5 text-center" style="background-color: var(--primary); color: white; position: relative; z-index: 1;">
-  <div class="container">
-    <h1 class="display-3 fw-bold mb-4 text-white">
-      Je développe des interfaces<br>
-      <span id="typed-text" style="color: var(--accent);">Utiles, Humaines et Inspirantes.</span>
-    </h1>
-    <p class="lead text-white-50 mb-4">
-      Des projets concrets, du code qui a du sens.
-    </p>
-    <a href="/about" class="btn btn-light btn-lg">En savoir plus</a>
+<!-- HERO -->
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="card border-0 shadow-sm rounded-4 text-center p-5" style="background-color: var(--primary); color: white;">
+
+        <!-- Titre principal -->
+        <h1 class="display-4 fw-bold mb-4">
+          Je crée des expériences web<br>
+          <span id="typed-text" style="color: var(--accent);">claires, utiles et humaines.</span>
+        </h1>
+
+        <!-- Paragraphe concis -->
+        <p class="lead text-white-50 mb-5" style="max-width: 680px; margin: 0 auto;">
+          Développeuse full stack passionnée, j’imagine et je construis des interfaces accessibles et inspirantes.
+        </p>
+
+        <!-- Boutons -->
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/realisations" class="btn btn-light btn-lg">Voir mes projets</a>
+          <a href="/about" class="btn btn-outline-light btn-lg">En savoir plus</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 
 <!-- VALEURS -->
 <section class="container py-5">
+  <h2 class="text-center mb-5">Mes valeurs</h2>
   <div class="row text-center g-4">
     <div class="col-md-4">
       <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
+        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
         <h5 class="fw-semibold" style="color: var(--primary);">Pertinence</h5>
-        <p class="text-muted">Je fais des choix techniques qui répondent précisément aux besoins du projet </p>
+        <p class="text-muted">Des choix techniques alignés sur les besoins réels des projets.</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
+        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
         <h5 class="fw-semibold" style="color: var(--primary);">Fiabilité</h5>
-        <p class="text-muted">J’écris du code propre, lisible, et durable. Un socle solide pour faire évoluer les idées dans le temps.</p>
+        <p class="text-muted">Un code propre, lisible et durable : un socle solide pour l’avenir.</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
+        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
         <h5 class="fw-semibold" style="color: var(--primary);">Utilité</h5>
-        <p class="text-muted">Chaque fonctionnalité, chaque ligne de code est pensée pour servir : résoudre un problème, simplifier une action, transmettre une intention.</p>
+        <p class="text-muted">Des fonctionnalités pensées pour simplifier, inspirer et transmettre.</p>
       </div>
     </div>
   </div>
@@ -44,14 +61,15 @@ title: Accueil
 
 <!-- PROJETS / ARTICLES / PODCASTS -->
 <section class="container py-5">
+  <h2 class="text-center mb-5">Ce que je fais</h2>
   <div class="row g-4 text-center">
 
     <div class="col-md-4">
       <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/projet.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Réalisations">
+        <img src="/assets/images/projet.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Réalisations" loading="lazy">
         <div class="card-body">
           <h5 class="card-title" style="color: var(--primary);">Portfolio</h5>
-          <p class="card-text">Mes projets sont concrets et publiés.</p>
+          <p class="card-text">Mes projets concrets et publiés, dont <em>Quotety</em>.</p>
           <a href="/realisations" class="btn btn-outline-primary mt-2">Voir mon portfolio</a>
         </div>
       </div>
@@ -59,10 +77,10 @@ title: Accueil
 
     <div class="col-md-4">
       <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/article.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Articles">
+        <img src="/assets/images/article.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Articles" loading="lazy">
         <div class="card-body">
           <h5 class="card-title" style="color: var(--primary);">Articles</h5>
-          <p class="card-text">Je partage ce que j’apprends et ce qui m’inspire, en code et en dehors.</p>
+          <p class="card-text">Je partage mes apprentissages et inspirations autour du code et de la créativité.</p>
           <a href="/blog" class="btn btn-outline-primary mt-2">Lire mes articles</a>
         </div>
       </div>
@@ -70,11 +88,11 @@ title: Accueil
 
     <div class="col-md-4">
       <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/podcasts.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Podcasts">
+        <img src="/assets/images/podcasts.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Podcasts" loading="lazy">
         <div class="card-body">
           <h5 class="card-title" style="color: var(--primary);">Podcasts</h5>
-          <p class="card-text">Des voix pour parler tech et art autrement. Mes deux podcasts sont en ligne.</p>
-          <a href="/podcasts" class="btn btn-outline-primary mt-2">Découvrir les podcasts</a>
+          <p class="card-text"><em>ART au Féminin</em> & <em>Dev Zone</em> : deux espaces de voix et de récits.</p>
+          <a href="/podcasts" class="btn btn-outline-primary mt-2">Découvrir mes podcasts</a>
         </div>
       </div>
     </div>
@@ -83,14 +101,18 @@ title: Accueil
 </section>
 
 <!-- SECTION À PROPOS -->
-<section class="py-5 text-center" style="background-color: #FEF9F3;">
-  <div class="container">
+<section class="py-5" style="background-color: #FEF9F3;">
+  <div class="container text-center">
     <h2 class="mb-4">Qui suis-je ?</h2>
-    <p class="lead mx-auto" style="max-width: 720px;">
-     Développeuse full stack, je m’appelle Aldjia Boughias.
-      Je construis des interfaces fonctionnelles et accessibles, avec une attention particulière au détail et à l’humain.
-      Mon chemin dans la tech reflète une soif d’apprendre, d’innover, et de créer.
-    </p>
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
+      <img src="/assets/images/portrait.jpg" alt="Portrait Aldjia" class="rounded-circle shadow" style="width: 180px; height: 180px; object-fit: cover;">
+      <p class="lead mx-auto" style="max-width: 600px;">
+        Je suis <strong>Aldjia Boughias</strong>, développeuse full stack.
+        J’aime créer des interfaces accessibles et humaines, avec une attention particulière au détail.
+        <br><br>
+        Mon objectif : <em>un web plus utile, plus créatif et plus inspirant</em>.
+      </p>
+    </div>
     <a href="/about" class="btn btn-primary mt-3">Découvrir mon parcours</a>
   </div>
 </section>
@@ -98,12 +120,14 @@ title: Accueil
 <!-- SECTION RÉSEAUX -->
 <section class="container text-center py-5">
   <h4 class="mb-3">Me retrouver en ligne</h4>
-  <a href="https://github.com/AldjiaDev" target="_blank" class="mx-3" aria-label="GitHub">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
-  </a>
-  <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" class="mx-3" aria-label="LinkedIn">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
-  </a>
+  <div class="d-flex justify-content-center gap-4">
+    <a href="https://github.com/AldjiaDev" target="_blank" class="mx-2" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
+    </a>
+    <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" class="mx-2" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
+    </a>
+  </div>
 </section>
 
 <!-- Typed.js -->
