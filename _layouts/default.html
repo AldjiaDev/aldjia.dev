@@ -18,16 +18,16 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title | default: site.title }} | Aldjia Dev" />
-  <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ page.image | default: site.default_image }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ page.image | default: site.default_image | absolute_url }}" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ page.title | default: site.title }} | Aldjia Dev" />
-  <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
-  <meta name="twitter:image" content="{{ page.image | default: site.default_image }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description | strip_html | escape }}" />
+  <meta name="twitter:image" content="{{ page.image | default: site.default_image | absolute_url }}" />
 
   {% seo %}
 
