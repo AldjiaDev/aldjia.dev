@@ -6,6 +6,7 @@ title: realisations
 <section class="container py-5">
   <h1 class="text-center mb-5">Portfolio</h1>
 
+  <div class="row g-4">
     {% for projet in site.realisations %}
       {% assign lien = projet.external_url | default: projet.url %}
       <div class="col-md-6 col-lg-4 d-flex">
