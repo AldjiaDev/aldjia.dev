@@ -1,11 +1,39 @@
 ---
 layout: default
-title: realisations
+title: "Portfolio – Projets Ruby on Rails & applications web sur mesure"
+description: >
+  Découvrez mes réalisations : sites web et applications Ruby on Rails, projets fullstack,
+  back-offices et produits digitaux conçus pour des usages concrets.
+permalink: /realisations/
 ---
 
-<section class="container py-5">
-  <h1 class="text-center mb-5">Portfolio</h1>
 
+<section class="container py-5">
+
+  <!-- HERO PORTFOLIO (SEO + contexte) -->
+  <header class="text-center mb-5">
+
+    <h1 class="display-5 fw-bold mb-3" style="color: var(--text-dark);">
+      Projets web & applications Ruby on Rails
+    </h1>
+
+    <p class="muted maxw mb-4">
+      Une sélection de sites et applications que j’ai conçus et développés en tant que
+      développeuse Fullstack (Ruby on Rails, JavaScript). Back-office, permissions, données,
+      et produits pensés pour durer.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary">
+        Prendre un rendez-vous
+      </a>
+      <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
+        En savoir plus sur moi
+      </a>
+    </div>
+  </header>
+
+  <!-- GRILLE PROJETS -->
   <div class="row g-4">
     {% for projet in site.realisations %}
       {% assign lien = projet.external_url | default: projet.url %}
@@ -18,4 +46,15 @@ title: realisations
       </div>
     {% endfor %}
   </div>
+
+  <!-- CTA FIN DE PAGE -->
+  <div class="text-center mt-5">
+    <p class="muted mb-3">
+      Vous avez un projet similaire (site, application, back-office) ?
+    </p>
+    <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary">
+      Réserver un créneau
+    </a>
+  </div>
+
 </section>
