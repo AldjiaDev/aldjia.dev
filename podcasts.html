@@ -1,44 +1,88 @@
 ---
 layout: default
-title: Podcasts
+title: "Podcasts sur la tech, le développement web et la création"
+description: "Podcasts autour de la tech, du développement web, de la création et des parcours professionnels : Dev Zone et ART au Féminin."
+permalink: /podcasts/
 ---
 
 <section class="container py-5">
-  <h1 class="text-center mb-5 display-4">Podcasts</h1>
 
-  <div class="row g-4 justify-content-center">
+  <!-- HERO PODCASTS (SEO + contexte) -->
+  <header class="text-center mb-5">
 
-    <!-- Card : Art au féminin -->
-    <div class="col-md-6 col-lg-4 d-flex">
+    <h1 class="display-5 fw-bold mb-3" style="color: var(--text-dark);">
+      Podcasts sur la tech, le développement web et la création
+    </h1>
+
+    <p class="muted maxw mb-4">
+      À travers mes podcasts <strong>Dev Zone</strong> et <strong>ART au Féminin</strong>,
+      je donne la parole à des développeur·se·s, des artistes et des créateur·rice·s
+      pour explorer les parcours, la pratique et les réalités du métier.
+    </p>
+  </header>
+
+  <!-- LISTE DES PODCASTS -->
+  <div id="podcasts-list" class="row g-4 justify-content-center">
+
+    <!-- Podcast : ART AU FÉMININ -->
+    <article class="col-md-6 col-lg-4 d-flex">
       {% include card.html
-        title="Art au féminin"
-        description="Créé en 2019, ce podcast met en lumière les femmes artistes d’hier et d’aujourd’hui à travers interviews, récits et analyses culturelles. Une parole artistique, engagée, nécessaire."
+        title="ART au Féminin"
+        description="Podcast lancé en 2019 qui met en lumière les femmes artistes d’hier et d’aujourd’hui à travers des interviews, récits et analyses culturelles. Une parole artistique, engagée et nécessaire."
         image="/assets/images/artaufeminin.jpeg"
         url="/podcasts/art-au-feminin/"
         cta="Voir les épisodes" %}
-    </div>
+    </article>
 
-    <!-- Card : Dev Zone -->
-    <div class="col-md-6 col-lg-4 d-flex">
+    <!-- Podcast : DEV ZONE -->
+    <article class="col-md-6 col-lg-4 d-flex">
       {% include card.html
         title="Dev Zone"
-        description="Un podcast orienté développement web. J’y interroge des développeur·se·s passionné·e·s sur leur parcours, leurs apprentissages, leurs projets, et les coulisses du métier."
+        description="Podcast dédié au développement web. J’y échange avec des développeur·se·s sur leurs parcours, leurs apprentissages, leurs projets et les coulisses du métier."
         image="/assets/images/devzone.jpeg"
         url="/podcasts/dev-zone/"
         cta="Voir les épisodes" %}
-    </div>
+    </article>
 
   </div>
 </section>
 
+<!-- PARTICIPER AU PODCAST -->
 <section class="container py-5">
-  <h2 class="text-center mb-4">Participer au podcast</h2>
-  <p class="text-center mb-4">
-    Tu veux participer à un épisode ? Clique sur le bouton ci-dessous pour compléter le formulaire :
-  </p>
+  <header class="text-center mb-4">
+    <h2 class="section-title">Participer à un épisode de podcast</h2>
+    <p class="muted maxw">
+      Vous êtes développeur·se, artiste ou créateur·rice et souhaitez partager votre parcours,
+      votre pratique ou un sujet qui vous tient à cœur ?
+    </p>
+  </header>
+
   <div class="text-center">
-    <a href="https://airtable.com/appYf4n8T5tio1w6x/pagjYDsjo9u6EaiuK/form" target="_blank" class="btn btn-primary btn-lg">
+    <a href="https://airtable.com/appYf4n8T5tio1w6x/pagjYDsjo9u6EaiuK/form"
+       target="_blank"
+       rel="noopener"
+       class="btn btn-primary btn-lg">
       Compléter le formulaire
+    </a>
+  </div>
+</section>
+
+<!-- CTA FINAL (conversion douce) -->
+<section class="container py-5">
+  <div class="hero-card p-5 text-center">
+    <h2 class="section-title mb-2">
+      Vous avez un projet digital ?
+    </h2>
+    <p class="muted mb-4 maxw">
+      Si vous êtes ici pour le podcast mais que vous avez aussi un projet web ou applicatif,
+      nous pouvons en discuter lors d’un échange sans engagement.
+    </p>
+
+    <a href="https://cal.com/aldjia-boughias"
+       target="_blank"
+       rel="noopener"
+       class="btn btn-primary btn-lg">
+      Prendre un rendez-vous
     </a>
   </div>
 </section>
