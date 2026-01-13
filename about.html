@@ -1,29 +1,32 @@
 ---
 layout: default
-title: À propos
+title: Développeuse Fullstack freelance Ruby on Rails – À propos
+description: Développeuse Fullstack freelance spécialisée en Ruby on Rails. Parcours, compétences, projets et approche orientée produit et usages.
+permalink: /about/
 ---
 
-<!-- SECTION INTRO -->
+<!-- INTRO / HERO -->
 <section class="container py-5">
   <div class="row justify-content-center">
     <div class="col-lg-12">
-      <div class="card border-0 shadow-sm rounded-4 p-5 d-flex flex-column flex-md-row align-items-center justify-content-between" style="background-color: var(--primary); color: white;">
+      <div class="card border-0 shadow-sm rounded-4 p-5 d-flex flex-column flex-md-row align-items-center justify-content-between"
+           style="background-color: var(--primary); color: white;">
 
-        <!-- Portrait à gauche -->
         <div class="text-center text-md-start mb-4 mb-md-0">
-          <img src="/assets/images/portrait.jpg" alt="Aldjia Dev"
-            class="rounded-circle shadow" style="width: 180px; height: 180px; object-fit: cover;">
+          <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+               alt="Portrait Aldjia Boughias – Développeuse Fullstack freelance"
+               class="rounded-circle shadow"
+               style="width: 180px; height: 180px; object-fit: cover;">
         </div>
 
-        <!-- Texte à droite -->
         <div class="text-center text-md-end">
-          <h1 class="display-5 fw-bold">
-            Salut, moi c’est <span style="color: var(--accent);">Aldjia Boughias</span>
+          <h1 class="display-5 fw-bold text-white">
+            <span style="letter-spacing: .5px;">Aldjia</span>
+            <span style="color: var(--accent); font-weight: 700;">Boughias</span>
           </h1>
           <p class="lead text-white-50 mb-0">
-            Développeuse Fullstack & Créatrice de Produits Digitaux
-
-            Je transforme les idées en applications web et mobiles impactantes.
+            Développeuse Fullstack freelance · Ruby on Rails<br>
+            Je conçois des sites web et applications utiles, structurés et évolutifs.
           </p>
         </div>
 
@@ -32,169 +35,121 @@ title: À propos
   </div>
 </section>
 
-<!-- CONTENU PRINCIPAL -->
-  <div class="container">
+<!-- CONTENU -->
+<div class="container">
+
+  <!-- PRÉSENTATION -->
+  <section class="mb-5">
+    <h2 class="h3 fw-semibold mb-3">Mon approche</h2>
+    <p class="muted">
+      J’accompagne des professionnels et des indépendants dans la création de sites web et
+      d’applications sur mesure. Mon travail commence toujours par la compréhension du besoin,
+      des usages et du contexte métier, avant toute ligne de code.
+    </p>
+    <p class="muted">
+      Avant de devenir développeuse, j’ai travaillé plus de 10 ans au contact direct de clients.
+      Cette expérience structure aujourd’hui ma manière de concevoir des produits digitaux :
+      clairs, utiles et orientés solutions.
+    </p>
+  </section>
 
   <!-- COMPÉTENCES -->
-  <div class="card shadow-sm border-0 rounded-4 mb-4" style="background-color: #FFF6EF;">
+  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #FFF6EF;">
     <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3" style="color: var(--primary);">🧰 Compétences</h2>
+      <h2 class="h4 fw-semibold mb-3">Compétences techniques</h2>
 
       <div class="row">
-        <!-- LANGAGES & FRAMEWORKS -->
         <div class="col-md-6">
-          <h5 class="fw-semibold" style="color: var(--accent);">Langages & Frameworks</h5>
-          <ul class="list-unstyled mb-4">
-            <li>• Backend : Ruby, Ruby on Rails</li>
-            <li>• Frontend : JavaScript, HTML5, CSS3, Bootstrap</li>
-            <li>• Mobile : Swift, SwiftUI (iOS)</li>
+          <h3 class="h6 fw-semibold">Langages & frameworks</h3>
+          <ul>
+            <li>Backend : Ruby, Ruby on Rails</li>
+            <li>Frontend : JavaScript, HTML5, CSS3, Bootstrap</li>
+            <li>Mobile : Swift, SwiftUI (iOS)</li>
           </ul>
         </div>
 
-        <!-- OUTILS & DÉPLOIEMENT -->
         <div class="col-md-6">
-          <h5 class="fw-semibold" style="color: var(--accent);">Outils & Déploiement</h5>
-          <ul class="list-unstyled mb-4">
-            <li>• Version Control : Git, GitHub</li>
-            <li>• Déploiement : Heroku, GitHub Pages</li>
-            <li>• Cloud / BaaS : Supabase</li>
-            <li>• Environnement : VS Code, Xcode, Ligne de commande (CLI)</li>
+          <h3 class="h6 fw-semibold">Outils & déploiement</h3>
+          <ul>
+            <li>Git, GitHub</li>
+            <li>Heroku, GitHub Pages</li>
+            <li>Supabase</li>
+            <li>VS Code, Xcode, CLI</li>
           </ul>
         </div>
-      </div>
-
-      <div class="row">
-        <!-- BASES DE DONNÉES -->
-        <div class="col-md-6">
-          <h5 class="fw-semibold" style="color: var(--accent);">Bases de données</h5>
-          <ul class="list-unstyled mb-4">
-            <li>• PostgreSQL</li>
-            <li>• SQLite</li>
-          </ul>
-        </div>
-
-        <!-- MÉTHODOLOGIES & DESIGN -->
-        <div class="col-md-6">
-          <h5 class="fw-semibold" style="color: var(--accent);">Méthodologies & Conception</h5>
-          <ul class="list-unstyled mb-0">
-            <li>• Méthodes Agiles (Scrum, Kanban)</li>
-            <li>• Conception UX/UI & Responsive Design</li>
-            <li>• Architecture MVC</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- PORTFOLIO DE PROJETS -->
-  <div class="card shadow-sm border-0 rounded-4 mb-4" style="background-color: #F7FAFF;">
-    <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3" style="color: var(--primary);">🚀 Portfolio de Projets</h2>
-
-      <div class="mb-4">
-        <h5 class="fw-semibold mb-1" style="color: var(--accent);"><a href="https://www.readnest.fr/" target="_blank">Readnest</a> — Application Web Communautaire</h5>
-        <p class="text-muted small mb-2"><em>Technologies : Ruby on Rails, PostgreSQL, JavaScript, API Geocoding, HTML5/CSS3, Bootstrap</em></p>
-        <p class="mb-2">Plateforme communautaire conçue pour connecter les <strong>3 types d'acteurs</strong> de la chaîne du livre : lecteurs, maisons d’édition et librairies. Développement d'un système de <strong>permissions à 3 rôles</strong>, intégration d'une <strong>carte interactive (API Geocoding )</strong> et mise en place d'une <strong>messagerie privée</strong> et de fonctionnalités sociales.</p>
-      </div>
-
-      <div class="mb-4">
-        <h5 class="fw-semibold mb-1" style="color: var(--accent);"><a href="https://quotety.aldjia.dev/" target="_blank">Quotety</a> — Application Web</h5>
-        <p class="text-muted small mb-2"><em>Technologies : Ruby on Rails, SQLite, JavaScript, HTML5/CSS3</em></p>
-        <p class="mb-2">Application Ruby on Rails pour la gestion et le partage de citations, incluant un <strong>back-office personnalisé</strong> avec un <strong>double système de permissions</strong> (Admin/Utilisateur ) et une taxonomie à <strong>2 niveaux</strong>.</p>
-      </div>
-
-      <div class="mb-4">
-        <h5 class="fw-semibold mb-1" style="color: var(--accent);"><a href="https://aldjia.dev/podcasts/dev-zone/" target="_blank">Dev Zone</a> — Podcast & Média</h5>
-        <p class="mb-2">Podcast de conversations sur la tech, les parcours de reconversion, le mentorat et les défis du métier de développeur.</p>
-      </div>
-
-      <div>
-        <h5 class="fw-semibold mb-1" style="color: var(--accent );"><a href="https://artaufeminin.fr/" target="_blank">ART au Féminin</a> — Podcast & Plateforme Média</h5>
-        <p class="mb-2">Podcast et plateforme valorisant les femmes artistes à travers des interviews et des conférences.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-
-  <!-- LIGNE 2 : EXPÉRIENCES + FORMATIONS -->
-  <div class="row mb-4">
-  <!-- EXPÉRIENCES -->
-  <div class="card shadow-sm border-0 rounded-4 mb-4" style="background-color: #ffffff;">
+  <!-- PROJETS -->
+  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #F7FAFF;">
     <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3" style="color: var(--primary );">💼 Expériences Professionnelles & Projets</h2>
+      <h2 class="h4 fw-semibold mb-3">Projets & réalisations</h2>
 
-      <h5 class="fw-semibold mb-3" style="color: var(--accent);">Développeuse Fullstack & Fondatrice</h5>
+      <h3 class="h6 fw-semibold">
+        <a href="https://www.readnest.fr/" target="_blank" rel="noopener">Readnest</a>
+      </h3>
+      <p class="muted">
+        Application web communautaire développée en Ruby on Rails, avec gestion de rôles,
+        carte interactive et fonctionnalités sociales.
+      </p>
 
-      <div class="mb-3">
-        <h6 class="mb-1">Projets Web (Readnest & Quotety)</h6>
-        <small class="text-muted">2025 – Aujourd’hui</small>
-        <p class="mb-2">Conception, développement et déploiement de deux applications web complètes (Ruby on Rails, JavaScript), démontrant une maîtrise du cycle de vie produit et l'intégration de fonctionnalités complexes (systèmes de permissions, API Geocoding, back-office).</p>
-      </div>
+      <h3 class="h6 fw-semibold">
+        <a href="https://quotety.aldjia.dev/" target="_blank" rel="noopener">Quotety</a>
+      </h3>
+      <p class="muted">
+        Application web avec back-office personnalisé et gestion de permissions.
+      </p>
 
-      <div class="mb-4">
-        <h6 class="mb-1">Podcasts (Dev Zone & ART au Féminin)</h6>
-        <small class="text-muted">2019 – Aujourd’hui</small>
-        <p class="mb-2">Création et gestion de deux podcasts (+50 épisodes au total), développant une expertise en storytelling, communication et gestion de projet de contenu.</p>
-      </div>
-
-      <h5 class="fw-semibold mb-3" style="color: var(--accent);">Expérience Salariée</h5>
-
-      <div>
-        <h6 class="mb-1">🏦 BNP Paribas — Attachée Commerciale & Conseillère Financière</h6>
-        <small class="text-muted">2011 – 2024</small>
-        <p>Durant 13 ans, j'ai développé une solide expertise en relation client, gestion de projet et résolution de problèmes complexes. J'ai géré un portefeuille de <strong>+500 clients</strong> et animé <strong>+15 ateliers</strong> d'éducation financière, des compétences transférables essentielles pour traduire un besoin métier en solution technique pertinente et centrée sur l'utilisateur.</p>
-      </div>
-
+      <h3 class="h6 fw-semibold">Podcasts</h3>
+      <p class="muted">
+        Créatrice des podcasts <strong>Dev Zone</strong> et <strong>ART au Féminin</strong>,
+        autour de la tech, des parcours et de la création.
+      </p>
     </div>
-  </div>
+  </section>
 
-
-  <!-- FORMATIONS -->
-  <div class="card shadow-sm border-0 rounded-4 mb-4" style="background-color: #FEF9F3;">
+  <!-- EXPÉRIENCE -->
+  <section class="card shadow-sm border-0 rounded-4 mb-5">
     <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3" style="color: var(--primary);">🎓 Formations</h2>
+      <h2 class="h4 fw-semibold mb-3">Expérience professionnelle</h2>
 
-      <!-- FORMATIONS TECHNIQUES -->
-      <h5 class="fw-semibold mb-3" style="color: var(--accent);">Développement Web & Mobile</h5>
-      <ul class="list-group list-group-flush mb-4">
-        <li class="list-group-item">
-          <strong>Apple Foundation Program – Simplon</strong> (2025)
+      <h3 class="h6 fw-semibold">Développeuse Fullstack freelance</h3>
+      <p class="muted">
+        Conception, développement et déploiement d’applications web sur mesure.
+      </p>
 
-          Formation intensive à l'écosystème Apple. Compétences acquises : <strong>Swift, SwiftUI, conception d'applications mobiles iOS, UX/UI mobile.</strong>
-        </li>
-        <li class="list-group-item">
-          <strong>Bootcamp Développeur Web (Fullstack) – Le Wagon</strong> (2025)
+      <h3 class="h6 fw-semibold">BNP Paribas – Relation client</h3>
+      <p class="muted">
+        13 ans d’expérience en relation client, gestion de besoins complexes et accompagnement
+        à la décision. Une compétence clé pour traduire un besoin métier en solution technique.
+      </p>
+    </div>
+  </section>
 
-          Formation intensive de 9 semaines (+400 heures) en développement web. Compétences acquises : <strong>Ruby, Ruby on Rails, JavaScript (ES6), HTML5, CSS3, SQL (PostgreSQL), Git, Heroku.</strong> Développement de deux applications web complètes en équipe selon les méthodes Agiles.
-        </li>
-      </ul>
+  <!-- FORMATION -->
+  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #FEF9F3;">
+    <div class="card-body">
+      <h2 class="h4 fw-semibold mb-3">Formations</h2>
 
-      <!-- PARCOURS ACADÉMIQUE -->
-      <h5 class="fw-semibold mb-3" style="color: var(--accent);">Parcours Académique</h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Histoire de l'Art</strong> – Beaux-Arts (2020–2021)</li>
-        <li class="list-group-item"><strong>BTS Banque</strong> (en alternance) – EFFICOM (2011–2013)</li>
-        <li class="list-group-item"><strong>Licence de Biologie</strong> – Université Catholique de Lille (2008–2011)</li>
+      <ul>
+        <li>Apple Foundation Program – Simplon (Swift, SwiftUI)</li>
+        <li>Bootcamp Développeur Web – Le Wagon (Ruby on Rails, JavaScript)</li>
+        <li>Histoire de l’Art – Beaux-Arts</li>
       </ul>
     </div>
-  </div>
-
-
-  <!-- CV -->
-
+  </section>
 
 </div>
 
-<hr class="my-5">
-
-<div class="text-center">
-  <h4 class="mb-4">Où me trouver</h4>
-  <a href="https://github.com/AldjiaDev" target="_blank" class="mx-3" aria-label="GitHub">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
+<!-- CTA -->
+<section class="container py-5 text-center">
+  <h2 class="h4 mb-3">Vous avez un projet ?</h2>
+  <p class="muted mb-4">
+    Je vous propose un échange de 30 minutes pour comprendre votre besoin
+    et voir si nous pouvons travailler ensemble.
+  </p>
+  <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+    Prendre un rendez-vous
   </a>
-  <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" class="mx-3" aria-label="LinkedIn">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
-  </a>
-</div>
+</section>
