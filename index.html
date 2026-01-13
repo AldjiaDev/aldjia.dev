@@ -3,142 +3,360 @@ layout: default
 title: Accueil
 ---
 
-<!-- HERO -->
-<section class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-12">
-      <div class="card border-0 shadow-sm rounded-4 text-center p-5" style="background-color: var(--primary); color: white;">
+<div class="home">
 
-        <!-- Titre principal -->
-        <h1 class="display-4 fw-bold mb-3" style="color: white;">
-          Développeuse Fullstack & Créatrice de Produits Digitaux
-        </h1>
-        <p class="mb-4" style="font-size: 2.5rem; font-weight: bold; line-height: 1.3; min-height: 3.5em;">Je transforme les idées en applications <span style="display: inline-block; overflow: visible !important;"><span id="typed-text" style="color: var(--accent);"></span></span></p>
+  <!-- HERO -->
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="hero-card text-center p-5">
 
-        <!-- Paragraphe concis -->
-        <p class="lead text-white-50 mb-5" style="max-width: 680px; margin: 0 auto;">
-          Avec une expertise en Ruby on Rails, JavaScript et Swift, je conçois et développe des solutions web et mobiles robustes, centrées sur l'utilisateur et porteuses de sens.
-        </p>
+          <p class="kicker mb-3">Développeuse Fullstack freelance</p>
 
-        <!-- Boutons -->
-        <div class="d-flex justify-content-center gap-3">
-          <a href="/realisations" class="btn btn-light btn-lg">Voir mes projets</a>
-          <a href="/about" class="btn btn-outline-light btn-lg">En savoir plus</a>
+          <h1 class="display-5 fw-bold mb-3 hero-title">
+            Sites web & applications sur mesure,<br class="d-none d-md-block">
+            pensés pour vos usages et votre évolution.
+          </h1>
+
+          <p class="mb-4" style="font-size: 1.6rem; font-weight: 600; line-height: 1.35;">
+            Je transforme vos idées en solutions
+            <span style="display:inline-block; overflow: visible !important;">
+              <span id="typed-text" style="color: var(--primary);"></span>
+            </span>
+          </p>
+
+          <p class="fs-5 hero-subtitle mb-5">
+            Ruby on Rails · JavaScript · (Mobile si pertinent). Une approche structurée : cadrer, construire, livrer.
+          </p>
+
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/contact" class="btn btn-primary btn-lg">Discutons de votre projet</a>
+            <a href="#offres" class="btn btn-outline-primary btn-lg">Voir les offres</a>
+            <a href="/realisations" class="btn btn-outline-primary btn-lg">Réalisations</a>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- VALEURS -->
-<section class="container py-5">
-  <h2 class="text-center mb-5">Mes valeurs</h2>
-  <div class="row text-center g-4">
-    <div class="col-md-4">
-      <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
-        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
-        <h5 class="fw-semibold" style="color: var(--primary);">Impact</h5>
-        <p class="text-muted">Concevoir des solutions qui répondent à de vrais besoins et génèrent de la valeur.</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
-        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
-        <h5 class="fw-semibold" style="color: var(--primary);">Qualité</h5>
-        <p class="text-muted">Un code robuste, maintenable et performant, garant d'une expérience utilisateur fluide.</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="p-4 border rounded-4 shadow-sm bg-white h-100">
-        <div class="mb-3" style="font-size: 2rem; color: var(--accent);"></div>
-        <h5 class="fw-semibold" style="color: var(--primary);">Innovation</h5>
-        <p class="text-muted">Explorer de nouvelles approches pour des solutions créatives et durables.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJETS / ARTICLES / PODCASTS -->
-<section class="container py-5">
-  <h2 class="text-center mb-5">Ce que je fais</h2>
-  <div class="row g-4 text-center">
-
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/projet.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Réalisations" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title" style="color: var(--primary);">Projets Web</h5>
-          <p class="card-text">Découvrez mes applications Fullstack (Ruby on Rails, JavaScript) : Readnest, Quotety et d'autres réalisations.</p>
-          <a href="/realisations" class="btn btn-outline-primary mt-2">Voir mes projets</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/article.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Articles" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title" style="color: var(--primary);">Articles & Blog</h5>
-          <p class="card-text">Mes réflexions et partages sur le développement web, la tech et la créativité.</p>
-          <a href="/blog" class="btn btn-outline-primary mt-2">Lire mes articles</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-        <img src="/assets/images/podcasts.jpeg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Podcasts" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title" style="color: var(--primary);">Podcasts</h5>
-          <p class="card-text">Dev Zone et ART au Féminin : des conversations inspirantes sur la tech et l'art.</p>
-          <a href="/podcasts" class="btn btn-outline-primary mt-2">Découvrir mes podcasts</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION À PROPOS -->
-<section class="py-5" style="background-color: #FEF9F3;">
-  <div class="container text-center">
-    <h2 class="mb-4">Qui suis-je ?</h2>
-    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
-      <img src="/assets/images/portrait.jpg" alt="Portrait Aldjia" class="rounded-circle shadow" style="width: 180px; height: 180px; object-fit: cover;">
-      <p class="lead mx-auto" style="max-width: 600px;">
-        Je suis <strong>Aldjia Boughias</strong>, développeuse Fullstack passionnée par la création de solutions web et mobiles qui ont du sens. Forte de 13 ans d'expérience en relation client chez BNP Paribas, j'ai développé une écoute fine des besoins humains que j'applique aujourd'hui à la conception d'applications robustes et intuitives.
-
-
-
-        Mon parcours atypique, enrichi par la création de podcasts et d'applications comme Readnest et Quotety, me permet d'aborder chaque projet avec une vision à 360° : de l'idée à la communication, en passant par le code. Mon objectif est de construire un web plus utile, plus créatif et plus inclusif.
+  <!-- CE QUE JE FAIS -->
+  <section class="container section">
+    <div class="text-center mb-5">
+      <h2 class="section-title mb-2">Ce que je fais</h2>
+      <p class="muted maxw">
+        Je crée des solutions digitales claires, fiables et évolutives — du simple site vitrine aux plateformes métier.
       </p>
     </div>
-    <a href="/about" class="btn btn-primary mt-3">Découvrir mon parcours</a>
-  </div>
-</section>
 
-<!-- SECTION RÉSEAUX -->
-<section class="container text-center py-5">
-  <h4 class="mb-3">Me retrouver en ligne</h4>
-  <div class="d-flex justify-content-center gap-4">
-    <a href="https://github.com/AldjiaDev" target="_blank" class="mx-2" aria-label="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
-    </a>
-    <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" class="mx-2" aria-label="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
-    </a>
-  </div>
-</section>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <h5 class="fw-semibold mb-2" style="color: var(--text-dark);">Sites web professionnels</h5>
+          <p class="muted mb-0">
+            Site vitrine ou dynamique, pensé pour la crédibilité, la lisibilité et la conversion.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <h5 class="fw-semibold mb-2" style="color: var(--text-dark);">Applications web sur mesure</h5>
+          <p class="muted mb-0">
+            Ruby on Rails + JavaScript pour vos besoins spécifiques : back-office, données, logique métier.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <h5 class="fw-semibold mb-2" style="color: var(--text-dark);">Web → Mobile (si utile)</h5>
+          <p class="muted mb-0">
+            Quand ça a du sens, je vous accompagne pour décliner votre solution en application mobile.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODE -->
+  <section class="container section">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="section-title mb-3">Une méthode simple et structurée</h2>
+        <p class="muted mb-4">
+          Chaque projet commence par un cadrage clair, avant toute phase de développement.
+          L’objectif : réduire les surprises, avancer sereinement, livrer proprement.
+        </p>
+
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex gap-3">
+            <div class="pill">1</div>
+            <div>
+              <div class="fw-semibold" style="color: var(--text-dark);">Cadrage</div>
+              <div class="muted">Objectifs, utilisateurs, périmètre, priorités.</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="pill">2</div>
+            <div>
+              <div class="fw-semibold" style="color: var(--text-dark);">Conception</div>
+              <div class="muted">Structure, parcours, maquettes si nécessaire.</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="pill">3</div>
+            <div>
+              <div class="fw-semibold" style="color: var(--text-dark);">Développement</div>
+              <div class="muted">Itérations courtes, visibilité sur l’avancement.</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="pill">4</div>
+            <div>
+              <div class="fw-semibold" style="color: var(--text-dark);">Mise en ligne</div>
+              <div class="muted">Tests, performance, sécurité, déploiement.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="/contact" class="btn btn-primary btn-lg">Me parler de votre besoin</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-card p-4">
+          <h5 class="fw-semibold mb-3" style="color: var(--text-dark);">Ce que vous obtenez</h5>
+          <ul class="muted mb-0 ps-3">
+            <li class="mb-2">Un périmètre clair (moins de stress, moins d’allers-retours).</li>
+            <li class="mb-2">Une solution maintenable et prête à évoluer.</li>
+            <li class="mb-2">Une communication simple, même si vous n’êtes pas technique.</li>
+            <li class="mb-2">Une réalisation orientée usage : utile avant d’être “complexe”.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES -->
+  <section id="offres" class="section" style="background-color: var(--bg-light);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-2">Offres & tarifs</h2>
+        <p class="muted maxw">
+          Des repères pour vous projeter. Chaque projet reste sur mesure : le prix final dépend du périmètre
+          (pages, fonctionnalités, back-office, contenu, délais).
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- ESSENTIEL -->
+        <div class="col-md-6 col-lg-4">
+          <div class="offer-card h-100 p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h5 class="fw-semibold mb-1" style="color: var(--text-dark);">Essentiel</h5>
+                <p class="muted mb-0">Site vitrine pro</p>
+              </div>
+              <span class="pill">Populaire</span>
+            </div>
+
+            <p class="fs-4 fw-bold offer-price mb-3">À partir de 3 000 € HT</p>
+
+            <ul class="muted ps-3 mb-4">
+              <li>Jusqu’à 5 pages</li>
+              <li>Responsive (mobile/tablette)</li>
+              <li>Formulaire de contact</li>
+              <li>SEO technique de base</li>
+              <li>Mise en ligne</li>
+            </ul>
+
+            <a href="/contact?offre=essentiel" class="btn btn-outline-primary w-100">Demander un devis</a>
+          </div>
+        </div>
+
+        <!-- PRO -->
+        <div class="col-md-6 col-lg-4">
+          <div class="offer-card h-100 p-4">
+            <div class="mb-3">
+              <h5 class="fw-semibold mb-1" style="color: var(--text-dark);">Pro</h5>
+              <p class="muted mb-0">Site dynamique</p>
+            </div>
+
+            <p class="fs-4 fw-bold offer-price mb-3">À partir de 5 000 € HT</p>
+
+            <ul class="muted ps-3 mb-4">
+              <li>Contenus administrables</li>
+              <li>Back-office simple</li>
+              <li>Structure évolutive</li>
+              <li>Cadrage inclus</li>
+              <li>Tests + mise en ligne</li>
+            </ul>
+
+            <a href="/contact?offre=pro" class="btn btn-outline-primary w-100">En discuter</a>
+          </div>
+        </div>
+
+        <!-- SUR MESURE -->
+        <div class="col-md-6 col-lg-4">
+          <div class="offer-card h-100 p-4">
+            <div class="mb-3">
+              <h5 class="fw-semibold mb-1" style="color: var(--text-dark);">Sur mesure</h5>
+              <p class="muted mb-0">Application web</p>
+            </div>
+
+            <p class="fs-4 fw-bold offer-price mb-3">À partir de 7 000 € HT</p>
+
+            <ul class="muted ps-3 mb-4">
+              <li>Logique métier</li>
+              <li>Back-office complet</li>
+              <li>Recherche / filtres</li>
+              <li>Itérations & feedback</li>
+              <li>Documentation de base</li>
+            </ul>
+
+            <a href="/contact?offre=sur-mesure" class="btn btn-outline-primary w-100">Obtenir une estimation</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compléments -->
+      <div class="text-center mt-5">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <span class="pill">Cadrage (Design Sprint) : <strong>1 200 – 2 000 € HT</strong></span>
+          <span class="pill">Maintenance & évolutions : <strong>à partir de 80 € / mois</strong></span>
+          <span class="pill">Web → Mobile : <strong>sur devis</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREUVES (Projets / Articles / Podcasts) -->
+  <section class="container section">
+    <div class="text-center mb-5">
+      <h2 class="section-title mb-2">Projets & contenus</h2>
+      <p class="muted maxw">
+        Quelques exemples pour découvrir mon travail : réalisations, articles et podcasts.
+      </p>
+    </div>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="offer-card h-100 p-4">
+          <h5 class="fw-semibold" style="color: var(--text-dark);">Réalisations</h5>
+          <p class="muted">
+            Applications et sites que j’ai conçus et développés (Readnest, Quotety…).
+          </p>
+          <a href="/realisations" class="btn btn-outline-primary">Voir mes projets</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="offer-card h-100 p-4">
+          <h5 class="fw-semibold" style="color: var(--text-dark);">Articles</h5>
+          <p class="muted">
+            Mes partages autour du développement, du produit et de la création.
+          </p>
+          <a href="/blog" class="btn btn-outline-primary">Lire les articles</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="offer-card h-100 p-4">
+          <h5 class="fw-semibold" style="color: var(--text-dark);">Podcasts</h5>
+          <p class="muted">
+            Dev Zone & ART au Féminin : conversations sur la tech, l’art et les parcours.
+          </p>
+          <a href="/podcasts" class="btn btn-outline-primary">Découvrir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="section" style="background-color: #fff;">
+    <div class="container">
+      <div class="row align-items-center g-5 justify-content-center">
+        <div class="col-lg-5 text-center">
+          <img src="/assets/images/portrait.jpg" alt="Portrait Aldjia" class="rounded-circle shadow"
+               style="width: 190px; height: 190px; object-fit: cover;">
+        </div>
+
+        <div class="col-lg-7">
+          <h2 class="section-title mb-3">Qui suis-je ?</h2>
+          <p class="muted mb-3">
+            Je suis <strong>Aldjia Boughias</strong>, développeuse Fullstack freelance.
+            J’accompagne des professionnels et des indépendants dans la création de sites web et applications sur mesure,
+            pensés pour leurs usages et leur évolution.
+          </p>
+
+          <p class="muted mb-3">
+            Pendant plus de 10 ans, j’ai travaillé au contact direct de clients : comprendre les besoins,
+            poser un cadre, et avancer avec méthode. Aujourd’hui, j’applique la même exigence à la conception
+            de produits digitaux.
+          </p>
+
+          <p class="muted mb-4">
+            Je suis aussi fondatrice de <strong>Readnest</strong> et des podcasts <strong>Dev Zone</strong> et
+            <strong>ART au Féminin</strong>. Je crois qu’un bon produit digital est avant tout une réponse à
+            un problème humain bien identifié.
+          </p>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="/about" class="btn btn-primary">Découvrir mon parcours</a>
+            <a href="/contact" class="btn btn-outline-primary">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="container section">
+    <div class="hero-card p-5 text-center">
+      <h2 class="section-title mb-2">Discutons de votre projet</h2>
+      <p class="muted mb-4 maxw">
+        Dites-moi où vous en êtes (idée, refonte, besoin d’un back-office, application…).
+        Je vous réponds avec des questions simples et une première estimation.
+      </p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/contact" class="btn btn-primary btn-lg">Me contacter</a>
+        <a href="#offres" class="btn btn-outline-primary btn-lg">Voir les offres</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEAUX -->
+  <section class="container text-center py-4">
+    <h4 class="mb-3" style="color: var(--text-dark);">Me retrouver en ligne</h4>
+    <div class="d-flex justify-content-center gap-4">
+      <a href="https://github.com/AldjiaDev" target="_blank" class="mx-2" aria-label="GitHub" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
+      </a>
+      <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/" target="_blank" class="mx-2" aria-label="LinkedIn" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
+      </a>
+    </div>
+  </section>
+
+</div>
 
 <!-- Typed.js -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   const typed = new Typed("#typed-text", {
-    strings: ["web et mobiles.", "impactantes.", "centrées utilisateur.", "innovantes."],
-    typeSpeed: 50,
-    backSpeed: 30,
-    backDelay: 2500,
+    strings: ["claires.", "fiables.", "évolutives.", "centrées sur l’usage."],
+    typeSpeed: 45,
+    backSpeed: 25,
+    backDelay: 2200,
     loop: true,
-  } );
+  });
 </script>
+
