@@ -5,72 +5,94 @@ description: Développeuse Fullstack freelance spécialisée en Ruby on Rails. P
 permalink: /about/
 ---
 
-<!-- INTRO / HERO -->
+<!-- HERO (Galerie B, sans orange) -->
 <section class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-12">
-      <div class="card border-0 shadow-sm rounded-4 p-5 d-flex flex-column flex-md-row align-items-center justify-content-between"
-           style="background-color: var(--primary); color: white;">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-5 text-center">
+      <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+           alt="Portrait Aldjia Boughias – Développeuse Fullstack freelance"
+           class="rounded-circle shadow"
+           style="width: 190px; height: 190px; object-fit: cover;">
+    </div>
 
-        <div class="text-center text-md-start mb-4 mb-md-0">
-          <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-               alt="Portrait Aldjia Boughias – Développeuse Fullstack freelance"
-               class="rounded-circle shadow"
-               style="width: 180px; height: 180px; object-fit: cover;">
-        </div>
+    <div class="col-lg-7">
+      <h1 class="display-5 fw-bold mb-3">
+        Aldjia Boughias
+      </h1>
+      <p class="lead muted mb-4">
+        Développeuse Fullstack freelance (Ruby on Rails).
+        Je conçois des sites web et applications utiles, structurés et évolutifs.
+      </p>
 
-        <div class="text-center text-md-end">
-          <h1 class="display-5 fw-bold text-white">
-            <span style="letter-spacing: .5px;">Aldjia</span>
-            <span style="color: var(--accent); font-weight: 700;">Boughias</span>
-          </h1>
-          <p class="lead text-white-50 mb-0">
-            Développeuse Fullstack freelance · Ruby on Rails<br>
-            Je conçois des sites web et applications utiles, structurés et évolutifs.
-          </p>
-        </div>
-
+      <div class="d-flex gap-3 flex-wrap">
+        <a class="btn btn-primary btn-lg"
+           href="https://cal.com/aldjia-boughias"
+           target="_blank"
+           rel="noopener">
+          Prendre RDV
+        </a>
+        <a class="btn btn-outline-primary btn-lg" href="{{ '/realisations' | relative_url }}">
+          Voir le portfolio
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTENU -->
 <div class="container">
 
-  <!-- PRÉSENTATION -->
-  <section class="mb-5">
-    <h2 class="h3 fw-semibold mb-3">Mon approche</h2>
-    <p class="muted">
-      J’accompagne des professionnels et des indépendants dans la création de sites web et
-      d’applications sur mesure. Mon travail commence toujours par la compréhension du besoin,
-      des usages et du contexte métier, avant toute ligne de code.
-    </p>
-    <p class="muted">
-      Avant de devenir développeuse, j’ai travaillé plus de 10 ans au contact direct de clients.
-      Cette expérience structure aujourd’hui ma manière de concevoir des produits digitaux :
-      clairs, utiles et orientés solutions.
-    </p>
+  <!-- APPROCHE -->
+  <section class="section pt-0">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="section-title mb-3">Mon approche</h2>
+        <p class="muted mb-3">
+          J’accompagne des professionnels, artistes et structures culturelles dans la création de sites web
+          et d’applications sur mesure. Mon point de départ : comprendre le besoin, les usages et le contexte métier,
+          avant toute ligne de code.
+        </p>
+        <p class="muted mb-0">
+          Avant le développement, j’ai travaillé plus de 10 ans au contact direct de clients.
+          Cette expérience structure aujourd’hui ma manière de concevoir des produits digitaux :
+          clairs, fiables et orientés solutions.
+        </p>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="offer-card p-4 h-100">
+          <h3 class="h5 fw-bold mb-3">Ce que vous pouvez attendre</h3>
+          <ul class="muted mb-0 ps-3">
+            <li class="mb-2">Un cadrage clair (périmètre, priorités, planning).</li>
+            <li class="mb-2">Une communication simple, même si vous n’êtes pas technique.</li>
+            <li class="mb-2">Une solution maintenable et prête à évoluer.</li>
+            <li class="mb-0">Un rendu soigné, cohérent avec votre univers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- COMPÉTENCES -->
-  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #FFF6EF;">
-    <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3">Compétences techniques</h2>
+  <!-- COMPÉTENCES (sans fond coloré) -->
+  <section class="section pt-0">
+    <div class="offer-card p-4 p-md-5">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+        <h2 class="section-title mb-0">Compétences techniques</h2>
+        <p class="muted mb-0">Stack principale : Ruby on Rails · JavaScript</p>
+      </div>
 
-      <div class="row">
+      <div class="row g-4">
         <div class="col-md-6">
-          <h3 class="h6 fw-semibold">Langages & frameworks</h3>
-          <ul>
+          <h3 class="h6 fw-bold mb-2">Langages & frameworks</h3>
+          <ul class="mb-0">
             <li>Backend : Ruby, Ruby on Rails</li>
-            <li>Frontend : JavaScript, HTML5, CSS3, Bootstrap</li>
-            <li>Mobile : Swift, SwiftUI (iOS)</li>
+            <li>Frontend : JavaScript, HTML, CSS, Bootstrap</li>
+            <li>Mobile (si pertinent) : Swift, SwiftUI</li>
           </ul>
         </div>
 
         <div class="col-md-6">
-          <h3 class="h6 fw-semibold">Outils & déploiement</h3>
-          <ul>
+          <h3 class="h6 fw-bold mb-2">Outils & déploiement</h3>
+          <ul class="mb-0">
             <li>Git, GitHub</li>
             <li>Heroku, GitHub Pages</li>
             <li>Supabase</li>
@@ -81,58 +103,94 @@ permalink: /about/
     </div>
   </section>
 
-  <!-- PROJETS -->
-  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #F7FAFF;">
-    <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3">Projets & réalisations</h2>
+  <!-- PROJETS (cards type galerie) -->
+  <section class="section pt-0">
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
+      <h2 class="section-title mb-0">Projets & réalisations</h2>
+      <a class="muted" href="{{ '/realisations' | relative_url }}">Voir tout le portfolio →</a>
+    </div>
 
-      <h3 class="h6 fw-semibold">
-        <a href="https://www.readnest.fr/" target="_blank" rel="noopener">Readnest</a>
-      </h3>
-      <p class="muted">
-        Application web communautaire développée en Ruby on Rails, avec gestion de rôles,
-        carte interactive et fonctionnalités sociales.
-      </p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 d-flex">
+        <div class="offer-card p-4 w-100">
+          <h3 class="h5 fw-bold mb-2">
+            <a href="https://www.readnest.fr/" target="_blank" rel="noopener">Readnest</a>
+          </h3>
+          <p class="muted mb-3">
+            Application web communautaire (Ruby on Rails) : gestion de rôles,
+            carte interactive et fonctionnalités sociales.
+          </p>
+          <a class="btn btn-outline-primary w-100"
+             href="https://www.readnest.fr/"
+             target="_blank"
+             rel="noopener">
+            Visiter le site
+          </a>
+        </div>
+      </div>
 
-      <h3 class="h6 fw-semibold">
-        <a href="https://quotety.aldjia.dev/" target="_blank" rel="noopener">Quotety</a>
-      </h3>
-      <p class="muted">
-        Application web avec back-office personnalisé et gestion de permissions.
-      </p>
+      <div class="col-md-6 col-lg-4 d-flex">
+        <div class="offer-card p-4 w-100">
+          <h3 class="h5 fw-bold mb-2">
+            <a href="https://quotety.aldjia.dev/" target="_blank" rel="noopener">Quotety</a>
+          </h3>
+          <p class="muted mb-3">
+            Application web avec back-office personnalisé et gestion de permissions.
+            Conçue pour être simple à administrer.
+          </p>
+          <a class="btn btn-outline-primary w-100"
+             href="https://quotety.aldjia.dev/"
+             target="_blank"
+             rel="noopener">
+            Voir le projet
+          </a>
+        </div>
+      </div>
 
-      <h3 class="h6 fw-semibold">Podcasts</h3>
-      <p class="muted">
-        Créatrice des podcasts <strong>Dev Zone</strong> et <strong>ART au Féminin</strong>,
-        autour de la tech, des parcours et de la création.
-      </p>
+      <div class="col-lg-4 d-flex">
+        <div class="offer-card p-4 w-100">
+          <h3 class="h5 fw-bold mb-2">Podcasts</h3>
+          <p class="muted mb-3">
+            Créatrice de <strong>Dev Zone</strong> et <strong>ART au Féminin</strong> :
+            conversations autour de la tech, des parcours et de la création.
+          </p>
+          <a class="btn btn-outline-primary w-100" href="{{ '/podcasts' | relative_url }}">
+            Découvrir
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- EXPÉRIENCE -->
-  <section class="card shadow-sm border-0 rounded-4 mb-5">
-    <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3">Expérience professionnelle</h2>
+  <!-- EXPÉRIENCE (synthétique) -->
+  <section class="section pt-0">
+    <div class="offer-card p-4 p-md-5">
+      <h2 class="section-title mb-4">Expérience</h2>
 
-      <h3 class="h6 fw-semibold">Développeuse Fullstack freelance</h3>
-      <p class="muted">
-        Conception, développement et déploiement d’applications web sur mesure.
-      </p>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h3 class="h6 fw-bold mb-2">Freelance · Développement web</h3>
+          <p class="muted mb-0">
+            Conception, développement et déploiement de sites et d’applications sur mesure.
+            Approche orientée usages, structure et qualité.
+          </p>
+        </div>
 
-      <h3 class="h6 fw-semibold">BNP Paribas – Relation client</h3>
-      <p class="muted">
-        13 ans d’expérience en relation client, gestion de besoins complexes et accompagnement
-        à la décision. Une compétence clé pour traduire un besoin métier en solution technique.
-      </p>
+        <div class="col-md-6">
+          <h3 class="h6 fw-bold mb-2">Relation client · +10 ans</h3>
+          <p class="muted mb-0">
+            Une expérience qui m’aide à cadrer, prioriser et traduire un besoin métier en solution digitale claire.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- FORMATION -->
-  <section class="card shadow-sm border-0 rounded-4 mb-5" style="background-color: #FEF9F3;">
-    <div class="card-body">
-      <h2 class="h4 fw-semibold mb-3">Formations</h2>
-
-      <ul>
+  <!-- FORMATION (simple) -->
+  <section class="section pt-0">
+    <div class="offer-card p-4 p-md-5">
+      <h2 class="section-title mb-3">Formations</h2>
+      <ul class="muted mb-0">
         <li>Apple Foundation Program – Simplon (Swift, SwiftUI)</li>
         <li>Bootcamp Développeur Web – Le Wagon (Ruby on Rails, JavaScript)</li>
         <li>Histoire de l’Art – Beaux-Arts</li>
@@ -144,12 +202,15 @@ permalink: /about/
 
 <!-- CTA -->
 <section class="container py-5 text-center">
-  <h2 class="h4 mb-3">Vous avez un projet ?</h2>
-  <p class="muted mb-4">
+  <h2 class="section-title mb-3">Vous avez un projet ?</h2>
+  <p class="muted mb-4 maxw">
     Je vous propose un échange de 30 minutes pour comprendre votre besoin
     et voir si nous pouvons travailler ensemble.
   </p>
-  <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+  <a href="https://cal.com/aldjia-boughias"
+     target="_blank"
+     rel="noopener"
+     class="btn btn-primary btn-lg">
     Prendre un rendez-vous
   </a>
 </section>
