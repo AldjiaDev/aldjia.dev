@@ -1,41 +1,46 @@
-/* 🌈 Palette Aldjia Dev */
+/* ================================
+   Aldjia Dev — Global Styles (safe)
+   ================================ */
+
+/* 🌈 Palette */
 :root {
-  --primary: #F4A261;     /* Orange doux = motivation */
-  --secondary: #A3B18A;   /* Vert sauge = curiosité, calme */
-  --accent: #FFD369;      /* Jaune lumineux = énergie */
-  --bg-light: #FEF9F3;    /* Fond clair doux */
+  --primary: #F4A261;     /* Orange doux */
+  --secondary: #A3B18A;   /* Vert sauge */
+  --accent: #FFD369;      /* Jaune lumineux */
+  --bg-light: #FEF9F3;    /* Fond clair */
   --text-dark: #2E2E2E;   /* Texte lisible */
 }
 
+/* Base layout */
 html, body {
   height: 100%;
+}
+body {
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
 }
 main {
   flex: 1;
 }
 
-/* Typographie globale */
-body, .card, .list-group-item, .navbar, .btn, .lead, h1, h2, h3, h4, h5, h6, p, a, li, span {
-  font-family: 'Poppins', sans-serif !important;
+/* Typography */
+body, .card, .list-group-item, .navbar, .btn, .lead,
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+  font-family: "Poppins", sans-serif !important;
   color: var(--text-dark);
   line-height: 1.7;
 }
 
-body {
-  background-color: var(--bg-light);
-  margin: 0;
-  padding: 0;
-}
-
-/* Titres */
+/* Headings */
 h1, h2, h3, h4 {
   font-weight: 700;
   color: var(--primary);
 }
 
-/* Liens */
+/* Links */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -44,7 +49,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* Boutons */
+/* Buttons */
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -69,49 +74,38 @@ a:hover {
   padding-left: 0;
 }
 
+/* Footer legacy class (if still used somewhere) */
 .footer {
   background-color: var(--bg-light);
   font-size: 0.9rem;
   border-top: 1px solid #e6e6e6;
 }
-
 .footer a {
   color: var(--text-dark);
   text-decoration: none;
 }
-
 .footer a:hover {
   color: var(--primary);
   text-decoration: underline;
 }
-.post-wrap{max-width:760px;margin:40px auto 80px;padding:0 20px}
-.post-header{margin-bottom:16px}
-.post-title{font-size:clamp(2rem,4vw,2.6rem);line-height:1.12;margin:6px 0 10px;font-weight:700}
-.post-meta{color:#6b7280;font-size:14px;margin-bottom:16px}
-.post-hero{margin:22px 0 28px}
-.post-hero img{width:100%;border-radius:14px;display:block;box-shadow:0 6px 28px rgba(0,0,0,.08)}
-.post-hero figcaption{font-size:13px;color:#8a8a8a;text-align:center;margin-top:8px}
-.post-content{font-size:18px;line-height:1.75;color:#1f2937}
-.post-content h2{font-size:1.6rem;margin:2.2rem 0 .8rem;line-height:1.25}
-.post-content h3{font-size:1.25rem;margin:1.6rem 0 .6rem}
-.post-content p{margin:1rem 0}
-.post-content img{max-width:100%;border-radius:10px;display:block;margin:1.2rem auto}
-.post-tags{margin-top:28px}
-.post-tag{display:inline-block;background:#f1f5f9;color:#0f172a;padding:.35rem .6rem;border-radius:999px;font-size:14px;margin:0 .35rem .35rem 0;text-decoration:none}
-.post-pager{margin-top:34px;display:flex;justify-content:space-between;gap:10px}
-.post-pager a{text-decoration:none;color:var(--primary,#6C4CF1)}
-.post-pager a:hover{text-decoration:underline}
 
-/* ===== Home (scopé) : look plus premium sans casser le reste ===== */
-.home .hero-card{
-  background: rgba(255,255,255,.82);
-  border: 1px solid rgba(46,46,46,.08);
-  border-radius: 28px;
-  box-shadow: 0 14px 50px rgba(0,0,0,.06);
-  backdrop-filter: blur(6px);
+/* ================================
+   Global utility styles (shared)
+   ================================ */
+.muted {
+  color: rgba(46,46,46,.72);
+}
+.maxw {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.home .kicker{
+.section {
+  padding: 88px 0;
+}
+
+.kicker {
   color: rgba(46,46,46,.65);
   font-weight: 600;
   letter-spacing: .08em;
@@ -119,59 +113,209 @@ a:hover {
   font-size: .8rem;
 }
 
-.home .hero-title{
-  color: var(--text-dark);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.home .hero-subtitle{
-  color: rgba(46,46,46,.72);
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.home .section{
-  padding: 88px 0;
-}
-
-.home .section-title{
+.section-title {
   color: var(--text-dark);
   letter-spacing: -0.02em;
 }
 
-.home .muted{
-  color: rgba(46,46,46,.72) !important;
-}
-
-.home .offer-card{
+/* Common “offer card” style (used across pages) */
+.offer-card {
   border: 1px solid rgba(46,46,46,.08);
   border-radius: 22px;
   box-shadow: 0 10px 35px rgba(0,0,0,.05);
   background: #fff;
 }
 
-.home .offer-price{
-  color: var(--text-dark);
-}
-
-.home .pill{
-  display:inline-block;
+/* Pill badge */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
   background: rgba(244,162,97,.12);
   border: 1px solid rgba(244,162,97,.25);
   color: var(--text-dark);
-  padding: .45rem .75rem;
+  padding: 0 .65rem;
   border-radius: 999px;
   font-size: .95rem;
+  font-weight: 600;
 }
 
-/* Boutons plus sobres uniquement sur la home */
-.home .btn-outline-primary{
+/* ================================
+   Navbar & Footer (global, safe)
+   ================================ */
+.site-nav {
+  background: var(--bg-light);
+}
+
+.site-brand {
+  color: var(--primary) !important;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.site-nav .nav-link {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.site-nav .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.site-nav .nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-nav .site-cta {
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.site-footer {
+  background: var(--bg-light);
+  border-top: 1px solid #eee;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ================================
+   Blog / Post layout
+   ================================ */
+.post-wrap {
+  max-width: 760px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.post-header {
+  margin-bottom: 16px;
+}
+
+.post-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.12;
+  margin: 6px 0 10px;
+  font-weight: 700;
+}
+
+.post-meta {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.post-hero {
+  margin: 22px 0 28px;
+}
+
+.post-hero img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 6px 28px rgba(0,0,0,.08);
+}
+
+.post-hero figcaption {
+  font-size: 13px;
+  color: #8a8a8a;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #1f2937;
+}
+
+.post-content h2 {
+  font-size: 1.6rem;
+  margin: 2.2rem 0 .8rem;
+  line-height: 1.25;
+}
+
+.post-content h3 {
+  font-size: 1.25rem;
+  margin: 1.6rem 0 .6rem;
+}
+
+.post-content p {
+  margin: 1rem 0;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 1.2rem auto;
+}
+
+.post-tags {
+  margin-top: 28px;
+}
+
+.post-tag {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: 14px;
+  margin: 0 .35rem .35rem 0;
+  text-decoration: none;
+}
+
+.post-pager {
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.post-pager a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.post-pager a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Home (scoped) — premium feel
+   ================================ */
+.home .hero-card {
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(46,46,46,.08);
+  border-radius: 28px;
+  box-shadow: 0 14px 50px rgba(0,0,0,.06);
+  backdrop-filter: blur(6px);
+}
+
+.home .hero-title {
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.home .hero-subtitle {
+  color: rgba(46,46,46,.72);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Buttons more sober only on the home */
+.home .btn-outline-primary {
   border-color: rgba(46,46,46,.22);
   color: var(--text-dark);
 }
 
-.home .btn-outline-primary:hover{
+.home .btn-outline-primary:hover {
   background: rgba(244,162,97,.12);
   border-color: rgba(244,162,97,.35);
   color: var(--text-dark);
