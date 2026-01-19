@@ -125,20 +125,43 @@ permalink: /links/
       <h2 class="links-h2 mb-3">Réseaux</h2>
 
       <div class="links-social">
-        <a href="https://www.linkedin.com/in/aldjia-boughias/"
-           target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+
+        <a class="social-card"
+          href="https://www.linkedin.com/in/aldjia-boughias/"
+          target="_blank" rel="noopener" aria-label="LinkedIn">
+          <div class="social-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+          </div>
+          <div class="social-text">
+            <div class="social-title">LinkedIn</div>
+            <div class="social-meta">Profil</div>
+          </div>
         </a>
 
-        <a href="https://github.com/AldjiaDev"
-           target="_blank" rel="noopener" aria-label="GitHub">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        <a class="social-card"
+          href="https://github.com/AldjiaDev"
+          target="_blank" rel="noopener" aria-label="GitHub">
+          <div class="social-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          </div>
+          <div class="social-text">
+            <div class="social-title">GitHub</div>
+            <div class="social-meta">Code</div>
+          </div>
         </a>
 
-        <a href="https://www.instagram.com/graines_de_nouvelles/"
-           target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        <a class="social-card"
+          href="https://www.instagram.com/graines_de_nouvelles/"
+          target="_blank" rel="noopener" aria-label="Instagram">
+          <div class="social-icon social-icon--ig">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+          </div>
+          <div class="social-text">
+            <div class="social-title">Instagram</div>
+            <div class="social-meta">Actu</div>
+          </div>
         </a>
+
       </div>
     </section>
 
@@ -272,30 +295,86 @@ permalink: /links/
   text-shadow: 0 6px 16px rgba(0,0,0,.28);
 }
 
-/* SOCIAL — centered */
+/* =========================
+   LINKS — SOCIAL CARDS
+   ========================= */
+
 .links-social{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  align-items:center;
-  padding-top: 6px;
-}
-.links-social img{
-  width:28px;
-  height:28px;
-  opacity:.7;
-  transition:.2s ease;
-}
-.links-social img:hover{
-  opacity:1;
-  transform: translateY(-1px);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 14px;
+  flex-wrap: nowrap;
 }
 
-/* MOBILE */
-@media (max-width:768px){
-  .links-grid{
-    grid-template-columns: 1fr;
-    justify-content: stretch;
+.social-card{
+  width: 190px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: #fff;
+
+  border: 1px solid rgba(17,17,17,.10);
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.social-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 55px rgba(0,0,0,.10);
+  border-color: rgba(17,17,17,.16);
+}
+
+.social-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(17,17,17,.10);
+  background: rgba(17,17,17,.03);
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 auto;
+}
+
+.social-icon img{
+  width: 22px;
+  height: 22px;
+}
+
+/* Simple-icons = SVG noir => on le rend plus doux */
+.social-icon--ig img{
+  opacity: .88;
+  filter: invert(0.08);
+}
+
+.social-title{
+  font-weight: 900;
+  color: #111;
+  line-height: 1.1;
+}
+
+.social-meta{
+  color: rgba(17,17,17,.62);
+  font-size: .9rem;
+  line-height: 1.1;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .links-social{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .social-card{
+    width: min(240px, 100%);
   }
 }
+
 </style>
