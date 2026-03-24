@@ -1,52 +1,48 @@
 ---
 permalink: /404.html
-layout: page
+layout: default
+title: "Page introuvable"
+description: "Cette page n'existe pas — Aldjia Boughias, développeuse web freelance spécialisée art & culture."
 ---
 
-<style type="text/css" media="screen">
-  .container-404 {
-    margin: 60px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  .container-404 img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
-  .container-404 h1 {
-    margin: 20px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: var(--primary);
-  }
-  .container-404 p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-</style>
+<section style="min-height: 70vh; display: flex; align-items: center; padding: 80px 0;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
 
-<div class="container-404">
-  <!-- Logo -->
-  <img src="/assets/images/favicon.png" alt="Logo Aldjia">
+        <p class="kicker mb-4">Erreur 404</p>
 
-  <!-- Message -->
-  <h1>404</h1>
-  <p><strong>Oups, cette page n’existe pas…</strong></p>
-  <p>En attendant, vous pouvez me retrouver ici :</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(5rem, 12vw, 9rem);
+          font-weight: 600;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          color: var(--bordeaux);
+          margin-bottom: 1.5rem;
+        ">404</h1>
 
-  <!-- Liens sociaux -->
-  <div class="social-links mt-3">
-    <a href="{{ site.github_url }}" target="_blank" aria-label="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40" height="40">
-    </a>
-    <a href="{{ site.linkedin_url }}" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40">
-    </a>
+        <p style="font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: .75rem;">
+          Cette page n'existe pas.
+        </p>
+        <p class="muted mb-5" style="font-size: .95rem; line-height: 1.7; max-width: 380px; margin-left: auto; margin-right: auto;">
+          Elle a peut-être été déplacée ou supprimée.<br>
+          Voici quelques endroits où aller à la place.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+          <a href="{{ '/' | relative_url }}" class="btn btn-primary">Accueil</a>
+          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline">Portfolio</a>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline">Prendre RDV</a>
+        </div>
+
+        <p style="font-size: .8rem; color: var(--muted);">
+          Une erreur ? Écrivez-moi à
+          <a href="mailto:{{ site.email }}" style="color: var(--bordeaux); text-decoration: none;">{{ site.email }}</a>
+        </p>
+
+      </div>
+    </div>
   </div>
-</div>
+</section>
