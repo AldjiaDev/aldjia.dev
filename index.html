@@ -238,13 +238,16 @@ description: "Développeuse web freelance à Lille, spécialisée art & culture.
           </a>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="sector-card px-lg-4">
-            <div class="sector-number">02</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Artistes</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Portfolio, œuvres, calendrier, contact avec les collectionneurs.
-            </p>
-          </div>
+          <a href="{{ '/secteurs/artistes' | relative_url }}" style="text-decoration: none; color: inherit;">
+            <div class="sector-card px-lg-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor=''">
+              <div class="sector-number">02</div>
+              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Artistes</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+                Portfolio, œuvres, calendrier, contact avec les collectionneurs.
+              </p>
+              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
+            </div>
+          </a>
         </div>
         <div class="col-md-6 col-lg-3">
           <a href="{{ '/secteurs/maisons-de-ventes' | relative_url }}" style="text-decoration: none; color: inherit;">
@@ -259,13 +262,16 @@ description: "Développeuse web freelance à Lille, spécialisée art & culture.
           </a>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="sector-card ps-lg-4">
-            <div class="sector-number">04</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Institutions & créatifs</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Musées, centres culturels, photographes, éditeurs.
-            </p>
-          </div>
+          <a href="{{ '/secteurs/institutions-culturelles' | relative_url }}" style="text-decoration: none; color: inherit;">
+            <div class="sector-card ps-lg-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor=''">
+              <div class="sector-number">04</div>
+              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Institutions & créatifs</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+                Musées, centres culturels, photographes, éditeurs.
+              </p>
+              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
+            </div>
+          </a>
         </div>
       </div>
 
