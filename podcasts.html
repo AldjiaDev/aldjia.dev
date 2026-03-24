@@ -1,88 +1,111 @@
 ---
 layout: default
-title: "Podcasts sur la tech, le développement web et la création"
-description: "Podcasts autour de la tech, du développement web, de la création et des parcours professionnels : Dev Zone et ART au Féminin."
+title: "Podcasts — Dev Zone & Art au Féminin"
+description: "Deux podcasts créés par Aldjia Boughias : Dev Zone, sur le développement web et les parcours tech, et Art au Féminin, dédié aux artistes femmes dans l'histoire de l'art."
 permalink: /podcasts/
 ---
 
-<section class="container py-5">
-
-  <!-- HERO PODCASTS (SEO + contexte) -->
-  <header class="text-center mb-5">
-
-    <h1 class="display-5 fw-bold mb-3" style="color: var(--text-dark);">
-      Podcasts sur la tech, le développement web et la création
-    </h1>
-
-    <p class="muted maxw mb-4">
-      À travers mes podcasts <strong>Dev Zone</strong> et <strong>ART au Féminin</strong>,
-      je donne la parole à des développeur·se·s, des artistes et des créateur·rice·s
-      pour explorer les parcours, la pratique et les réalités du métier.
-    </p>
-  </header>
-
-  <!-- LISTE DES PODCASTS -->
-  <div id="podcasts-list" class="row g-4 justify-content-center">
-
-    <!-- Podcast : ART AU FÉMININ -->
-    <article class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="ART au Féminin"
-        description="Podcast lancé en 2019 qui met en lumière les femmes artistes d’hier et d’aujourd’hui à travers des interviews, récits et analyses culturelles. Une parole artistique, engagée et nécessaire."
-        image="/assets/images/artaufeminin.jpeg"
-        url="/podcasts/art-au-feminin/"
-        cta="Voir les épisodes" %}
-    </article>
-
-    <!-- Podcast : DEV ZONE -->
-    <article class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone"
-        description="Podcast dédié au développement web. J’y échange avec des développeur·se·s sur leurs parcours, leurs apprentissages, leurs projets et les coulisses du métier."
-        image="/assets/images/devzone.jpeg"
-        url="/podcasts/dev-zone/"
-        cta="Voir les épisodes" %}
-    </article>
-
+<!-- HERO -->
+<section style="padding: 80px 0 64px;">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-lg-7">
+        <p class="kicker mb-3">Créations</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.8rem, 5vw, 4.5rem);
+          font-weight: 600;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+          margin-bottom: 0;
+        ">Podcasts</h1>
+      </div>
+      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
+          Deux projets audio pour explorer la tech, l'art et les parcours qui les traversent.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- PARTICIPER AU PODCAST -->
-<section class="container py-5">
-  <header class="text-center mb-4">
-    <h2 class="section-title">Participer à un épisode de podcast</h2>
-    <p class="muted maxw">
-      Vous êtes développeur·se, artiste ou créateur·rice et souhaitez partager votre parcours,
-      votre pratique ou un sujet qui vous tient à cœur ?
-    </p>
-  </header>
+<div class="container" style="padding-bottom: 96px;">
+  <div class="row g-4">
 
-  <div class="text-center">
-    <a href="https://airtable.com/appYf4n8T5tio1w6x/pagjYDsjo9u6EaiuK/form"
-       target="_blank"
-       rel="noopener"
-       class="btn btn-primary btn-lg">
-      Compléter le formulaire
-    </a>
+    <!-- ART AU FÉMININ -->
+    <div class="col-lg-6">
+      <div style="background: var(--ink); border-radius: var(--radius); padding: 2.5rem; height: 100%; display: flex; flex-direction: column;">
+        <p style="font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: rgba(247,244,239,.40); margin-bottom: 1.5rem;">
+          <span style="display: inline-block; width: 18px; height: 1px; background: var(--bordeaux); vertical-align: middle; margin-right: .5rem; margin-bottom: 1px;"></span>
+          Depuis 2019
+        </p>
+        <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 2.2rem; font-weight: 600; color: #F7F4EF; line-height: 1.1; margin-bottom: 1rem;">
+          Art au Féminin
+        </h2>
+        <p style="color: rgba(247,244,239,.65); font-size: .95rem; line-height: 1.75; flex: 1; margin-bottom: 1.5rem;">
+          Une plateforme dédiée aux artistes femmes dans l'histoire de l'art.
+          Épisodes, articles, sélection de livres et citations — pour redonner sa place
+          à une création trop longtemps mise à l'écart.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span style="font-size: .75rem; border: 1px solid rgba(247,244,239,.15); border-radius: 4px; padding: .2rem .6rem; color: rgba(247,244,239,.55);">Podcast</span>
+          <span style="font-size: .75rem; border: 1px solid rgba(247,244,239,.15); border-radius: 4px; padding: .2rem .6rem; color: rgba(247,244,239,.55);">Articles</span>
+          <span style="font-size: .75rem; border: 1px solid rgba(247,244,239,.15); border-radius: 4px; padding: .2rem .6rem; color: rgba(247,244,239,.55);">Livres</span>
+          <span style="font-size: .75rem; border: 1px solid rgba(247,244,239,.15); border-radius: 4px; padding: .2rem .6rem; color: rgba(247,244,239,.55);">Citations</span>
+        </div>
+        <a href="{{ site.artaufeminin_url }}"
+           target="_blank" rel="noopener"
+           style="background: var(--bordeaux); border: 1px solid var(--bordeaux); border-radius: 8px; padding: .65rem 1.5rem; color: #fff !important; font-size: .875rem; font-weight: 500; letter-spacing: .04em; display: inline-block; align-self: flex-start;">
+          Découvrir le projet
+        </a>
+      </div>
+    </div>
+
+    <!-- DEV ZONE -->
+    <div class="col-lg-6">
+      <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2.5rem; height: 100%; display: flex; flex-direction: column;">
+        <p class="kicker mb-4" style="font-size: .72rem;">Depuis 2024</p>
+        <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 2.2rem; font-weight: 600; color: var(--ink); line-height: 1.1; margin-bottom: 1rem;">
+          Dev Zone
+        </h2>
+        <p class="muted mb-4" style="font-size: .95rem; line-height: 1.75; flex: 1;">
+          Des conversations avec des développeurs sur leur parcours, leur pratique
+          et la réalité du métier. Technologie, reconversion, entrepreneuriat,
+          produit — sans filtre.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span style="font-size: .75rem; border: 1px solid var(--line); border-radius: 4px; padding: .2rem .6rem; color: var(--muted);">Développement web</span>
+          <span style="font-size: .75rem; border: 1px solid var(--line); border-radius: 4px; padding: .2rem .6rem; color: var(--muted);">Parcours</span>
+          <span style="font-size: .75rem; border: 1px solid var(--line); border-radius: 4px; padding: .2rem .6rem; color: var(--muted);">Tech</span>
+        </div>
+        <a href="{{ '/podcasts/dev-zone' | relative_url }}" class="btn btn-outline-primary" style="align-self: flex-start;">
+          Voir les épisodes
+        </a>
+      </div>
+    </div>
+
   </div>
-</section>
 
-<!-- CTA FINAL (conversion douce) -->
-<section class="container py-5">
-  <div class="hero-card p-5 text-center">
-    <h2 class="section-title mb-2">
-      Vous avez un projet digital ?
-    </h2>
-    <p class="muted mb-4 maxw">
-      Si vous êtes ici pour le podcast mais que vous avez aussi un projet web ou applicatif,
-      nous pouvons en discuter lors d’un échange sans engagement.
-    </p>
-
-    <a href="https://cal.com/aldjia-boughias"
-       target="_blank"
-       rel="noopener"
-       class="btn btn-primary btn-lg">
-      Prendre un rendez-vous
-    </a>
+  <!-- PARTICIPER -->
+  <div class="mt-5 pt-5" style="border-top: 1px solid var(--line);">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <p class="kicker mb-2">Participer</p>
+        <h2 class="section-title mb-3">Vous souhaitez témoigner ?</h2>
+        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.75;">
+          Développeur·se, artiste, créateur·rice — si vous avez un parcours, une pratique
+          ou un sujet à partager, je serais ravie de vous recevoir dans un épisode.
+        </p>
+      </div>
+      <div class="col-lg-4 offset-lg-1 text-lg-end">
+        <a href="{{ site.podcast_form_url }}"
+           target="_blank" rel="noopener"
+           class="btn btn-primary btn-lg">
+          Compléter le formulaire
+        </a>
+      </div>
+    </div>
   </div>
-</section>
+
+</div>

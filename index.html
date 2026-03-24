@@ -1,316 +1,468 @@
 ---
 layout: default
-title: "Sites web & applications Ruby on Rails — sur mesure, clairs et évolutifs"
-description: "Je conçois des sites web et applications sur mesure pour professionnels et indépendants : crédibles, rapides, pensés pour vos usages et votre croissance."
+title: "Développeuse web pour l'art & la culture — Sites et applications sur mesure"
+description: "Aldjia Boughias, développeuse web freelance à Lille. Je crée des sites et applications sur mesure pour galeries d'art, artistes, maisons de ventes aux enchères et institutions culturelles. Formation Beaux-Arts + Ruby on Rails."
 ---
 
 <div class="home">
 
-  <!-- HERO -->
-  <section class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <div class="hero-card text-center p-5">
+  <!-- =====================
+       HERO
+       ===================== -->
+  <section class="hero-section" aria-label="Introduction">
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-          <p class="kicker mb-3">Développement web sur mesure</p>
+        <div class="col-lg-7">
+          <p class="kicker mb-4">Développement web · Art & Culture</p>
 
-          <h1 class="display-5 fw-bold mb-3 hero-title">
-            Un site qui donne confiance.<br class="d-none d-md-block">
-            Une solution qui simplifie votre quotidien.
+          <h1 class="hero-title mb-0">
+            Le web au service<br>
+            de l'art &amp; de la culture
           </h1>
 
-          <p class="mb-4" style="font-size: 1.6rem; font-weight: 600; line-height: 1.35;">
-            Je vous aide à transformer votre besoin en solution
-            <span style="display:inline-block; overflow: visible !important;">
-              <span id="typed-text" style="color: var(--primary);"></span>
-            </span>
+          <div class="hero-divider"></div>
+
+          <p class="hero-subtitle mb-5">
+            Je conçois des sites et applications sur mesure pour les galeries d'art, artistes,
+            maisons de ventes aux enchères et institutions culturelles.
+            Une double formation Beaux-Arts et développement web — pour comprendre
+            votre univers avant d'écrire la première ligne de code.
           </p>
 
-          <p class="muted maxw mb-4">
-            Pour artistes, institutions culturelles, maisons de ventes, indépendants et PME :
-            un site vitrine, un site dynamique ou une application métier — cadrés, livrés, maintenables.
-          </p>
-
-          <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://cal.com/aldjia-boughias"
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="{{ site.cal_url }}"
                target="_blank"
                rel="noopener"
                class="btn btn-primary btn-lg">
               Discutons de votre projet
             </a>
-
-            <a href="#offres" class="btn btn-outline-primary btn-lg">Voir les offres</a>
-            <a href="#reassurance" class="btn btn-outline-primary btn-lg">Ce que vous obtenez</a>
+            <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
+              Voir les réalisations
+            </a>
           </div>
 
-          <p class="muted mt-3 mb-0" style="font-size: .95rem;">
-            Échange de 30 minutes · sans engagement · conseils concrets
+          <p class="mt-3 mb-0" style="font-size: .85rem; color: var(--muted);">
+            Échange de 30 min · sans engagement · conseils concrets
           </p>
-
         </div>
+
+        <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+          <div style="position: relative; width: 100%; max-width: 420px;">
+            <div style="
+              position: absolute; top: -20px; right: -20px;
+              width: 180px; height: 180px;
+              border: 1px solid var(--bordeaux-mid);
+              border-radius: 2px;
+            "></div>
+            <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+                 alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
+                 style="
+                   width: 100%;
+                   aspect-ratio: 3/4;
+                   object-fit: cover;
+                   border-radius: 2px;
+                   position: relative;
+                   z-index: 1;
+                   border: 1px solid var(--line);
+                 ">
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CE QUE JE FAIS -->
-  <section class="container section">
-    <div class="text-center mb-5">
-      <h2 class="section-title mb-2">Ce que je réalise pour vous</h2>
-      <p class="muted maxw">
-        Une présence en ligne crédible, un contenu facile à mettre à jour, et si besoin une logique métier (back-office, formulaires, données).
-      </p>
-    </div>
+  <!-- =====================
+       RÉALISATION VEDETTE
+       ===================== -->
+  <section class="section" aria-labelledby="realisation-vedette">
+    <div class="container">
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-          <h3 class="h5 fw-semibold mb-2">Site vitrine premium</h3>
-          <p class="muted mb-0">
-            Une vitrine claire et élégante : services, portfolio, contact, prise de RDV, SEO de base et performance.
-          </p>
+      <div class="row align-items-center mb-5">
+        <div class="col">
+          <p class="kicker mb-2">Réalisation récente</p>
+          <h2 id="realisation-vedette" class="section-title mb-0">Un site pour une maison de ventes aux enchères</h2>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-          <h3 class="h5 fw-semibold mb-2">Site dynamique</h3>
-          <p class="muted mb-0">
-            Blog, actualités, événements, contenus administrables : vous gardez la main, sans dépendre de quelqu’un au quotidien.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
-          <h3 class="h5 fw-semibold mb-2">Application web métier</h3>
-          <p class="muted mb-0">
-            Ruby on Rails + JavaScript : back-office, workflow, rôles, données, automatisations — pour gagner du temps.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POUR QUI / CAS D'USAGE -->
-  <section class="container section">
-    <div class="text-center mb-5">
-      <h2 class="section-title mb-2">Exemples de besoins fréquents</h2>
-      <p class="muted maxw">
-        Quelques cas d’usage typiques (on adapte selon votre contexte et vos priorités).
-      </p>
-    </div>
-
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="offer-card h-100 p-4">
-          <h3 class="h5 fw-semibold mb-2">Art & culture</h3>
-          <ul class="muted ps-3 mb-0">
-            <li>Portfolio / artistes</li>
-            <li>Agenda / expositions</li>
-            <li>Pages éditoriales SEO</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="offer-card h-100 p-4">
-          <h3 class="h5 fw-semibold mb-2">Maisons de ventes / métiers</h3>
-          <ul class="muted ps-3 mb-0">
-            <li>Catalogue / lots</li>
-            <li>Formulaire d’estimation</li>
-            <li>Espace admin / back-office</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="offer-card h-100 p-4">
-          <h3 class="h5 fw-semibold mb-2">Indépendants & PME</h3>
-          <ul class="muted ps-3 mb-0">
-            <li>Offres & conversion</li>
-            <li>Réservation / prise de RDV</li>
-            <li>Suivi & évolutions</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MÉTHODE -->
-  <section class="container section">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <h2 class="section-title mb-3">Une méthode simple, pour éviter les surprises</h2>
-        <p class="muted mb-4">
-          On clarifie d’abord le besoin et les priorités, puis on construit en itérations.
-          Vous savez où on va, ce qui est inclus, et ce qui peut attendre.
-        </p>
-
-        <div class="d-flex flex-column gap-3">
-          <div class="d-flex gap-3">
-            <div class="pill">1</div>
-            <div>
-              <div class="fw-semibold">Cadrage</div>
-              <div class="muted">Objectif, contenu, pages/fonctionnalités, contraintes, délais.</div>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3">
-            <div class="pill">2</div>
-            <div>
-              <div class="fw-semibold">Conception</div>
-              <div class="muted">Structure & parcours, maquettes si nécessaire, messages clés.</div>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3">
-            <div class="pill">3</div>
-            <div>
-              <div class="fw-semibold">Développement</div>
-              <div class="muted">Itérations courtes, retours simples, avancement visible.</div>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3">
-            <div class="pill">4</div>
-            <div>
-              <div class="fw-semibold">Mise en ligne</div>
-              <div class="muted">Tests, performance, SEO de base, sécurité, déploiement.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 d-flex gap-3 flex-wrap">
-          <a href="https://cal.com/aldjia-boughias"
-             target="_blank"
-             rel="noopener"
-             class="btn btn-primary btn-lg">
-            Voir si votre projet est adapté
+        <div class="col-auto d-none d-md-block">
+          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">
+            Toutes les réalisations
           </a>
-          <a href="#offres" class="btn btn-outline-primary btn-lg">Voir les offres</a>
         </div>
       </div>
 
-      <div class="col-lg-6" id="reassurance">
-        <div class="hero-card p-4">
-          <h3 class="h5 fw-semibold mb-3">Ce que vous obtenez</h3>
-          <ul class="muted mb-0 ps-3">
-            <li class="mb-2"><strong>Un périmètre clair</strong> (moins d’allers-retours, plus de sérénité).</li>
-            <li class="mb-2"><strong>Un rendu propre et cohérent</strong> (typographie, hiérarchie, lisibilité).</li>
-            <li class="mb-2"><strong>Un site rapide</strong> (performance, images optimisées, bonnes pratiques).</li>
-            <li class="mb-2"><strong>Une base maintenable</strong> (évolutive, facile à améliorer).</li>
-          </ul>
+      <div class="featured-project p-5 p-md-0" style="background: var(--ink); border-radius: var(--radius);">
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-7 p-5">
+            <p class="project-label mb-3">Commissaires-priseurs · Mirabili Enchères</p>
+
+            <h3>Mirabili Enchères —<br>cabinet de curiosités<br>en ligne</h3>
+
+            <p class="mt-3 mb-4">
+              Application web Ruby on Rails pour une maison de ventes aux enchères.
+              Conçu comme un cabinet de curiosités numérique : présentation des ventes,
+              catalogue en ligne, formulaire d'estimation, SEO travaillé
+              pour le référencement des lots et des vacations.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="project-tag">Ruby on Rails</span>
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">Commissaires-priseurs</span>
+              <span class="project-tag">Cabinet de curiosités</span>
+            </div>
+
+            <a href="{{ '/realisations' | relative_url }}"
+               class="btn btn-bordeaux"
+               style="background: var(--bordeaux); border-color: var(--bordeaux); color: #fff;">
+              Voir le projet
+            </a>
+          </div>
+
+          <div class="col-lg-5 d-none d-lg-flex">
+            <div style="
+              background: rgba(247,244,239,.04);
+              border-left: 1px solid rgba(247,244,239,.08);
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 3rem;
+              border-radius: 0 var(--radius) var(--radius) 0;
+            ">
+              <div style="text-align: center;">
+                <p style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 2.8rem; color: rgba(247,244,239,.15); line-height: 1; margin: 0;">
+                  Art &amp;<br>Enchères
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       POURQUOI MOI
+       ===================== -->
+  <section class="section bg-white-warm" aria-labelledby="differenciateur">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+
+        <div class="col-lg-5">
+          <p class="kicker mb-3">Une double expertise</p>
+          <h2 id="differenciateur" class="section-title mb-4">
+            Beaux-Arts<br>
+            <em style="font-style: normal; color: var(--bordeaux);">+</em><br>
+            Développement web
+          </h2>
+          <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
+            Avant d'être développeuse, j'ai étudié aux Beaux-Arts.
+            Un parcours qui me permet de comprendre vos enjeux esthétiques,
+            éditoriaux et culturels — avant même d'ouvrir un éditeur de code.
+          </p>
+          <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
+            Je ne traduis pas votre vision en code — je la comprends, je l'enrichis,
+            et je la livre dans un site qui lui rend justice.
+          </p>
+          <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
+            En savoir plus sur mon parcours
+          </a>
+        </div>
+
+        <div class="col-lg-6 offset-lg-1">
+          <div style="
+            border-left: 2px solid var(--bordeaux-mid);
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+          ">
+            <div>
+              <p class="kicker mb-1" style="font-size: .68rem;">Compréhension sectorielle</p>
+              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
+                Vernissage, catalogue raisonné, vacation — je connais votre univers. Pas besoin de tout m'expliquer.
+              </p>
+            </div>
+            <div>
+              <p class="kicker mb-1" style="font-size: .68rem;">Esthétique & technique</p>
+              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
+                Un site beau et performant. Typographie, hiérarchie visuelle, vitesse — rien n'est sacrifié.
+              </p>
+            </div>
+            <div>
+              <p class="kicker mb-1" style="font-size: .68rem;">Relation de confiance</p>
+              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
+                10 ans d'expérience en relation client. Je communique clairement et tiens mes engagements.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- OFFRES -->
-  <section id="offres" class="section" style="background-color: var(--bg-light);">
+  <!-- =====================
+       POUR QUI
+       ===================== -->
+  <section class="section" aria-labelledby="secteurs">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title mb-2">Offres & repères de tarifs</h2>
-        <p class="muted maxw">
-          Des repères pour vous projeter. Le prix final dépend du périmètre (pages, contenu, fonctionnalités, délais, intégrations).
-        </p>
+
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-6">
+          <p class="kicker mb-3">Secteurs</p>
+          <h2 id="secteurs" class="section-title mb-0">Pour qui je travaille</h2>
+        </div>
+        <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
+            Professionnels du monde de l'art et de la culture qui veulent une présence en ligne à la hauteur de leur travail.
+          </p>
+        </div>
       </div>
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="offer-card h-100 p-4">
-            <h3 class="h5 fw-semibold mb-1">Essentiel</h3>
-            <p class="muted mb-2">Site vitrine</p>
-            <p class="fs-4 fw-bold mb-3">À partir de 1 500 € HT</p>
-            <ul class="muted ps-3 mb-4">
-              <li>Structure claire + sections</li>
-              <li>Prise de RDV / contact</li>
-              <li>SEO de base + performance</li>
-            </ul>
-            <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary w-100">
-              Estimer votre projet
-            </a>
+      <div class="row g-0">
+        <div class="col-md-6 col-lg-3">
+          <div class="sector-card pe-4">
+            <div class="sector-number">01</div>
+            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Galeries d'art</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+              Artistes, expositions, agenda, demandes de renseignements.
+            </p>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="offer-card h-100 p-4">
-            <h3 class="h5 fw-semibold mb-1">Pro</h3>
-            <p class="muted mb-2">Site dynamique</p>
-            <p class="fs-4 fw-bold mb-3">À partir de 5 000 € HT</p>
-            <ul class="muted ps-3 mb-4">
-              <li>Contenu administrable</li>
-              <li>Pages SEO (blog/actus)</li>
-              <li>Évolutions facilitées</li>
-            </ul>
-            <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary w-100">
-              Définir votre besoin
-            </a>
+        <div class="col-md-6 col-lg-3">
+          <div class="sector-card px-lg-4">
+            <div class="sector-number">02</div>
+            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Artistes</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+              Portfolio, œuvres, calendrier, contact avec les collectionneurs.
+            </p>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="offer-card h-100 p-4">
-            <h3 class="h5 fw-semibold mb-1">Sur mesure</h3>
-            <p class="muted mb-2">Application web</p>
-            <p class="fs-4 fw-bold mb-3">À partir de 7 000 € HT</p>
-            <ul class="muted ps-3 mb-4">
-              <li>Back-office & rôles</li>
-              <li>Données / workflow métier</li>
-              <li>Intégrations (API, outils)</li>
-            </ul>
-            <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary w-100">
-              Obtenir un devis clair
-            </a>
+        <div class="col-md-6 col-lg-3">
+          <div class="sector-card px-lg-4">
+            <div class="sector-number">03</div>
+            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Maisons de ventes</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+              Catalogue, estimation en ligne, vacations, back-office.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="sector-card ps-lg-4">
+            <div class="sector-number">04</div>
+            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Institutions & créatifs</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+              Musées, centres culturels, photographes, éditeurs.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-5">
-        <p class="muted mb-3">
-          Vous ne savez pas quelle offre choisir ? On commence par un échange et je vous conseille la meilleure option.
+    </div>
+  </section>
+
+  <!-- =====================
+       TARIFS
+       ===================== -->
+  <section id="offres" class="section bg-white-warm" aria-labelledby="tarifs">
+    <div class="container">
+
+      <div class="text-center mb-5 maxw mx-auto">
+        <p class="kicker mb-3">Tarifs</p>
+        <h2 id="tarifs" class="section-title mb-3">Repères de prix</h2>
+        <p class="muted">
+          Des repères pour vous projeter. Le périmètre exact est défini ensemble lors de notre premier échange — sans engagement.
         </p>
-        <a href="https://cal.com/aldjia-boughias"
-           target="_blank"
-           rel="noopener"
-           class="btn btn-outline-primary btn-lg">
-          Faire le point sur votre projet
+      </div>
+
+      <!-- 4 offres principales -->
+      <div class="row g-4 mb-5">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="price-card h-100">
+            <p class="price-label mb-3">Site vitrine</p>
+            <p class="price-amount mb-0">2 000 €</p>
+            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
+            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
+              <li class="mb-2" style="color: var(--muted);">— Design soigné et identitaire</li>
+              <li class="mb-2" style="color: var(--muted);">— Portfolio, services, contact</li>
+              <li class="mb-2" style="color: var(--muted);">— SEO & performance</li>
+              <li class="mb-2" style="color: var(--muted);">— Rapide à mettre en ligne</li>
+            </ul>
+            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
+              Pour artistes, galeristes, indépendants créatifs
+            </p>
+            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
+              En discuter
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="price-card featured h-100">
+            <p class="price-label mb-3" style="color: var(--bordeaux) !important;">Site éditorial</p>
+            <p class="price-amount mb-0">5 000 €</p>
+            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
+            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
+              <li class="mb-2" style="color: var(--muted);">— Contenu que vous gérez seul</li>
+              <li class="mb-2" style="color: var(--muted);">— Agenda, catalogue, actualités</li>
+              <li class="mb-2" style="color: var(--muted);">— Pages SEO & blog</li>
+              <li class="mb-2" style="color: var(--muted);">— Évolutions facilitées</li>
+            </ul>
+            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
+              Pour galeries, institutions, maisons de ventes
+            </p>
+            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary w-100 mt-auto">
+              En discuter
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="price-card h-100">
+            <p class="price-label mb-3">Application métier</p>
+            <p class="price-amount mb-0">8 000 €</p>
+            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
+            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
+              <li class="mb-2" style="color: var(--muted);">— Back-office sur mesure</li>
+              <li class="mb-2" style="color: var(--muted);">— Catalogue interactif, estimation</li>
+              <li class="mb-2" style="color: var(--muted);">— Workflow & rôles utilisateurs</li>
+              <li class="mb-2" style="color: var(--muted);">— Ruby on Rails robuste</li>
+            </ul>
+            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
+              Pour maisons de ventes, institutions complexes
+            </p>
+            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
+              En discuter
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="price-card h-100">
+            <p class="price-label mb-3">Refonte</p>
+            <p class="price-amount mb-0">2 500 €</p>
+            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
+            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
+              <li class="mb-2" style="color: var(--muted);">— Audit de l'existant</li>
+              <li class="mb-2" style="color: var(--muted);">— Nouveau design & structure</li>
+              <li class="mb-2" style="color: var(--muted);">— Migration & SEO préservé</li>
+              <li class="mb-2" style="color: var(--muted);">— Contenu retravaillé si besoin</li>
+            </ul>
+            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
+              Pour tout site existant à moderniser
+            </p>
+            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
+              En discuter
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Accompagnement post-livraison -->
+      <div style="border-top: 1px solid var(--line); padding-top: 2.5rem;">
+        <div class="row align-items-center g-4">
+
+          <div class="col-lg-4">
+            <p class="kicker mb-2">Après la livraison</p>
+            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.5rem; font-weight: 600;">
+              Accompagnement continu
+            </h3>
+            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">
+              On ne disparaît pas après la mise en ligne.
+              Deux formules selon vos besoins.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4" style="border: 1px solid var(--bordeaux-mid); border-radius: var(--radius); background: var(--bordeaux-light);">
+              <p class="mb-1" style="font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bordeaux); font-weight: 500;">Forfait mensuel</p>
+              <p style="font-family: 'Cormorant Garant', serif; font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem;">99 €<span style="font-size: 1rem; font-weight: 400; color: var(--muted);"> HT / mois</span></p>
+              <p class="muted mb-0" style="font-size: .85rem;">Suivi régulier, mises à jour, corrections, petites évolutions. Vous n'êtes jamais bloqué.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4" style="border: 1px solid var(--line); border-radius: var(--radius);">
+              <p class="mb-1" style="font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500;">Pack d'heures</p>
+              <p style="font-family: 'Cormorant Garant', serif; font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem;">Sur devis</p>
+              <p class="muted mb-0" style="font-size: .85rem;">Évolutions ponctuelles, nouvelles fonctionnalités, intégrations. Selon vos priorités du moment.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="text-center muted mt-5" style="font-size: .9rem;">
+        Pas sûr de quelle offre vous correspond ?
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
+           style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
+          On en parle en 30 minutes.
         </a>
-      </div>
+      </p>
+
     </div>
   </section>
 
-  <!-- À PROPOS (courte, orientée confiance) -->
-  <section class="section" style="background-color: #fff;">
+  <!-- =====================
+       ART AU FÉMININ
+       ===================== -->
+  <section class="section bg-white-warm" aria-labelledby="podcast-art">
     <div class="container">
-      <div class="row align-items-center g-5 justify-content-center">
+      <div class="row g-5 align-items-center">
 
-        <div class="col-lg-5 text-center">
-          <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-               alt="Aldjia Boughias — développeuse Ruby on Rails freelance"
-               class="rounded-circle shadow"
-               style="width: 190px; height: 190px; object-fit: cover;">
+        <div class="col-lg-5">
+          <p class="kicker mb-3">Projet éditorial</p>
+          <h2 id="podcast-art" class="section-title mb-4">
+            Art au Féminin
+          </h2>
+          <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
+            Une plateforme dédiée à l'histoire des femmes dans le monde de l'art —
+            podcast, articles, sélections de livres, citations.
+            Parce que ma relation avec la culture ne s'arrête pas au code.
+          </p>
+          <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary">
+            Découvrir le projet
+          </a>
         </div>
 
-        <div class="col-lg-7">
-          <h2 class="section-title mb-3">Un partenaire fiable (même si vous n’êtes pas technique)</h2>
+        <div class="col-lg-6 offset-lg-1">
+          <div class="row g-3">
 
-          <p class="muted mb-3">
-            Je m’appelle <strong>Aldjia Boughias</strong>. Mon rôle : comprendre votre besoin, poser un cadre clair,
-            et livrer une solution simple à utiliser, prête à évoluer.
-          </p>
+            <div class="col-6">
+              <div class="p-3" style="border: 1px solid var(--line); border-radius: var(--radius);">
+                <p class="kicker mb-2" style="font-size: .65rem;">Podcast</p>
+                <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.5;">Épisodes sur les artistes femmes, leur parcours, leur rapport à la création.</p>
+              </div>
+            </div>
 
-          <p class="muted mb-4">
-            Si vous cherchez quelqu’un de <strong>structuré</strong>, qui communique clairement et qui pense “usage” avant “complexité”,
-            on devrait bien s’entendre.
-          </p>
+            <div class="col-6">
+              <div class="p-3" style="border: 1px solid var(--line); border-radius: var(--radius);">
+                <p class="kicker mb-2" style="font-size: .65rem;">Articles</p>
+                <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.5;">Contenus éditoriaux approfondis sur l'histoire de l'art au féminin.</p>
+              </div>
+            </div>
 
-          <div class="d-flex gap-3 flex-wrap">
-            <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">
-              Voir des réalisations
-            </a>
-            <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
-              À propos (détails)
-            </a>
+            <div class="col-6">
+              <div class="p-3" style="border: 1px solid var(--line); border-radius: var(--radius);">
+                <p class="kicker mb-2" style="font-size: .65rem;">Livres</p>
+                <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.5;">Une sélection d'ouvrages pour aller plus loin dans la découverte.</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="p-3" style="border: 1px solid var(--bordeaux-mid); border-radius: var(--radius); background: var(--bordeaux-light);">
+                <p class="kicker mb-2" style="font-size: .65rem;">Citations</p>
+                <p class="mb-0" style="font-size: .9rem; color: var(--bordeaux); line-height: 1.5; font-style: italic;">"L'art est la seule façon de s'enfuir sans quitter la maison."</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -318,31 +470,32 @@ description: "Je conçois des sites web et applications sur mesure pour professi
     </div>
   </section>
 
-  <!-- RESSOURCES -->
-  <section class="container section">
-    <div class="text-center mt-5">
-      <a href="https://cal.com/aldjia-boughias"
+  <!-- =====================
+       CTA FINAL
+       ===================== -->
+  <section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
+    <div class="container text-center">
+
+      <p class="kicker mb-4" style="color: rgba(247,244,239,.45) !important;">
+        Contact
+      </p>
+
+      <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2.2rem, 4vw, 3.5rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
+        Un projet ? Parlons-en.
+      </h2>
+
+      <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
+        30 minutes d'échange, sans engagement.
+      </p>
+
+      <a href="{{ site.cal_url }}"
          target="_blank"
          rel="noopener"
-         class="btn btn-primary btn-lg">
-        Discutons de votre projet
+         style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
+        Réserver un créneau
       </a>
-      <p class="muted mt-3 mb-0" style="font-size: .95rem;">
-        Échange de 30 minutes · sans engagement
-      </p>
+
     </div>
   </section>
 
 </div>
-
-<!-- Typed.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  const typed = new Typed("#typed-text", {
-    strings: ["claire.", "fiable.", "évolutive.", "pensée pour vos usages."],
-    typeSpeed: 45,
-    backSpeed: 25,
-    backDelay: 2200,
-    loop: true,
-  });
-</script>

@@ -1,40 +1,65 @@
 ---
 layout: default
-title: Développeuse Fullstack freelance Ruby on Rails – À propos
-description: Développeuse Fullstack freelance spécialisée en Ruby on Rails. Parcours, compétences, projets et approche orientée produit et usages.
+title: "À propos — Développeuse web pour l'art & la culture"
+description: "Aldjia Boughias, développeuse web freelance. Formation Beaux-Arts et Ruby on Rails, 10 ans de relation client. Je crée des sites et applications pour galeries, artistes et maisons de ventes."
 permalink: /about/
 ---
 
-<!-- HERO (Galerie B, sans orange) -->
-<section class="container py-5">
-  <div class="row align-items-center g-5">
-    <div class="col-lg-5 text-center">
-      <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-           alt="Portrait Aldjia Boughias – Développeuse Fullstack freelance"
-           class="rounded-circle shadow"
-           style="width: 190px; height: 190px; object-fit: cover;">
-    </div>
+<!-- HERO -->
+<section style="padding: 80px 0 64px;">
+  <div class="container">
+    <div class="row align-items-center g-5">
 
-    <div class="col-lg-7">
-      <h1 class="display-5 fw-bold mb-3">
-        Aldjia Boughias
-      </h1>
-      <p class="lead muted mb-4">
-        Développeuse Fullstack freelance (Ruby on Rails).
-        Je conçois des sites web et applications utiles, structurés et évolutifs.
-      </p>
-
-      <div class="d-flex gap-3 flex-wrap">
-        <a class="btn btn-primary btn-lg"
-           href="https://cal.com/aldjia-boughias"
-           target="_blank"
-           rel="noopener">
-          Prendre RDV
-        </a>
-        <a class="btn btn-outline-primary btn-lg" href="{{ '/realisations' | relative_url }}">
-          Voir le portfolio
-        </a>
+      <div class="col-lg-4">
+        <div style="position: relative;">
+          <div style="
+            position: absolute; top: -16px; left: -16px;
+            width: 120px; height: 120px;
+            border: 1px solid var(--bordeaux-mid);
+            border-radius: 2px;
+            z-index: 0;
+          "></div>
+          <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+               alt="Aldjia Boughias — développeuse web spécialisée art et culture"
+               style="
+                 width: 100%;
+                 aspect-ratio: 3/4;
+                 object-fit: cover;
+                 border-radius: 2px;
+                 border: 1px solid var(--line);
+                 position: relative;
+                 z-index: 1;
+               ">
+        </div>
       </div>
+
+      <div class="col-lg-7 offset-lg-1">
+        <p class="kicker mb-4">Développeuse web · Art & Culture</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.8rem, 5vw, 4.5rem);
+          font-weight: 600;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+          margin-bottom: 1.5rem;
+        ">
+          Aldjia Boughias
+        </h1>
+        <p style="font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 480px; margin-bottom: 2rem;">
+          Développeuse web freelance avec une double formation Beaux-Arts et Ruby on Rails.
+          Je conçois des sites et applications sur mesure pour les professionnels du monde de l'art et de la culture.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Prendre RDV
+          </a>
+          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
+            Voir le portfolio
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -43,174 +68,205 @@ permalink: /about/
 
   <!-- APPROCHE -->
   <section class="section pt-0">
-    <div class="row g-5">
-      <div class="col-lg-7">
-        <h2 class="section-title mb-3">Mon approche</h2>
-        <p class="muted mb-3">
-          J’accompagne des professionnels, artistes et structures culturelles dans la création de sites web
-          et d’applications sur mesure. Mon point de départ : comprendre le besoin, les usages et le contexte métier,
-          avant toute ligne de code.
+    <div class="row g-5 align-items-start">
+
+      <div class="col-lg-5">
+        <p class="kicker mb-3">Approche</p>
+        <h2 class="section-title mb-4">Comprendre avant de construire</h2>
+        <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
+          Mon point de départ n'est jamais technique — c'est toujours votre univers,
+          votre public, ce que vous voulez transmettre.
+          Ensuite seulement on parle de pages, de fonctionnalités et de code.
         </p>
-        <p class="muted mb-0">
-          Avant le développement, j’ai travaillé plus de 10 ans au contact direct de clients.
-          Cette expérience structure aujourd’hui ma manière de concevoir des produits digitaux :
-          clairs, fiables et orientés solutions.
+        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
+          Dix ans de relation client m'ont appris à écouter, à cadrer et à livrer
+          ce qui a été promis — sans mauvaises surprises.
         </p>
       </div>
 
-      <div class="col-lg-5">
-        <div class="offer-card p-4 h-100">
-          <h3 class="h5 fw-bold mb-3">Ce que vous pouvez attendre</h3>
-          <ul class="muted mb-0 ps-3">
-            <li class="mb-2">Un cadrage clair (périmètre, priorités, planning).</li>
-            <li class="mb-2">Une communication simple, même si vous n’êtes pas technique.</li>
-            <li class="mb-2">Une solution maintenable et prête à évoluer.</li>
-            <li class="mb-0">Un rendu soigné, cohérent avec votre univers.</li>
-          </ul>
+      <div class="col-lg-6 offset-lg-1">
+        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
+          <div>
+            <p class="kicker mb-1" style="font-size: .68rem;">Cadrage clair</p>
+            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Périmètre, priorités, planning définis ensemble avant de commencer.</p>
+          </div>
+          <div>
+            <p class="kicker mb-1" style="font-size: .68rem;">Communication simple</p>
+            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Pas de jargon. Même si vous n'êtes pas technique, vous comprenez chaque étape.</p>
+          </div>
+          <div>
+            <p class="kicker mb-1" style="font-size: .68rem;">Rendu soigné</p>
+            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Typographie, hiérarchie visuelle, performance — cohérent avec votre univers.</p>
+          </div>
+          <div>
+            <p class="kicker mb-1" style="font-size: .68rem;">Base évolutive</p>
+            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Ce que je livre, vous pouvez le faire grandir — sans tout reprendre de zéro.</p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- COMPÉTENCES (sans fond coloré) -->
+  <!-- FORMATION -->
   <section class="section pt-0">
-    <div class="offer-card p-4 p-md-5">
-      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
-        <h2 class="section-title mb-0">Compétences techniques</h2>
-        <p class="muted mb-0">Stack principale : Ruby on Rails · JavaScript</p>
+    <p class="kicker mb-4">Parcours</p>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div style="border-top: 2px solid var(--bordeaux); padding-top: 1.5rem;">
+          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
+            Histoire de l'Art
+          </h3>
+          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
+            Beaux-Arts — une formation qui nourrit encore aujourd'hui ma façon de concevoir chaque projet.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
+          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
+            Développement web
+          </h3>
+          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
+            Le Wagon — Ruby on Rails, JavaScript. Bootcamp intensif, projets en conditions réelles.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
+          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
+            Apple Foundation Program
+          </h3>
+          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
+            Simplon — Swift, SwiftUI. Développement mobile et pensée produit.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section class="section pt-0">
+    <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2.5rem;">
+      <div class="row align-items-start g-4 mb-4">
+        <div class="col">
+          <p class="kicker mb-2">Stack technique</p>
+          <h2 class="section-title mb-0">Compétences</h2>
+        </div>
+        <div class="col-auto d-none d-md-block">
+          <p class="muted mb-0" style="font-size: .9rem;">Principal : Ruby on Rails · JavaScript</p>
+        </div>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6">
-          <h3 class="h6 fw-bold mb-2">Langages & frameworks</h3>
-          <ul class="mb-0">
-            <li>Backend : Ruby, Ruby on Rails</li>
-            <li>Frontend : JavaScript, HTML, CSS, Bootstrap</li>
-            <li>Mobile (si pertinent) : Swift, SwiftUI</li>
-          </ul>
+          <p class="kicker mb-3" style="font-size: .68rem;">Langages & frameworks</p>
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
+              <span>Ruby on Rails</span>
+              <span style="color: var(--bordeaux); font-size: .75rem;">●●●●○</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
+              <span>JavaScript</span>
+              <span style="color: var(--bordeaux); font-size: .75rem;">●●●○○</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
+              <span>HTML · CSS · Bootstrap</span>
+              <span style="color: var(--bordeaux); font-size: .75rem;">●●●●○</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
+              <span>Swift · SwiftUI</span>
+              <span style="color: var(--bordeaux); font-size: .75rem;">●●○○○</span>
+            </div>
+          </div>
         </div>
-
         <div class="col-md-6">
-          <h3 class="h6 fw-bold mb-2">Outils & déploiement</h3>
-          <ul class="mb-0">
-            <li>Git, GitHub</li>
-            <li>Heroku, GitHub Pages</li>
-            <li>Supabase</li>
-            <li>VS Code, Xcode, CLI</li>
-          </ul>
+          <p class="kicker mb-3" style="font-size: .68rem;">Outils & déploiement</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Git · GitHub</span>
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Heroku</span>
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">GitHub Pages</span>
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Supabase</span>
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Jekyll</span>
+            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">SEO on-page</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJETS (cards type galerie) -->
+  <!-- PROJETS -->
   <section class="section pt-0">
-    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
-      <h2 class="section-title mb-0">Projets & réalisations</h2>
-      <a class="muted" href="{{ '/realisations' | relative_url }}">Voir tout le portfolio →</a>
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-5">
+      <div>
+        <p class="kicker mb-2">Réalisations</p>
+        <h2 class="section-title mb-0">Projets</h2>
+      </div>
+      <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">Voir tout le portfolio</a>
     </div>
 
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4 d-flex">
-        <div class="offer-card p-4 w-100">
-          <h3 class="h5 fw-bold mb-2">
-            <a href="https://www.readnest.fr/" target="_blank" rel="noopener">Readnest</a>
-          </h3>
-          <p class="muted mb-3">
-            Application web communautaire (Ruby on Rails) : gestion de rôles,
-            carte interactive et fonctionnalités sociales.
+
+      <div class="col-md-6 col-lg-4">
+        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
+          <p class="kicker mb-2" style="font-size: .65rem;">Commissaires-priseurs</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Mirabili Enchères</h3>
+          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
+            Application Ruby on Rails conçue comme un cabinet de curiosités numérique. Catalogue, estimation en ligne, SEO travaillé pour les vacations.
           </p>
-          <a class="btn btn-outline-primary w-100"
-             href="https://www.readnest.fr/"
-             target="_blank"
-             rel="noopener">
-            Visiter le site
-          </a>
+          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary w-100">Voir le projet</a>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 d-flex">
-        <div class="offer-card p-4 w-100">
-          <h3 class="h5 fw-bold mb-2">
-            <a href="https://quotety.aldjia.dev/" target="_blank" rel="noopener">Quotety</a>
-          </h3>
-          <p class="muted mb-3">
-            Application web avec back-office personnalisé et gestion de permissions.
-            Conçue pour être simple à administrer.
+      <div class="col-md-6 col-lg-4">
+        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
+          <p class="kicker mb-2" style="font-size: .65rem;">Plateforme éditoriale</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Art au Féminin</h3>
+          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
+            Podcast et plateforme dédiée aux artistes femmes dans l'histoire de l'art — épisodes, articles, livres, citations.
           </p>
-          <a class="btn btn-outline-primary w-100"
-             href="https://quotety.aldjia.dev/"
-             target="_blank"
-             rel="noopener">
-            Voir le projet
-          </a>
+          <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">Découvrir</a>
         </div>
       </div>
 
-      <div class="col-lg-4 d-flex">
-        <div class="offer-card p-4 w-100">
-          <h3 class="h5 fw-bold mb-2">Podcasts</h3>
-          <p class="muted mb-3">
-            Créatrice de <strong>Dev Zone</strong> et <strong>ART au Féminin</strong> :
-            conversations autour de la tech, des parcours et de la création.
+      <div class="col-md-6 col-lg-4">
+        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
+          <p class="kicker mb-2" style="font-size: .65rem;">Application web</p>
+          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Readnest</h3>
+          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
+            Plateforme communautaire Ruby on Rails — gestion de rôles, carte interactive et fonctionnalités sociales.
           </p>
-          <a class="btn btn-outline-primary w-100" href="{{ '/podcasts' | relative_url }}">
-            Découvrir
-          </a>
+          <a href="https://www.readnest.fr/" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">Visiter</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- EXPÉRIENCE (synthétique) -->
-  <section class="section pt-0">
-    <div class="offer-card p-4 p-md-5">
-      <h2 class="section-title mb-4">Expérience</h2>
-
-      <div class="row g-4">
-        <div class="col-md-6">
-          <h3 class="h6 fw-bold mb-2">Freelance · Développement web</h3>
-          <p class="muted mb-0">
-            Conception, développement et déploiement de sites et d’applications sur mesure.
-            Approche orientée usages, structure et qualité.
-          </p>
-        </div>
-
-        <div class="col-md-6">
-          <h3 class="h6 fw-bold mb-2">Relation client · +10 ans</h3>
-          <p class="muted mb-0">
-            Une expérience qui m’aide à cadrer, prioriser et traduire un besoin métier en solution digitale claire.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMATION (simple) -->
-  <section class="section pt-0">
-    <div class="offer-card p-4 p-md-5">
-      <h2 class="section-title mb-3">Formations</h2>
-      <ul class="muted mb-0">
-        <li>Apple Foundation Program – Simplon (Swift, SwiftUI)</li>
-        <li>Bootcamp Développeur Web – Le Wagon (Ruby on Rails, JavaScript)</li>
-        <li>Histoire de l’Art – Beaux-Arts</li>
-      </ul>
     </div>
   </section>
 
 </div>
 
 <!-- CTA -->
-<section class="container py-5 text-center">
-  <h2 class="section-title mb-3">Vous avez un projet ?</h2>
-  <p class="muted mb-4 maxw">
-    Je vous propose un échange de 30 minutes pour comprendre votre besoin
-    et voir si nous pouvons travailler ensemble.
-  </p>
-  <a href="https://cal.com/aldjia-boughias"
-     target="_blank"
-     rel="noopener"
-     class="btn btn-primary btn-lg">
-    Prendre un rendez-vous
-  </a>
+<section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
+  <div class="container text-center">
+    <p class="kicker mb-4" style="color: rgba(247,244,239,.45) !important;">Contact</p>
+    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2.2rem, 4vw, 3.5rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
+      Un projet ? Parlons-en.
+    </h2>
+    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
+      30 minutes d'échange, sans engagement.
+    </p>
+    <a href="{{ site.cal_url }}"
+       target="_blank"
+       rel="noopener"
+       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
+      Réserver un créneau
+    </a>
+  </div>
 </section>

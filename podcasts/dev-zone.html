@@ -1,85 +1,129 @@
 ---
 layout: default
-title: Dev Zone
+title: "Dev Zone — Podcast développement web & parcours tech"
+description: "Dev Zone est un podcast créé par Aldjia Boughias : des conversations avec des développeurs sur leur parcours, leur pratique et la réalité du métier."
+permalink: /podcasts/dev-zone/
 ---
 
-<section class="container py-5">
-  <h1 class="text-center display-5 mb-5">Dev Zone</h1>
+<!-- HERO -->
+<section style="padding: 80px 0 64px;">
+  <div class="container">
+    <div class="row align-items-center g-5">
 
-  <p class="text-center mb-5">
-    <strong>Dev Zone</strong> est un podcast dédié à celles et ceux qui vivent le développement web au quotidien.<br>
-    Des interviews, des retours d’expérience, des parcours inspirants.
-  </p>
+      <div class="col-lg-7">
+        <p class="kicker mb-3">Podcast · Depuis 2024</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.8rem, 5vw, 4.5rem);
+          font-weight: 600;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+          margin-bottom: 1.5rem;
+        ">Dev Zone</h1>
+        <p class="muted mb-0" style="font-size: 1.05rem; line-height: 1.8; max-width: 500px;">
+          Des conversations avec des développeurs sur leur parcours, leur pratique
+          et la réalité du métier. Technologie, reconversion, entrepreneuriat, produit — sans filtre.
+        </p>
+      </div>
 
-  <div class="row g-4 justify-content-center">
-    <!-- Épisode 0 -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — On entre dans la Zone !"
-        description="Un podcast humain dans un monde numérique. Aldjia Boughias vous embarque dans une conversation sur la tech, les choix de vie et les récits inspirants."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/4p1JlnFEONylzl9UnMC4U7?si=CCzYUr9iSzen2v24AUDv9w"
-        cta="Écouter l’épisode" %}
+      <div class="col-lg-4 offset-lg-1 d-none d-lg-flex justify-content-center">
+        <img src="{{ '/assets/images/devzone.jpeg' | relative_url }}"
+             alt="Dev Zone — podcast développement web"
+             style="width: 100%; max-width: 260px; border-radius: var(--radius); border: 1px solid var(--line);">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ÉPISODES -->
+<section style="padding-bottom: 96px;">
+  <div class="container">
+
+    <div class="d-flex align-items-center justify-content-between mb-5">
+      <p class="kicker mb-0">Épisodes</p>
+      <span class="muted" style="font-size: .85rem;">{{ site.episodes.size | default: "" }}</span>
     </div>
 
-    <!-- Épisode 1 -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone - David Leuliette : de React Native à l’entrepreneuriat, oser sa propre voie"
-        description="David Leuliette, CEO de WeShipItToday, expert React Native depuis 2016 et créateur du podcast Le Cross Platform Show, partage ici son parcours. Une conversation authentique, inspirante et pleine de conseils concrets pour celles et ceux qui veulent oser, innover et trouver leur propre voie."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/0oW4RZ7s59gWhdK6ooXIxa"
-        cta="Écouter l’épisode" %}
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="On entre dans la Zone !"
+          description="Un podcast humain dans un monde numérique. Aldjia Boughias vous embarque dans une conversation sur la tech, les choix de vie et les récits inspirants."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/4p1JlnFEONylzl9UnMC4U7?si=CCzYUr9iSzen2v24AUDv9w"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="David Leuliette : de React Native à l'entrepreneuriat"
+          description="David Leuliette, CEO de WeShipItToday et expert React Native, partage son parcours — une conversation authentique et pleine de conseils pour ceux qui veulent oser leur propre voie."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/0oW4RZ7s59gWhdK6ooXIxa"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="Épisode Spécial Readnest : de la curiosité au code"
+          description="Comment la curiosité, l'éthique et le code peuvent s'unir pour créer Readnest — une plateforme Ruby on Rails pour reconnecter lecteurs, auteurs, libraires et éditeurs."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/7BXR6rgveZL4nyjJEBIaVq?si=ogHn9U2bQmKaTWA3PaBdNQ"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="RGPD, NIS 2, AI Act : la conformité numérique avec Senosen"
+          description="Avec Nicolas Ragot, Paul Fouquet et Maxime Moisant : RGPD, NIS2, DORA, AI Act — comment transformer la réglementation en avantage stratégique."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/04DMAenSDUs7DpUGDkIWue?si=pJT8YdGfSTu6rlReIPUHqw"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="Camille Coutens : du code propre au produit utile"
+          description="Développeuse web et mobile spécialisée Vue.js et Nuxt.js, Camille partage sa vision du product thinking et son approche pour transformer une idée en application utile."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/6mYbiXgH76KsLBubN0L9Ny?si=pLk-DupzSaePSCwfP0xwsA"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="Clémentine Duriez : tester les métiers pour mieux s'orienter"
+          description="Testeuse de métiers du digital, Clémentine a exploré le webdesign, DPO, content et gestion de projet. Un épisode sur l'orientation et la reconversion, loin des clichés."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/1rB3XdDaqYHo7Sa2DZ9y89?si=dQMDMzLTRweLDD6NCd-vkQ"
+          cta="Écouter" %}
+      </div>
+
+      <div class="col-md-6 col-lg-4 d-flex">
+        {% include card.html
+          title="Grégoire Boisseau : sites web qui convertissent"
+          description="Développeur freelance depuis 2016 (React, Next.js, Astro), Grégoire parle performance, SEO, conversion et offres produitisées — acquérir des clients sans vendre à l'ancienne."
+          image="/assets/images/devzone.jpeg"
+          url="https://open.spotify.com/episode/2S1K191EAoXle4tDCbtP4i?si=aS8wcb7zRN-YkeuxEPUSAg"
+          cta="Écouter" %}
+      </div>
+
     </div>
 
-    <!-- Épisode Spécial Readnest -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — Épisode Spécial Readnest : De la Curiosité au Code - Construire l'Alternative Fullstack pour le Livre"
-        description="Dans cet épisode spécial, j’explore comment la curiosité, l’éthique et le code peuvent s’unir pour créer Readnest : une plateforme Fullstack Ruby on Rails pensée pour reconnecter lecteur·ice·s, auteur·ice·s, libraires et maisons d’édition. Une aventure de construction, d’impact et de sens."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/7BXR6rgveZL4nyjJEBIaVq?si=ogHn9U2bQmKaTWA3PaBdNQ"
-        cta="Écouter l’épisode" %}
-    </div>
-
-        <!-- Épisode RGPD / NIS2 / AI Act -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — RGPD, NIS 2, AI Act : La Conformité Numérique expliquée par Senosen"
-        description="Un échange essentiel avec l’équipe du cabinet Senosen : Nicolas Ragot, Paul Fouquet et Maxime Moisant. Ensemble, nous explorons la conformité numérique, le RGPD, NIS 2, DORA, l’AI Act, et la manière de transformer la réglementation en avantage stratégique — avec un éclairage unique mêlant droit, cybersécurité et développement."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/04DMAenSDUs7DpUGDkIWue?si=pJT8YdGfSTu6rlReIPUHqw"
-        cta="Écouter l’épisode" %}
-    </div>
-
-       <!-- Épisode Camille Coutens -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — Camille Coutens : du code propre au produit utile"
-        description="Développeuse web et mobile spécialisée en Vue.js et Nuxt.js, Camille Coutens partage son parcours, sa vision du product thinking et son approche pour transformer une idée en application utile et bien pensée."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/6mYbiXgH76KsLBubN0L9Ny?si=pLk-DupzSaePSCwfP0xwsA"
-        cta="Écouter l’épisode" %}
-    </div>
-
-        <!-- Épisode Clémentine Duriez -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — Clémentine Duriez : tester les métiers pour mieux s’orienter"
-        description="Testeuse de métiers, Clémentine Duriez a exploré plusieurs métiers du digital (webdesign, DPO, content, gestion de projet) pour comprendre la réalité du terrain. Un épisode inspirant sur l’orientation professionnelle, la reconversion et les carrières dans la tech, loin des clichés."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/1rB3XdDaqYHo7Sa2DZ9y89?si=dQMDMzLTRweLDD6NCd-vkQ"
-        cta="Écouter l’épisode" %}
-    </div>
-
-        <!-- Épisode Grégoire Boisseau -->
-    <div class="col-md-6 col-lg-4 d-flex">
-      {% include card.html
-        title="Dev Zone — Sites web qui convertissent : performance, SEO et stratégie avec Grégoire Boisseau"
-        description="Dans Dev Zone, je reçois Grégoire Boisseau, développeur web freelance depuis 2016, spécialisé React, Next.js et Astro. Pour lui, un site ne doit pas juste exister : il doit rapporter des clients. On parle performance, SEO, conversion, offres “produitisées” (2500.fr, La Liste), et acquisition de clients sans vendre à l’ancienne — en restant aligné avec sa façon de travailler."
-        image="/assets/images/devzone.jpeg"
-        url="https://open.spotify.com/episode/2S1K191EAoXle4tDCbtP4i?si=aS8wcb7zRN-YkeuxEPUSAg"
-        cta="Écouter l’épisode" %}
+    <!-- PARTICIPER -->
+    <div class="mt-5 pt-5 text-center" style="border-top: 1px solid var(--line);">
+      <p class="kicker mb-3">Participer</p>
+      <h2 class="section-title mb-3">Vous voulez témoigner ?</h2>
+      <p class="muted mb-4 maxw mx-auto" style="font-size: .95rem; line-height: 1.75;">
+        Développeur·se, créateur·rice — si vous avez un parcours ou un sujet à partager, je serais ravie de vous recevoir.
+      </p>
+      <a href="{{ site.podcast_form_url }}"
+         target="_blank" rel="noopener"
+         class="btn btn-primary btn-lg">
+        Compléter le formulaire
+      </a>
     </div>
 
   </div>

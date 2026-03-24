@@ -1,92 +1,102 @@
 ---
 layout: default
-title: Articles sur le développement web & Ruby on Rails
-description: Articles et retours d’expérience sur le développement web, Ruby on Rails, la conception de produits digitaux et le métier de développeuse Fullstack freelance.
+title: "Articles — Développement web, art, culture & numérique"
+description: "Retours d'expérience et réflexions sur le développement web, Ruby on Rails, le SEO et la place du numérique dans le monde de l'art et de la culture."
 permalink: /blog/
 ---
 
-<section class="container py-5">
+<!-- HERO -->
+<section style="padding: 80px 0 64px;">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-lg-7">
+        <p class="kicker mb-3">Articles</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.8rem, 5vw, 4.5rem);
+          font-weight: 600;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+          margin-bottom: 0;
+        ">Écrits</h1>
+      </div>
+      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
+          Développement web, Ruby on Rails, SEO, numérique et culture — ce que j'apprends et ce que j'observe.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- HERO BLOG (SEO + contexte) -->
-  <header class="text-center mb-5">
-    <h1 class="display-5 fw-bold mb-3" style="color: var(--text-dark);">
-      Articles sur le développement web, Ruby on Rails et la conception produit
-    </h1>
+<!-- LISTE DES ARTICLES -->
+<section style="padding-bottom: 96px;">
+  <div class="container">
 
-    <p class="muted maxw mb-4">
-      Je partage ici des tutoriels, retours d’expérience et réflexions autour du développement Fullstack
-      (Ruby on Rails, JavaScript), de l’UX et de la création de produits digitaux utiles.
-    </p>
+    <div class="row g-4">
+      {% for post in site.posts %}
+        <article class="col-md-6 col-lg-4">
+          <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
+            <div style="
+              border: 1px solid var(--line);
+              border-radius: var(--radius);
+              overflow: hidden;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              transition: border-color .2s;
+            "
+            onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+            onmouseout="this.style.borderColor='var(--line)'">
 
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary">
-        Prendre un rendez-vous
-      </a>
-      <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">
-        Voir mes réalisations
+              {% if post.image %}
+                <img src="{{ post.image | relative_url }}"
+                     alt="{{ post.image_alt | default: post.title | escape }}"
+                     style="width: 100%; height: 200px; object-fit: cover; display: block;"
+                     loading="lazy">
+              {% endif %}
+
+              <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%-d %B %Y" }}
+                  </time>
+                </p>
+                <h2 style="
+                  font-family: 'Cormorant Garant', serif;
+                  font-style: italic;
+                  font-size: 1.2rem;
+                  font-weight: 600;
+                  color: var(--ink);
+                  line-height: 1.3;
+                  margin-bottom: .75rem;
+                  flex: 1;
+                ">{{ post.title }}</h2>
+                <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
+                  {% if post.description %}
+                    {{ post.description | truncate: 110 }}
+                  {% else %}
+                    {{ post.excerpt | strip_html | truncate: 110 }}
+                  {% endif %}
+                </p>
+                <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
+                  Lire →
+                </span>
+              </div>
+
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-5 pt-4" style="border-top: 1px solid var(--line);">
+      <p class="muted mb-4" style="font-size: .95rem;">Un projet en tête ?</p>
+      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        En discuter
       </a>
     </div>
-  </header>
 
-  <!-- LISTE DES ARTICLES -->
-  <div class="row g-4">
-    {% for post in site.posts %}
-      <article class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
-          {% if post.image %}
-            <a href="{{ post.url | relative_url }}" aria-label="Lire l’article : {{ post.title | escape }}">
-              <img
-                src="{{ post.image | relative_url }}"
-                class="card-img-top"
-                alt="{{ post.image_alt | default: post.title | escape }}"
-                style="object-fit: cover; height: 200px;"
-                loading="lazy">
-            </a>
-          {% endif %}
-
-          <div class="card-body d-flex flex-column">
-            <div>
-              <!-- H2 (pas H4) : hiérarchie SEO propre sous le H1 -->
-              <h2 class="card-title fw-semibold mb-2" style="font-size: 1.25rem; color: var(--text-dark);">
-                <a href="{{ post.url | relative_url }}" class="text-decoration-none" style="color: inherit;">
-                  {{ post.title }}
-                </a>
-              </h2>
-
-              <p class="text-muted small mb-2">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                  {{ post.date | date: "%-d %B %Y" }}
-                </time>
-                {% if post.category %}
-                  · <span>{{ post.category }}</span>
-                {% endif %}
-              </p>
-
-              {% if post.description %}
-                <p class="card-text muted">{{ post.description }}</p>
-              {% else %}
-                <p class="card-text muted">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-              {% endif %}
-            </div>
-
-            <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary mt-auto">
-              Lire l’article
-            </a>
-          </div>
-        </div>
-      </article>
-    {% endfor %}
   </div>
-
-  <!-- CTA FIN DE PAGE (conversion douce) -->
-  <div class="text-center mt-5">
-    <p class="muted mb-3">
-      Vous avez un projet et vous souhaitez en discuter ?
-    </p>
-    <a href="https://cal.com/aldjia-boughias" target="_blank" rel="noopener" class="btn btn-primary">
-      Réserver un créneau
-    </a>
-  </div>
-
 </section>

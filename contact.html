@@ -1,72 +1,82 @@
 ---
 layout: default
-title: "Contact – Développeuse Fullstack freelance Ruby on Rails"
-description: "Contactez Aldjia Boughias, développeuse Fullstack freelance. Prenez rendez-vous pour discuter de votre projet web ou applicatif."
+title: "Contact — Développeuse web pour l'art & la culture"
+description: "Prenez rendez-vous avec Aldjia Boughias pour discuter de votre projet web. Premier échange de 30 minutes, sans engagement."
 permalink: /contact/
 ---
 
-<section class="container py-5">
+<section style="padding: 80px 0 96px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
 
-  <!-- HERO CONTACT -->
-  <header class="text-center mb-5">
+        <p class="kicker mb-4">Contact</p>
 
-    <h1 class="display-5 fw-bold mb-3" style="color: var(--text-dark);">
-      Discutons de votre projet
-    </h1>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.8rem, 5vw, 4.5rem);
+          font-weight: 600;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+          margin-bottom: 1.5rem;
+        ">Un projet ? Parlons-en.</h1>
 
-    <p class="muted maxw mt-3">
-      Vous avez un projet web ou une application à concevoir ?
-      Je vous propose un premier échange pour comprendre votre besoin,
-      vos objectifs et voir comment je peux vous accompagner.
-    </p>
-  </header>
+        <p class="muted mb-5 maxw mx-auto" style="font-size: 1rem; line-height: 1.8;">
+          Premier échange de 30 minutes, sans engagement.
+          On fait le point sur votre besoin et je vous oriente vers la meilleure solution.
+        </p>
 
-  <!-- CTA PRINCIPAL : RDV -->
-  <div class="text-center mb-4">
-    <a href="https://cal.com/aldjia-boughias"
-       target="_blank"
-       rel="noopener"
-       class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
-      Prendre un rendez-vous (30 min)
-    </a>
-  </div>
+        <a href="{{ site.cal_url }}"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary btn-lg mb-3">
+          Réserver un créneau
+        </a>
 
-  <!-- TEXTE RASSURANCE -->
-  <p class="text-center muted mb-5" style="max-width: 680px; margin: 0 auto;">
-    Échange sans engagement · Clarification du besoin · Réponse rapide
-  </p>
+        <p class="muted mb-0" style="font-size: .85rem;">
+          Sans engagement · Réponse sous 48h
+        </p>
 
-  <!-- RÉSEAUX -->
-  <div class="text-center">
-    <h2 class="h5 fw-semibold mb-4" style="color: var(--text-dark);">
-      Me retrouver en ligne
-    </h2>
-
-    <div class="d-flex justify-content-center gap-4">
-      <a href="https://github.com/AldjiaDev"
-         target="_blank"
-         rel="noopener"
-         aria-label="GitHub – Aldjia Boughias"
-         class="text-decoration-none">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-             alt="GitHub"
-             width="48"
-             height="48"
-             class="shadow-sm rounded-circle p-2 bg-white border">
-      </a>
-
-      <a href="https://www.linkedin.com/in/aldjia-boughias-ba6447346/"
-         target="_blank"
-         rel="noopener"
-         aria-label="LinkedIn – Aldjia Boughias"
-         class="text-decoration-none">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-             alt="LinkedIn"
-             width="48"
-             height="48"
-             class="shadow-sm rounded-circle p-2 bg-white border">
-      </a>
+      </div>
     </div>
-  </div>
 
+    <!-- SÉPARATEUR -->
+    <div class="row justify-content-center mt-5 pt-5">
+      <div class="col-lg-6" style="border-top: 1px solid var(--line); padding-top: 3rem;">
+
+        <div class="row g-4 text-center">
+
+          <div class="col-4">
+            <p class="kicker mb-2" style="font-size: .65rem;">Email</p>
+            <a href="mailto:{{ site.email }}"
+               style="font-size: .9rem; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--bordeaux-mid);">
+              boughias-aldjia<br>@live.fr
+            </a>
+          </div>
+
+          <div class="col-4">
+            <p class="kicker mb-2" style="font-size: .65rem;">LinkedIn</p>
+            <a href="{{ site.linkedin_url }}"
+               target="_blank" rel="noopener"
+               style="font-size: .9rem; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--bordeaux-mid);">
+              Aldjia Boughias
+            </a>
+          </div>
+
+          <div class="col-4">
+            <p class="kicker mb-2" style="font-size: .65rem;">GitHub</p>
+            <a href="{{ site.github_url }}"
+               target="_blank" rel="noopener"
+               style="font-size: .9rem; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--bordeaux-mid);">
+              AldjiaDev
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </section>

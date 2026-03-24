@@ -1,27 +1,28 @@
 /* ================================
-   Aldjia Dev — Option B (Galerie contemporaine)
-   Minimal, contrasté, beaucoup d’air
-   (avec fix contraste boutons)
+   Aldjia Dev — Art & Culture Edition
+   Cormorant Garant + Inter
+   Encre · Papier · Bordeaux
    ================================ */
 
 /* Palette */
 :root {
-  --primary: #F4A261;      /* accent (hover / détails) */
-  --accent: #FFD369;
-  --bg: #fbfbfa;           /* fond galerie */
-  --surface: #ffffff;      /* cartes */
-  --ink: #111111;          /* texte principal (contraste) */
-  --muted: rgba(17,17,17,.68);
-  --line: rgba(17,17,17,.10);
-  --shadow: 0 18px 60px rgba(0,0,0,.08);
-  --shadow-soft: 0 10px 30px rgba(0,0,0,.06);
-  --radius: 18px;
+  --bordeaux: #8B2635;
+  --bordeaux-light: rgba(139,38,53,.08);
+  --bordeaux-mid: rgba(139,38,53,.18);
+  --bg: #F7F4EF;
+  --surface: #FFFFFF;
+  --ink: #0D0D0D;
+  --muted: rgba(13,13,13,.58);
+  --line: rgba(13,13,13,.10);
+  --shadow: 0 20px 60px rgba(13,13,13,.07);
+  --shadow-soft: 0 8px 28px rgba(13,13,13,.06);
+  --radius: 6px;
 }
 
 /* Layout */
 html, body { height: 100%; }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -32,289 +33,548 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-main{ flex: 1; }
+main { flex: 1; }
 
-/* Typo */
-body, p, li, a, span, .btn, .lead, .navbar, .card, .list-group-item{
-  font-family: "Poppins", sans-serif !important;
+/* ================================
+   Typographie
+   ================================ */
+
+body, p, li, a, span, .btn, .lead, .navbar, .card, .list-group-item {
+  font-family: "Inter", sans-serif !important;
   line-height: 1.7;
   color: var(--ink);
 }
 
-/* Titres : sobre, moderne */
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garant", serif !important;
   color: var(--ink);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* Titres de section : italique élégant */
+.section-title {
+  font-family: "Cormorant Garant", serif !important;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--ink);
 }
 
 /* Liens */
-a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--primary); }
+a { color: var(--ink); text-decoration: none; }
+a:hover { color: var(--bordeaux); }
 
-/* Muted & helpers */
-.muted{ color: var(--muted) !important; }
-.maxw{
-  max-width: 780px;
+/* Helpers */
+.muted { color: var(--muted) !important; }
+.maxw {
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
 }
-.section{ padding: 84px 0; }
-.section-title{ color: var(--ink); }
+.section { padding: 96px 0; }
 
-/* Kicker (galerie) */
-.kicker{
-  color: rgba(17,17,17,.55) !important;
-  font-weight: 600;
-  letter-spacing: .18em;
+/* Kicker — label de section */
+.kicker {
+  font-family: "Inter", sans-serif !important;
+  color: var(--bordeaux) !important;
+  font-weight: 500;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  font-size: .78rem;
+  font-size: .72rem;
 }
 
-/* Buttons */
-.btn-primary{
-  background: #1a1a1a;          /* plus doux que noir pur */
-  border-color: #1a1a1a;
-  border-radius: 999px;
-  padding-left: 1.15rem;
-  padding-right: 1.15rem;
-  box-shadow: var(--shadow-soft);
+/* Trait bordeaux décoratif */
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--bordeaux);
+  vertical-align: middle;
+  margin-right: .5rem;
+  margin-bottom: 1px;
 }
 
-/* ✅ FIX CONTRASTE TEXTE (important) */
+/* ================================
+   Boutons
+   ================================ */
+
+.btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  border-radius: 8px;
+  padding: .65rem 1.5rem;
+  font-family: "Inter", sans-serif !important;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  box-shadow: none;
+  transition: background .18s, border-color .18s;
+}
+
 .btn-primary,
-.btn-primary span{
-  color: #ffffff !important;
+.btn-primary span {
+  color: #fff !important;
 }
 
-.btn-primary:hover{
-  background: #000;
-  border-color: #000;
-}
-.btn-primary:hover,
-.btn-primary:hover span{
-  color: #ffffff !important;
+.btn-primary:hover {
+  background: var(--bordeaux);
+  border-color: var(--bordeaux);
+  color: #fff !important;
 }
 
-.btn-outline-primary{
-  border-radius: 999px;
-  border-color: var(--line) !important;
+.btn-outline-primary {
+  border-radius: 8px;
+  border: 1px solid rgba(13,13,13,.22) !important;
+  color: var(--ink) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  background: transparent;
+  transition: border-color .18s, background .18s;
+}
+
+.btn-outline-primary:hover {
+  background: rgba(13,13,13,.04);
+  border-color: var(--ink) !important;
   color: var(--ink) !important;
 }
-.btn-outline-primary:hover{
-  background: rgba(17,17,17,.04);
-  border-color: rgba(17,17,17,.18) !important;
-  color: var(--ink) !important;
+
+.btn-bordeaux {
+  background: var(--bordeaux);
+  border: 1px solid var(--bordeaux);
+  border-radius: 8px;
+  padding: .65rem 1.5rem;
+  color: #fff !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  transition: background .18s;
 }
 
-/* Cards global */
-.card{
+.btn-bordeaux:hover {
+  background: #6d1d29;
+  border-color: #6d1d29;
+  color: #fff !important;
+}
+
+/* ================================
+   Cards
+   ================================ */
+
+.card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
-/* Offer / hero cards */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(13,13,13,.18);
+}
+
 .offer-card,
-.hero-card{
+.hero-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: calc(var(--radius) + 6px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
 
-/* Gallery hover (effet “cadre”) */
-.card,
-.offer-card,
-.hero-card{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+/* ================================
+   Navbar & Footer
+   ================================ */
+
+.site-nav {
+  background: rgba(247,244,239,.92) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(13,13,13,.08);
 }
-.card:hover,
-.offer-card:hover,
-.hero-card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 22px 70px rgba(0,0,0,.10);
-  border-color: rgba(17,17,17,.16);
+
+.site-brand {
+  font-family: "Cormorant Garant", serif !important;
+  color: var(--ink) !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: .01em;
+}
+
+.site-nav .nav-link {
+  font-family: "Inter", sans-serif !important;
+  color: rgba(13,13,13,.70) !important;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+.site-nav .nav-link:hover { color: var(--ink) !important; }
+
+.site-nav .nav-link.active {
+  color: var(--ink) !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--bordeaux);
+}
+
+.site-nav .site-cta {
+  background: var(--ink) !important;
+  border-color: var(--ink) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  box-shadow: none;
+  transition: background .18s;
+}
+
+.site-nav .site-cta:hover {
+  background: var(--bordeaux) !important;
+  border-color: var(--bordeaux) !important;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--ink) !important;
+  border-top: none !important;
+}
+
+.site-footer p,
+.site-footer a,
+.site-footer span {
+  color: rgba(247,244,239,.62) !important;
+  font-size: .85rem;
+}
+
+.site-footer a:hover {
+  color: rgba(247,244,239,.95) !important;
+  text-decoration: none;
+}
+
+.site-footer .footer-brand {
+  font-family: "Cormorant Garant", serif !important;
+  font-style: italic;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: rgba(247,244,239,.90) !important;
+}
+
+/* ================================
+   Homepage — Hero
+   ================================ */
+
+.home .hero-section {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.home .hero-title {
+  font-family: "Cormorant Garant", serif !important;
+  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  color: var(--ink);
+}
+
+.home .hero-subtitle {
+  font-family: "Inter", sans-serif !important;
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.hero-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--bordeaux);
+  margin: 1.5rem 0;
+}
+
+/* ================================
+   Homepage — Sections
+   ================================ */
+
+.bg-paper { background: var(--bg); }
+.bg-white-warm { background: #FFFFFE; }
+.bg-ink { background: var(--ink); }
+
+/* Section cas d'usage */
+.sector-card {
+  border-top: 2px solid var(--line);
+  padding: 2rem 0;
+  transition: border-color .2s;
+}
+
+.sector-card:hover {
+  border-top-color: var(--bordeaux);
+}
+
+.sector-number {
+  font-family: "Cormorant Garant", serif !important;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--bordeaux);
+  line-height: 1;
+  margin-bottom: .5rem;
+  opacity: .5;
+}
+
+/* Featured project */
+.featured-project {
+  background: var(--ink);
+  color: #F7F4EF;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.featured-project .project-label {
+  font-family: "Inter", sans-serif !important;
+  color: rgba(247,244,239,.45) !important;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.featured-project .project-label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--bordeaux);
+  vertical-align: middle;
+  margin-right: .5rem;
+  margin-bottom: 1px;
+}
+
+.featured-project h3 {
+  font-family: "Cormorant Garant", serif !important;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #F7F4EF !important;
+  line-height: 1.1;
+}
+
+.featured-project p {
+  color: rgba(247,244,239,.70) !important;
+}
+
+.featured-project .project-tag {
+  display: inline-block;
+  border: 1px solid rgba(247,244,239,.18);
+  color: rgba(247,244,239,.70) !important;
+  padding: .25rem .65rem;
+  border-radius: 2px;
+  font-size: .78rem;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+
+/* Pill étapes */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  border: 1px solid var(--bordeaux);
+  background: transparent;
+  color: var(--bordeaux);
+  font-size: .85rem;
+  font-weight: 600;
+  font-family: "Cormorant Garant", serif !important;
+  flex-shrink: 0;
+}
+
+/* Tarifs */
+.price-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  transition: border-color .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card:hover {
+  border-color: var(--bordeaux-mid);
+}
+
+.price-card.featured {
+  border-color: var(--bordeaux);
+  background: #FFFFFE;
+}
+
+.price-card .price-amount {
+  font-family: "Cormorant Garant", serif !important;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.price-card .price-label {
+  font-size: .75rem;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* List group */
-.list-group-item{
+.list-group-item {
   background: transparent;
   border: none;
   padding-left: 0;
 }
 
-/* Pill */
-.pill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(17,17,17,.03);
+/* ================================
+   Blog / Post
+   ================================ */
+
+.post-wrap { max-width: 780px; margin: 48px auto 96px; padding: 0 20px; }
+.post-header { margin-bottom: 20px; }
+
+.post-title {
+  font-family: "Cormorant Garant", serif !important;
+  font-style: italic;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.06;
+  font-weight: 600;
+  margin: 12px 0 12px;
   color: var(--ink);
-  padding: 0 .65rem;
-  font-size: .95rem;
-  font-weight: 600;
 }
 
-/* ================================
-   Navbar & Footer — galerie
-   ================================ */
-.site-nav{
-  background: rgba(251,251,250,.82) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(17,17,17,.08);
-}
-
-.site-brand{
-  color: var(--ink) !important;
-  font-size: 1.6rem;
-  letter-spacing: .01em;
-  font-style: normal;
-}
-
-.site-nav .nav-link{
-  color: rgba(17,17,17,.80) !important;
-  font-weight: 600;
-}
-.site-nav .nav-link:hover{ color: var(--ink) !important; }
-.site-nav .nav-link.active{
-  color: var(--ink) !important;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
-/* CTA navbar */
-.site-nav .site-cta{
-  background: #1a1a1a !important;
-  border-color: #1a1a1a !important;
-  border-radius: 999px;
-  box-shadow: var(--shadow-soft);
-  color: #fff !important;
-}
-
-/* Footer */
-.site-footer{
-  background: var(--bg) !important;
-  border-top: 1px solid rgba(17,17,17,.08) !important;
-}
-.site-footer p,
-.site-footer a{
-  color: rgba(17,17,17,.62) !important;
-}
-.site-footer a:hover{
-  color: var(--ink) !important;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* ================================
-   Blog / Post — editorial moderne
-   ================================ */
-.post-wrap{ max-width: 820px; margin: 42px auto 90px; padding: 0 20px; }
-.post-header{ margin-bottom: 16px; }
-.post-title{
-  font-size: clamp(2.1rem, 4vw, 3rem);
-  line-height: 1.08;
-  margin: 8px 0 10px;
-}
-.post-meta{ color: rgba(17,17,17,.55); font-size: 14px; margin-bottom: 18px; }
-
-.post-hero{ margin: 24px 0 30px; }
-.post-hero img{
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-  border: 1px solid rgba(17,17,17,.10);
-  box-shadow: var(--shadow-soft);
-}
-.post-hero figcaption{
+.post-meta {
+  color: rgba(13,13,13,.50);
   font-size: 13px;
-  color: rgba(17,17,17,.52);
-  text-align: center;
-  margin-top: 8px;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif !important;
 }
 
-.post-content{
-  font-size: 18px;
-  line-height: 1.8;
+.post-hero { margin: 28px 0 36px; }
+.post-hero img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+.post-hero figcaption {
+  font-size: 12px;
+  color: rgba(13,13,13,.45);
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.post-content {
+  font-size: 17px;
+  line-height: 1.82;
   color: var(--ink);
 }
-.post-content h2{
-  font-size: 1.55rem;
-  margin: 2.1rem 0 .8rem;
-  line-height: 1.22;
+
+.post-content h2 {
+  font-family: "Cormorant Garant", serif !important;
+  font-style: italic;
+  font-size: 1.65rem;
+  margin: 2.4rem 0 .8rem;
+  font-weight: 600;
 }
-.post-content h3{
-  font-size: 1.18rem;
-  margin: 1.4rem 0 .6rem;
+
+.post-content h3 {
+  font-family: "Cormorant Garant", serif !important;
+  font-size: 1.25rem;
+  margin: 1.6rem 0 .6rem;
+  font-weight: 600;
 }
-.post-content p{ margin: 1rem 0; }
-.post-content img{
+
+.post-content p { margin: 1rem 0; }
+.post-content img {
   max-width: 100%;
-  border-radius: 14px;
+  border-radius: var(--radius);
   display: block;
-  margin: 1.2rem auto;
-  border: 1px solid rgba(17,17,17,.10);
+  margin: 1.4rem auto;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow-soft);
 }
 
-.post-tags{ margin-top: 28px; }
-.post-tag{
+.post-tags { margin-top: 32px; }
+.post-tag {
   display: inline-block;
-  background: rgba(17,17,17,.04);
+  background: transparent;
   color: var(--ink);
-  padding: .35rem .6rem;
-  border-radius: 999px;
-  font-size: 14px;
+  padding: .3rem .65rem;
+  border-radius: 0;
+  font-size: 13px;
   margin: 0 .35rem .35rem 0;
-  border: 1px solid rgba(17,17,17,.10);
+  border: 1px solid var(--line);
+  font-family: "Inter", sans-serif !important;
 }
-.post-pager{ margin-top: 34px; display:flex; justify-content:space-between; gap:10px; }
-.post-pager a{ color: var(--ink); }
-.post-pager a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+
+.post-pager {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.post-pager a {
+  color: var(--ink);
+  font-size: .9rem;
+}
+
+.post-pager a:hover {
+  color: var(--bordeaux);
+}
 
 /* ================================
-   Home — galerie (scopé)
+   Responsive
    ================================ */
-.home .hero-card{
-  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.90));
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .home .hero-section { min-height: auto; padding: 72px 0 60px; }
+  .site-brand { font-size: 1.3rem; }
 }
 
-.home .hero-title{
-  color: var(--ink);
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+@media (max-width: 576px) {
+  .section { padding: 52px 0; }
+  .home .hero-title { font-size: 2.8rem; }
 }
 
-.home .hero-subtitle{
-  color: rgba(17,17,17,.68) !important;
-  max-width: 780px;
-  margin: 0 auto;
+/* ================================
+   Overrides finaux
+   ================================ */
+
+.featured-project h3 {
+  color: #F7F4EF !important;
 }
 
-/* Sur la home : outlines très discrets */
-.home .btn-outline-primary{
-  border-color: rgba(17,17,17,.18) !important;
-}
-.home .btn-outline-primary:hover{
-  background: rgba(17,17,17,.04);
-  border-color: rgba(17,17,17,.26) !important;
-}
-
-/* Responsive tweaks */
-@media (max-width: 576px){
-  .section{ padding: 64px 0; }
-  .site-brand{ font-size: 1.45rem; }
-}
-
-/* Force neutral text color (kills orange from previous rules) */
-h1, h2, h3, h4, h5, h6,
-.navbar .nav-link,
-.card-title {
-  color: var(--ink) !important;
-}
+.navbar .nav-link { color: rgba(13,13,13,.70) !important; }
