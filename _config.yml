@@ -98,6 +98,7 @@ exclude:
 permalink: pretty
 include:
   - podcasts
+  - secteurs
 
 # Exclude from processing.
 # The following items will not be processed, by default.
