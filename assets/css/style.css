@@ -324,6 +324,9 @@ a:hover { color: var(--bordeaux); }
   border-top: 2px solid var(--line);
   padding: 2rem 0;
   transition: border-color .2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .sector-card:hover {
