@@ -2,7 +2,6 @@
 layout: post
 title: "Architecture d’un site Jekyll : analyse des gems utilisées"
 date: 2025-05-04
-categories: [jekyll, ruby, architecture]
 description: "Chaque gem a un rôle bien défini, un peu comme les maillons d’une chaîne bien huilée. Dans cet article, on explore les gems utilisées dans un site Jekyll classique hébergé sur GitHub Pages. À la clé : compatibilité, performance, SEO, et un brin de magie Ruby."
 image: /assets/images/gemjekyll.jpg
 ---

@@ -2,7 +2,6 @@
 layout: post
 title: "A2PAS : Créer une carte d’événements locale avec SwiftUI et MapKit"
 date: 2025-05-20
-categories: [iOS,Swift, SwiftUI, MapKit, Apple Foundation Program, Simplon, Map, Géolocalisation]
 description: "A2PAS est une application iOS développée avec SwiftUI et MapKit, conçue pour afficher des événements géolocalisés en temps réel. Ce billet explore son architecture technique, la gestion de la carte interactive et les choix d'implémentation réalisés dans le cadre du programme Apple Foundation Program."
 image: /assets/images/Map.jpg
 ---

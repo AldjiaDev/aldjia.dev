@@ -2,7 +2,6 @@
 layout: post
 title: "Comprendre Ruby et Rails : au-delà du code, une philosophie"
 date: 2025-06-08
-categories: [Ruby, Rails, Philosophie, Développement]
 tags: [Ruby, Rails, langage, framework, apprentissage, philosophie]
 description: "Plongée dans la dualité poétique de Ruby et la structure puissante de Rails. Un duo qui va bien au-delà du code."
 image: /assets/images/rubyonrails.jpg

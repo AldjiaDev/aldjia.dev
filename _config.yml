@@ -95,7 +95,7 @@ exclude:
   - .gitignore
 
 # Permaliens lisibles
-permalink: pretty
+permalink: /blog/:title/
 include:
   - podcasts
   - secteurs

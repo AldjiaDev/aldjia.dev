@@ -2,7 +2,6 @@
 layout: post
 title: "Construire une application Ruby on Rails en 2025 : outils, méthodes et apprentissages"
 date: 2025-06-13
-categories: [Mes réalisations]
 tags: [Ruby on Rails, développement, apprentissage, déploiement, stack, projets]
 description: Retour d’expérience sur la création d’une application Ruby on Rails en 2025. Du choix du projet aux outils modernes comme Hotwire, Tailwind et PostgreSQL, cet article partage les méthodes, apprentissages et défis techniques rencontrés au fil du développement.
 image: /assets/images/rails.jpg
