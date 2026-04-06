@@ -278,6 +278,75 @@ description: "Développeuse web freelance à Lille, spécialisée art & culture.
   </section>
 
   <!-- =====================
+       TÉMOIGNAGES
+       ===================== -->
+  <section class="section bg-white-warm" aria-labelledby="temoignages">
+    <div class="container">
+
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-6">
+          <p class="kicker mb-3">Témoignages</p>
+          <h2 id="temoignages" class="section-title mb-0">Ce qu'ils en disent</h2>
+        </div>
+        <div class="col-lg-4 offset-lg-2 d-none d-lg-flex align-items-end">
+          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
+            Avis issus de Google Business · vérifiables en ligne
+          </p>
+        </div>
+      </div>
+
+      <div class="temoignage-carousel-wrap">
+        <div id="carouselTemoignages" class="carousel slide" data-bs-ride="false">
+
+          <div class="carousel-inner">
+            {% for t in site.data.temoignages %}
+            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+              <div class="temoignage-card mx-auto">
+                <div class="temoignage-stars mb-3">
+                  {% for i in (1..t.note) %}★{% endfor %}
+                </div>
+                <blockquote class="temoignage-texte mb-4">
+                  "{{ t.texte }}"
+                </blockquote>
+                <div class="temoignage-auteur">
+                  <p class="mb-0" style="font-weight: 600; font-size: .9rem; color: var(--ink);">{{ t.nom }}</p>
+                  <p class="mb-0 muted" style="font-size: .8rem;">{{ t.role }}</p>
+                  {% if t.source == "Google" %}
+                  <p class="mb-0 mt-2" style="font-size: .72rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase;">via Google</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Contrôles -->
+          <div class="temoignage-controls mt-4 d-flex align-items-center justify-content-center gap-4">
+            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev" aria-label="Avis précédent">
+              ←
+            </button>
+            <div class="carousel-indicators-custom">
+              {% for t in site.data.temoignages %}
+              <button type="button"
+                data-bs-target="#carouselTemoignages"
+                data-bs-slide-to="{{ forloop.index0 }}"
+                {% if forloop.first %}class="active" aria-current="true"{% endif %}
+                aria-label="Avis {{ forloop.index }}">
+              </button>
+              {% endfor %}
+            </div>
+            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next" aria-label="Avis suivant">
+              →
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================
        TARIFS
        ===================== -->
   <section id="offres" class="section bg-white-warm" aria-labelledby="tarifs">
