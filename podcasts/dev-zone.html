@@ -47,69 +47,16 @@ permalink: /podcasts/dev-zone/
     </div>
 
     <div class="row g-4">
+      {% for episode in site.data.episodes_devzone %}
       <div class="col-md-6 col-lg-4 d-flex">
         {% include card.html
-          title="On entre dans la Zone !"
-          description="Un podcast humain dans un monde numérique. Aldjia Boughias vous embarque dans une conversation sur la tech, les choix de vie et les récits inspirants."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/4p1JlnFEONylzl9UnMC4U7?si=CCzYUr9iSzen2v24AUDv9w"
+          title=episode.titre
+          description=episode.description
+          image=episode.image
+          url=episode.url
           cta="Écouter" %}
       </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="David Leuliette : de React Native à l'entrepreneuriat"
-          description="David Leuliette, CEO de WeShipItToday et expert React Native, partage son parcours — une conversation authentique et pleine de conseils pour ceux qui veulent oser leur propre voie."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/0oW4RZ7s59gWhdK6ooXIxa"
-          cta="Écouter" %}
-      </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="Épisode Spécial Readnest : de la curiosité au code"
-          description="Comment la curiosité, l'éthique et le code peuvent s'unir pour créer Readnest — une plateforme Ruby on Rails pour reconnecter lecteurs, auteurs, libraires et éditeurs."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/7BXR6rgveZL4nyjJEBIaVq?si=ogHn9U2bQmKaTWA3PaBdNQ"
-          cta="Écouter" %}
-      </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="RGPD, NIS 2, AI Act : la conformité numérique avec Senosen"
-          description="Avec Nicolas Ragot, Paul Fouquet et Maxime Moisant : RGPD, NIS2, DORA, AI Act — comment transformer la réglementation en avantage stratégique."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/04DMAenSDUs7DpUGDkIWue?si=pJT8YdGfSTu6rlReIPUHqw"
-          cta="Écouter" %}
-      </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="Camille Coutens : du code propre au produit utile"
-          description="Développeuse web et mobile spécialisée Vue.js et Nuxt.js, Camille partage sa vision du product thinking et son approche pour transformer une idée en application utile."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/6mYbiXgH76KsLBubN0L9Ny?si=pLk-DupzSaePSCwfP0xwsA"
-          cta="Écouter" %}
-      </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="Clémentine Duriez : tester les métiers pour mieux s'orienter"
-          description="Testeuse de métiers du digital, Clémentine a exploré le webdesign, DPO, content et gestion de projet. Un épisode sur l'orientation et la reconversion, loin des clichés."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/1rB3XdDaqYHo7Sa2DZ9y89?si=dQMDMzLTRweLDD6NCd-vkQ"
-          cta="Écouter" %}
-      </div>
-
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title="Grégoire Boisseau : sites web qui convertissent"
-          description="Développeur freelance depuis 2016 (React, Next.js, Astro), Grégoire parle performance, SEO, conversion et offres produitisées — acquérir des clients sans vendre à l'ancienne."
-          image="/assets/images/devzone.jpeg"
-          url="https://open.spotify.com/episode/2S1K191EAoXle4tDCbtP4i?si=aS8wcb7zRN-YkeuxEPUSAg"
-          cta="Écouter" %}
-      </div>
-
+      {% endfor %}
     </div>
 
     <!-- PARTICIPER -->
