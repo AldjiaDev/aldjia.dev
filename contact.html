@@ -27,16 +27,28 @@ permalink: /contact/
           On fait le point sur votre besoin et je vous oriente vers la meilleure solution.
         </p>
 
-        <a href="{{ site.cal_url }}"
-           target="_blank"
-           rel="noopener"
-           class="btn btn-primary btn-lg mb-3">
-          Réserver un créneau
-        </a>
+        <div class="d-flex gap-3 flex-wrap justify-content-center mb-3">
+          <a href="{{ site.cal_url }}"
+             target="_blank"
+             rel="noopener"
+             class="btn btn-primary btn-lg">
+            Réserver un créneau
+          </a>
+          <a id="mailto-btn" class="btn btn-outline-primary btn-lg" href="#">
+            Écrire un email
+          </a>
+        </div>
 
         <p class="muted mb-0" style="font-size: .85rem;">
           Sans engagement · Réponse sous 48h
         </p>
+
+        <script>
+          (function() {
+            var u = 'boughias-aldjia', d = 'live.fr';
+            document.getElementById('mailto-btn').href = 'mailto:' + u + '@' + d;
+          })();
+        </script>
 
       </div>
     </div>
