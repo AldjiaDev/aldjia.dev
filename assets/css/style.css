@@ -666,6 +666,61 @@ a:hover { color: var(--bordeaux); }
 .navbar .nav-link { color: rgba(13,13,13,.70) !important; }
 
 /* ================================
+   Portfolio — cartes projets
+   ================================ */
+
+.portfolio-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.portfolio-card:hover {
+  border-color: var(--bordeaux-mid);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(13,13,13,.08);
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.portfolio-card-img-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.portfolio-card:hover .portfolio-card-img-inner {
+  transform: scale(1.04);
+}
+
+.portfolio-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-tag {
+  font-size: .75rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: .2rem .55rem;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================================
    Blog — cartes grille
    ================================ */
 
