@@ -34,8 +34,64 @@ permalink: /blog/
 <section style="padding-bottom: 96px;">
   <div class="container">
 
+    {% assign first_post = site.posts.first %}
+    {% assign other_posts = site.posts | shift %}
+
+    <!-- Article vedette -->
+    <article class="mb-5">
+      <a href="{{ first_post.url | relative_url }}" style="text-decoration: none; display: block;">
+        <div class="blog-featured-card"
+             onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+             onmouseout="this.style.borderColor='var(--line)'">
+
+          {% if first_post.image %}
+            <div class="blog-featured-img">
+              <img src="{{ first_post.image | relative_url }}"
+                   alt="{{ first_post.image_alt | default: first_post.title | escape }}"
+                   style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                   loading="eager">
+            </div>
+          {% endif %}
+
+          <div class="blog-featured-body">
+            <p style="font-size: .72rem; color: var(--muted); margin-bottom: .75rem; letter-spacing: .06em; text-transform: uppercase; font-family: 'Inter', sans-serif;">
+              <time datetime="{{ first_post.date | date_to_xmlschema }}">
+                {{ first_post.date | date: "%-d %B %Y" }}
+              </time>
+              <span style="margin: 0 .5rem; opacity: .4;">·</span>
+              <span style="color: var(--bordeaux);">Article récent</span>
+            </p>
+            <h2 style="
+              font-family: 'Cormorant Garant', serif;
+              font-style: italic;
+              font-size: clamp(1.6rem, 3vw, 2.4rem);
+              font-weight: 600;
+              color: var(--ink);
+              line-height: 1.15;
+              margin-bottom: 1rem;
+            ">{{ first_post.title }}</h2>
+            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; max-width: 480px;">
+              {% if first_post.description %}
+                {{ first_post.description | truncate: 160 }}
+              {% else %}
+                {{ first_post.excerpt | strip_html | truncate: 160 }}
+              {% endif %}
+            </p>
+            <span style="font-size: .85rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
+              Lire l'article →
+            </span>
+          </div>
+
+        </div>
+      </a>
+    </article>
+
+    <!-- Séparateur -->
+    <div style="border-top: 1px solid var(--line); margin-bottom: 2.5rem;"></div>
+
+    <!-- Grille des autres articles -->
     <div class="row g-4">
-      {% for post in site.posts %}
+      {% for post in other_posts %}
         <article class="col-md-6 col-lg-4">
           <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
             <div style="
@@ -51,10 +107,12 @@ permalink: /blog/
             onmouseout="this.style.borderColor='var(--line)'">
 
               {% if post.image %}
-                <img src="{{ post.image | relative_url }}"
-                     alt="{{ post.image_alt | default: post.title | escape }}"
-                     style="width: 100%; height: 200px; object-fit: cover; display: block;"
-                     loading="lazy">
+                <div class="blog-card-img-wrap">
+                  <img src="{{ post.image | relative_url }}"
+                       alt="{{ post.image_alt | default: post.title | escape }}"
+                       class="blog-card-img"
+                       loading="lazy">
+                </div>
               {% endif %}
 
               <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
@@ -80,6 +138,13 @@ permalink: /blog/
                     {{ post.excerpt | strip_html | truncate: 110 }}
                   {% endif %}
                 </p>
+                {% if post.tags and post.tags.size > 0 %}
+                  <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
+                    {% for tag in post.tags limit:2 %}
+                      <span style="font-size: .72rem; border: 1px solid var(--line); border-radius: 3px; padding: .15rem .5rem; color: var(--muted); font-family: 'Inter', sans-serif;">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
                 <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
                   Lire →
                 </span>

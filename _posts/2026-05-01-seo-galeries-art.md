@@ -105,6 +105,11 @@ La technique au service de la visibilité. La visibilité au service des ventes.
 
 *Vous avez un site de galerie et vous vous demandez pourquoi il n'apparaît pas dans les résultats de recherche malgré un catalogue solide ? [Prenons 30 minutes pour analyser ce qui bloque]({{ site.cal_url }}) — sans engagement, avec des pistes concrètes et actionnables.*
 
+---
+
+**À explorer :**
+[Site web pour galerie d'art](/secteurs/galeries-art/) · [Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/)
+
 <div class="text-center mt-5">
   <a href="/blog.html" class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm">
     ← Retour au blog

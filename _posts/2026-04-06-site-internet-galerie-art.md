@@ -107,3 +107,7 @@ Un site de galerie d'art bien conçu n'est pas nécessairement plus cher qu'un s
 ---
 
 *Vous êtes galeriste et vous reconnaissez certains de ces problèmes dans votre site actuel ? [Prenons 30 minutes pour en parler]({{ site.cal_url }}) — sans engagement, avec des conseils concrets sur ce qui peut être amélioré.*
+
+---
+
+**À explorer :** [Site web pour galerie d'art — ce que je propose concrètement](/secteurs/galeries-art/)

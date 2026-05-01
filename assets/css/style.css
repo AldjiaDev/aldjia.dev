@@ -664,3 +664,68 @@ a:hover { color: var(--bordeaux); }
 }
 
 .navbar .nav-link { color: rgba(13,13,13,.70) !important; }
+
+/* ================================
+   Blog — cartes grille
+   ================================ */
+
+.blog-card-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.blog-card-img-wrap:hover .blog-card-img {
+  transform: scale(1.04);
+}
+
+/* ================================
+   Blog — article vedette
+   ================================ */
+
+.blog-featured-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .2s;
+  min-height: 320px;
+}
+
+.blog-featured-img {
+  flex: 0 0 48%;
+  max-width: 48%;
+  overflow: hidden;
+}
+
+.blog-featured-body {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .blog-featured-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .blog-featured-img {
+    flex: none;
+    max-width: 100%;
+    height: 220px;
+  }
+  .blog-featured-body {
+    padding: 1.5rem;
+  }
+}
