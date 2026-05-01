@@ -48,7 +48,7 @@ permalink: /about/
         </h1>
         <p style="font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 480px; margin-bottom: 2rem;">
           Développeuse web freelance avec une double formation Beaux-Arts et Ruby on Rails.
-          Je conçois des sites et applications sur mesure pour les professionnels du monde de l’art et de la culture.
+          Je conçois des sites et applications sur mesure pour les professionnels du monde de l'art et de la culture.
         </p>
         <div class="d-flex gap-3 flex-wrap">
           <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
@@ -108,7 +108,31 @@ permalink: /about/
     </div>
   </section>
 
-  <!-- FORMATION -->
+  <!-- PHRASE FORTE -->
+  <section class="section pt-0">
+    <div style="
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 3rem 0;
+      text-align: center;
+    ">
+      <p style="
+        font-family: 'Cormorant Garant', serif;
+        font-style: italic;
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.4;
+        max-width: 720px;
+        margin: 0 auto;
+      ">
+        "J'ai étudié l'art avant d'apprendre à coder.
+        Ce n'était pas un détour — c'était une fondation."
+      </p>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
   <section class="section pt-0">
     <p class="kicker mb-4">Parcours</p>
     <div class="row g-4">
@@ -155,49 +179,52 @@ permalink: /about/
   <!-- COMPÉTENCES -->
   <section class="section pt-0">
     <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2.5rem;">
+
       <div class="row align-items-start g-4 mb-4">
         <div class="col">
           <p class="kicker mb-2">Stack technique</p>
           <h2 class="section-title mb-0">Compétences</h2>
         </div>
-        <div class="col-auto d-none d-md-block">
-          <p class="muted mb-0" style="font-size: .9rem;">Principal : Ruby on Rails · JavaScript</p>
-        </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
+
         <div class="col-md-6">
           <p class="kicker mb-3" style="font-size: .68rem;">Langages & frameworks</p>
-          <div class="d-flex flex-column gap-2">
-            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
-              <span>Ruby on Rails</span>
-              <span style="color: var(--bordeaux); font-size: .75rem;">●●●●○</span>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
+              <span style="font-size: .95rem; font-weight: 500;">Ruby on Rails</span>
+              <span style="font-size: .78rem; color: var(--bordeaux); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Principal</span>
             </div>
-            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
-              <span>JavaScript</span>
-              <span style="color: var(--bordeaux); font-size: .75rem;">●●●○○</span>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
+              <span style="font-size: .95rem; font-weight: 500;">HTML · CSS · Bootstrap</span>
+              <span style="font-size: .78rem; color: var(--bordeaux); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Principal</span>
             </div>
-            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
-              <span>HTML · CSS · Bootstrap</span>
-              <span style="color: var(--bordeaux); font-size: .75rem;">●●●●○</span>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
+              <span style="font-size: .95rem; font-weight: 500;">JavaScript</span>
+              <span style="font-size: .78rem; color: var(--muted); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Courant</span>
             </div>
-            <div class="d-flex justify-content-between align-items-center" style="font-size: .9rem;">
-              <span>Swift · SwiftUI</span>
-              <span style="color: var(--bordeaux); font-size: .75rem;">●●○○○</span>
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: .95rem; font-weight: 500;">Swift · SwiftUI</span>
+              <span style="font-size: .78rem; color: var(--muted); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Notions</span>
             </div>
           </div>
         </div>
+
         <div class="col-md-6">
           <p class="kicker mb-3" style="font-size: .68rem;">Outils & déploiement</p>
           <div class="d-flex flex-wrap gap-2">
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Git · GitHub</span>
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Heroku</span>
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">GitHub Pages</span>
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Supabase</span>
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">Jekyll</span>
-            <span style="font-size: .82rem; border: 1px solid var(--line); border-radius: 4px; padding: .25rem .65rem; color: var(--muted);">SEO on-page</span>
+            <span class="portfolio-tag">Git · GitHub</span>
+            <span class="portfolio-tag">Heroku</span>
+            <span class="portfolio-tag">GitHub Pages</span>
+            <span class="portfolio-tag">Supabase</span>
+            <span class="portfolio-tag">Jekyll</span>
+            <span class="portfolio-tag">PostgreSQL</span>
+            <span class="portfolio-tag">SEO on-page</span>
+            <span class="portfolio-tag">Schema.org</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -215,36 +242,54 @@ permalink: /about/
     <div class="row g-4">
 
       <div class="col-md-6 col-lg-4">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
-          <p class="kicker mb-2" style="font-size: .65rem;">Commissaires-priseurs</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Mirabili Enchères</h3>
-          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
-            Application Ruby on Rails conçue comme un cabinet de curiosités numérique. Catalogue, estimation en ligne, SEO travaillé pour les vacations.
-          </p>
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary w-100">Voir le projet</a>
-        </div>
+        <a href="/realisations/mirabili-encheres/" style="text-decoration: none; display: block; height: 100%;">
+          <div style="border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;"
+               onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+               onmouseout="this.style.borderColor='var(--line)'">
+            <div class="blog-card-img-wrap">
+              <img src="/assets/images/mirabili.jpg" alt="Mirabili Enchères" class="blog-card-img" loading="lazy">
+            </div>
+            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+              <p class="kicker mb-2" style="font-size: .65rem;">Commissaires-priseurs</p>
+              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Mirabili Enchères</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Application Ruby on Rails — catalogue, estimation en ligne, SEO structuré.</p>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
-          <p class="kicker mb-2" style="font-size: .65rem;">Plateforme éditoriale</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Art au Féminin</h3>
-          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
-            Podcast et plateforme dédiée aux artistes femmes dans l'histoire de l’art — épisodes, articles, livres, citations.
-          </p>
-          <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">Découvrir</a>
-        </div>
+        <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener" style="text-decoration: none; display: block; height: 100%;">
+          <div style="border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;"
+               onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+               onmouseout="this.style.borderColor='var(--line)'">
+            <div class="blog-card-img-wrap">
+              <img src="/assets/images/artaufeminin.jpeg" alt="Art au Féminin" class="blog-card-img" loading="lazy">
+            </div>
+            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+              <p class="kicker mb-2" style="font-size: .65rem;">Plateforme éditoriale</p>
+              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Art au Féminin</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Podcast et plateforme dédiée aux artistes femmes dans l'histoire de l'art.</p>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;" onmouseover="this.style.borderColor='var(--bordeaux-mid)'" onmouseout="this.style.borderColor='var(--line)'">
-          <p class="kicker mb-2" style="font-size: .65rem;">Application web</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">Readnest</h3>
-          <p class="muted mb-4" style="font-size: .9rem; line-height: 1.6; flex: 1;">
-            Plateforme communautaire Ruby on Rails — gestion de rôles, carte interactive et fonctionnalités sociales.
-          </p>
-          <a href="https://www.readnest.fr/" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">Visiter</a>
-        </div>
+        <a href="https://www.readnest.fr/" target="_blank" rel="noopener" style="text-decoration: none; display: block; height: 100%;">
+          <div style="border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; height: 100%; display: flex; flex-direction: column; transition: border-color .2s;"
+               onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+               onmouseout="this.style.borderColor='var(--line)'">
+            <div class="blog-card-img-wrap">
+              <img src="/assets/images/readnest.jpg" alt="Readnest" class="blog-card-img" loading="lazy">
+            </div>
+            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+              <p class="kicker mb-2" style="font-size: .65rem;">Application web</p>
+              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Readnest</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme communautaire Ruby on Rails — gestion de rôles, carte interactive.</p>
+            </div>
+          </div>
+        </a>
       </div>
 
     </div>
