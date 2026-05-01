@@ -43,19 +43,56 @@ permalink: /podcasts/dev-zone/
 
     <div class="d-flex align-items-center justify-content-between mb-5">
       <p class="kicker mb-0">Épisodes</p>
-      <span class="muted" style="font-size: .85rem;">{{ site.episodes.size | default: "" }}</span>
+      <span class="muted" style="font-size: .85rem;">{{ site.data.episodes_devzone.size }} épisodes</span>
     </div>
 
-    <div class="row g-4">
+    <div style="display: flex; flex-direction: column;">
       {% for episode in site.data.episodes_devzone %}
-      <div class="col-md-6 col-lg-4 d-flex">
-        {% include card.html
-          title=episode.titre
-          description=episode.description
-          image=episode.image
-          url=episode.url
-          cta="Écouter" %}
-      </div>
+      <a href="{{ episode.url }}" target="_blank" rel="noopener"
+         style="text-decoration: none; color: inherit; display: block;"
+         onmouseover="this.querySelector('.ep-title').style.color='var(--bordeaux)'"
+         onmouseout="this.querySelector('.ep-title').style.color='var(--ink)'">
+        <div style="
+          display: flex;
+          align-items: flex-start;
+          gap: 2rem;
+          padding: 1.75rem 0;
+          border-bottom: 1px solid var(--line);
+        ">
+          <span style="
+            font-family: 'Cormorant Garant', serif;
+            font-size: 1.1rem;
+            color: var(--bordeaux);
+            font-weight: 600;
+            min-width: 2rem;
+            padding-top: .1rem;
+            opacity: .6;
+          ">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+          <div style="flex: 1;">
+            <h3 class="ep-title" style="
+              font-family: 'Cormorant Garant', serif;
+              font-style: italic;
+              font-size: 1.25rem;
+              font-weight: 600;
+              color: var(--ink);
+              line-height: 1.25;
+              margin-bottom: .5rem;
+              transition: color .18s;
+            ">{{ episode.titre }}</h3>
+            <p style="font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 0;">
+              {{ episode.description }}
+            </p>
+          </div>
+          <span class="d-none d-md-block" style="
+            font-size: .75rem;
+            color: var(--bordeaux);
+            font-weight: 500;
+            letter-spacing: .04em;
+            white-space: nowrap;
+            padding-top: .3rem;
+          ">Écouter →</span>
+        </div>
+      </a>
       {% endfor %}
     </div>
 
