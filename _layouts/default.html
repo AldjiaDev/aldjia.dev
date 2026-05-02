@@ -88,31 +88,35 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    document.querySelectorAll('section').forEach((section, i) => {
-      // Hero already visible — animate inner elements instead
-      if (i === 0) {
-        gsap.from(section.querySelectorAll('.kicker, h1, .hero-subtitle, .d-flex'), {
-          opacity: 0,
-          y: 28,
-          duration: 0.75,
-          stagger: 0.12,
-          ease: 'power2.out',
-          delay: 0.1
-        });
-        return;
-      }
-      gsap.from(section, {
-        opacity: 0,
-        y: 48,
-        duration: 0.85,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 84%',
-          toggleActions: 'play none none none'
+    // Animations uniquement sur desktop — sur mobile les ScrollTriggers
+    // peuvent ne pas se déclencher et laisser les sections invisibles
+    if (window.innerWidth >= 768) {
+      document.querySelectorAll('section').forEach((section, i) => {
+        // Hero already visible — animate inner elements instead
+        if (i === 0) {
+          gsap.from(section.querySelectorAll('.kicker, h1, .hero-subtitle, .d-flex'), {
+            opacity: 0,
+            y: 28,
+            duration: 0.75,
+            stagger: 0.12,
+            ease: 'power2.out',
+            delay: 0.1
+          });
+          return;
         }
+        gsap.from(section, {
+          opacity: 0,
+          y: 48,
+          duration: 0.85,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 84%',
+            toggleActions: 'play none none none'
+          }
+        });
       });
-    });
+    }
   </script>
 
 </body>
