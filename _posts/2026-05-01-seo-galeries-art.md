@@ -111,7 +111,7 @@ La technique au service de la visibilité. La visibilité au service des ventes.
 [Site web pour galerie d'art](/secteurs/galeries-art/) · [Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/)
 
 <div class="text-center mt-5">
-  <a href="/blog.html" class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm">
+  <a href="/blog/" class="btn btn-outline-primary">
     ← Retour au blog
   </a>
 </div>

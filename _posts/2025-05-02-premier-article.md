@@ -88,7 +88,7 @@ Et il m’a rappelé que parfois, choisir plus simple, c’est choisir plus just
 ---
 
 <div class="text-center mt-5">
-  <a href="/blog.html" class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm">
+  <a href="/blog/" class="btn btn-outline-primary">
     ← Retour au blog
   </a>
 </div>
