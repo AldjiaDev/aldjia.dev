@@ -798,3 +798,34 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
     padding: 1.5rem;
   }
 }
+
+/* ================================
+   About — box Art au Féminin
+   ================================ */
+
+.about-art-box { padding: 1.5rem; }
+
+@media (min-width: 768px) {
+  .about-art-box { padding: 2.5rem 3rem; }
+}
+
+/* ================================
+   Mobile — correctifs globaux
+   ================================ */
+
+@media (max-width: 575px) {
+  /* Évite les textes trop grands dans les sections sombres */
+  .home .hero-section { padding: 56px 0 48px; }
+
+  /* Sector cards : espacement cohérent en colonne unique */
+  .sector-card { padding-right: 0 !important; padding-left: 0 !important; }
+
+  /* Price cards : padding réduit */
+  .price-card { padding: 1.75rem; }
+
+  /* Temoignage card */
+  .temoignage-card { padding: 1.5rem; }
+
+  /* Post wrap */
+  .post-wrap { margin: 32px auto 64px; padding: 0 16px; }
+}
