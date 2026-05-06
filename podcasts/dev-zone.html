@@ -49,6 +49,7 @@ permalink: /podcasts/dev-zone/
     <div style="display: flex; flex-direction: column;">
       {% for episode in site.data.episodes_devzone %}
       <a href="{{ episode.url }}" target="_blank" rel="noopener"
+         aria-label="{{ episode.titre }} — écouter l'épisode (ouvre dans un nouvel onglet)"
          style="text-decoration: none; color: inherit; display: block;"
          onmouseover="this.querySelector('.ep-title').style.color='var(--bordeaux)'"
          onmouseout="this.querySelector('.ep-title').style.color='var(--ink)'">

@@ -2,7 +2,7 @@
      onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
      onmouseout="this.style.borderColor='var(--line)'">
   {% if include.image %}
-    <img src="{{ include.image }}" alt="{{ include.title }}" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+    <img src="{{ include.image }}" alt="{{ include.alt | default: include.title }}" loading="lazy" style="width: 100%; height: 180px; object-fit: cover; display: block;">
   {% endif %}
   <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
     <h4 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">

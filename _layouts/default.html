@@ -70,9 +70,11 @@
 
 <body>
 
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   {% include navbar.html %}
 
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
 
@@ -86,6 +88,43 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
   <script>
+    // ============================================================
+    // Accessibilité : répliquer les effets hover lors du focus clavier
+    // Les cartes et liens ont des onmouseover/onmouseout sur leurs
+    // enfants — on les déclenche aussi au focus/blur sur le lien parent
+    // ============================================================
+    (function() {
+      // Cartes dans des liens <a> (onmouseover sur un enfant)
+      document.querySelectorAll('a[href]').forEach(function(link) {
+        var card = link.querySelector('[onmouseover]');
+        if (!card) return;
+        link.addEventListener('focus', function() {
+          card.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+        });
+        link.addEventListener('blur', function() {
+          card.dispatchEvent(new MouseEvent('mouseout', { bubbles: true }));
+        });
+      });
+      // Liens <a> qui ont eux-mêmes onmouseover (ex: liste d'épisodes)
+      document.querySelectorAll('a[onmouseover]').forEach(function(link) {
+        link.addEventListener('focus', function() {
+          link.dispatchEvent(new MouseEvent('mouseover', { bubbles: false }));
+        });
+        link.addEventListener('blur', function() {
+          link.dispatchEvent(new MouseEvent('mouseout', { bubbles: false }));
+        });
+      });
+      // <summary> dans <details> (FAQ)
+      document.querySelectorAll('summary[onmouseover]').forEach(function(summary) {
+        summary.addEventListener('focus', function() {
+          summary.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+        });
+        summary.addEventListener('blur', function() {
+          summary.dispatchEvent(new MouseEvent('mouseout', { bubbles: true }));
+        });
+      });
+    })();
+
     gsap.registerPlugin(ScrollTrigger);
 
     // Animations uniquement sur desktop — sur mobile les ScrollTriggers

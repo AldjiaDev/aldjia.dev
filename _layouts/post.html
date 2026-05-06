@@ -4,10 +4,7 @@ layout: default
 
 <article class="post-wrap">
 
-  <a href="{{ '/blog' | relative_url }}"
-     style="display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; color: var(--muted); text-decoration: none; margin-bottom: 2rem;"
-     onmouseover="this.style.color='var(--bordeaux)'"
-     onmouseout="this.style.color='var(--muted)'">
+  <a href="{{ '/blog' | relative_url }}" class="post-back-link">
     ← Articles
   </a>
 
@@ -38,7 +35,7 @@ layout: default
     </div>
   {% endif %}
 
-  <nav class="post-pager">
+  <nav class="post-pager" aria-label="Navigation entre articles">
     {% if page.previous.url %}
       <a class="prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
     {% else %}

@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm site-nav" style="z-index: 1030;">
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm site-nav" aria-label="Navigation principale" style="z-index: 1030;">
   <div class="container">
-    <a class="navbar-brand fw-bold site-brand" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand fw-bold site-brand" href="{{ '/' | relative_url }}" aria-label="Aldjia Dev — Accueil">
       Aldjia Dev
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -13,25 +13,33 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | relative_url }}">
+          <a class="nav-link {% if page.url == '/about/' %}active{% endif %}"
+             href="{{ '/about' | relative_url }}"
+             {% if page.url == '/about/' %}aria-current="page"{% endif %}>
             À propos
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/realisations' %}active{% endif %}" href="{{ '/realisations' | relative_url }}">
+          <a class="nav-link {% if page.url contains '/realisations' %}active{% endif %}"
+             href="{{ '/realisations' | relative_url }}"
+             {% if page.url contains '/realisations' %}aria-current="page"{% endif %}>
             Portfolio
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog' | relative_url }}">
+          <a class="nav-link {% if page.url contains '/blog' %}active{% endif %}"
+             href="{{ '/blog' | relative_url }}"
+             {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
             Articles
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/podcasts' %}active{% endif %}" href="{{ '/podcasts' | relative_url }}">
+          <a class="nav-link {% if page.url contains '/podcasts' %}active{% endif %}"
+             href="{{ '/podcasts' | relative_url }}"
+             {% if page.url contains '/podcasts' %}aria-current="page"{% endif %}>
             Podcasts
           </a>
         </li>
@@ -41,7 +49,8 @@
           <a class="btn btn-primary btn-sm rounded-pill px-3 site-cta"
              href="{{ site.cal_url }}"
              target="_blank"
-             rel="noopener">
+             rel="noopener"
+             aria-label="Prendre rendez-vous (ouvre dans un nouvel onglet)">
             Prendre RDV
           </a>
         </li>
