@@ -45,11 +45,110 @@ permalink: /contact/
 
         <script>
           (function() {
-            var u = 'boughias-aldjia', d = 'live.fr';
+            var u = 'boughias.aldjia', d = 'gmail.com';
             document.getElementById('mailto-btn').href = 'mailto:' + u + '@' + d;
           })();
         </script>
 
+      </div>
+    </div>
+
+    <!-- FORMULAIRE DE CONTACT -->
+    <div class="row justify-content-center mt-5 pt-2">
+      <div class="col-lg-6">
+        <p class="kicker mb-4 text-center" style="font-size: .65rem;">Formulaire</p>
+
+        <form
+          action="https://formspree.io/boughias.aldjia@gmail.com"
+          method="POST"
+          id="contact-form"
+        >
+          <!-- Redirection après envoi -->
+          <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=true" />
+
+          <div class="mb-3">
+            <label for="contact-name" style="font-size: .85rem; font-weight: 500; margin-bottom: .4rem; display: block;">Nom</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              required
+              placeholder="Votre nom"
+              style="
+                width: 100%;
+                padding: .65rem .9rem;
+                border: 1px solid var(--line);
+                background: transparent;
+                font-family: inherit;
+                font-size: .9rem;
+                color: var(--ink);
+                outline: none;
+                transition: border-color .2s;
+              "
+              onfocus="this.style.borderColor='var(--bordeaux)'"
+              onblur="this.style.borderColor='var(--line)'"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="contact-email" style="font-size: .85rem; font-weight: 500; margin-bottom: .4rem; display: block;">Email</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              required
+              placeholder="votre@email.com"
+              style="
+                width: 100%;
+                padding: .65rem .9rem;
+                border: 1px solid var(--line);
+                background: transparent;
+                font-family: inherit;
+                font-size: .9rem;
+                color: var(--ink);
+                outline: none;
+                transition: border-color .2s;
+              "
+              onfocus="this.style.borderColor='var(--bordeaux)'"
+              onblur="this.style.borderColor='var(--line)'"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="contact-message" style="font-size: .85rem; font-weight: 500; margin-bottom: .4rem; display: block;">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              required
+              rows="6"
+              placeholder="Décrivez votre projet..."
+              style="
+                width: 100%;
+                padding: .65rem .9rem;
+                border: 1px solid var(--line);
+                background: transparent;
+                font-family: inherit;
+                font-size: .9rem;
+                color: var(--ink);
+                outline: none;
+                resize: vertical;
+                transition: border-color .2s;
+              "
+              onfocus="this.style.borderColor='var(--bordeaux)'"
+              onblur="this.style.borderColor='var(--line)'"
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+          </div>
+
+          {% if page.url contains '?sent=true' %}
+          <p class="text-center mt-4" style="font-size: .9rem; color: var(--bordeaux);">
+            Message envoyé — je vous réponds dans les 48h.
+          </p>
+          {% endif %}
+        </form>
       </div>
     </div>
 
@@ -63,7 +162,7 @@ permalink: /contact/
             <p class="kicker mb-2" style="font-size: .65rem;">Email</p>
             <a href="mailto:{{ site.email }}"
                style="font-size: .9rem; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--bordeaux-mid);">
-              boughias-aldjia<br>@live.fr
+              boughias.aldjia<br>@gmail.com
             </a>
           </div>
 
