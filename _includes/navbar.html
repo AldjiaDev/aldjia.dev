@@ -44,6 +44,14 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/contact' %}active{% endif %}"
+             href="{{ '/contact' | relative_url }}"
+             {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
+            Contact
+          </a>
+        </li>
+
         <!-- CTA -->
         <li class="nav-item ms-lg-2">
           <a class="btn btn-primary btn-sm rounded-pill px-3 site-cta"
