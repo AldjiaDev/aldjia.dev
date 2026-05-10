@@ -21,6 +21,9 @@
       "url": "{{ site.url }}/assets/images/favicon.png"
     }
   },
-  "datePublished": "{{ page.date | date_to_xmlschema }}"
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.modified_date | default: page.date | date_to_xmlschema }}",
+  "wordCount": {{ page.content | number_of_words }},
+  "url": "{{ site.url }}{{ page.url }}"
 }
 </script>
