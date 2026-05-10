@@ -1,0 +1,150 @@
+---
+layout: default
+title: "Déclaration d'accessibilité — RGAA"
+description: "Déclaration d'accessibilité d'aldjia.dev conformément au RGAA 4.1. État de conformité, non-conformités identifiées et contact pour signaler un problème."
+permalink: /accessibilite/
+---
+
+<section style="padding: 80px 0 100px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+
+        <p class="kicker mb-4">Accessibilité</p>
+        <h1 style="
+          font-family: 'Cormorant Garant', serif;
+          font-style: italic;
+          font-size: clamp(2.2rem, 4vw, 3.5rem);
+          font-weight: 600;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          margin-bottom: .75rem;
+        ">Déclaration d'accessibilité</h1>
+
+        <p class="muted mb-5" style="font-size: .9rem;">
+          Établie le 10 mai 2026 — conforme au <strong style="color: var(--ink);">RGAA 4.1</strong>
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+
+          <!-- État de conformité -->
+          <div>
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">État de conformité</h2>
+            <div style="border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 1rem;">
+              <p style="font-size: .95rem; font-weight: 600; color: var(--bordeaux); margin: 0;">
+                aldjia.dev est partiellement conforme au RGAA 4.1.
+              </p>
+            </div>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin: 0;">
+              Une conformité partielle signifie que certaines pages ou certains composants présentent des non-conformités aux critères du RGAA, sans bloquer l'accès à l'information principale du site.
+            </p>
+          </div>
+
+          <!-- Résultats des tests -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Résultats des tests</h2>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin-bottom: 1rem;">
+              L'auto-évaluation a été réalisée en mai 2026 sur les pages représentatives du site. Les points de contrôle suivants ont été vérifiés :
+            </p>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin: 0;">
+              <li style="margin-bottom: .5rem;">Alternatives textuelles aux images ✓</li>
+              <li style="margin-bottom: .5rem;">Structure des titres et landmarks HTML ✓</li>
+              <li style="margin-bottom: .5rem;">Navigation au clavier et focus visible ✓</li>
+              <li style="margin-bottom: .5rem;">Lien d'évitement (skip link) ✓</li>
+              <li style="margin-bottom: .5rem;">Contraste des couleurs — textes courants (ratio ≥ 4,5:1) ✓</li>
+              <li style="margin-bottom: .5rem;">Formulaire de contact : labels associés, gestion des erreurs ✓</li>
+              <li style="margin-bottom: .5rem;">Langue de la page déclarée (<code>lang="fr"</code>) ✓</li>
+              <li style="margin-bottom: .5rem;">Liens vers des contenus externes identifiés ✓</li>
+              <li>Pas de contenu qui clignote ou qui peut provoquer des crises photosensibles ✓</li>
+            </ul>
+          </div>
+
+          <!-- Non-conformités -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Non-conformités identifiées</h2>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin: 0;">
+              <li style="margin-bottom: .75rem;">
+                <strong style="color: var(--ink);">Animations GSAP</strong> — les animations d'apparition des sections (ScrollTrigger) sont désactivées sur mobile mais restent présentes sur desktop. Elles respectent cependant la préférence système <code>prefers-reduced-motion</code> si configurée.
+              </li>
+              <li style="margin-bottom: .75rem;">
+                <strong style="color: var(--ink);">Contenus embarqués tiers</strong> — le calendrier de réservation (Cal.com) s'ouvre dans un nouvel onglet. Son accessibilité interne dépend de Cal.com et échappe au contrôle de ce site.
+              </li>
+              <li>
+                <strong style="color: var(--ink);">Contraste des textes décoratifs</strong> — certains éléments de kicker (textes en lettres capitales espacées) et de légendes secondaires présentent un ratio de contraste légèrement inférieur à 4,5:1 sur fond clair. Ces textes n'apportent pas d'information critique.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Technologies -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Technologies utilisées</h2>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin: 0;">
+              <li style="margin-bottom: .4rem;">HTML5</li>
+              <li style="margin-bottom: .4rem;">CSS3</li>
+              <li style="margin-bottom: .4rem;">JavaScript (ES6+)</li>
+              <li style="margin-bottom: .4rem;">Jekyll (générateur de site statique)</li>
+              <li style="margin-bottom: .4rem;">Bootstrap 5.3</li>
+              <li>GSAP 3 (animations)</li>
+            </ul>
+          </div>
+
+          <!-- Environnement de test -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Environnement de test</h2>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin-bottom: .75rem;">Les vérifications ont été effectuées avec :</p>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin: 0;">
+              <li style="margin-bottom: .4rem;">Chrome 124 sur macOS — navigation au clavier</li>
+              <li style="margin-bottom: .4rem;">VoiceOver (macOS) — lecteur d'écran natif</li>
+              <li style="margin-bottom: .4rem;">Axe DevTools — extension d'audit automatique</li>
+              <li>Wave (WebAIM) — outil de vérification des contrastes et de la structure</li>
+            </ul>
+          </div>
+
+          <!-- Pages testées -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Pages ayant fait l'objet d'une vérification</h2>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin: 0;">
+              <li style="margin-bottom: .4rem;"><a href="/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Accueil</a></li>
+              <li style="margin-bottom: .4rem;"><a href="/about/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">À propos</a></li>
+              <li style="margin-bottom: .4rem;"><a href="/contact/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Contact</a></li>
+              <li style="margin-bottom: .4rem;"><a href="/realisations/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Réalisations</a></li>
+              <li style="margin-bottom: .4rem;"><a href="/blog/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Articles</a></li>
+              <li><a href="/faq/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Retour & contact -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Retour d'information et contact</h2>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin-bottom: 1rem;">
+              Si vous constatez un défaut d'accessibilité qui vous empêche d'accéder à un contenu ou à une fonctionnalité de ce site, vous pouvez me contacter :
+            </p>
+            <ul class="muted" style="font-size: .95rem; line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1rem;">
+              <li style="margin-bottom: .5rem;">Via le <a href="/contact/" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">formulaire de contact</a></li>
+              <li>Par email : <a id="access-mail" href="#" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">boughias.aldjia@gmail.com</a></li>
+            </ul>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin: 0;">
+              Je m'engage à répondre dans un délai de 5 jours ouvrés et à apporter les corrections nécessaires.
+            </p>
+            <script>
+              (function() {
+                var u = 'boughias.aldjia', d = 'gmail.com';
+                document.getElementById('access-mail').href = 'mailto:' + u + '@' + d;
+              })();
+            </script>
+          </div>
+
+          <!-- Voie de recours -->
+          <div style="border-top: 1px solid var(--line); padding-top: 2rem;">
+            <h2 style="font-size: 1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink);">Voie de recours</h2>
+            <p class="muted" style="font-size: .95rem; line-height: 1.8; margin: 0;">
+              Si mes réponses ne vous satisfont pas, vous pouvez contacter le <strong style="color: var(--ink);">Défenseur des droits</strong> (defenseurdesdroits.fr), lui écrire à l'adresse postale suivante : Défenseur des droits — Libre réponse 71120 — 75342 Paris CEDEX 07, ou contacter un de ses délégués dans votre région.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

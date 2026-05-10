@@ -127,9 +127,10 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animations uniquement sur desktop — sur mobile les ScrollTriggers
-    // peuvent ne pas se déclencher et laisser les sections invisibles
-    if (window.innerWidth >= 768) {
+    // Animations uniquement sur desktop et si l'utilisateur n'a pas demandé
+    // la réduction des mouvements (prefers-reduced-motion — RGAA critère 13.8)
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (window.innerWidth >= 768 && !prefersReduced) {
       document.querySelectorAll('section').forEach((section, i) => {
         // Hero already visible — animate inner elements instead
         if (i === 0) {

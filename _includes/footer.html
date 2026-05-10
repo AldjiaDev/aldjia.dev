@@ -57,10 +57,24 @@
 
     </div>
 
-    <div class="pt-4" style="border-top: 1px solid rgba(247,244,239,.08);">
+    <div class="pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3" style="border-top: 1px solid rgba(247,244,239,.08);">
       <p class="mb-0" style="color: rgba(247,244,239,.28); font-size: .78rem;">
         © {{ site.time | date: '%Y' }} Aldjia Boughias · Développeuse web freelance · Lille
       </p>
+      <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
+        <li>
+          <a href="{{ '/rgpd' | relative_url }}"
+             style="color: rgba(247,244,239,.35); font-size: .78rem; text-decoration: underline; text-underline-offset: 3px;">
+            Politique de confidentialité
+          </a>
+        </li>
+        <li>
+          <a href="{{ '/accessibilite' | relative_url }}"
+             style="color: rgba(247,244,239,.35); font-size: .78rem; text-decoration: underline; text-underline-offset: 3px;">
+            Accessibilité : partiellement conforme
+          </a>
+        </li>
+      </ul>
     </div>
 
   </div>

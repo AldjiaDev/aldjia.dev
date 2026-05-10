@@ -104,7 +104,7 @@ permalink: /contact/
       <div class="col-lg-6 offset-lg-1">
 
         <!-- Message de succès (masqué par défaut) -->
-        <div id="form-success" style="display: none; padding: 3rem 2rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); text-align: center;">
+        <div id="form-success" role="status" aria-live="polite" style="display: none; padding: 3rem 2rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); text-align: center;">
           <p style="
             font-family: 'Cormorant Garant', serif;
             font-style: italic;
@@ -134,6 +134,8 @@ permalink: /contact/
                 id="contact-name"
                 name="name"
                 required
+                autocomplete="name"
+                aria-required="true"
                 placeholder="Votre nom"
                 style="
                   width: 100%;
@@ -158,6 +160,8 @@ permalink: /contact/
                 id="contact-email"
                 name="email"
                 required
+                autocomplete="email"
+                aria-required="true"
                 placeholder="votre@email.com"
                 style="
                   width: 100%;
@@ -234,7 +238,7 @@ permalink: /contact/
             <p class="muted mb-0" style="font-size: .82rem;">Réponse sous 48h</p>
           </div>
 
-          <p id="form-error" style="display: none; margin-top: 1rem; font-size: .88rem; color: #c0392b;">
+          <p id="form-error" role="alert" aria-live="assertive" style="display: none; margin-top: 1rem; font-size: .88rem; color: #c0392b;">
             Une erreur est survenue. Réessayez ou écrivez-moi directement par email.
           </p>
 
