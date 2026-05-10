@@ -58,14 +58,26 @@ permalink: /contact/
       <div class="col-lg-6">
         <p class="kicker mb-4 text-center" style="font-size: .65rem;">Formulaire</p>
 
-        <form
-          action="https://formspree.io/f/mnjwoqgg"
-          method="POST"
-          id="contact-form"
-        >
-          <!-- Redirection après envoi -->
-          <input type="hidden" name="_next" value="{{ site.url }}/contact/merci/" />
+        <!-- Message de confirmation (masqué par défaut) -->
+        <div id="form-success" style="display: none; text-align: center; padding: 2rem 0;">
+          <p style="
+            font-family: 'Cormorant Garant', serif;
+            font-style: italic;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+          ">Merci pour votre message.</p>
+          <p class="muted" style="font-size: .95rem; line-height: 1.8; margin-bottom: 2rem;">
+            Je vous réponds sous 48h.<br>
+            En attendant, vous pouvez réserver un créneau directement.
+          </p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Réserver un créneau
+          </a>
+        </div>
 
+        <form id="contact-form">
           <div class="mb-3">
             <label for="contact-name" style="font-size: .85rem; font-weight: 500; margin-bottom: .4rem; display: block;">Nom</label>
             <input
@@ -140,15 +152,44 @@ permalink: /contact/
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+            <button type="submit" id="form-submit-btn" class="btn btn-primary btn-lg">Envoyer le message</button>
           </div>
 
-          {% if page.url contains '?sent=true' %}
-          <p class="text-center mt-4" style="font-size: .9rem; color: var(--bordeaux);">
-            Message envoyé — je vous réponds dans les 48h.
+          <p id="form-error" style="display: none; text-align: center; margin-top: 1rem; font-size: .9rem; color: #c0392b;">
+            Une erreur est survenue. Réessayez ou écrivez-moi directement par email.
           </p>
-          {% endif %}
         </form>
+
+        <script>
+          document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('form-submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Envoi en cours…';
+
+            var data = new FormData(this);
+            fetch('https://formspree.io/f/mnjwoqgg', {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            })
+            .then(function(res) {
+              if (res.ok) {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+              } else {
+                document.getElementById('form-error').style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Envoyer le message';
+              }
+            })
+            .catch(function() {
+              document.getElementById('form-error').style.display = 'block';
+              btn.disabled = false;
+              btn.textContent = 'Envoyer le message';
+            });
+          });
+        </script>
       </div>
     </div>
 
