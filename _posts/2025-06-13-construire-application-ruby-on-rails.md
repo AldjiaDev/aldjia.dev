@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_from:
+  - /mes%20r%C3%A9alisations/2025/06/13/construire-application-ruby-on-rails/
 title: "Construire une application Ruby on Rails en 2025 : outils, méthodes et apprentissages"
 date: 2025-06-13
 tags: [Ruby on Rails, développement, apprentissage, déploiement, stack, projets]
