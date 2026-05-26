@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Site web pour commissaire-priseur : les fonctionnalités indispensables"
-date: 2026-06-10
+date: 2026-05-13
 description: "Un site pour une maison de ventes aux enchères doit faire bien plus qu'afficher un calendrier. Catalogue en ligne, estimation, SEO des lots, back-office autonome — ce qu'il faut vraiment prévoir, et pourquoi les solutions génériques ne tiennent pas la route."
 image: /assets/images/site-commissaire-priseur.jpg
 tags: [commissaire-priseur, maison de ventes aux enchères, site internet, catalogue en ligne, estimation, SEO, développement web, Ruby on Rails]

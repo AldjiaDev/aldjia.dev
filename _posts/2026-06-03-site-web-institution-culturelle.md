@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Site web pour institution culturelle : musée, fondation, centre d'art"
-date: 2026-06-03
+date: 2026-05-06
 description: "Un site pour une institution culturelle n'est pas un site vitrine. C'est un outil éditorial, de médiation et de visibilité. Ce qu'il doit contenir, comment le structurer, et pourquoi les solutions génériques ne suffisent pas."
 image: /assets/images/site-institution-culturelle.jpg
 tags: [institution culturelle, musée, fondation, centre d'art, site internet, développement web, SEO, médiation culturelle]
