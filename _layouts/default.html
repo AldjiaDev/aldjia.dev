@@ -17,11 +17,16 @@
 
   {% if page.url == "/" %}
     {% include jsonld-person.html %}
+    {% include jsonld-localbusiness.html %}
   {% elsif page.url == "/about/" %}
     {% include jsonld-person.html %}
     {% include jsonld-breadcrumb.html %}
   {% else %}
     {% include jsonld-breadcrumb.html %}
+  {% endif %}
+
+  {% if page.schema_service_name %}
+    {% include jsonld-service.html %}
   {% endif %}
 
   {% if page.layout == "post" %}

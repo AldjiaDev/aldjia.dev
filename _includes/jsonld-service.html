@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.schema_service_name | escape }}",
+  "description": "{{ page.schema_service_description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "{{ site.url }}/#business",
+    "name": "Aldjia Dev",
+    "url": "{{ site.url }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "serviceType": "{{ page.schema_service_type | escape }}",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "{{ page.schema_service_audience | escape }}"
+  }
+}
+</script>

@@ -1,0 +1,101 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "{{ site.url }}/#business",
+  "name": "Aldjia Dev",
+  "url": "{{ site.url }}",
+  "description": "Développeuse web freelance spécialisée dans la création de sites et d'applications pour le monde de l'art et de la culture. Sites vitrine, portfolios, applications Ruby on Rails sur mesure pour galeries d'art, artistes, maisons de ventes aux enchères et institutions culturelles.",
+  "founder": {
+    "@type": "Person",
+    "name": "Aldjia Boughias",
+    "jobTitle": "Développeuse web freelance",
+    "url": "{{ site.url }}/about/",
+    "image": "{{ '/assets/images/portrait.jpg' | absolute_url }}",
+    "sameAs": [
+      "{{ site.linkedin_url }}",
+      "{{ site.github_url }}"
+    ]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lille",
+    "addressRegion": "Hauts-de-France",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Villeneuve-d'Ascq"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Hauts-de-France"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    }
+  ],
+  "knowsAbout": [
+    "Développement web",
+    "Ruby on Rails",
+    "Jekyll",
+    "SEO",
+    "Galeries d'art",
+    "Maisons de ventes aux enchères",
+    "Art contemporain",
+    "Culture numérique"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de développement web pour l'art et la culture",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Site web pour galerie d'art",
+          "url": "{{ site.url }}/secteurs/galeries-art/",
+          "description": "Conception et développement de sites web sur mesure pour galeries d'art : catalogue d'artistes, agenda des expositions, SEO sectoriel."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Portfolio en ligne pour artiste",
+          "url": "{{ site.url }}/secteurs/artistes/",
+          "description": "Création de portfolios en ligne pour artistes plasticiens, photographes et illustrateurs : galerie d'œuvres, démarche artistique, SEO du nom et de la pratique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Site web pour maison de ventes aux enchères",
+          "url": "{{ site.url }}/secteurs/maisons-de-ventes/",
+          "description": "Application web Ruby on Rails pour commissaires-priseurs : catalogue de lots, formulaire d'estimation, agenda des vacations, SEO des objets et des ventes."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Site web pour institution culturelle",
+          "url": "{{ site.url }}/secteurs/institutions-culturelles/",
+          "description": "Création de sites web pour musées, fondations, centres d'art et institutions culturelles : agenda, médiation, contenu éditorial, accessibilité numérique."
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "{{ site.linkedin_url }}",
+    "{{ site.github_url }}"
+  ]
+}
+</script>
