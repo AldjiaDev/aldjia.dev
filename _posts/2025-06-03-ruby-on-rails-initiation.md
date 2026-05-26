@@ -2,6 +2,8 @@
 layout: post
 title: "Ruby on Rails : mon initiation au code, entre larmes, magie et résilience"
 date: 2025-06-03
+robots: noindex,nofollow
+sitemap: false
 tags: [Ruby, Rails, débutant, motivation, apprentissage, Le Wagon]
 description: "Retour sur mon tout premier contact avec le code à travers Ruby on Rails : une aventure humaine et technique, marquée par des doutes, de la magie... et une passion née dans la douleur."
 image: /assets/images/Ruby.jpg

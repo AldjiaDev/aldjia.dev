@@ -2,6 +2,8 @@
 layout: post
 title: "Créer mon site avec Jekyll — un projet, une révélation"
 date: 2025-05-02
+robots: noindex,nofollow
+sitemap: false
 description: "Pourquoi j'ai choisi Jekyll plutôt que Ruby on Rails pour créer mon site vitrine, et ce que j'y ai découvert."
 image: /assets/images/articlejekyll.jpeg
 ---
