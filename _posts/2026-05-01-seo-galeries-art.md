@@ -108,7 +108,7 @@ La technique au service de la visibilité. La visibilité au service des ventes.
 ---
 
 **À explorer :**
-[Site web pour galerie d'art](/secteurs/galeries-art/) · [Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/)
+[Site web pour galerie d'art](/secteurs/galeries-art/) · [Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/) · [Combien coûte un site pour une galerie ?](/blog/prix-site-web-galerie-art/) · [Pourquoi le site d'une galerie n'est pas un site comme les autres](/blog/site-internet-galerie-art/)
 
 <div class="text-center mt-5">
   <a href="/blog/" class="btn btn-outline-primary">
