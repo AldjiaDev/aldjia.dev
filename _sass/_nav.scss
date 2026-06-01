@@ -69,8 +69,8 @@
   }
 }
 
-// CTA bouton nav
-.nav-cta {
+// CTA bouton nav — specificity 0,2,1 to beat .nav-links a (0,1,1)
+.nav-links a.nav-cta {
   background: $color-ink !important;
   color: $color-bg !important;
   padding: 0.45rem 1.1rem !important;
@@ -205,12 +205,28 @@
   &:hover, &:focus-visible { opacity: 1; }
 }
 
-// Neutralise les overrides agressifs de l'ancien CSS sur le footer
+// Neutralise les règles blanc-sur-noir de style.css (footer était foncé)
+.site-footer,
 .site-footer p,
 .site-footer a,
 .site-footer span {
+  color: $color-ink-3 !important;
   letter-spacing: 0 !important;
 }
+
+.site-footer a:hover { color: $color-ink !important; }
+
+// Surcharge spécificité 0,2,0 de style.css pour .site-footer .footer-brand
+.site-footer .footer-brand {
+  color: $color-ink !important;
+  font-family: $font-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: $weight-medium !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+}
+
+.site-footer .footer-col-title { color: $color-gold !important; }
 
 // ── Responsive nav ────────────────────────────────────────────────────────────
 
