@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Comment apparaître sur Google quand un collectionneur cherche une œuvre — le SEO pour galeries d'art"
 date: 2026-05-01
 description: "Le référencement d'une galerie d'art ne s'improvise pas. Ce n'est pas une question de mots-clés génériques, mais d'architecture, de données structurées et d'une logique éditoriale pensée pour vos acheteurs. Ce que vous devez savoir — et ce que la plupart des sites de galeries font mal."

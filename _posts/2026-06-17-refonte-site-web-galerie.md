@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Refonte de site web pour une galerie d'art : par où commencer ?"
 date: 2026-05-20
 description: "Votre site de galerie existe, mais il ne travaille plus pour vous. Avant de tout refaire, il faut comprendre ce qui ne va pas — et ce qui mérite d'être préservé. Ce que j'examine systématiquement avant une refonte."

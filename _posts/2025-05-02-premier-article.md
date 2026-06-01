@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 title: "Créer mon site avec Jekyll — un projet, une révélation"
 date: 2025-05-02
 robots: noindex,nofollow

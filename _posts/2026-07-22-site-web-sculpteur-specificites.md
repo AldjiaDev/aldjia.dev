@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Créer un site web pour sculpteur : les spécificités que votre développeur doit connaître"
 date: 2026-07-22
 description: "Vues multiples, dimensions, matériaux, poids, exposition in situ — ce qu'un site de sculpteur doit montrer que la plupart des développeurs ne savent pas."

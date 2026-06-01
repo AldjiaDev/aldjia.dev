@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 redirect_from:
   - /mes%20r%C3%A9alisations/2025/06/13/construire-application-ruby-on-rails/
 robots: noindex,nofollow

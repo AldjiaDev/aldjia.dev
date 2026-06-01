@@ -1,0 +1,38 @@
+// ── Page Processus ────────────────────────────────────────────────────────────
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: $space-lg;
+  margin: $space-xl 0;
+}
+
+.process-step {
+  border: $border-default;
+  border-radius: $r-card;
+  padding: $space-lg;
+}
+
+.process-step__num {
+  font-size: $size-xs;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-wide;
+  color: $color-gold;
+  text-transform: uppercase;
+  margin-bottom: $space-sm;
+  display: block;
+}
+
+.process-step__title {
+  font-family: $font-serif;
+  font-size: $size-h3;
+  color: $color-ink;
+  margin-bottom: $space-sm;
+}
+
+.process-step__text {
+  font-size: $size-small;
+  color: $color-ink-3;
+  line-height: $lh-body;
+  margin-bottom: 0;
+}

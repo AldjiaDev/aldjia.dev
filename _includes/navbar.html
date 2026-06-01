@@ -20,6 +20,10 @@
          {% if page.url == '/about/' %}class="active" aria-current="page"{% endif %}>
         À propos
       </a>
+      <a href="{{ '/processus' | relative_url }}"
+         {% if page.url == '/processus/' %}class="active" aria-current="page"{% endif %}>
+        Comment ça se passe
+      </a>
       <a href="{{ '/realisations' | relative_url }}"
          {% if page.url contains '/realisations' %}class="active" aria-current="page"{% endif %}>
         Portfolio

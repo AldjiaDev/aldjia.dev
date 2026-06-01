@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 title: "A2PAS : Créer une carte d’événements locale avec SwiftUI et MapKit"
 date: 2025-05-20
 robots: noindex,nofollow

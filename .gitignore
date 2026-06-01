@@ -11,3 +11,6 @@ aldjia-dev/
 _site/
 .jekyll-cache/
 vendor/
+
+tmp/
+public/

@@ -63,6 +63,13 @@ last_modified_at: 2026-05-26
           <p class="mt-3 mb-0" style="font-size: .85rem; color: var(--muted);">
             Échange de 30 min · sans engagement · conseils concrets
           </p>
+          <p class="mt-2 mb-0" style="font-size: .82rem; color: var(--muted);">
+            Comment ça se passe ? →
+            <a href="{{ '/processus' | relative_url }}"
+               style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
+              Voir mon processus de travail
+            </a>
+          </p>
         </div>
 
         <div class="col-lg-5 d-none d-lg-flex justify-content-end">
@@ -309,7 +316,12 @@ last_modified_at: 2026-05-26
         </div>
         <div class="col-lg-4 offset-lg-2 d-none d-lg-flex align-items-end">
           <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Avis issus de Google Business · vérifiables en ligne
+            <a href="https://www.google.com/search?q=Aldjia+Boughias+d%C3%A9veloppeuse+web"
+               target="_blank"
+               rel="noopener"
+               class="review-source">
+              ★ Voir sur Google
+            </a>
           </p>
         </div>
       </div>
@@ -331,7 +343,14 @@ last_modified_at: 2026-05-26
                   <p class="mb-0" style="font-weight: 600; font-size: .9rem; color: var(--ink);">{{ t.nom }}</p>
                   <p class="mb-0 muted" style="font-size: .8rem;">{{ t.role }}</p>
                   {% if t.source == "Google" %}
-                  <p class="mb-0 mt-2" style="font-size: .72rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase;">via Google</p>
+                  <p class="mb-0 mt-2">
+                    <a href="https://www.google.com/search?q=Aldjia+Boughias+d%C3%A9veloppeuse+web"
+                       target="_blank"
+                       rel="noopener"
+                       class="review-source">
+                      ★ Vérifié sur Google
+                    </a>
+                  </p>
                   {% endif %}
                 </div>
               </div>
@@ -497,6 +516,11 @@ last_modified_at: 2026-05-26
         <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
            style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
           On en parle en 30 minutes.
+        </a>
+      </p>
+      <p class="text-center mt-3">
+        <a href="{{ '/tarifs' | relative_url }}" class="section-link" style="font-size: .875rem; color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
+          Détail complet des tarifs et FAQ →
         </a>
       </p>
 

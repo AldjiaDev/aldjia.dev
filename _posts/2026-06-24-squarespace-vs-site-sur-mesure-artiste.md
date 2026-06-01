@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Squarespace vs site sur mesure pour artiste : ce que les comparatifs ne disent pas"
 date: 2026-06-24
 description: "URLs instables, compression d'images, absence de schema.org — ce que les plateformes no-code ne font pas et pourquoi ça compte pour un artiste."

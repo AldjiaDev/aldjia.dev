@@ -1,0 +1,121 @@
+// ── Newsletter ────────────────────────────────────────────────────────────────
+
+.newsletter-block {
+  background: $color-bg-3;
+  border: $border-gold;
+  border-radius: $r-card;
+  padding: $space-xl;
+  margin: $space-2xl 0;
+}
+
+.newsletter-block__label {
+  font-size: $size-xs;
+  color: $color-gold;
+  text-transform: uppercase;
+  letter-spacing: $tracking-wide;
+  font-weight: $weight-medium;
+  margin-bottom: $space-sm;
+}
+
+.newsletter-block__title {
+  font-family: $font-serif;
+  font-size: $size-h2;
+  color: $color-ink;
+  margin-bottom: $space-sm;
+  font-style: normal;
+}
+
+.newsletter-block__sub {
+  font-size: $size-small;
+  color: $color-ink-3;
+  line-height: $lh-body;
+  margin-bottom: $space-lg;
+}
+
+.newsletter-form__row {
+  display: flex;
+  gap: $space-sm;
+  flex-wrap: wrap;
+
+  input[type="email"] {
+    flex: 1;
+    min-width: 200px;
+    border: $border-emphasis;
+    border-radius: $r-btn;
+    padding: 0.6rem 0.875rem;
+    font-size: $size-small;
+    background: $color-bg;
+    color: $color-ink;
+    outline: none;
+    transition: border-color 0.18s, box-shadow 0.18s;
+
+    &:focus {
+      border-color: $color-gold;
+      box-shadow: 0 0 0 3px $color-gold-pale;
+    }
+  }
+
+  button[type="submit"] {
+    background: $color-ink;
+    color: $color-bg;
+    border: none;
+    border-radius: $r-btn;
+    padding: 0.6rem 1.1rem;
+    font-size: $size-small;
+    font-weight: $weight-medium;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.18s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+.newsletter-form__note {
+  font-size: $size-xs;
+  color: $color-ink-4;
+  margin-top: $space-sm;
+  margin-bottom: 0;
+}
+
+// Toggle articles techniques sur /blog/
+.blog-dev-toggle {
+  border-top: $border-default;
+  padding-top: $space-lg;
+  margin-top: $space-xl;
+
+  summary {
+    font-size: $size-small;
+    color: $color-ink-3;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker { display: none; }
+    &::before { content: '→ '; }
+
+    &:hover { color: $color-ink; }
+  }
+
+  details[open] summary::before { content: '↓ '; }
+}
+
+// Bannière condensée sur la page /blog/
+.newsletter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-gold-pale;
+  border: $border-gold;
+  border-radius: $r-btn;
+  padding: $space-md $space-lg;
+  margin-bottom: $space-xl;
+  flex-wrap: wrap;
+  gap: $space-md;
+
+  span {
+    font-size: $size-small;
+    color: $color-ink-2;
+  }
+}

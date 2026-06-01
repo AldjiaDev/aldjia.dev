@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 title: "Ruby on Rails : mon initiation au code, entre larmes, magie et résilience"
 date: 2025-06-03
 robots: noindex,nofollow

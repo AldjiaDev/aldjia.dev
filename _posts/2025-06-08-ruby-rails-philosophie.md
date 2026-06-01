@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 title: "Comprendre Ruby et Rails : au-delà du code, une philosophie"
 date: 2025-06-08
 robots: noindex,nofollow

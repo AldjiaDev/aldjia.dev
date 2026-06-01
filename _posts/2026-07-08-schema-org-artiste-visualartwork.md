@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Les données structurées schema.org pour les artistes : VisualArtwork, Person, Event"
 date: 2026-07-08
 description: "Comment utiliser schema.org pour que Google comprenne que vos pages sont des œuvres d'art — et vous valorise dans les résultats enrichis."

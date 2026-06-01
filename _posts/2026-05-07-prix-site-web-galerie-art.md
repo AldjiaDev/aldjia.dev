@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Combien coûte un site web pour une galerie d'art ou une maison de ventes ?"
 date: 2026-05-07
 description: "Prix, fourchettes, ce qui fait vraiment varier le budget : tout ce qu'une galerie ou une maison de ventes doit savoir avant de confier son site à un développeur. Sans détour."

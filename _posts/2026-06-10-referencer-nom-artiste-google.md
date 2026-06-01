@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Comment référencer son nom d'artiste sur Google : guide pratique"
 date: 2026-06-10
 description: "Nom, technique, ville, données structurées — les leviers concrets pour qu'un artiste soit trouvé sur Google par les galeristes et collectionneurs."

@@ -1,0 +1,9 @@
+Créer une image og-default.jpg de 1200x630px avec :
+- Fond #1A1A18 (noir chaud)
+- Texte "Aldjia Boughias" en Cormorant Garamond blanc, grand
+- Sous-titre "Développeuse web · Art & Culture · Lille" en gris clair
+- Point doré "#B8975A" comme accent
+- URL "aldjia.dev" en bas à droite
+Outil suggéré : Canva (template LinkedIn post 1200x627) ou Figma.
+
+Déposer le fichier terminé dans ce dossier sous le nom : og-default.jpg

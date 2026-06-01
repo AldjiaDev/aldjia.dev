@@ -1,0 +1,42 @@
+// ── Réalisations / Cas clients ────────────────────────────────────────────────
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: $space-md;
+  background: $color-bg-3;
+  border-radius: $r-card;
+  padding: $space-lg;
+  margin: $space-xl 0;
+}
+
+.project-meta__item {
+  label {
+    font-size: $size-xs;
+    color: $color-ink-4;
+    text-transform: uppercase;
+    letter-spacing: $tracking-wide;
+    font-weight: $weight-medium;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-size: $size-small;
+    color: $color-ink;
+    font-weight: $weight-medium;
+  }
+}
+
+.project-cta-inline {
+  background: $color-bg-3;
+  border: $border-gold;
+  border-radius: $r-card;
+  padding: $space-lg $space-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-md;
+  margin-top: $space-2xl;
+}

@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Pourquoi le site d'une galerie d'art n'est pas un site comme les autres"
 date: 2026-04-06
 description: "Un site pour une galerie d'art a des contraintes uniques : catalogue vivant, double public, images haute résolution, SEO sectoriel. Ce qu'un développeur généraliste ne saura pas anticiper — et ce que ça change concrètement."

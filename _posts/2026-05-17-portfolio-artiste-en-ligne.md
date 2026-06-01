@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: clients
 title: "Portfolio artiste en ligne : ce que votre site doit vraiment faire pour vous"
 date: 2026-05-17
 description: "Un portfolio en ligne pour artiste n'est pas un simple album photo. Ce qu'il doit montrer, comment le structurer pour être trouvé sur Google, et pourquoi la plupart des solutions toutes faites passent à côté."

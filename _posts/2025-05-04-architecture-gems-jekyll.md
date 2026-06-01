@@ -1,5 +1,6 @@
 ---
 layout: post
+audience: dev
 title: "Architecture d’un site Jekyll : analyse des gems utilisées"
 date: 2025-05-04
 robots: noindex,nofollow
