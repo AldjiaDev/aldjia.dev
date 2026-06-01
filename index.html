@@ -31,9 +31,22 @@ last_modified_at: 2026-05-26
             avant d'écrire la première ligne de code.
           </p>
 
-          <p class="mb-5" style="font-size: .85rem; color: var(--muted); letter-spacing: .03em;">
-            5 projets livrés &nbsp;·&nbsp; 10 ans de relation client &nbsp;·&nbsp; 100% remote possible
-          </p>
+          <div class="hero-stats mb-2">
+            <div class="stat">
+              <span class="stat__num">5+</span>
+              <span class="stat__label">Projets livrés</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__num">10</span>
+              <span class="stat__label">Ans relation client</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__num">100%</span>
+              <span class="stat__label">Remote possible</span>
+            </div>
+          </div>
 
           <div class="d-flex gap-3 flex-wrap">
             <a href="{{ site.cal_url }}"
@@ -366,92 +379,81 @@ last_modified_at: 2026-05-26
         </p>
       </div>
 
-      <!-- 4 offres principales -->
-      <div class="row g-4 mb-5">
+      <!-- 4 offres — CSS Grid -->
+      <div class="offer-cards-grid">
 
         <!-- Audit -->
-        <div class="col-md-6 col-lg-3" id="audit">
-          <div class="price-card h-100">
-            <p class="price-label mb-3">Audit web</p>
-            <p class="price-amount mb-0">250 €</p>
-            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
-            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
-              <li class="mb-2" style="color: var(--muted);">— Analyse UX & parcours utilisateur</li>
-              <li class="mb-2" style="color: var(--muted);">— Audit SEO on-page</li>
-              <li class="mb-2" style="color: var(--muted);">— Performance & accessibilité</li>
-              <li class="mb-2" style="color: var(--muted);">— Recommandations priorisées</li>
-              <li class="mb-2" style="color: var(--muted);">— Appel de restitution inclus</li>
-            </ul>
-            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
-              Pour tout professionnel voulant comprendre pourquoi son site ne convertit pas
-            </p>
-            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
-              Commander l'audit
-            </a>
+        <div class="offer-card offer-card--featured" id="audit">
+          <div class="offer-card__header">
+            <span class="offer-card__tag">Entrée de gamme</span>
+            <h3 class="offer-card__name">Audit web</h3>
           </div>
+          <div class="offer-card__price">250 € <span>HT · à partir de</span></div>
+          <ul class="offer-card__list">
+            <li>Analyse UX &amp; parcours utilisateur</li>
+            <li>Audit SEO on-page</li>
+            <li>Performance &amp; accessibilité</li>
+            <li>Recommandations priorisées</li>
+            <li>Appel de restitution inclus</li>
+          </ul>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
+            Commander l'audit
+          </a>
         </div>
 
         <!-- Site vitrine -->
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card h-100">
-            <p class="price-label mb-3">Site vitrine</p>
-            <p class="price-amount mb-0">1 500 €</p>
-            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
-            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
-              <li class="mb-2" style="color: var(--muted);">— Design soigné et identitaire</li>
-              <li class="mb-2" style="color: var(--muted);">— Portfolio, services, contact</li>
-              <li class="mb-2" style="color: var(--muted);">— SEO on-page & performance</li>
-              <li class="mb-2" style="color: var(--muted);">— Rapide à mettre en ligne</li>
-            </ul>
-            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
-              Pour artistes, galeristes, indépendants créatifs
-            </p>
-            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
-              En discuter
-            </a>
+        <div class="offer-card">
+          <div class="offer-card__header">
+            <h3 class="offer-card__name">Site vitrine</h3>
           </div>
+          <div class="offer-card__price">1 500 € <span>HT · à partir de</span></div>
+          <ul class="offer-card__list">
+            <li>Design soigné et identitaire</li>
+            <li>Portfolio, services, contact</li>
+            <li>SEO on-page &amp; performance</li>
+            <li>Rapide à mettre en ligne</li>
+          </ul>
+          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour artistes, galeristes, indépendants créatifs</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
+            En discuter
+          </a>
         </div>
 
         <!-- Site éditorial -->
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card featured h-100">
-            <p class="price-label mb-3" style="color: var(--bordeaux) !important;">Site éditorial</p>
-            <p class="price-amount mb-0">3 500 €</p>
-            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
-            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
-              <li class="mb-2" style="color: var(--muted);">— Contenu que vous gérez seul</li>
-              <li class="mb-2" style="color: var(--muted);">— Agenda, catalogue, actualités</li>
-              <li class="mb-2" style="color: var(--muted);">— SEO on-page & blog</li>
-              <li class="mb-2" style="color: var(--muted);">— Évolutions facilitées</li>
-            </ul>
-            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
-              Pour galeries, institutions, maisons de ventes
-            </p>
-            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary w-100 mt-auto">
-              En discuter
-            </a>
+        <div class="offer-card offer-card--featured">
+          <div class="offer-card__header">
+            <span class="offer-card__tag">Le plus populaire</span>
+            <h3 class="offer-card__name">Site éditorial</h3>
           </div>
+          <div class="offer-card__price">3 500 € <span>HT · à partir de</span></div>
+          <ul class="offer-card__list">
+            <li>Contenu que vous gérez seul</li>
+            <li>Agenda, catalogue, actualités</li>
+            <li>SEO on-page &amp; blog</li>
+            <li>Évolutions facilitées</li>
+          </ul>
+          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour galeries, institutions, maisons de ventes</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
+            En discuter
+          </a>
         </div>
 
         <!-- Application métier -->
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card h-100">
-            <p class="price-label mb-3">Application métier</p>
-            <p class="price-amount mb-0">6 000 €</p>
-            <p class="muted mb-4" style="font-size: .82rem;">À partir de · HT</p>
-            <ul class="list-unstyled mb-4" style="font-size: .88rem;">
-              <li class="mb-2" style="color: var(--muted);">— Back-office sur mesure</li>
-              <li class="mb-2" style="color: var(--muted);">— Catalogue interactif, estimation</li>
-              <li class="mb-2" style="color: var(--muted);">— SEO on-page & données structurées</li>
-              <li class="mb-2" style="color: var(--muted);">— Ruby on Rails robuste</li>
-            </ul>
-            <p class="mb-3" style="font-size: .8rem; color: var(--muted); font-style: italic;">
-              Pour maisons de ventes, institutions complexes
-            </p>
-            <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 mt-auto">
-              En discuter
-            </a>
+        <div class="offer-card">
+          <div class="offer-card__header">
+            <h3 class="offer-card__name">Application métier</h3>
           </div>
+          <div class="offer-card__price">6 000 € <span>HT · à partir de</span></div>
+          <ul class="offer-card__list">
+            <li>Back-office sur mesure</li>
+            <li>Catalogue interactif, estimation</li>
+            <li>SEO on-page &amp; données structurées</li>
+            <li>Ruby on Rails robuste</li>
+          </ul>
+          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour maisons de ventes, institutions complexes</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
+            En discuter
+          </a>
         </div>
 
       </div>
@@ -504,67 +506,39 @@ last_modified_at: 2026-05-26
   <!-- =====================
        FAQ
        ===================== -->
-  <section id="faq" class="section bg-white-warm" aria-labelledby="faq-titre">
+  <section id="faq" class="section section--alt" aria-labelledby="faq-titre">
     <div class="container">
 
-      <div class="text-center mb-5 maxw mx-auto">
-        <p class="kicker mb-3">Questions fréquentes</p>
-        <h2 id="faq-titre" class="section-title mb-0">Ce qu'on me demande souvent</h2>
-      </div>
+      <span class="section-label">FAQ</span>
+      <h2 id="faq-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+      <div class="faq">
 
-          <div style="border-top: 1px solid var(--line);">
+        <details class="faq__item">
+          <summary class="faq__q">Est-ce que je pourrai gérer mon site seul après la livraison ?</summary>
+          <p class="faq__a">Oui. Je conçois les sites pour que vous puissiez mettre à jour vos contenus sans toucher au code. Une prise en main est incluse à la livraison.</p>
+        </details>
 
-            <div style="border-bottom: 1px solid var(--line); padding: 1.75rem 0;">
-              <h3 style="font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">
-                Est-ce que je pourrai gérer mon site seul après la livraison ?
-              </h3>
-              <p class="muted mb-0" style="font-size: .93rem; line-height: 1.75;">
-                Oui. Je conçois les sites pour que vous puissiez mettre à jour vos contenus sans toucher au code. Une prise en main est incluse à la livraison.
-              </p>
-            </div>
+        <details class="faq__item">
+          <summary class="faq__q">Combien de temps dure un projet ?</summary>
+          <p class="faq__a">Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange.</p>
+        </details>
 
-            <div style="border-bottom: 1px solid var(--line); padding: 1.75rem 0;">
-              <h3 style="font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">
-                Combien de temps dure un projet ?
-              </h3>
-              <p class="muted mb-0" style="font-size: .93rem; line-height: 1.75;">
-                Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange.
-              </p>
-            </div>
+        <details class="faq__item">
+          <summary class="faq__q">Travaillez-vous à distance ?</summary>
+          <p class="faq__a">Oui, 100% en remote. Mes clients sont à Lille, Paris, et au-delà. Tout se fait en visio, avec des points réguliers.</p>
+        </details>
 
-            <div style="border-bottom: 1px solid var(--line); padding: 1.75rem 0;">
-              <h3 style="font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">
-                Travaillez-vous à distance ?
-              </h3>
-              <p class="muted mb-0" style="font-size: .93rem; line-height: 1.75;">
-                Oui, 100% en remote. Mes clients sont à Lille, Paris, et au-delà. Tout se fait en visio, avec des points réguliers.
-              </p>
-            </div>
+        <details class="faq__item">
+          <summary class="faq__q">Quelle est la différence entre l'audit et une refonte ?</summary>
+          <p class="faq__a">L'audit analyse votre site existant et vous livre un rapport d'action sans engagement. La refonte, c'est l'étape suivante si vous souhaitez implémenter les recommandations.</p>
+        </details>
 
-            <div style="border-bottom: 1px solid var(--line); padding: 1.75rem 0;">
-              <h3 style="font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">
-                Quelle est la différence entre l'audit et une refonte ?
-              </h3>
-              <p class="muted mb-0" style="font-size: .93rem; line-height: 1.75;">
-                L'audit analyse votre site existant et vous livre un rapport d'action sans engagement. La refonte, c'est l'étape suivante si vous souhaitez implémenter les recommandations.
-              </p>
-            </div>
+        <details class="faq__item">
+          <summary class="faq__q">Que se passe-t-il après la livraison ?</summary>
+          <p class="faq__a">Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins.</p>
+        </details>
 
-            <div style="padding: 1.75rem 0;">
-              <h3 style="font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">
-                Que se passe-t-il après la livraison ?
-              </h3>
-              <p class="muted mb-0" style="font-size: .93rem; line-height: 1.75;">
-                Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
       </div>
 
     </div>

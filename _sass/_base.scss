@@ -1,0 +1,124 @@
+@import 'variables';
+
+// ── CSS Custom Properties ─────────────────────────────────────────────────────
+// Rétrocompatibilité avec les var(--bordeaux), var(--ink)… dans les pages HTML
+
+:root {
+  --bordeaux:       #{$color-gold};
+  --bordeaux-light: #{$color-gold-pale};
+  --bordeaux-mid:   rgba(184, 151, 90, 0.30);
+  --bg:             #{$color-bg};
+  --surface:        #FFFFFF;
+  --ink:            #{$color-ink};
+  --muted:          #{$color-ink-3};
+  --line:           #{$color-border};
+  --radius:         #{$r-card};
+  --shadow:         0 20px 60px rgba(0, 0, 0, 0.06);
+  --shadow-soft:    0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+// ── Reset ─────────────────────────────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body { height: 100%; overflow-x: hidden; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: $font-sans !important;
+  background: $color-bg;
+  color: $color-ink;
+  line-height: $lh-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main { flex: 1; }
+
+// ── Typographie ───────────────────────────────────────────────────────────────
+
+// Override agressif sur les !important Raleway de l'ancien style.css
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif !important;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-tight;
+  color: $color-ink;
+  margin-bottom: 0.5em;
+  line-height: $lh-tight;
+  text-transform: none !important;
+  font-style: normal;
+}
+
+h1 { font-size: $size-display; }
+h2 { font-size: $size-h1; }
+h3 { font-size: $size-h2; }
+
+// Italiques dorés dans les titres de section
+h1 em, h2 em {
+  color: $color-gold;
+  font-style: italic;
+}
+
+p {
+  font-size: $size-body;
+  color: $color-ink-3;
+  line-height: $lh-body;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover { color: $color-gold; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: $color-gold-light;
+  color: $color-ink;
+}
+
+// ── Accessibilité ─────────────────────────────────────────────────────────────
+
+.skip-link {
+  position: fixed;
+  top: -6rem;
+  left: 1rem;
+  z-index: 9999;
+  background: $color-gold;
+  color: #fff !important;
+  padding: 0.6rem 1.25rem;
+  font-size: $size-small;
+  font-weight: $weight-medium;
+  text-decoration: none;
+  transition: top 0.15s ease;
+  border-radius: 0 0 $r-badge $r-badge;
+}
+.skip-link:focus { top: 0; }
+
+:focus-visible,
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible {
+  outline: 2px solid $color-gold !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}

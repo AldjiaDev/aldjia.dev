@@ -1,0 +1,495 @@
+@import 'variables';
+
+// ── Hero (homepage) ───────────────────────────────────────────────────────────
+
+.home .hero-section {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.home .hero-title {
+  font-family: $font-serif !important;
+  font-size: clamp(2.8rem, 6.5vw, 5rem) !important;
+  font-weight: $weight-medium;
+  font-style: italic;
+  letter-spacing: $tracking-tight;
+  line-height: $lh-tight;
+  color: $color-ink;
+  text-transform: none !important;
+}
+
+.home .hero-subtitle {
+  font-family: $font-sans;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: $weight-regular;
+  color: $color-ink-3;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.hero-divider {
+  width: 48px;
+  height: 2px;
+  background: $color-gold;
+  margin: 1.75rem 0;
+  opacity: 1;
+}
+
+.bg-paper      { background: $color-bg; }
+.bg-white-warm { background: $color-bg-3; }
+.bg-ink        { background: $color-ink; }
+
+// ── Cartes secteurs ───────────────────────────────────────────────────────────
+
+.sector-card {
+  border-top: 2px solid $color-border;
+  padding: 2rem 0;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover     { border-top-color: $color-gold; }
+}
+
+.sector-card:focus-within { border-top-color: $color-gold; }
+
+.sector-number {
+  font-family: $font-sans;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: $color-ink-4;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+// ── Projet vedette ────────────────────────────────────────────────────────────
+
+.featured-project {
+  background: $color-ink;
+  color: #F7F4EF;
+  border-radius: $r-card;
+  overflow: hidden;
+}
+
+.featured-project .project-label {
+  font-family: $font-sans !important;
+  color: rgba(247, 244, 239, 0.45) !important;
+  font-size: $size-xs;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  font-weight: $weight-medium;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: $color-gold;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    margin-bottom: 1px;
+  }
+}
+
+.featured-project h3 {
+  font-family: $font-serif !important;
+  font-style: italic !important;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem) !important;
+  font-weight: $weight-medium;
+  color: #FFFFFF !important;
+  line-height: $lh-tight;
+  letter-spacing: $tracking-tight;
+  text-transform: none !important;
+}
+
+.featured-project p  { color: rgba(247, 244, 239, 0.70) !important; }
+
+.featured-project .project-tag {
+  display: inline-block;
+  border: 1px solid rgba(247, 244, 239, 0.18);
+  color: rgba(247, 244, 239, 0.70) !important;
+  padding: 0.25rem 0.65rem;
+  border-radius: $r-badge;
+  font-size: $size-small;
+  font-family: $font-sans;
+}
+
+// ── Price card (legacy — cartes non encore converties) ────────────────────────
+
+.price-card {
+  background: #FFFFFF;
+  border: $border-default;
+  border-radius: $r-card;
+  padding: 2rem 1.5rem;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+
+  &:hover { border-color: rgba(184, 151, 90, 0.30); }
+}
+
+.price-card.featured {
+  border: $border-featured;
+  background: #FFF9F0;
+}
+
+.price-card .price-amount {
+  font-family: $font-serif !important;
+  font-size: 2.4rem;
+  font-weight: $weight-medium;
+  color: $color-ink;
+  line-height: 1;
+  letter-spacing: $tracking-tight;
+  text-transform: none !important;
+}
+
+.price-card .price-label {
+  font-family: $font-sans !important;
+  font-size: $size-xs;
+  color: $color-ink-3;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  font-weight: $weight-medium;
+}
+
+// ── Témoignages ───────────────────────────────────────────────────────────────
+
+.temoignage-carousel-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.temoignage-card {
+  background: #FFFFFF;
+  border: $border-default;
+  border-radius: $r-card;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.temoignage-stars {
+  color: $color-gold;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+
+.temoignage-texte {
+  font-family: $font-serif !important;
+  font-style: italic;
+  font-weight: $weight-regular;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $color-ink;
+  margin: 0;
+  border: none;
+  padding: 0;
+  text-transform: none !important;
+}
+
+.temoignage-btn {
+  background: transparent;
+  border: $border-default;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: $color-ink;
+  cursor: pointer;
+  transition: border-color 0.18s, color 0.18s;
+  flex-shrink: 0;
+
+  &:hover, &:focus-visible {
+    border-color: $color-gold;
+    color: $color-gold;
+    outline: 2px solid $color-gold;
+    outline-offset: 3px;
+  }
+}
+
+.carousel-indicators-custom {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  button {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: $color-border;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.18s;
+
+    &.active {
+      background: $color-gold;
+      transform: scale(1.5);
+    }
+  }
+}
+
+// ── Portfolio cards ───────────────────────────────────────────────────────────
+
+.portfolio-card {
+  border: $border-default;
+  border-radius: $r-card;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: rgba(184, 151, 90, 0.30);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(26, 26, 24, 0.08);
+  }
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.portfolio-card-img-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-card-img-inner { transform: scale(1.04); }
+
+.portfolio-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $size-xs;
+  border: $border-default;
+  border-radius: $r-badge;
+  padding: 0.2rem 0.55rem;
+  color: $color-ink-3;
+}
+
+// ── Blog ──────────────────────────────────────────────────────────────────────
+
+.blog-card-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card-img-wrap:hover .blog-card-img { transform: scale(1.04); }
+
+.blog-featured-card {
+  display: flex;
+  flex-direction: row;
+  border: $border-default;
+  border-radius: $r-card;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  min-height: 320px;
+}
+
+.blog-featured-img {
+  flex: 0 0 48%;
+  max-width: 48%;
+  overflow: hidden;
+}
+
+.blog-featured-body {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// ── Post ──────────────────────────────────────────────────────────────────────
+
+.post-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: $font-sans;
+  font-size: $size-small;
+  color: $color-ink-3;
+  text-decoration: none;
+  margin-bottom: 2rem;
+
+  &:hover, &:focus-visible { color: $color-gold; }
+}
+
+.post-wrap  { max-width: 780px; margin: 48px auto 96px; padding: 0 20px; }
+.post-header { margin-bottom: 20px; }
+
+.post-title {
+  font-family: $font-serif !important;
+  font-style: italic;
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  line-height: $lh-tight;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-tight;
+  text-transform: none !important;
+  margin: 12px 0;
+  color: $color-ink;
+}
+
+.post-meta {
+  font-family: $font-sans;
+  color: $color-ink-4;
+  font-size: $size-small;
+  margin-bottom: 20px;
+}
+
+.post-hero { margin: 28px 0 36px; }
+.post-hero img {
+  width: 100%;
+  border-radius: $r-card-sm;
+  display: block;
+  border: $border-default;
+}
+.post-hero figcaption {
+  font-family: $font-sans;
+  font-size: 0.75rem;
+  color: $color-ink-4;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.post-content {
+  font-size: 1.0625rem;
+  line-height: 1.82;
+  color: $color-ink;
+  font-family: $font-sans;
+
+  h2 {
+    font-family: $font-serif !important;
+    font-style: italic;
+    font-size: 1.5rem !important;
+    margin: 2.4rem 0 0.8rem;
+    font-weight: $weight-medium;
+    letter-spacing: $tracking-tight;
+    text-transform: none !important;
+  }
+
+  h3 {
+    font-family: $font-serif !important;
+    font-size: 1.15rem !important;
+    margin: 1.6rem 0 0.6rem;
+    font-weight: $weight-medium;
+    text-transform: none !important;
+  }
+
+  p { margin: 1rem 0; color: $color-ink; font-family: $font-sans; }
+
+  img {
+    max-width: 100%;
+    border-radius: $r-card-sm;
+    display: block;
+    margin: 1.4rem auto;
+    border: $border-default;
+  }
+
+  a { color: $color-gold; text-decoration: underline; text-underline-offset: 3px; }
+}
+
+.post-tags { margin-top: 32px; }
+
+.post-tag {
+  display: inline-block;
+  font-family: $font-sans;
+  background: transparent;
+  color: $color-ink;
+  padding: 0.3rem 0.65rem;
+  border-radius: $r-badge;
+  font-size: $size-small;
+  margin: 0 0.35rem 0.35rem 0;
+  border: $border-default;
+}
+
+.post-pager {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: $border-default;
+  padding-top: 28px;
+
+  a {
+    font-family: $font-sans;
+    color: $color-ink;
+    font-size: 0.9rem;
+    &:hover { color: $color-gold; }
+  }
+}
+
+// ── About ─────────────────────────────────────────────────────────────────────
+
+.about-art-box { padding: 1.5rem; }
+
+@media (min-width: 768px) {
+  .about-art-box { padding: 2.5rem 3rem; }
+}
+
+// ── Pill étapes ───────────────────────────────────────────────────────────────
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: $r-badge;
+  border: $border-default;
+  background: transparent;
+  color: $color-ink-3;
+  font-family: $font-sans;
+  font-size: $size-small;
+  font-weight: $weight-regular;
+  flex-shrink: 0;
+}
+
+// ── Responsive composants ─────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .home .hero-section { min-height: auto; padding: 72px 0 60px; }
+  .blog-featured-card { flex-direction: column; min-height: auto; }
+  .blog-featured-img  { flex: none; max-width: 100%; height: 220px; }
+  .blog-featured-body { padding: 1.5rem; }
+  .temoignage-card    { padding: 1.75rem; }
+}
+
+@media (max-width: 576px) {
+  .home .hero-section { padding: 56px 0 48px; }
+  .home .hero-title   { font-size: 2.4rem !important; }
+  .sector-card        { padding-right: 0 !important; padding-left: 0 !important; }
+  .price-card         { padding: 1.5rem; }
+  .temoignage-card    { padding: 1.5rem; }
+  .post-wrap          { margin: 32px auto 64px; padding: 0 16px; }
+}

@@ -1,0 +1,259 @@
+@import 'variables';
+
+// ── Navbar ────────────────────────────────────────────────────────────────────
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 250, 247, 0.94) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: $border-default !important;
+  // Neutralise les styles Bootstrap sur .navbar
+  padding: 0 !important;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $space-xl;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Logo
+.nav-logo {
+  font-family: $font-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: $weight-medium !important;
+  color: $color-ink !important;
+  letter-spacing: -0.02em !important;
+  text-decoration: none;
+  font-style: normal !important;
+  text-transform: none !important;
+  flex-shrink: 0;
+}
+
+.nav-logo__dot { color: $color-gold; }
+
+// Liens nav
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  // Bootstrap reset
+  flex-basis: auto !important;
+  flex-grow: 0 !important;
+}
+
+.nav-links a {
+  font-size: $size-small;
+  color: $color-ink-3 !important;
+  transition: color 0.2s;
+  font-family: $font-sans !important;
+  font-weight: $weight-regular;
+  letter-spacing: 0;
+  text-transform: none !important;
+  text-decoration: none;
+
+  &:hover { color: $color-ink !important; }
+
+  &.active {
+    color: $color-ink !important;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: $color-gold;
+  }
+}
+
+// CTA bouton nav
+.nav-cta {
+  background: $color-ink !important;
+  color: $color-bg !important;
+  padding: 0.45rem 1.1rem !important;
+  border-radius: $r-btn !important;
+  font-size: $size-small !important;
+  font-weight: $weight-medium;
+  font-family: $font-sans !important;
+  transition: opacity 0.2s;
+  text-transform: none !important;
+  border: none !important;
+  box-shadow: none;
+  letter-spacing: 0 !important;
+
+  &:hover {
+    opacity: 0.85;
+    color: $color-bg !important;
+  }
+}
+
+// Bouton burger
+.nav-toggle {
+  background: transparent;
+  border: $border-emphasis;
+  border-radius: $r-btn;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  color: $color-ink;
+  display: none;
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+
+.site-footer {
+  background: $color-bg-2 !important;
+  border-top: $border-default !important;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: $space-xl;
+  padding: $space-2xl $space-xl;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col-title {
+  display: block;
+  font-family: $font-sans !important;
+  font-size: $size-xs;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  color: $color-gold !important;
+  margin-bottom: 0.25rem;
+}
+
+.footer-col a {
+  font-size: $size-small !important;
+  color: $color-ink-3 !important;
+  font-weight: $weight-regular;
+  font-family: $font-sans !important;
+  letter-spacing: 0 !important;
+  transition: color 0.2s;
+
+  &:hover { color: $color-ink !important; }
+}
+
+.footer-brand {
+  // Surcharge le style inline existant
+  font-family: $font-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: $weight-medium !important;
+  color: $color-ink !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  text-decoration: none;
+
+  p {
+    font-family: $font-sans !important;
+    font-size: $size-small !important;
+    color: $color-ink-3 !important;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    letter-spacing: 0 !important;
+  }
+}
+
+.footer-bottom {
+  border-top: $border-default;
+  padding: 1rem $space-xl;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $size-xs;
+  color: $color-ink-4;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  span, a {
+    font-size: $size-xs !important;
+    color: $color-ink-4 !important;
+    letter-spacing: 0 !important;
+    font-weight: $weight-regular !important;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    &:hover { color: $color-ink-3 !important; }
+  }
+}
+
+// Icônes sociales dans le footer
+.footer-social-link {
+  opacity: 0.55;
+  transition: opacity 0.2s;
+  display: inline-flex;
+
+  &:hover, &:focus-visible { opacity: 1; }
+}
+
+// Neutralise les overrides agressifs de l'ancien CSS sur le footer
+.site-footer p,
+.site-footer a,
+.site-footer span {
+  letter-spacing: 0 !important;
+}
+
+// ── Responsive nav ────────────────────────────────────────────────────────────
+
+@media (max-width: 992px) {
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.75rem 0 1rem;
+    width: 100%;
+
+    // Bootstrap collapse gère la visibilité
+    &.collapse:not(.show) { display: none; }
+    &.show { display: flex !important; }
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem $space-xl;
+    gap: 0;
+  }
+
+  .nav-links a { padding: 0.35rem 0; }
+}
+
+@media (max-width: 768px) {
+  .nav-inner { padding: 0.75rem 1.5rem; }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .footer-bottom { padding: 1rem 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem;
+  }
+}

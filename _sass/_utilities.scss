@@ -1,0 +1,491 @@
+@import 'variables';
+
+// ── Container ─────────────────────────────────────────────────────────────────
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $space-xl;
+}
+
+@media (max-width: 768px) { .container { padding: 0 1.5rem; } }
+@media (max-width: 576px) { .container { padding: 0 1.25rem; } }
+
+// ── Sections ──────────────────────────────────────────────────────────────────
+
+.section {
+  padding: $space-2xl 0;
+  border-top: $border-default;
+}
+
+.section--alt { background: $color-bg-3; }
+.section--dark { background: $color-ink; color: $color-bg; }
+
+// Labels de section (eyebrow au-dessus des titres)
+.section-label {
+  display: block;
+  font-family: $font-sans;
+  font-size: $size-xs;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  color: $color-gold;
+  margin-bottom: 0.6rem;
+}
+
+// ── Kicker (rétrocompat + refonte visuelle) ───────────────────────────────────
+
+.kicker {
+  display: inline-flex !important;
+  font-family: $font-sans !important;
+  color: $color-gold !important;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase !important;
+  font-size: $size-xs !important;
+  font-style: normal;
+  // Badge look
+  border: $border-gold;
+  padding: 0.25rem 0.6rem;
+  border-radius: $r-badge;
+  background: $color-gold-pale;
+}
+
+.kicker::before { display: none; }
+
+// ── Eyebrow (nouvel élément badge) ───────────────────────────────────────────
+
+.eyebrow {
+  display: inline-flex;
+  font-family: $font-sans;
+  font-size: $size-xs;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  color: $color-gold;
+  border: $border-gold;
+  padding: 0.25rem 0.6rem;
+  border-radius: $r-badge;
+  background: $color-gold-pale;
+  margin-bottom: 1.25rem;
+}
+
+// ── Hero stats ────────────────────────────────────────────────────────────────
+
+.hero-stats {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat__num {
+  font-size: 1.375rem;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-tight;
+  color: $color-ink;
+  line-height: 1;
+  font-family: $font-sans;
+}
+
+.stat__label {
+  font-size: $size-xs;
+  color: $color-ink-3;
+  font-family: $font-sans;
+}
+
+.stat-sep {
+  width: 1px;
+  height: 36px;
+  background: $color-border;
+  flex-shrink: 0;
+}
+
+// ── Boutons Bootstrap (override) ─────────────────────────────────────────────
+
+.btn-primary {
+  background: $color-ink !important;
+  border-color: $color-ink !important;
+  border-radius: $r-btn !important;
+  padding: 0.7rem 1.75rem;
+  font-family: $font-sans !important;
+  font-size: $size-small !important;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-normal !important;
+  text-transform: none !important;
+  box-shadow: none;
+  color: $color-bg !important;
+  transition: background 0.18s, border-color 0.18s;
+
+  &:hover, &:focus, &:active, &:focus-visible {
+    background: $color-gold !important;
+    border-color: $color-gold !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-outline-primary {
+  border-radius: $r-btn !important;
+  border: $border-emphasis !important;
+  color: $color-ink !important;
+  font-family: $font-sans !important;
+  font-size: $size-small !important;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-normal !important;
+  text-transform: none !important;
+  background: transparent !important;
+  transition: background 0.18s, color 0.18s;
+
+  &:hover, &:focus, &:active, &:focus-visible {
+    background: $color-ink !important;
+    border-color: $color-ink !important;
+    color: $color-bg !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-bordeaux {
+  background: $color-ink;
+  border: 1px solid $color-ink;
+  border-radius: $r-btn !important;
+  padding: 0.7rem 1.75rem;
+  color: $color-bg !important;
+  font-family: $font-sans !important;
+  font-size: $size-small !important;
+  font-weight: $weight-medium;
+  letter-spacing: $tracking-normal !important;
+  text-transform: none !important;
+  transition: background 0.18s;
+
+  &:hover {
+    background: $color-gold;
+    border-color: $color-gold;
+    color: #fff !important;
+  }
+}
+
+// Boutons système design (non-Bootstrap)
+.btn--primary   { background: $color-ink; color: $color-bg !important; border-radius: $r-btn; padding: 0.7rem 1.375rem; font-size: $size-small; font-weight: $weight-medium; display: inline-flex; align-items: center; text-decoration: none; }
+.btn--secondary { background: transparent; color: $color-ink; border: $border-emphasis; border-radius: $r-btn; padding: 0.7rem 1.375rem; font-size: $size-small; font-weight: $weight-medium; display: inline-flex; align-items: center; text-decoration: none; }
+.btn--gold      { background: $color-gold; color: #fff !important; border-radius: $r-btn; padding: 0.7rem 1.375rem; font-size: $size-small; font-weight: $weight-medium; display: inline-flex; align-items: center; text-decoration: none; }
+.btn--ghost     { background: transparent; color: $color-gold; border: $border-gold; border-radius: $r-btn; padding: 0.7rem 1.375rem; font-size: $size-small; font-weight: $weight-medium; display: inline-flex; align-items: center; text-decoration: none; }
+
+// ── Section titre ─────────────────────────────────────────────────────────────
+
+.section-title {
+  font-family: $font-serif !important;
+  font-style: italic;
+  font-weight: $weight-medium;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  letter-spacing: $tracking-tight;
+  text-transform: none !important;
+  line-height: $lh-tight;
+  color: $color-ink;
+}
+
+// ── Offer cards (grille tarifs) ───────────────────────────────────────────────
+
+.offer-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.offer-card {
+  background: $color-bg;
+  border: $border-default;
+  border-radius: $r-card;
+  padding: 1.375rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition: box-shadow 0.2s;
+
+  &:hover { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07); }
+}
+
+.offer-card--featured {
+  background: #FFF9F0;
+  border: $border-featured;
+}
+
+.offer-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.offer-card__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: $font-sans;
+  font-size: $size-xs;
+  font-weight: $weight-medium;
+  text-transform: uppercase;
+  letter-spacing: $tracking-wide;
+  color: $color-gold;
+  background: $color-gold-pale;
+  border: $border-gold;
+  border-radius: $r-badge;
+  padding: 0.2rem 0.5rem;
+}
+
+.offer-card__name {
+  font-family: $font-serif !important;
+  font-size: $size-h2;
+  font-weight: $weight-medium;
+  color: $color-ink;
+  margin-bottom: 0;
+  letter-spacing: $tracking-tight;
+  text-transform: none !important;
+  font-style: normal;
+  line-height: $lh-tight;
+}
+
+.offer-card__price {
+  font-family: $font-serif;
+  font-size: 1.5rem;
+  font-weight: $weight-medium;
+  color: $color-ink;
+  letter-spacing: $tracking-tight;
+
+  span {
+    font-family: $font-sans;
+    font-size: $size-xs;
+    color: $color-ink-3;
+    font-weight: $weight-regular;
+    letter-spacing: 0;
+  }
+}
+
+.offer-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: $size-small;
+  color: $color-ink-3;
+  flex: 1;
+  font-family: $font-sans;
+
+  li::before {
+    content: "—";
+    color: $color-gold;
+    margin-right: 0.4rem;
+  }
+}
+
+.offer-card__cta {
+  display: block;
+  border: $border-emphasis;
+  border-radius: $r-btn;
+  padding: 0.6rem 0.875rem;
+  font-family: $font-sans;
+  font-size: $size-small;
+  font-weight: $weight-medium;
+  color: $color-ink;
+  text-align: center;
+  margin-top: auto;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-ink;
+    color: $color-bg !important;
+    border-color: $color-ink;
+  }
+}
+
+.offer-card--featured .offer-card__cta {
+  background: $color-ink;
+  color: $color-bg !important;
+  border-color: $color-ink;
+
+  &:hover {
+    background: $color-gold;
+    border-color: $color-gold;
+  }
+}
+
+// ── FAQ (details/summary) ─────────────────────────────────────────────────────
+
+.faq {
+  max-width: 640px;
+}
+
+.faq__item {
+  border-bottom: $border-default;
+  padding: 1rem 0;
+}
+
+.faq__q {
+  font-family: $font-sans;
+  font-size: $size-body;
+  font-weight: $weight-medium;
+  color: $color-ink;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+
+  &::marker,
+  &::-webkit-details-marker { display: none; }
+
+  &::after {
+    content: "+";
+    color: $color-gold;
+    font-size: 1.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    font-family: $font-sans;
+    font-weight: $weight-regular;
+  }
+}
+
+details[open] .faq__q::after { content: "×"; }
+
+.faq__a {
+  font-family: $font-sans;
+  font-size: $size-small;
+  color: $color-ink-3;
+  line-height: $lh-body;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+// ── Formulaire de contact ─────────────────────────────────────────────────────
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  label {
+    font-family: $font-sans;
+    font-size: $size-small;
+    font-weight: $weight-medium;
+    color: $color-ink-2;
+  }
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+  border: $border-emphasis !important;
+  border-radius: $r-btn !important;
+  padding: 0.65rem 0.85rem;
+  font-size: $size-small;
+  background: $color-bg !important;
+  color: $color-ink !important;
+  outline: none;
+  width: 100%;
+  font-family: $font-sans;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    border-color: $color-gold !important;
+    box-shadow: 0 0 0 3px $color-gold-pale;
+  }
+}
+
+.contact-form textarea,
+#contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-note {
+  font-family: $font-sans;
+  font-size: $size-small;
+  color: $color-ink-3;
+
+  a {
+    color: $color-gold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// ── Tech pills ────────────────────────────────────────────────────────────────
+
+.tech-pill {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $size-xs;
+  background: rgba(26, 26, 24, 0.05);
+  color: $color-ink-3;
+  border-radius: $r-badge;
+  padding: 0.2rem 0.5rem;
+  border: $border-default;
+}
+
+// ── CTA bloc dark ─────────────────────────────────────────────────────────────
+
+.cta-block {
+  background: $color-ink;
+  padding: $space-2xl $space-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  h2 { color: $color-bg; margin-bottom: 0.5rem; }
+  p  { color: rgba(245, 240, 232, 0.55); }
+  em { color: $color-gold; font-style: italic; }
+}
+
+// ── Helpers globaux ───────────────────────────────────────────────────────────
+
+.muted { color: $color-ink-3 !important; }
+
+.maxw {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 992px) {
+  .offer-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 3.5rem 0; }
+  .form-row--2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .section { padding: 2.5rem 0; }
+  .offer-cards-grid { grid-template-columns: 1fr; }
+}
