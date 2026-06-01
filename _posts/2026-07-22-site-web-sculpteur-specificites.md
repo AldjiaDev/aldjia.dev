@@ -6,7 +6,7 @@ description: "Vues multiples, dimensions, matériaux, poids, exposition in situ 
 author: "Aldjia Boughias"
 categories: [Artistes, Développement web]
 tags: [site web sculpteur, portfolio sculpteur, site artiste plasticien, portfolio sculpture]
-image: /assets/images/blog/site-web-sculpteur-specificites.jpg
+image: /assets/images/site-web-sculpteur-specificites.jpg
 ---
 
 Un site pour sculpteur n'est pas un site pour peintre. Ce n'est pas non plus un site pour photographe. Les sculptures sont des objets dans l'espace — tridimensionnels, souvent monumentaux, toujours situés dans un contexte particulier. Un site web qui l'ignore rate une partie essentielle du travail.

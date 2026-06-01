@@ -6,7 +6,7 @@ description: "Comment utiliser schema.org pour que Google comprenne que vos page
 author: "Aldjia Boughias"
 categories: [SEO, Technique]
 tags: [schema.org artiste, données structurées portfolio, VisualArtwork JSON-LD, SEO artiste]
-image: /assets/images/blog/schema-org-artiste-visualartwork.jpg
+image: /assets/images/schema-org-artiste-visualartwork.jpg
 ---
 
 Si vous avez déjà entendu parler de "données structurées" ou de "schema.org" sans bien comprendre ce que c'est, ni pourquoi ça vous concerne en tant qu'artiste, cet article est fait pour vous.

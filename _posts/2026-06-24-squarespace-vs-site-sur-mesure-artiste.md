@@ -6,7 +6,7 @@ description: "URLs instables, compression d'images, absence de schema.org — ce
 author: "Aldjia Boughias"
 categories: [SEO, Artistes]
 tags: [squarespace artiste, cargo artiste, site sur mesure artiste, portfolio artiste]
-image: /assets/images/blog/squarespace-vs-site-sur-mesure-artiste.jpg
+image: /assets/images/squarespace-vs-site-sur-mesure-artiste.jpg
 ---
 
 Squarespace, Cargo, Format, Wix, Webflow — les plateformes no-code se sont imposées comme le réflexe des artistes qui veulent "avoir un site" sans passer par un développeur. Et c'est compréhensible : elles sont accessibles, rapides à prendre en main, et les templates sont souvent bien conçus visuellement.

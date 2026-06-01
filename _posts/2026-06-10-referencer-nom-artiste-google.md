@@ -6,7 +6,7 @@ description: "Nom, technique, ville, données structurées — les leviers concr
 author: "Aldjia Boughias"
 categories: [SEO, Artistes]
 tags: [seo artiste, référencement artiste, portfolio artiste, google artiste]
-image: /assets/images/blog/referencer-nom-artiste-google.jpg
+image: /assets/images/referencer-nom-artiste-google.jpg
 ---
 
 Être artiste en 2026, c'est aussi exister sur Google. Quand un galeriste cherche votre nom après un vernissage, quand un collectionneur veut en savoir plus sur votre travail, quand un commissaire d'exposition explore des pistes — la première chose qu'ils font, c'est une recherche en ligne. Ce qui apparaît dans ces résultats dit quelque chose sur votre sérieux, votre accessibilité, votre présence professionnelle.
