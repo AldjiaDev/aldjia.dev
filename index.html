@@ -647,8 +647,7 @@ last_modified_at: 2026-05-26
       </div>
 
       <div class="row g-4">
-        {% assign recent_posts = site.posts | limit: 3 %}
-        {% for post in recent_posts %}
+        {% for post in site.posts limit:3 %}
         <div class="col-md-4">
           <a href="{{ post.url }}" style="text-decoration: none; display: block; height: 100%;">
             <article style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; transition: border-color .2s;"
