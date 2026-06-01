@@ -45,6 +45,12 @@
         </li>
 
         <li class="nav-item">
+          <a class="nav-link" href="{{ '/' | relative_url }}#audit">
+            Audit
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link {% if page.url contains '/contact' %}active{% endif %}"
              href="{{ '/contact' | relative_url }}"
              {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
