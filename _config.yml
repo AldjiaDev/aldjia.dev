@@ -18,18 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Aldjia Dev
+title: "Aldjia Boughias — Développeuse web · Art & Culture · Lille"
 email: boughias.aldjia@gmail.com
 
 description: >-
-  Aldjia Boughias, développeuse web freelance à Lille spécialisée dans l’art et la culture.
-  Sites vitrine, sites dynamiques et applications Ruby on Rails sur mesure pour galeries d’art,
-  artistes, maisons de ventes aux enchères et institutions culturelles.
+  Développeuse web freelance spécialisée art & culture. Sites et applications Ruby on Rails
+  sur mesure pour galeries d’art, artistes, maisons de ventes et institutions culturelles.
+  Basée à Lille, 100 % remote possible.
 
-baseurl: "" 
+baseurl: ""
 url: "https://aldjia.dev"
 
-author: Aldjia Boughias
+author:
+  name: "Aldjia Boughias"
+  email: "boughias.aldjia@gmail.com"
+
+timezone: Europe/Paris
+
+# Publier les articles avec des dates dans le futur
+future: true
 
 # Image par défaut pour les partages (Open Graph, Twitter)
 default_image: /assets/images/preview.jpg

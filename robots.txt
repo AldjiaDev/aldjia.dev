@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aldjia.dev/sitemap.xml
