@@ -43,7 +43,7 @@ default_image: /assets/images/preview.jpg
 
 # URLs à centraliser — modifier ici si elles changent
 # Formspree : créer un formulaire sur formspree.io et coller l'ID ici (ex: xpzgwkbl)
-formspree_id: ""
+formspree_id: "mnjwoqgg"
 cal_url: https://cal.com/aldjia-boughias/rendez-vous-de-30-minutes?overlayCalendar=true&month=2026-05&date=2026-05-19
 linkedin_url: https://www.linkedin.com/in/aldjia-boughias-ba6447346/
 github_url: https://github.com/AldjiaDev
