@@ -22,7 +22,7 @@ Cet article n’est pas un tutoriel pas-à-pas, mais un partage d’expérience.
 Celle d’une développeuse encore en chemin, qui vient de construire une application et qui apprend, à chaque ligne de code.
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/rails.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/rails.jpg" alt="Illustration Ruby et Rails 1" width="1536" height="1024" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 
@@ -112,7 +112,7 @@ Déployer, c’est faire un pas décisif. Cela m’a appris à :
 - Lire des logs, corriger des erreurs inattendues
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/quotety.jpg" alt="Illustration Ruby et Rails 1" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/quotety.jpg" alt="Illustration Ruby et Rails 1" width="1536" height="1024" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 Mon projet est désormais en ligne : [quotety.aldjia.dev](https://quotety.aldjia.dev)

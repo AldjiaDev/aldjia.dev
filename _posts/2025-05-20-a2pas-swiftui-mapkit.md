@@ -11,7 +11,7 @@ image: /assets/images/Map.jpg
 <p>Dans le cadre du programme <strong>Apple Foundation Program</strong> dispensé par <strong>Simplon</strong>, j'ai travaillé sur un projet d’application iOS baptisé <strong>A2PAS</strong>. Conçu pour favoriser la découverte des événements locaux autour de soi, le projet m’a permis de me concentrer sur des fonctionnalités <strong>géospatiales avancées</strong>, notamment l'intégration de <strong>MapKit</strong>, la gestion d’itinéraires et la création d’un système de filtres dynamiques avec <strong>SwiftUI</strong>.</p>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/a2pas-intro.jpg" alt="Illustration de l'application A2PAS" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/a2pas-intro.jpg" alt="Illustration de l'application A2PAS" width="329" height="708" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <p>Ce billet détaille les éléments techniques de la <strong>vue Map</strong>, les choix d’implémentation, ainsi que les apprentissages issus de cette formation.</p>
@@ -31,7 +31,7 @@ image: /assets/images/Map.jpg
 </ul>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/a2pas-fonctionnalites.jpg" alt="Capture d'écran des fonctionnalités de l'app A2PAS" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/a2pas-fonctionnalites.jpg" alt="Capture d'écran des fonctionnalités de l'app A2PAS" width="329" height="708" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <h2>Architecture technique</h2>
@@ -46,7 +46,7 @@ image: /assets/images/Map.jpg
 </ul>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/a2pas-architecture.jpg" alt="Schéma de l’architecture MVVM de l’app" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/a2pas-architecture.jpg" alt="Schéma de l’architecture MVVM de l’app" width="329" height="708" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <h2>Map personnalisée avec RouteMapView.swift</h2>

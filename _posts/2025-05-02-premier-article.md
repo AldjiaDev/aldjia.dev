@@ -10,7 +10,7 @@ image: /assets/images/articlejekyll.jpeg
 ---
 
 <p style="text-align:center; margin-bottom: 3rem;">
-  <img src="/assets/images/articlejekyll.jpeg" alt="Image de l’article" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/articlejekyll.jpeg" alt="Image de l’article" width="1740" height="1160" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 Il y a encore quelques semaines, je pensais naturellement créer mon site vitrine avec Ruby on Rails.

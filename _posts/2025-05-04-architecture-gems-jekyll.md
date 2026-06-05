@@ -14,7 +14,7 @@ Quand on choisit [Jekyll](https://jekyllrb.com/) pour développer un site statiq
 Dans cet article, on explore les gems utilisées dans un site Jekyll classique hébergé sur GitHub Pages. À la clé : compatibilité, performance, SEO, et un brin de magie Ruby.
 
 <p style="text-align:center; margin-bottom: 3rem;">
-  <img src="/assets/images/gemjekyll.jpg" alt="Illustration du Gemfile Jekyll" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/gemjekyll.jpg" alt="Illustration du Gemfile Jekyll" width="1660" height="1528" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 ## `github-pages` : la gem d’intégration continue

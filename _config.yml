@@ -107,6 +107,7 @@ exclude:
 # Permaliens lisibles
 permalink: /blog/:title/
 include:
+  - _headers
   - podcasts
   - secteurs
 

@@ -17,7 +17,7 @@ image: /assets/images/Ruby.jpg
 <p>Au début, apprendre à coder avec Ruby on Rails fut un choc. Un mélange d’admiration et de frustration. Chaque réussite semblait relever du miracle ; chaque erreur, d’une énigme irrésolue. Mais c’est dans cette expérience rude et fondatrice que j’ai trouvé non seulement une passion, mais une compréhension intime de ce qu’est vraiment Ruby on Rails : un outil pensé pour les humains, pas pour les machines.</p>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/Ruby.jpg" alt="Logo Ruby" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/Ruby.jpg" alt="Logo Ruby" width="4445" height="2336" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <h2>Ruby on Rails, une révolution douce dans le monde du code</h2>
@@ -35,7 +35,7 @@ image: /assets/images/Ruby.jpg
 </blockquote>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/David_Heinemeier_Hansson.jpg" alt="David Heinemeier Hansson, créateur de Ruby on Rails" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/David_Heinemeier_Hansson.jpg" alt="David Heinemeier Hansson, créateur de Ruby on Rails" width="683" height="1024" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <h2>Apprendre Rails sans aucune base : une initiation brutale</h2>
@@ -61,7 +61,7 @@ image: /assets/images/Ruby.jpg
 <p>Même quand on débute. <strong>Surtout</strong> quand on débute.</p>
 
 <p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/Yukihiro_Matsumoto_EuRuKo_2011.jpg" alt="Yukihiro Matsumoto, créateur de Ruby" style="max-width: 100%; border-radius: 10px;">
+  <img src="/assets/images/Yukihiro_Matsumoto_EuRuKo_2011.jpg" alt="Yukihiro Matsumoto, créateur de Ruby" width="1920" height="1853" style="max-width: 100%; border-radius: 10px;">
 </p>
 
 <h2>Ruby on Rails comme point de départ… et de trajectoire</h2>

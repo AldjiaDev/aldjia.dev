@@ -56,6 +56,7 @@ permalink: /blog/
             <div class="blog-featured-img">
               <img src="{{ first_post.image | relative_url }}"
                    alt="{{ first_post.image_alt | default: first_post.title | escape }}"
+                   width="800" height="320"
                    style="width: 100%; height: 100%; object-fit: cover; display: block;"
                    loading="eager">
             </div>
@@ -126,6 +127,7 @@ permalink: /blog/
                 <div class="blog-card-img-wrap">
                   <img src="{{ post.image | relative_url }}"
                        alt="{{ post.image_alt | default: post.title | escape }}"
+                       width="800" height="200"
                        class="blog-card-img"
                        loading="lazy">
                 </div>
