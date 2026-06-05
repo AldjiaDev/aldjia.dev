@@ -80,19 +80,23 @@ last_modified_at: 2026-05-26
               border: 1px solid var(--bordeaux-mid);
               border-radius: 2px;
             "></div>
-            <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-                 alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
-                 width="600" height="800"
-                 loading="eager"
-                 style="
-                   width: 100%;
-                   aspect-ratio: 3/4;
-                   object-fit: cover;
-                   border-radius: 2px;
-                   position: relative;
-                   z-index: 1;
-                   border: 1px solid var(--line);
-                 ">
+            <picture>
+              <source srcset="{{ '/assets/images/portrait.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+                   alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
+                   width="600" height="800"
+                   loading="eager"
+                   fetchpriority="high"
+                   style="
+                     width: 100%;
+                     aspect-ratio: 3/4;
+                     object-fit: cover;
+                     border-radius: 2px;
+                     position: relative;
+                     z-index: 1;
+                     border: 1px solid var(--line);
+                   ">
+            </picture>
           </div>
         </div>
 
