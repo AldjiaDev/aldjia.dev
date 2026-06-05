@@ -75,12 +75,20 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
 
   {% if jekyll.environment == "production" %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ5JJ91PQX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-HJ5JJ91PQX');
+
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HJ5JJ91PQX';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 3000);
+    });
   </script>
   {% endif %}
 </head>
@@ -148,29 +156,31 @@
     // la réduction des mouvements (prefers-reduced-motion — RGAA critère 13.8)
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (window.innerWidth >= 768 && !prefersReduced) {
-      document.querySelectorAll('section').forEach((section, i) => {
-        // Hero already visible — animate inner elements instead
-        if (i === 0) {
-          gsap.from(section.querySelectorAll('.kicker, h1, .hero-subtitle, .d-flex'), {
-            opacity: 0,
-            y: 28,
-            duration: 0.75,
-            stagger: 0.12,
-            ease: 'power2.out',
-            delay: 0.1
-          });
-          return;
-        }
-        gsap.from(section, {
-          opacity: 0,
-          y: 48,
-          duration: 0.85,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 84%',
-            toggleActions: 'play none none none'
+      requestAnimationFrame(function() {
+        document.querySelectorAll('section').forEach((section, i) => {
+          // Hero already visible — animate inner elements instead
+          if (i === 0) {
+            gsap.from(section.querySelectorAll('.kicker, h1, .hero-subtitle, .d-flex'), {
+              opacity: 0,
+              y: 28,
+              duration: 0.75,
+              stagger: 0.12,
+              ease: 'power2.out',
+              delay: 0.1
+            });
+            return;
           }
+          gsap.from(section, {
+            opacity: 0,
+            y: 48,
+            duration: 0.85,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 84%',
+              toggleActions: 'play none none none'
+            }
+          });
         });
       });
     }
