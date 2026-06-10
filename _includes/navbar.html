@@ -32,7 +32,10 @@
          {% if page.url contains '/blog' %}class="active" aria-current="page"{% endif %}>
         Articles
       </a>
-      <a href="{{ '/' | relative_url }}#audit">Audit</a>
+      <a href="{{ '/audit' | relative_url }}"
+         {% if page.url contains '/audit' %}class="active" aria-current="page"{% endif %}>
+        Audit
+      </a>
       <a href="{{ '/contact' | relative_url }}"
          {% if page.url contains '/contact' %}class="active" aria-current="page"{% endif %}>
         Contact

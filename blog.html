@@ -39,12 +39,6 @@ permalink: /blog/
     {% assign first_post = client_posts.first %}
     {% assign other_posts = client_posts | shift %}
 
-    <!-- Bannière newsletter -->
-    <div class="newsletter-banner">
-      <span>Recevoir les prochains articles par email</span>
-      <a href="#newsletter" class="btn btn-outline-primary btn-sm">S'abonner</a>
-    </div>
-
     <!-- Article vedette -->
     <article class="mb-5">
       <a href="{{ first_post.url | relative_url }}" style="text-decoration: none; display: block;">
@@ -197,9 +191,6 @@ permalink: /blog/
         </div>
       </details>
     </div>
-
-    <!-- Newsletter -->
-    {% include newsletter-form.html %}
 
     <div class="text-center mt-5 pt-4" style="border-top: 1px solid var(--line);">
       <p class="muted mb-4" style="font-size: .95rem;">Un projet en tête ?</p>
