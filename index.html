@@ -352,8 +352,8 @@ last_modified_at: 2026-05-26
                 <div class="temoignage-stars mb-3" aria-label="Note : {{ t.note }} étoile{% if t.note > 1 %}s{% endif %} sur 5" role="img">
                   {% for i in (1..t.note) %}★{% endfor %}
                 </div>
-                <blockquote class="temoignage-texte mb-4">
-                  "{{ t.texte }}"
+                <blockquote class="temoignage-texte mb-0">
+                  {{ t.texte }}
                 </blockquote>
                 <div class="temoignage-auteur">
                   <p class="mb-0" style="font-weight: 600; font-size: .9rem; color: var(--ink);">{{ t.nom }}</p>
