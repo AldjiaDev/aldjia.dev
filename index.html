@@ -190,56 +190,81 @@ last_modified_at: 2026-05-26
        ===================== -->
   <section class="section bg-white-warm" aria-labelledby="differenciateur">
     <div class="container">
-      <div class="row g-5 align-items-center">
 
+      <div class="row align-items-end mb-5 g-4">
         <div class="col-lg-5">
           <p class="kicker mb-3">Une double expertise</p>
-          <h2 id="differenciateur" class="section-title mb-4">
+          <h2 id="differenciateur" class="section-title mb-0">
             Beaux-Arts<br>
             <em style="font-style: normal; color: var(--bordeaux);">+</em><br>
             Développement web
           </h2>
-          <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-            Cours aux Beaux-Arts, puis des années à fonder et développer Art au Féminin —
-            ma relation avec la culture est pratique, pas théorique.
-            Je comprends vos enjeux esthétiques et éditoriaux avant d'écrire
-            la première ligne de code.
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
+            Je ne traduis pas votre vision en code — je la comprends parce que j'y suis.
+            Fondatrice d'un média culturel depuis 2019, je vis dans le monde de l'art
+            avant d'en construire les sites.
           </p>
-          <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-            Je ne traduis pas votre vision en code — je la comprends, je l'enrichis,
-            et je la livre dans un site qui lui rend justice.
-          </p>
-          <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
-            En savoir plus sur mon parcours
+        </div>
+      </div>
+
+      <div class="row g-5 align-items-stretch">
+
+        <!-- Art au Féminin — projet fondateur mis en avant -->
+        <div class="col-lg-6">
+          <a href="{{ site.artaufeminin_url }}"
+             target="_blank" rel="noopener"
+             class="aaf-showcase"
+             aria-label="Découvrir Art au Féminin — artaufeminin.fr (ouvre dans un nouvel onglet)">
+            <div class="aaf-showcase__img">
+              <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
+                   alt="Art au Féminin — plateforme culturelle fondée par Aldjia Boughias"
+                   width="1000" height="1000"
+                   loading="lazy">
+            </div>
+            <div class="aaf-showcase__body">
+              <p class="kicker mb-2" style="font-size: .65rem;">Fondatrice · artaufeminin.fr · Depuis 2019</p>
+              <h3 class="aaf-showcase__title">Art au Féminin</h3>
+              <p class="aaf-showcase__desc">
+                Média culturel indépendant dédié aux artistes femmes dans l'histoire de l'art.
+                Podcast, articles de fond, sélections de livres —
+                fondé, conçu, développé et animé par mes soins.
+              </p>
+              <span class="aaf-showcase__link">Découvrir artaufeminin.fr →</span>
+            </div>
           </a>
         </div>
 
-        <div class="col-lg-6 offset-lg-1">
-          <div style="
-            border-left: 2px solid var(--bordeaux-mid);
-            padding-left: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-          ">
+        <!-- Différenciateurs -->
+        <div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center">
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
             <div>
               <p class="kicker mb-1" style="font-size: .68rem;">Compréhension sectorielle</p>
               <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                Vernissage, catalogue raisonné, vacation — je connais votre univers. Pas besoin de tout m'expliquer.
+                Vernissage, catalogue raisonné, vacation — je connais votre univers.
+                Pas besoin de tout m'expliquer.
               </p>
             </div>
             <div>
               <p class="kicker mb-1" style="font-size: .68rem;">Esthétique & technique</p>
               <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                Un site beau et performant. Typographie, hiérarchie visuelle, vitesse — rien n'est sacrifié.
+                Un site beau et performant. Typographie, hiérarchie visuelle, vitesse —
+                rien n'est sacrifié.
               </p>
             </div>
             <div>
               <p class="kicker mb-1" style="font-size: .68rem;">Relation de confiance</p>
               <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                10 ans d'expérience en relation client. Je communique clairement et tiens mes engagements.
+                10 ans d'expérience en relation client. Je communique clairement
+                et tiens mes engagements.
               </p>
             </div>
+          </div>
+          <div class="mt-5">
+            <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
+              En savoir plus sur mon parcours
+            </a>
           </div>
         </div>
 
@@ -731,6 +756,12 @@ last_modified_at: 2026-05-26
          style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
         Réserver un créneau
       </a>
+
+      <p class="mt-4 mb-0" style="font-size: .85rem; color: rgba(247,244,239,.38); font-family: 'Cormorant Garant', serif; font-style: italic;">
+        Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
+          style="color: rgba(247,244,239,.55); text-decoration: underline; text-underline-offset: 3px;">Art au Féminin</a>
+        · Développeuse spécialisée art &amp; culture depuis 2019
+      </p>
 
     </div>
   </section>

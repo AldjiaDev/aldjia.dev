@@ -1093,3 +1093,89 @@ a:hover .home-article-card {
   letter-spacing: -0.01em;
   margin-bottom: .25rem;
 }
+
+/* ================================
+   Art au Féminin — showcase card
+   ================================ */
+
+.aaf-showcase {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  background: var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.aaf-showcase:hover {
+  color: inherit;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+}
+
+.aaf-showcase__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.aaf-showcase__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+  filter: grayscale(15%);
+}
+
+.aaf-showcase:hover .aaf-showcase__img img {
+  transform: scale(1.04);
+}
+
+.aaf-showcase__body {
+  padding: 2rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.aaf-showcase__body .kicker {
+  color: rgba(247,244,239,.50) !important;
+}
+
+.aaf-showcase__title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: rgba(247,244,239,.92) !important;
+  margin-bottom: .75rem;
+}
+
+.aaf-showcase__desc {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: .95rem;
+  line-height: 1.75;
+  color: rgba(247,244,239,.58) !important;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.aaf-showcase__link {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--bordeaux) !important;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .aaf-showcase { height: auto; }
+  .aaf-showcase__img { aspect-ratio: 16/7; }
+  .aaf-showcase__body { padding: 1.5rem 1.75rem 2rem; }
+}
