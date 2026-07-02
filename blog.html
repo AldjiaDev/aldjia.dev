@@ -42,9 +42,7 @@ permalink: /blog/
     <!-- Article vedette -->
     <article class="mb-5">
       <a href="{{ first_post.url | relative_url }}" style="text-decoration: none; display: block;">
-        <div class="blog-featured-card"
-             onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
-             onmouseout="this.style.borderColor='var(--line)'">
+        <div class="blog-featured-card">
 
           {% if first_post.image %}
             <div class="blog-featured-img">
@@ -105,17 +103,7 @@ permalink: /blog/
       {% for post in other_posts %}
         <article class="col-md-6 col-lg-4">
           <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div style="
-              border: 1px solid var(--line);
-              border-radius: var(--radius);
-              overflow: hidden;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              transition: border-color .2s;
-            "
-            onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
-            onmouseout="this.style.borderColor='var(--line)'">
+            <div class="blog-article-card">
 
               {% if post.image %}
                 <div class="blog-card-img-wrap">
@@ -176,9 +164,7 @@ permalink: /blog/
           {% for post in dev_posts %}
             <div class="col-md-6">
               <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block;">
-                <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; transition: border-color .2s;"
-                     onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
-                     onmouseout="this.style.borderColor='var(--line)'">
+                <div class="blog-dev-card">
                   <p style="font-size: .75rem; color: var(--muted); margin-bottom: .4rem; font-family: 'Inter', sans-serif;">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
                   </p>

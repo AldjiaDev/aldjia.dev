@@ -165,7 +165,7 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
   letter-spacing: .12em;
   text-transform: uppercase;
   box-shadow: none;
-  transition: background .18s, border-color .18s;
+  transition: background .18s, border-color .18s, transform .18s, box-shadow .18s;
 }
 
 .btn-primary,
@@ -177,6 +177,8 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
   background: var(--bordeaux);
   border-color: var(--bordeaux);
   color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139,38,53,.25);
 }
 
 .btn-outline-primary {
@@ -189,13 +191,15 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
   letter-spacing: .12em;
   text-transform: uppercase;
   background: transparent;
-  transition: border-color .18s, background .18s, color .18s;
+  transition: border-color .18s, background .18s, color .18s, transform .18s, box-shadow .18s;
 }
 
 .btn-outline-primary:hover {
   background: var(--ink);
   border-color: var(--ink) !important;
   color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(17,17,17,.15);
 }
 
 .btn-bordeaux {
@@ -871,7 +875,7 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 
 .blog-card-img-wrap {
   width: 100%;
-  height: 200px;
+  height: 270px;
   overflow: hidden;
 }
 
@@ -885,6 +889,39 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 
 .blog-card-img-wrap:hover .blog-card-img {
   transform: scale(1.04);
+}
+
+/* ================================
+   Cards — grille projets & articles
+   ================================ */
+
+.blog-article-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+a:hover .blog-article-card,
+.blog-article-card:hover {
+  border-color: var(--bordeaux-mid);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.07);
+}
+
+.blog-dev-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: border-color .2s;
+}
+
+a:hover .blog-dev-card,
+.blog-dev-card:hover {
+  border-color: var(--bordeaux-mid);
 }
 
 /* ================================
@@ -1059,6 +1096,35 @@ select {
 
 a:hover .home-article-card {
   border-color: var(--bordeaux-mid);
+}
+
+/* List row cards (city pages — offre liste) */
+.list-row-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color .18s;
+}
+
+.list-row-card:hover {
+  border-color: var(--bordeaux-mid);
+}
+
+.list-row-card--active {
+  border-color: var(--bordeaux-mid);
+  background: var(--bordeaux-light);
+}
+
+.list-row-card--active:hover {
+  border-color: var(--bordeaux);
+}
+
+/* FAQ — hover on details */
+details:hover {
+  border-color: var(--bordeaux-mid) !important;
 }
 
 /* Kicker dans les sections sombres — contraste WCAG AA (ratio ≥ 4.5:1) */
