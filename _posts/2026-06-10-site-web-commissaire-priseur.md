@@ -96,7 +96,7 @@ Le coût réel n'est pas le prix initial. C'est la somme des opportunités manqu
 ---
 
 **À explorer :**
-[Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/) · [Mirabili Enchères — cas client](/realisations/mirabili-encheres/) · [SEO pour galeries et maisons de ventes](/blog/seo-galeries-art/) · [Combien coûte un site web pour une galerie ou une maison de ventes ?](/blog/prix-site-web-galerie-art/)
+[Site web pour maison de ventes aux enchères](/secteurs/maisons-de-ventes/) · [Mirabili Enchères — cas client](/realisations/mirabili-encheres/) · [SEO pour galeries et maisons de ventes](/blog/seo-galeries-art/) · [Combien coûte un site web pour une galerie ou une maison de ventes ?](/blog/prix-site-web-galerie-art/) · [Tarifs](/tarifs/)
 
 <div class="text-center mt-5">
   <a href="/blog/" class="btn btn-outline-primary">

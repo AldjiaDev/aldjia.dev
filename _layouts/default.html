@@ -52,6 +52,10 @@
     {% include jsonld-service.html %}
   {% endif %}
 
+  {% if page.faq_items %}
+    {% include jsonld-faqpage.html %}
+  {% endif %}
+
   {% if page.layout == "post" %}
     {% include jsonld-post.html %}
   {% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Site web pour maison de ventes aux enchères avec SEO — Commissaires-priseurs"
-description: "Site web sur mesure pour commissaires-priseurs : catalogue de lots en ligne, formulaire d'estimation, SEO des vacations. Votre maison de ventes trouvée par les collectionneurs sur Google."
+title: "Site web pour maison de ventes — Commissaires-priseurs"
+description: "Site sur mesure pour commissaires-priseurs : catalogue de lots, estimation en ligne, SEO des vacations. Votre maison de ventes trouvée par les collectionneurs sur Google."
 permalink: /secteurs/maisons-de-ventes/
 canonical: https://aldjia.dev/secteurs/maisons-de-ventes/
 last_modified_at: 2026-04-06
@@ -10,6 +10,15 @@ schema_service_name: "Création de site web pour maison de ventes aux enchères"
 schema_service_description: "Application web Ruby on Rails pour commissaires-priseurs : catalogue de lots en ligne, formulaire d'estimation, agenda des vacations, SEO des objets et des ventes aux enchères."
 schema_service_type: "Développement web"
 schema_service_audience: "Commissaires-priseurs, maisons de ventes aux enchères"
+faq_items:
+  - q: "Combien coûte un site pour une maison de ventes aux enchères ?"
+    a: "Un site éditorial avec catalogue et agenda des vacations démarre à 3 500 € HT. Une application métier complète avec back-office, estimation en ligne et gestion des lots part à 6 000 € HT."
+  - q: "Peut-on intégrer un formulaire d'estimation en ligne ?"
+    a: "Oui. C'est l'une des fonctionnalités clés d'un site de commissaire-priseur. Le formulaire est optimisé mobile, avec envoi de photos et accusé de réception automatique."
+  - q: "Les URLs des lots restent-elles stables après chaque vacation ?"
+    a: "Oui. C'est un point fondamental traité dès la conception : chaque lot a une URL permanente, même après la vacation, pour conserver le référencement Google accumulé."
+  - q: "Le vocabulaire des enchères (vacation, adjudication, estimation...) est-il maîtrisé ?"
+    a: "Oui. Je connais le vocabulaire et les contraintes opérationnelles du secteur. Mirabili Enchères, application Ruby on Rails pour commissaire-priseur, en est la démonstration concrète."
 ---
 
 <!-- HERO -->
@@ -274,6 +283,26 @@ schema_service_audience: "Commissaires-priseurs, maisons de ventes aux enchères
             </p>
           </div>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-ventes-titre">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="kicker mb-3">FAQ</p>
+        <h2 id="faq-ventes-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
+        <div class="faq">
+          {% for item in page.faq_items %}
+          <details class="faq__item">
+            <summary class="faq__q">{{ item.q }}</summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>

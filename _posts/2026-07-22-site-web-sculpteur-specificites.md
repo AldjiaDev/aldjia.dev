@@ -95,4 +95,4 @@ Si c'est quelque chose qui vous intéresse, c'est techniquement possible — et 
 
 ---
 
-Vous êtes sculpteur et vous cherchez un site qui respecte la complexité de votre travail ? Découvrez [mon offre pour les artistes plasticiens](/secteurs/artistes/) ou [prenez rendez-vous](/contact/) pour un premier échange. Je lis aussi avec plaisir [cet article sur les données structurées schema.org pour les artistes](/blog/schema-org-artiste-visualartwork/), qui explique comment bien documenter vos œuvres pour Google.
+Vous êtes sculpteur et vous cherchez un site qui respecte la complexité de votre travail ? Découvrez [mon offre pour les artistes plasticiens](/secteurs/artistes/), consultez les [tarifs](/tarifs/) ou [prenez rendez-vous](/contact/) pour un premier échange. Je lis aussi avec plaisir [cet article sur les données structurées schema.org pour les artistes](/blog/schema-org-artiste-visualartwork/), qui explique comment bien documenter vos œuvres pour Google.

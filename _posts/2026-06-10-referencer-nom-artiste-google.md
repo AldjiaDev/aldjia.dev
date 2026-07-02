@@ -102,4 +102,4 @@ Un site mis à jour régulièrement est exploré plus souvent par les robots de 
 
 ---
 
-Si vous souhaitez mettre en place tout cela pour votre portfolio, je vous accompagne de la conception à la mise en ligne. Découvrez [mon offre pour les artistes](/secteurs/artistes/) ou [prenez rendez-vous]({{ site.cal_url }}) pour un premier échange de 30 minutes.
+Si vous souhaitez mettre en place tout cela pour votre portfolio, je vous accompagne de la conception à la mise en ligne. Découvrez [mon offre pour les artistes](/secteurs/artistes/), consultez les [tarifs](/tarifs/) ou [prenez rendez-vous]({{ site.cal_url }}) pour un premier échange de 30 minutes.

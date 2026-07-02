@@ -96,6 +96,7 @@ highlighter: rouge
 # Exclude from production build
 exclude:
   - node_modules
+  - tmp
   - Gemfile
   - Gemfile.lock
   - README.md

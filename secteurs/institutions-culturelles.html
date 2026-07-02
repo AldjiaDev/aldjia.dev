@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Site web pour institution culturelle — Musées, centres d'art, fondations"
-description: "Développeuse web spécialisée pour institutions culturelles : musées, centres d'art, fondations, maisons de la culture. Sites sur mesure, agenda, billetterie, médiation numérique. Ruby on Rails."
+title: "Site web pour institution culturelle — Musées & centres d'art"
+description: "Sites sur mesure pour institutions culturelles : musées, centres d'art, fondations. Agenda, billetterie, médiation numérique. Développeuse spécialisée art & culture."
 permalink: /secteurs/institutions-culturelles/
 canonical: https://aldjia.dev/secteurs/institutions-culturelles/
 last_modified_at: 2026-06-03
@@ -10,6 +10,15 @@ schema_service_name: "Création de site web pour institution culturelle"
 schema_service_description: "Création de sites web pour musées, fondations, centres d'art et institutions culturelles : agenda événementiel, médiation numérique, contenu éditorial, accessibilité RGAA, SEO."
 schema_service_type: "Développement web"
 schema_service_audience: "Musées, fondations, centres d'art, institutions culturelles"
+faq_items:
+  - q: "Quels types d'institutions culturelles accompagnez-vous ?"
+    a: "Musées, centres d'art, fondations, associations culturelles, maisons de la culture et lieux de résidence artistique. Chaque structure a ses besoins spécifiques que j'intègre dès le cadrage."
+  - q: "L'accessibilité RGAA est-elle prise en compte ?"
+    a: "Oui. L'accessibilité numérique est intégrée dans chaque projet : structure sémantique correcte, contrastes suffisants, navigation clavier, labels ARIA — conforme aux critères WCAG 2.1 AA."
+  - q: "Peut-on intégrer un agenda d'événements et une billetterie ?"
+    a: "Oui. Ces fonctionnalités sont prévues dans les offres site éditorial et application métier, avec un back-office pour que votre équipe gère l'agenda en autonomie."
+  - q: "Combien coûte un site pour une institution culturelle ?"
+    a: "Un site éditorial pour institution démarre à 3 500 € HT. Une application métier avec fonctionnalités avancées (billetterie, médiathèque, agenda) part à 6 000 € HT. Le tarif est toujours défini lors d'un premier échange gratuit."
 ---
 
 <!-- HERO -->
@@ -225,6 +234,26 @@ schema_service_audience: "Musées, fondations, centres d'art, institutions cultu
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-institution-titre">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="kicker mb-3">FAQ</p>
+        <h2 id="faq-institution-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
+        <div class="faq">
+          {% for item in page.faq_items %}
+          <details class="faq__item">
+            <summary class="faq__q">{{ item.q }}</summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -93,7 +93,7 @@ Ce n'est pas un projet standard. C'est un projet de confiance — entre vous, vo
 ---
 
 **À explorer :**
-[Site web pour galerie d'art](/secteurs/galeries-art/) · [Combien coûte un site web pour une galerie ?](/blog/prix-site-web-galerie-art/) · [SEO pour galeries d'art](/blog/seo-galeries-art/) · [Pourquoi le site d'une galerie n'est pas un site comme les autres](/blog/site-internet-galerie-art/)
+[Site web pour galerie d'art](/secteurs/galeries-art/) · [Combien coûte un site web pour une galerie ?](/blog/prix-site-web-galerie-art/) · [SEO pour galeries d'art](/blog/seo-galeries-art/) · [Pourquoi le site d'une galerie n'est pas un site comme les autres](/blog/site-internet-galerie-art/) · [Tarifs](/tarifs/)
 
 <div class="text-center mt-5">
   <a href="/blog/" class="btn btn-outline-primary">

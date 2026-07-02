@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Site web portfolio pour artiste avec SEO — Développeuse web art & culture"
-description: "Un site portfolio pour artiste qui se trouve sur Google : design soigné, galerie d'œuvres optimisée, SEO naturel intégré dès la conception. Développeuse web spécialisée art & culture."
+title: "Site web portfolio pour artiste — Design & SEO intégrés"
+description: "Portfolio en ligne pour artiste : design soigné, galerie d'œuvres optimisée, SEO naturel intégré dès la conception. Développeuse spécialisée art & culture, formation Beaux-Arts."
 permalink: /secteurs/artistes/
 canonical: https://aldjia.dev/secteurs/artistes/
 last_modified_at: 2026-05-17
@@ -10,6 +10,15 @@ schema_service_name: "Création de site web pour artiste"
 schema_service_description: "Création de sites portfolio sur mesure pour artistes plasticiens, photographes et illustrateurs : galerie d'œuvres, démarche artistique, agenda d'expositions, SEO du nom et de la pratique."
 schema_service_type: "Développement web"
 schema_service_audience: "Artistes plasticiens, photographes, sculpteurs, illustrateurs"
+faq_items:
+  - q: "Combien coûte un site portfolio pour un artiste ?"
+    a: "Un site vitrine pour artiste démarre à 1 500 € HT. Le tarif varie selon le nombre de séries, les fonctionnalités souhaitées et l'existence d'une charte graphique. Un premier échange gratuit permet de cadrer le projet."
+  - q: "Quelle est la différence entre Squarespace et un site sur mesure pour artiste ?"
+    a: "Un site sur mesure permet des URLs stables, des données structurées VisualArtwork et Person pour le référencement de vos œuvres, et un SEO optimisé pour votre nom — éléments absents ou limités sur Squarespace."
+  - q: "Le SEO du nom d'artiste est-il intégré dès le départ ?"
+    a: "Oui. Balises titre, meta descriptions, données structurées Person et VisualArtwork, attributs alt des images — tout est pensé pour que votre nom et vos séries soient bien référencés sur Google."
+  - q: "Travaillez-vous avec des artistes de toutes disciplines ?"
+    a: "Oui : peintres, sculpteurs, photographes, illustrateurs, plasticiens. Chaque pratique a ses spécificités techniques que j'anticipe dès la conception du site."
 ---
 
 <!-- HERO -->
@@ -304,6 +313,26 @@ schema_service_audience: "Artistes plasticiens, photographes, sculpteurs, illust
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-artistes-titre">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="kicker mb-3">FAQ</p>
+        <h2 id="faq-artistes-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
+        <div class="faq">
+          {% for item in page.faq_items %}
+          <details class="faq__item">
+            <summary class="faq__q">{{ item.q }}</summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

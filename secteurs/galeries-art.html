@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Site web pour galerie d'art avec SEO — Développeuse web spécialisée art & culture"
-description: "Vous cherchez un site web pour votre galerie d'art, pensé pour le SEO dès la conception ? Design soigné, catalogue en ligne, référencement naturel optimisé. Formation Beaux-Arts + Ruby on Rails."
+title: "Site web pour galerie d'art — Design & SEO intégrés"
+description: "Site web sur mesure pour galerie d'art : catalogue d'artistes, agenda des expositions, design soigné et SEO sectoriel intégré dès la conception. Formation Beaux-Arts."
 permalink: /secteurs/galeries-art/
 canonical: https://aldjia.dev/secteurs/galeries-art/
 last_modified_at: 2026-04-06
@@ -10,6 +10,15 @@ schema_service_name: "Création de site web pour galerie d'art"
 schema_service_description: "Conception et développement de sites web sur mesure pour galeries d'art : catalogue d'artistes, agenda des expositions, design soigné, SEO sectoriel intégré dès la conception."
 schema_service_type: "Développement web"
 schema_service_audience: "Galeries d'art, galeristes, collectionneurs"
+faq_items:
+  - q: "Combien coûte un site web pour une galerie d'art ?"
+    a: "Le prix dépend du périmètre. Un site vitrine démarre à 1 500 € HT, un site éditorial avec back-office pour gérer votre catalogue en autonomie à partir de 3 500 € HT. Le tarif exact est défini lors d'un premier échange gratuit."
+  - q: "Combien de temps faut-il pour créer un site de galerie d'art ?"
+    a: "Un site vitrine se réalise en 3 à 5 semaines. Un site éditorial avec gestion du catalogue prend 6 à 10 semaines. Ces délais sont fixés ensemble lors du premier échange."
+  - q: "Le SEO est-il inclus dans la création du site de la galerie ?"
+    a: "Oui. SEO on-page, données structurées schema.org (VisualArtwork, Person, Event, LocalBusiness) et optimisation des Core Web Vitals sont intégrés à chaque projet, sans supplément."
+  - q: "Peut-on gérer le catalogue d'artistes et d'œuvres sans développeur ?"
+    a: "Oui. Je conçois un back-office simple et documenté pour que vous puissiez mettre à jour artistes, œuvres et expositions en totale autonomie, sans intervention technique."
 ---
 
 <!-- HERO -->
@@ -260,6 +269,26 @@ schema_service_audience: "Galeries d'art, galeristes, collectionneurs"
             </p>
           </div>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-galerie-titre">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="kicker mb-3">FAQ</p>
+        <h2 id="faq-galerie-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
+        <div class="faq">
+          {% for item in page.faq_items %}
+          <details class="faq__item">
+            <summary class="faq__q">{{ item.q }}</summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,58 @@
+# Aldjia Boughias — Développeuse web freelance · Art & Culture
+
+Aldjia Boughias est développeuse web freelance spécialisée dans la création de sites et d'applications sur mesure pour les professionnels du monde de l'art et de la culture : galeries d'art, artistes, maisons de ventes aux enchères, institutions culturelles, photographes.
+
+Double formation : histoire de l'art (Beaux-Arts) et développement web (Le Wagon — Ruby on Rails). Fondatrice du média culturel Art au Féminin. Basée à Lille, 100 % remote possible. Intervient aussi à Paris et Bruxelles.
+
+## Ce qu'Aldjia fait
+
+- Création de sites vitrines pour artistes et galeries (à partir de 1 500 € HT)
+- Sites éditoriaux avec back-office pour galeries et institutions (à partir de 3 500 € HT)
+- Applications métier sur mesure pour maisons de ventes (à partir de 6 000 € HT)
+- Audits web : UX, SEO, performance (à partir de 250 € HT)
+- Stack principale : Ruby on Rails, Jekyll, HTML/CSS, JavaScript
+- SEO on-page, schema.org et Core Web Vitals inclus dans chaque projet
+
+## Ce qui la distingue
+
+Elle comprend l'univers de ses clients avant de coder. Une galerie d'art n'a pas les mêmes besoins qu'une boutique e-commerce : catalogue vivant, double audience (collectionneurs et grand public), identité visuelle forte, SEO sectoriel spécifique. Aldjia a fondé un média culturel indépendant et travaille avec le secteur de l'art depuis des années.
+
+## Pages clés
+
+- Accueil : https://aldjia.dev/
+- À propos : https://aldjia.dev/about/
+- Tarifs : https://aldjia.dev/tarifs/
+- Réalisations : https://aldjia.dev/realisations/
+- Contact : https://aldjia.dev/contact/
+- FAQ : https://aldjia.dev/faq/
+
+## Services par secteur
+
+- Galeries d'art : https://aldjia.dev/secteurs/galeries-art/
+- Artistes : https://aldjia.dev/secteurs/artistes/
+- Maisons de ventes : https://aldjia.dev/secteurs/maisons-de-ventes/
+- Institutions culturelles : https://aldjia.dev/secteurs/institutions-culturelles/
+- Photographes : https://aldjia.dev/secteurs/photographes/
+
+## Zones géographiques
+
+- Lille et métropole : https://aldjia.dev/lille/
+- Hauts-de-France : https://aldjia.dev/hauts-de-france/
+- Paris : https://aldjia.dev/paris/
+- Bruxelles : https://aldjia.dev/bruxelles/
+
+## Blog — Articles de référence
+
+- SEO pour galeries d'art : https://aldjia.dev/blog/seo-galeries-art/
+- Prix d'un site web pour galerie : https://aldjia.dev/blog/prix-site-web-galerie-art/
+- Portfolio artiste en ligne : https://aldjia.dev/blog/portfolio-artiste-en-ligne/
+- Refonte site galerie d'art : https://aldjia.dev/blog/refonte-site-web-galerie/
+- Squarespace vs site sur mesure : https://aldjia.dev/blog/squarespace-vs-site-sur-mesure-artiste/
+- Schema.org pour artistes : https://aldjia.dev/blog/schema-org-artiste-visualartwork/
+- Site web pour commissaire-priseur : https://aldjia.dev/blog/site-web-commissaire-priseur/
+- Référencer son nom d'artiste sur Google : https://aldjia.dev/blog/referencer-nom-artiste-google/
+
+## Contact
+
+- Réserver un échange de 30 min (sans engagement) : https://aldjia.dev/contact/
+- LinkedIn : https://www.linkedin.com/in/aldjia-boughias-ba6447346/

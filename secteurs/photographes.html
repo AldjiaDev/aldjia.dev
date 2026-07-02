@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Site web pour photographe — Portfolio en ligne sur mesure"
-description: "Développeuse web spécialisée pour photographes. Sites portfolio, galeries d'images optimisées, protection des droits, espace client. Design soigné, performance et SEO. Formation Beaux-Arts + Ruby on Rails."
+description: "Portfolio sur mesure pour photographes : galeries d'images optimisées, protection des droits, espace client. Design soigné, performance et SEO inclus. Formation Beaux-Arts."
 permalink: /secteurs/photographes/
 canonical: https://aldjia.dev/secteurs/photographes/
 last_modified_at: 2026-04-06
@@ -10,6 +10,15 @@ schema_service_name: "Création de site web pour photographe"
 schema_service_description: "Création de sites portfolio sur mesure pour photographes : galeries d'images optimisées, protection des droits, espace client, SEO des séries et des reportages."
 schema_service_type: "Développement web"
 schema_service_audience: "Photographes professionnels et artistiques"
+faq_items:
+  - q: "Comment protéger mes photographies sur mon site ?"
+    a: "Plusieurs niveaux de protection sont possibles : filigrane optionnel, désactivation du clic droit sur les images, résolutions adaptées selon l'usage, et conservation des métadonnées EXIF pour votre traçabilité."
+  - q: "Les galeries d'images ralentissent-elles le site ?"
+    a: "Non, si elles sont bien développées. J'utilise le format WebP, le lazy loading et le chargement progressif pour que le site reste rapide quelle que soit la taille de votre portfolio."
+  - q: "Le SEO d'un photographe est-il différent du SEO classique ?"
+    a: "Oui. Les attributs alt des images, les noms de fichiers, les données structurées ImageObject et VisualArtwork, et les pages dédiées par série sont les leviers clés pour être trouvé sur Google Images et dans les résultats de recherche."
+  - q: "Combien coûte un site portfolio pour un photographe ?"
+    a: "Un site vitrine démarre à 1 500 € HT. Les fonctionnalités supplémentaires (espace client, commande en ligne, protection avancée) font évoluer le tarif. Un premier échange gratuit permet de cadrer le projet."
 ---
 
 <!-- HERO -->
@@ -217,6 +226,26 @@ schema_service_audience: "Photographes professionnels et artistiques"
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-photo-titre">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="kicker mb-3">FAQ</p>
+        <h2 id="faq-photo-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
+        <div class="faq">
+          {% for item in page.faq_items %}
+          <details class="faq__item">
+            <summary class="faq__q">{{ item.q }}</summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

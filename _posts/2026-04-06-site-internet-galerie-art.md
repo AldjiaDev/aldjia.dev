@@ -111,7 +111,7 @@ Un site de galerie d'art bien conçu n'est pas nécessairement plus cher qu'un s
 
 ---
 
-**À explorer :** [Site web pour galerie d'art](/secteurs/galeries-art/) · [SEO pour galeries d'art](/blog/seo-galeries-art/) · [Combien coûte un site pour une galerie ?](/blog/prix-site-web-galerie-art/)
+**À explorer :** [Site web pour galerie d'art](/secteurs/galeries-art/) · [SEO pour galeries d'art](/blog/seo-galeries-art/) · [Combien coûte un site pour une galerie ?](/blog/prix-site-web-galerie-art/) · [Tarifs](/tarifs/)
 
 <div class="text-center mt-5">
   <a href="/blog/" class="btn btn-outline-primary">
