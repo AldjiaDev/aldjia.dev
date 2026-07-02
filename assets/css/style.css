@@ -95,25 +95,33 @@ body, p, li, a, span, .btn, .lead, .navbar, .card, .list-group-item {
   color: var(--ink);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif !important;
+h1, h2, h3 {
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-weight: 600;
   color: var(--ink);
-  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-transform: none;
+}
+
+h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: var(--ink);
   letter-spacing: .04em;
-  line-height: 1.1;
-  font-style: normal;
-  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 /* Titres de section */
 .section-title {
-  font-family: "Raleway", sans-serif !important;
-  font-style: normal;
-  font-weight: 300;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  line-height: 1.15;
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.01em;
+  text-transform: none;
+  line-height: 1.1;
   color: var(--ink);
 }
 
@@ -352,13 +360,13 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 }
 
 .home .hero-title {
-  font-family: "Raleway", sans-serif !important;
-  font-size: clamp(2.6rem, 6.5vw, 6rem);
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  line-height: 1.05;
+  font-family: 'Cormorant Garant', serif;
+  font-size: clamp(3.4rem, 8.5vw, 8.5rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  line-height: 1.0;
   color: var(--ink);
 }
 
@@ -391,7 +399,7 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 .sector-card {
   border-top: 2px solid var(--line);
   padding: 2rem 0;
-  transition: border-color .2s;
+  transition: border-color .25s, background .25s;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -399,16 +407,18 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 
 .sector-card:hover {
   border-top-color: var(--bordeaux);
+  background: rgba(139,38,53,.03);
 }
 
 .sector-number {
-  font-family: "Raleway", sans-serif !important;
-  font-size: 1.5rem;
-  font-weight: 200;
-  color: var(--muted);
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: 3.8rem;
+  font-weight: 300;
+  color: rgba(17,17,17,.09);
   line-height: 1;
-  margin-bottom: .75rem;
-  letter-spacing: .04em;
+  margin-bottom: .25rem;
+  letter-spacing: -0.03em;
 }
 
 /* Featured project */
@@ -421,7 +431,7 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 
 .featured-project .project-label {
   font-family: "Raleway", sans-serif !important;
-  color: rgba(247,244,239,.45) !important;
+  color: rgba(247,244,239,.72) !important;
   font-size: .72rem;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -440,14 +450,14 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 }
 
 .featured-project h3 {
-  font-family: "Raleway", sans-serif !important;
-  font-style: normal;
-  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
-  font-weight: 300;
-  color: #FFFFFF !important;
-  line-height: 1.15;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  color: #F7F4EF !important;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 .featured-project p {
@@ -549,14 +559,14 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 .post-header { margin-bottom: 20px; }
 
 .post-title {
-  font-family: "Raleway", sans-serif !important;
-  font-style: normal;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: 1.1;
-  font-weight: 300;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  margin: 12px 0 12px;
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  margin: 12px 0 16px;
   color: var(--ink);
 }
 
@@ -590,11 +600,11 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 }
 
 .post-content h2 {
-  font-family: "Raleway", sans-serif !important;
-  font-style: normal;
-  font-size: 1.5rem;
-  margin: 2.4rem 0 .8rem;
-  font-weight: 300;
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: 1.9rem;
+  margin: 2.8rem 0 .8rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -752,9 +762,7 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
    Overrides finaux
    ================================ */
 
-.featured-project h3 {
-  color: #F7F4EF !important;
-}
+/* Supprimé : .featured-project h3 color override now in main block */
 
 .navbar .nav-link { color: rgba(13,13,13,.70) !important; }
 
@@ -845,8 +853,25 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: border-color .2s;
-  min-height: 320px;
+  transition: border-color .25s;
+  min-height: 460px;
+}
+
+a:hover .blog-featured-card,
+.blog-featured-card:hover {
+  border-color: var(--bordeaux-mid);
+}
+
+.blog-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+a:hover .blog-featured-img img {
+  transform: scale(1.03);
 }
 
 .blog-featured-img {
@@ -907,4 +932,120 @@ a:hover { color: var(--bordeaux); text-decoration: none; }
 
   /* Post wrap */
   .post-wrap { margin: 32px auto 64px; padding: 0 16px; }
+
+  /* Hero title mobile */
+  .home .hero-title { font-size: 3rem; }
+}
+
+/* ================================
+   Ticker / marquee éditorial
+   ================================ */
+
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: .9rem 0;
+  user-select: none;
+}
+
+.ticker__inner {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker__inner span {
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__inner { animation: none; }
+}
+
+/* ================================
+   Grain texture subtile (ambiance galerie)
+   ================================ */
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9000;
+  opacity: .02;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px;
+}
+
+/* ================================
+   Select — flèche custom accessible
+   ================================ */
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235E5E5E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem !important;
+}
+
+/* ================================
+   Accessibilité — cartes interactives
+   ================================ */
+
+/* Article cards home blog */
+.home-article-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  height: 100%;
+  transition: border-color .2s;
+}
+
+a:hover .home-article-card {
+  border-color: var(--bordeaux-mid);
+}
+
+/* Kicker dans les sections sombres — contraste WCAG AA (ratio ≥ 4.5:1) */
+[style*="background: #2E2E2A"] .kicker,
+[style*="background:#2E2E2A"] .kicker {
+  color: rgba(247,244,239,.72) !important;
+}
+
+/* ================================
+   Process steps — titres cohérents
+   ================================ */
+
+.process-step__title {
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* ================================
+   Offer cards — titres cohérents
+   ================================ */
+
+.offer-card__name {
+  font-family: 'Cormorant Garant', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: .25rem;
 }

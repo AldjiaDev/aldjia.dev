@@ -105,6 +105,16 @@ last_modified_at: 2026-05-26
   </section>
 
   <!-- =====================
+       TICKER
+       ===================== -->
+  <div class="ticker" aria-hidden="true" role="presentation">
+    <div class="ticker__inner">
+      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
+      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <!-- =====================
        RÉALISATION VEDETTE
        ===================== -->
   <section class="section" aria-labelledby="realisation-vedette">
@@ -258,9 +268,9 @@ last_modified_at: 2026-05-26
       <div class="row g-0">
         <div class="col-md-6 col-lg-3">
           <a href="/secteurs/galeries-art/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card pe-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor=’var(--bordeaux-mid)’" onmouseout="this.style.borderColor=’’">
+            <div class="sector-card pe-4">
               <div class="sector-number">01</div>
-              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Galeries d’art</h3>
+              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Galeries d’art</h3>
               <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
                 Votre site ne reflète pas la qualité de vos expositions ? Je crée un espace en ligne qui met vos artistes et œuvres en valeur.
               </p>
@@ -270,9 +280,9 @@ last_modified_at: 2026-05-26
         </div>
         <div class="col-md-6 col-lg-3">
           <a href="/secteurs/artistes/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card px-lg-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor=’var(--bordeaux-mid)’" onmouseout="this.style.borderColor=’’">
+            <div class="sector-card px-lg-4">
               <div class="sector-number">02</div>
-              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Artistes</h3>
+              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Artistes</h3>
               <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
                 Votre travail mérite mieux qu’un PDF envoyé par email. Un portfolio en ligne qui parle à vos collectionneurs et institutions.
               </p>
@@ -282,9 +292,9 @@ last_modified_at: 2026-05-26
         </div>
         <div class="col-md-6 col-lg-3">
           <a href="/secteurs/maisons-de-ventes/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card px-lg-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor=’var(--bordeaux-mid)’" onmouseout="this.style.borderColor=’’">
+            <div class="sector-card px-lg-4">
               <div class="sector-number">03</div>
-              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Maisons de ventes</h3>
+              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Maisons de ventes</h3>
               <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
                 Vos lots méritent un catalogue en ligne digne de ce nom. Estimations, vacations, back-office — je connais le vocabulaire.
               </p>
@@ -294,9 +304,9 @@ last_modified_at: 2026-05-26
         </div>
         <div class="col-md-6 col-lg-3">
           <a href="/secteurs/institutions-culturelles/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card ps-lg-4" style="transition: border-color .18s;" onmouseover="this.style.borderColor=’var(--bordeaux-mid)’" onmouseout="this.style.borderColor=’’">
+            <div class="sector-card ps-lg-4">
               <div class="sector-number">04</div>
-              <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Institutions & créatifs</h3>
+              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Institutions & créatifs</h3>
               <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
                 Musées, éditeurs, photographes — votre mission culturelle a besoin d’un site qui lui ressemble et qui se trouve sur Google.
               </p>
@@ -680,11 +690,9 @@ last_modified_at: 2026-05-26
         {% for post in site.posts limit:3 %}
         <div class="col-md-4">
           <a href="{{ post.url }}" style="text-decoration: none; display: block; height: 100%;">
-            <article style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; height: 100%; transition: border-color .2s;"
-                     onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
-                     onmouseout="this.style.borderColor='var(--line)'">
+            <article class="home-article-card">
               <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">
+              <h3 style="font-size: 1.2rem; margin-bottom: .6rem; line-height: 1.3;">
                 {{ post.title }}
               </h3>
               {% if post.description %}
@@ -705,7 +713,7 @@ last_modified_at: 2026-05-26
   <section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
     <div class="container text-center">
 
-      <p class="kicker mb-4" style="color: rgba(247,244,239,.45) !important;">
+      <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">
         Contact
       </p>
 
