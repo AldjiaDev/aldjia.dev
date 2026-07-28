@@ -275,7 +275,7 @@ layout: default
       <a href="/realisations/" class="btn btn-outline-primary">Voir tout le portfolio</a>
     </div>
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4">
         <a href="/realisations/mirabili-encheres/" style="text-decoration: none;">
           <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
                onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
@@ -286,7 +286,7 @@ layout: default
           </div>
         </a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4">
         <a href="/realisations/berenice-auger/" style="text-decoration: none;">
           <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
                onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
@@ -294,6 +294,17 @@ layout: default
             <p class="kicker mb-2" style="font-size: .65rem;">Site d'artiste · Rails</p>
             <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem;">Bérénice Auger</h3>
             <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Site sur mesure pour une artiste multidisciplinaire — galerie, boutique et ateliers.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="/realisations/readnest/" style="text-decoration: none;">
+          <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
+               onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+               onmouseout="this.style.borderColor='var(--line)'">
+            <p class="kicker mb-2" style="font-size: .65rem;">Plateforme communautaire · Rails</p>
+            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem;">Readnest</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme connectant lecteurs, librairies indépendantes et maisons d'édition.</p>
           </div>
         </a>
       </div>
