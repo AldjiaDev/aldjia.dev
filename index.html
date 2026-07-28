@@ -2,7 +2,18 @@
 layout: default
 title: "Aldjia Boughias — Développeuse web · Art & Culture · Lille"
 description: "Développeuse web freelance à Lille, spécialisée art & culture. Sites sur mesure pour galeries, artistes, maisons de ventes et institutions culturelles. SEO inclus."
-last_modified_at: 2026-05-26
+last_modified_at: 2026-07-28
+faq_items:
+  - q: "Est-ce que je pourrai gérer mon site seul après la livraison ?"
+    a: "Oui. Je conçois les sites pour que vous puissiez mettre à jour vos contenus sans toucher au code. Une prise en main est incluse à la livraison."
+  - q: "Combien de temps dure un projet ?"
+    a: "Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange."
+  - q: "Travaillez-vous à distance ?"
+    a: "Oui, 100 % en remote. Mes clients sont à Lille, Paris, Montréal et partout en France. Tout se fait en visio, avec des points réguliers."
+  - q: "Quelle est la différence entre un audit et une refonte ?"
+    a: "L'audit analyse votre site existant et vous livre un rapport d'action sans engagement. La refonte, c'est l'étape suivante si vous souhaitez implémenter les recommandations."
+  - q: "Que se passe-t-il après la livraison ?"
+    a: "Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins."
 ---
 
 <div class="home">
@@ -33,7 +44,7 @@ last_modified_at: 2026-05-26
 
           <div class="hero-stats mb-2">
             <div class="stat">
-              <span class="stat__num">5+</span>
+              <span class="stat__num">6</span>
               <span class="stat__label">Projets livrés</span>
             </div>
             <div class="stat-sep" aria-hidden="true"></div>
@@ -109,8 +120,8 @@ last_modified_at: 2026-05-26
        ===================== -->
   <div class="ticker" aria-hidden="true" role="presentation">
     <div class="ticker__inner">
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
+      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
+      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
     </div>
   </div>
 
@@ -186,6 +197,73 @@ last_modified_at: 2026-05-26
   </section>
 
   <!-- =====================
+       MINI PORTFOLIO
+       ===================== -->
+  <section class="section bg-white-warm" aria-labelledby="autres-projets">
+    <div class="container">
+
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-6">
+          <p class="kicker mb-3">Portfolio</p>
+          <h2 id="autres-projets" class="section-title mb-0">D'autres projets livrés</h2>
+        </div>
+        <div class="col-lg-4 offset-lg-2 d-none d-lg-block text-end">
+          <a href="{{ '/realisations' | relative_url }}" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
+            Voir les 6 réalisations →
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ '/realisations/berenice-auger/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
+            <div class="home-article-card" style="height: 100%;">
+              <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}"
+                   alt="Site web Bérénice Auger — artiste multidisciplinaire"
+                   loading="lazy"
+                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+              <p class="kicker mb-1" style="font-size: .65rem;">Artiste · Ruby on Rails · 2026</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Bérénice Auger</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Galerie, boutique, ateliers — site complet pour une artiste multidisciplinaire basée au Québec.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
+            <div class="home-article-card" style="height: 100%;">
+              <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
+                   alt="Art au Féminin — plateforme éditoriale culturelle"
+                   loading="lazy"
+                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+              <p class="kicker mb-1" style="font-size: .65rem;">Média culturel · Gatsby · 2021</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Art au Féminin</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme éditoriale et podcast dédié aux artistes femmes dans l'histoire de l'art.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="{{ '/realisations/readnest/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
+            <div class="home-article-card" style="height: 100%;">
+              <img src="{{ '/assets/images/readnest.jpg' | relative_url }}"
+                   alt="Readnest — plateforme communautaire Ruby on Rails"
+                   loading="lazy"
+                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+              <p class="kicker mb-1" style="font-size: .65rem;">Communauté · Ruby on Rails · 2025</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Readnest</h3>
+              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme communautaire — gestion de rôles, carte interactive, catalogue de livres.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================
        POURQUOI MOI
        ===================== -->
   <section class="section bg-white-warm" aria-labelledby="differenciateur">
@@ -213,10 +291,9 @@ last_modified_at: 2026-05-26
 
         <!-- Art au Féminin — projet fondateur mis en avant -->
         <div class="col-lg-6">
-          <a href="{{ site.artaufeminin_url }}"
-             target="_blank" rel="noopener"
+          <a href="{{ '/realisations/art-au-feminin/' | relative_url }}"
              class="aaf-showcase"
-             aria-label="Découvrir Art au Féminin — artaufeminin.fr (ouvre dans un nouvel onglet)">
+             aria-label="Voir la réalisation Art au Féminin">
             <div class="aaf-showcase__img">
               <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
                    alt="Art au Féminin — plateforme culturelle fondée par Aldjia Boughias"
@@ -224,14 +301,14 @@ last_modified_at: 2026-05-26
                    loading="lazy">
             </div>
             <div class="aaf-showcase__body">
-              <p class="kicker mb-2" style="font-size: .65rem;">Fondatrice · artaufeminin.fr · Depuis 2019</p>
+              <p class="kicker mb-2" style="font-size: .65rem;">Fondatrice · Depuis 2019</p>
               <h3 class="aaf-showcase__title">Art au Féminin</h3>
               <p class="aaf-showcase__desc">
                 Média culturel indépendant dédié aux artistes femmes dans l'histoire de l'art.
                 Podcast, articles de fond, sélections de livres —
                 fondé, conçu, développé et animé par mes soins.
               </p>
-              <span class="aaf-showcase__link">Découvrir artaufeminin.fr →</span>
+              <span class="aaf-showcase__link">Voir la réalisation →</span>
             </div>
           </a>
         </div>
