@@ -27,7 +27,7 @@
 // Logo
 .nav-logo {
   font-family: $font-serif !important;
-  font-size: 1.1rem !important;
+  font-size: 1.3rem !important;
   font-weight: $weight-medium !important;
   color: $color-ink !important;
   letter-spacing: -0.02em !important;
@@ -50,7 +50,7 @@
 }
 
 .nav-links a {
-  font-size: $size-small;
+  font-size: 0.9375rem;
   color: $color-ink-3 !important;
   transition: color 0.2s;
   font-family: $font-sans !important;
@@ -75,7 +75,7 @@
   color: $color-bg !important;
   padding: 0.45rem 1.1rem !important;
   border-radius: $r-btn !important;
-  font-size: $size-small !important;
+  font-size: 0.9375rem !important;
   font-weight: $weight-medium;
   font-family: $font-sans !important;
   transition: opacity 0.2s;
@@ -154,7 +154,7 @@
 .footer-brand {
   // Surcharge le style inline existant
   font-family: $font-serif !important;
-  font-size: 1.1rem !important;
+  font-size: 1.3rem !important;
   font-weight: $weight-medium !important;
   color: $color-ink !important;
   letter-spacing: -0.02em !important;
@@ -227,7 +227,7 @@
 .site-footer .footer-brand {
   color: $color-ink !important;
   font-family: $font-serif !important;
-  font-size: 1.1rem !important;
+  font-size: 1.3rem !important;
   font-weight: $weight-medium !important;
   letter-spacing: -0.02em !important;
   text-transform: none !important;
