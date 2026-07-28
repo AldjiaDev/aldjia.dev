@@ -8,13 +8,25 @@
       "position": 1,
       "name": "Accueil",
       "item": "{{ site.url }}"
+    }{% if include.parent %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ include.parent }}",
+      "item": "{{ site.url }}{{ include.parent_url }}"
     },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page.title | split: ' — ' | first }}",
+      "item": "{{ page.url | absolute_url }}"
+    }{% else %},
     {
       "@type": "ListItem",
       "position": 2,
       "name": "{{ page.title | split: ' — ' | first }}",
       "item": "{{ page.url | absolute_url }}"
-    }
+    }{% endif %}
   ]
 }
 </script>

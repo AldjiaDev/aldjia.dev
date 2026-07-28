@@ -44,6 +44,8 @@
   {% elsif page.url == "/about/" %}
     {% include jsonld-person.html %}
     {% include jsonld-breadcrumb.html %}
+  {% elsif page.url contains "/realisations/" and page.url != "/realisations/" %}
+    {% include jsonld-breadcrumb.html parent="Réalisations" parent_url="/realisations/" %}
   {% else %}
     {% include jsonld-breadcrumb.html %}
   {% endif %}

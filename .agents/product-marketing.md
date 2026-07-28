@@ -99,9 +99,12 @@ Aldjia conçoit des sites et applications sur mesure pour les professionnels du 
 
 ## Projets de référence
 
-- **Mirabili Enchères** — Application Ruby on Rails pour commissaire-priseur (catalogue, estimation en ligne, SEO structuré)
-- **Art au Féminin** — Plateforme éditoriale et podcast dédié aux artistes femmes dans l'histoire de l'art
-- **Readnest** — Plateforme communautaire Ruby on Rails (gestion de rôles, carte interactive)
+- **Bérénice Auger** — Site d'artiste multidisciplinaire (Ruby on Rails, galerie, boutique, ateliers) — [/realisations/berenice-auger/]
+- **Mirabili Enchères** — Application Ruby on Rails pour commissaire-priseur (catalogue, estimation en ligne, SEO structuré) — [/realisations/mirabili-encheres/]
+- **Art au Féminin** — Plateforme éditoriale et podcast dédié aux artistes femmes dans l'histoire de l'art (Gatsby) — [/realisations/art-au-feminin/]
+- **Readnest** — Plateforme communautaire Ruby on Rails (gestion de rôles, carte interactive) — [/realisations/readnest/]
+- **Aurélie de Baudus** — Site vitrine coaching & bibliothérapie (Jekyll, SEO local) — [/realisations/aurelie-de-baudus/]
+- **Quotety** — Application back-office Ruby on Rails (gestion permissions, catalogue CRUD) — [/realisations/quotety/]
 
 ---
 
