@@ -272,7 +272,18 @@ layout: default
       <a href="/realisations/" class="btn btn-outline-primary">Voir tout le portfolio</a>
     </div>
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4">
+        <a href="/realisations/art-au-feminin/" style="text-decoration: none;">
+          <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
+               onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
+               onmouseout="this.style.borderColor='var(--line)'">
+            <p class="kicker mb-2" style="font-size: .65rem;">Plateforme éditoriale · Podcast</p>
+            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem;">Art au Féminin</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Podcast et plateforme dédiée aux artistes femmes dans l'histoire de l'art.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
         <a href="/realisations/mirabili-encheres/" style="text-decoration: none;">
           <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
                onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
@@ -283,7 +294,7 @@ layout: default
           </div>
         </a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-lg-4">
         <a href="/realisations/aurelie-de-baudus/" style="text-decoration: none;">
           <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
                onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
