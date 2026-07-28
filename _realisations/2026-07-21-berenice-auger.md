@@ -1,14 +1,14 @@
 ---
-title: "Aurélie de Baudus — Site vitrine coaching & bibliothérapie"
-description: "Site vitrine sur mesure pour une coach de vie et bibliothérapeute à Lambersart. Design épuré, référencement local, autonomie éditoriale."
-date: 2025-11-01
-permalink: /realisations/aurelie-de-baudus/
-client: "Aurélie de Baudus"
-secteur: "Coaching · Bibliothérapie"
-annee: "2025"
-stack: ["Jekyll", "SEO on-page", "GitHub Pages"]
-site: "https://www.aureliedebaudus.com/"
-image: /assets/images/aurelie-debaudus.jpg
+title: "Bérénice Auger — Site vitrine pour une artiste multidisciplinaire"
+description: "Conception et développement du site de Bérénice Auger, artiste basée à Lévis : sculptures en bois recyclé, peintures acryliques, bijoux artisanaux, boutique et ateliers — sur mesure avec Ruby on Rails."
+date: 2026-07-21
+permalink: /realisations/berenice-auger/
+client: "Bérénice Auger"
+secteur: "Art · Artisanat"
+annee: "2026"
+stack: ["Ruby on Rails", "SEO on-page", "Design sur mesure"]
+site: "https://www.bereniceauger.com/"
+image: /assets/images/bereniceauger.jpg
 layout: default
 ---
 
@@ -18,7 +18,7 @@ layout: default
     <div class="row align-items-end g-5">
 
       <div class="col-lg-7">
-        <p class="kicker mb-3">Réalisation · Coaching &amp; Bibliothérapie</p>
+        <p class="kicker mb-3">Réalisation · Artiste multidisciplinaire</p>
         <h1 style="
           font-family: 'Cormorant Garant', serif;
           font-style: italic;
@@ -27,10 +27,10 @@ layout: default
           line-height: 1.05;
           letter-spacing: -0.02em;
           margin-bottom: 1.5rem;
-        ">Aurélie de Baudus</h1>
+        ">Bérénice Auger</h1>
         <p class="muted mb-0" style="font-size: 1.05rem; line-height: 1.8; max-width: 500px;">
-          Site vitrine sur mesure pour une coach de vie et bibliothérapeute à Lambersart —
-          un espace qui reflète la douceur et la profondeur de son approche.
+          Site sur mesure pour une artiste multidisciplinaire basée à Lévis —
+          sculptures en bois recyclé, peintures acryliques, bijoux artisanaux, boutique et ateliers créatifs.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ layout: default
         <div style="display: flex; flex-direction: column; gap: 1.25rem;">
           <div>
             <p class="kicker mb-1" style="font-size: .65rem;">Stack</p>
-            <p class="mb-0" style="font-size: .9rem; color: var(--muted);">Jekyll · HTML/CSS · GitHub Pages</p>
+            <p class="mb-0" style="font-size: .9rem; color: var(--muted);">Ruby on Rails · PostgreSQL · HTML/CSS</p>
           </div>
           <div>
             <p class="kicker mb-1" style="font-size: .65rem;">Prestations</p>
@@ -46,10 +46,10 @@ layout: default
           </div>
           <div>
             <p class="kicker mb-1" style="font-size: .65rem;">En ligne depuis</p>
-            <p class="mb-0" style="font-size: .9rem; color: var(--muted);">2025</p>
+            <p class="mb-0" style="font-size: .9rem; color: var(--muted);">2026</p>
           </div>
           <div>
-            <a href="https://www.aureliedebaudus.com/" target="_blank" rel="noopener"
+            <a href="https://www.bereniceauger.com/" target="_blank" rel="noopener"
                style="font-size: .85rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
               Voir le site →
             </a>
@@ -64,8 +64,8 @@ layout: default
 <!-- IMAGE -->
 <section style="padding-bottom: 80px;">
   <div class="container">
-    <img src="/assets/images/aurelie-debaudus.jpg"
-         alt="Aurélie de Baudus — site développé par Aldjia Boughias"
+    <img src="/assets/images/bereniceauger.jpg"
+         alt="Bérénice Auger — site développé par Aldjia Boughias"
          style="width: 100%; border-radius: var(--radius); border: 1px solid var(--line); display: block;">
   </div>
 </section>
@@ -77,20 +77,20 @@ layout: default
 
       <div class="col-lg-4">
         <p class="kicker mb-3">Contexte</p>
-        <h2 class="section-title mb-0">Un univers de soin qui méritait un site à sa mesure</h2>
+        <h2 class="section-title mb-0">Un univers artistique qui méritait un espace à sa mesure</h2>
       </div>
 
       <div class="col-lg-7 offset-lg-1">
         <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          Aurélie de Baudus est coach de vie et bibliothérapeute à Lambersart, en Hauts-de-France.
-          Elle accompagne des personnes — souvent des femmes sensibles — à travers le coaching individuel,
-          la bibliothérapie créative et des ateliers collectifs. Son approche est douce, profonde,
-          ancrée dans le monde des mots et des livres.
+          Bérénice Auger est une artiste multidisciplinaire basée à Lévis, au Québec.
+          Elle travaille à partir de matériaux récupérés — bois recyclé, pigments, matières naturelles —
+          pour créer des sculptures, des peintures et des bijoux artisanaux qui explorent la transformation
+          et la beauté du vivant.
         </p>
         <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Elle avait besoin d'un site qui reflète cette sensibilité — sans template générique
-          qui donnerait l'impression d'un cabinet médical ou d'un site de coaching standard.
-          La direction artistique devait être aussi soignée que son accompagnement.
+          Son univers, l'<em>Univers des Possibles</em>, ne pouvait pas tenir dans un template générique.
+          Il fallait un espace en ligne aussi singulier que son travail : une boutique, un espace ateliers,
+          un portfolio de collections — le tout pensé comme une galerie.
         </p>
       </div>
 
@@ -104,13 +104,13 @@ layout: default
 
     <div class="row align-items-end mb-5">
       <div class="col-lg-6">
-        <p class="kicker mb-3">Enjeux</p>
-        <h2 class="section-title mb-0">Être trouvée localement, être choisie pour qui elle est</h2>
+        <p class="kicker mb-3">Solution</p>
+        <h2 class="section-title mb-0">Galerie, boutique et ateliers — une seule application cohérente</h2>
       </div>
       <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
         <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Deux objectifs qui semblent distincts mais sont liés : un site référencé localement
-          et un site qui donne envie de prendre rendez-vous.
+          Un site pensé pour présenter les œuvres avec soin, vendre des pièces en ligne
+          et accueillir les inscriptions aux ateliers créatifs.
         </p>
       </div>
     </div>
@@ -120,10 +120,10 @@ layout: default
       <div class="col-md-6 col-lg-3">
         <div class="sector-card pe-4">
           <div class="sector-number">01</div>
-          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Référencement local</h3>
+          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Portfolio de collections</h3>
           <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Apparaître sur les requêtes "coach Lambersart", "bibliothérapeute Lille Métropole"
-            — là où ses clients potentiels cherchent.
+            Présentation des séries — Plumes, Briller — avec visuels soignés,
+            descriptions et navigation fluide entre les œuvres.
           </p>
         </div>
       </div>
@@ -131,10 +131,10 @@ layout: default
       <div class="col-md-6 col-lg-3">
         <div class="sector-card px-lg-4">
           <div class="sector-number">02</div>
-          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Présentation claire</h3>
+          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Boutique intégrée</h3>
           <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Des pages services structurées pour expliquer simplement ce qu'elle propose —
-            coaching, bibliothérapie, ateliers — et à qui c'est destiné.
+            Vente de bijoux artisanaux et sculptures miniatures directement depuis le site —
+            gestion des stocks et des commandes depuis un back-office dédié.
           </p>
         </div>
       </div>
@@ -142,10 +142,10 @@ layout: default
       <div class="col-md-6 col-lg-3">
         <div class="sector-card px-lg-4">
           <div class="sector-number">03</div>
-          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Contact adapté</h3>
+          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Espace ateliers</h3>
           <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Un formulaire pensé pour les personnes qui cherchent un premier pas —
-            pas un formulaire froid, un espace doux pour initier le contact.
+            Présentation des ateliers créatifs et formulaire d'inscription —
+            pour que Bérénice puisse animer sa communauté sans intermédiaire.
           </p>
         </div>
       </div>
@@ -153,10 +153,10 @@ layout: default
       <div class="col-md-6 col-lg-3">
         <div class="sector-card ps-lg-4">
           <div class="sector-number">04</div>
-          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">Autonomie totale</h3>
+          <h3 style="font-size: 1.1rem; font-style: italic; margin-bottom: .4rem;">SEO on-page</h3>
           <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Un site qu'Aurélie peut mettre à jour seule — ajouter un atelier,
-            modifier une page — sans passer par un développeur.
+            Structure technique optimisée pour que les collections et les ateliers
+            remontent sur les requêtes de son public.
           </p>
         </div>
       </div>
@@ -172,32 +172,32 @@ layout: default
     <div class="row g-5 align-items-center">
 
       <div class="col-lg-5">
-        <p class="kicker mb-3">Résultat</p>
-        <h2 class="section-title mb-4">Livré en 3 semaines, autonome dès le premier jour</h2>
+        <p class="kicker mb-3">Approche</p>
+        <h2 class="section-title mb-4">Ruby on Rails, pour un site qui grandit avec l'artiste</h2>
         <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          Le site a été livré en 3 semaines. La charte typographique, douce et littéraire,
-          a été conçue sur mesure à partir de ses références visuelles. GitHub Pages assure
-          l'hébergement — coût nul, disponibilité maximale.
+          Un site d'artiste n'est pas figé — les collections évoluent, les ateliers se renouvellent,
+          la boutique s'enrichit. Ruby on Rails offre un back-office sur mesure
+          que Bérénice peut gérer seule, sans dépendre d'un développeur pour chaque mise à jour.
         </p>
         <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          À la livraison, une session de prise en main lui a permis de gérer son contenu
-          seule immédiatement. Le référencement local est en progression sur les requêtes ciblées.
+          La direction artistique du site a été pensée pour refléter son univers éco-conscient :
+          palette naturelle, typographie soignée, mise en valeur des matières et des textures.
         </p>
       </div>
 
       <div class="col-lg-6 offset-lg-1">
         <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
           <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Délai de livraison</p>
-            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">3 semaines de conception à mise en ligne</p>
+            <p class="kicker mb-1" style="font-size: .68rem;">Back-office autonome</p>
+            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">Gestion des collections, de la boutique et des ateliers en totale indépendance.</p>
           </div>
           <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Hébergement</p>
-            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">GitHub Pages — coût zéro, performances maximales</p>
+            <p class="kicker mb-1" style="font-size: .68rem;">Design sur mesure</p>
+            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">Direction artistique conçue pour refléter l'univers de l'artiste — pas un template.</p>
           </div>
           <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Autonomie</p>
-            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">Gestion du contenu en totale indépendance dès la livraison</p>
+            <p class="kicker mb-1" style="font-size: .68rem;">SEO intégré</p>
+            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">Structure technique optimisée dès la conception pour être trouvée sur Google.</p>
           </div>
         </div>
       </div>
@@ -213,32 +213,32 @@ layout: default
     <div class="project-meta">
       <div class="project-meta__item">
         <label>Client</label>
-        <span>Aurélie de Baudus</span>
+        <span>Bérénice Auger</span>
       </div>
       <div class="project-meta__item">
         <label>Secteur</label>
-        <span>Coaching · Bibliothérapie</span>
+        <span>Art · Artisanat</span>
       </div>
       <div class="project-meta__item">
         <label>Année</label>
-        <span>2025</span>
+        <span>2026</span>
       </div>
       <div class="project-meta__item">
         <label>Stack</label>
-        <span>Jekyll · GitHub Pages · SEO</span>
+        <span>Ruby on Rails · PostgreSQL · SEO</span>
       </div>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem;">
-      <span class="portfolio-tag">Jekyll</span>
+      <span class="portfolio-tag">Ruby on Rails</span>
+      <span class="portfolio-tag">Design sur mesure</span>
       <span class="portfolio-tag">SEO on-page</span>
-      <span class="portfolio-tag">GitHub Pages</span>
-      <span class="portfolio-tag">Site vitrine</span>
-      <span class="portfolio-tag">Référencement local</span>
+      <span class="portfolio-tag">Boutique en ligne</span>
+      <span class="portfolio-tag">Site d'artiste</span>
     </div>
 
     <div class="d-flex flex-wrap gap-3 mb-4">
-      <a href="https://www.aureliedebaudus.com/" target="_blank" rel="noopener" class="btn btn-outline-primary">
+      <a href="https://www.bereniceauger.com/" target="_blank" rel="noopener" class="btn btn-outline-primary">
         Voir le site →
       </a>
       <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">
@@ -248,9 +248,9 @@ layout: default
 
     <div class="project-cta-inline">
       <div>
-        <p class="kicker mb-1" style="font-size: .65rem;">Un projet similaire ?</p>
+        <p class="kicker mb-1" style="font-size: .65rem;">Vous êtes artiste ?</p>
         <p class="mb-0" style="font-size: 1rem; font-weight: 500; color: var(--ink);">
-          Site vitrine pour un indépendant, un thérapeute, un artiste — parlons-en.
+          Un site qui reflète votre univers — galerie, boutique, ateliers — parlons-en.
         </p>
       </div>
       <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary">
@@ -284,13 +284,13 @@ layout: default
         </a>
       </div>
       <div class="col-md-6">
-        <a href="/realisations/berenice-auger/" style="text-decoration: none;">
+        <a href="/realisations/aurelie-de-baudus/" style="text-decoration: none;">
           <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; transition: border-color .2s;"
                onmouseover="this.style.borderColor='var(--bordeaux-mid)'"
                onmouseout="this.style.borderColor='var(--line)'">
-            <p class="kicker mb-2" style="font-size: .65rem;">Site d'artiste · Rails</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem;">Bérénice Auger</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Site sur mesure pour une artiste multidisciplinaire — galerie, boutique et ateliers.</p>
+            <p class="kicker mb-2" style="font-size: .65rem;">Site vitrine · Coaching</p>
+            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem;">Aurélie de Baudus</h3>
+            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Site vitrine pour une coach de vie et bibliothérapeute à Lambersart.</p>
           </div>
         </a>
       </div>
