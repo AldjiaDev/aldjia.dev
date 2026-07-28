@@ -4,7 +4,7 @@
 
     <div class="footer-col footer-brand-col">
       <a href="{{ '/' | relative_url }}" class="footer-brand nav-logo" aria-label="Aldjia Dev — Accueil">
-        Aldjia<span class="nav-logo__dot">.</span>dev
+        Aldjia<span class="nav-logo__dot" aria-hidden="true">.</span>dev
       </a>
       <p>Développeuse web spécialisée art &amp; culture.<br>Sites et applications sur mesure · Lille &amp; remote.</p>
       <div style="display: flex; gap: 0.75rem; margin-top: 0.25rem;">
@@ -28,34 +28,41 @@
     </div>
 
     <div class="footer-col">
-      <span class="footer-col-title">Navigation</span>
-      <a href="{{ '/about' | relative_url }}">À propos</a>
-      <a href="{{ '/processus' | relative_url }}">Comment je travaille</a>
-      <a href="{{ '/realisations' | relative_url }}">Réalisations</a>
-      <a href="{{ '/tarifs' | relative_url }}">Tarifs</a>
-      <a href="{{ '/blog' | relative_url }}">Articles</a>
-      <a href="{{ '/podcasts' | relative_url }}">Podcasts</a>
-      <a href="{{ '/creation-site-web-seo' | relative_url }}">Site web avec SEO</a>
+      <span id="footer-nav-principale" class="footer-col-title" role="heading" aria-level="2">Navigation</span>
+      <nav aria-labelledby="footer-nav-principale">
+        <a href="{{ '/about' | relative_url }}">À propos</a>
+        <a href="{{ '/processus' | relative_url }}">Comment je travaille</a>
+        <a href="{{ '/realisations' | relative_url }}">Réalisations</a>
+        <a href="{{ '/tarifs' | relative_url }}">Tarifs</a>
+        <a href="{{ '/blog' | relative_url }}">Articles</a>
+        <a href="{{ '/podcasts' | relative_url }}">Podcasts</a>
+        <a href="{{ '/creation-site-web-seo' | relative_url }}">Site web avec SEO</a>
+      </nav>
     </div>
 
     <div class="footer-col">
-      <span class="footer-col-title">Secteurs</span>
-      <a href="{{ '/secteurs/galeries-art' | relative_url }}">Galeries d'art</a>
-      <a href="{{ '/secteurs/maisons-de-ventes' | relative_url }}">Maisons de ventes</a>
-      <a href="{{ '/secteurs/artistes' | relative_url }}">Artistes</a>
-      <a href="{{ '/secteurs/sculpteurs' | relative_url }}">Sculpteurs</a>
-      <a href="{{ '/secteurs/institutions-culturelles' | relative_url }}">Institutions culturelles</a>
+      <span id="footer-nav-secteurs" class="footer-col-title" role="heading" aria-level="2">Secteurs</span>
+      <nav aria-labelledby="footer-nav-secteurs">
+        <a href="{{ '/secteurs/galeries-art' | relative_url }}">Galeries d'art</a>
+        <a href="{{ '/secteurs/maisons-de-ventes' | relative_url }}">Maisons de ventes</a>
+        <a href="{{ '/secteurs/artistes' | relative_url }}">Artistes</a>
+        <a href="{{ '/secteurs/sculpteurs' | relative_url }}">Sculpteurs</a>
+        <a href="{{ '/secteurs/institutions-culturelles' | relative_url }}">Institutions culturelles</a>
+      </nav>
     </div>
 
     <div class="footer-col">
-      <span class="footer-col-title">Contact</span>
-      <a href="{{ site.cal_url }}" target="_blank" rel="noopener">Prendre RDV</a>
-      <a href="mailto:{{ site.email }}">Email</a>
-      <a href="{{ '/lille' | relative_url }}">Développeuse à Lille</a>
-      <a href="{{ '/hauts-de-france' | relative_url }}">Hauts-de-France</a>
-      <a href="{{ '/paris' | relative_url }}">Développeuse web à Paris</a>
-      <a href="{{ '/bruxelles' | relative_url }}">Bruxelles</a>
-      <a href="{{ '/montreal' | relative_url }}">Montréal & Québec</a>
+      <span id="footer-nav-contact" class="footer-col-title" role="heading" aria-level="2">Contact</span>
+      <nav aria-labelledby="footer-nav-contact">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
+           aria-label="Prendre RDV (ouvre dans un nouvel onglet)">Prendre RDV</a>
+        <a href="mailto:{{ site.email }}">Email</a>
+        <a href="{{ '/lille' | relative_url }}">Développeuse à Lille</a>
+        <a href="{{ '/hauts-de-france' | relative_url }}">Hauts-de-France</a>
+        <a href="{{ '/paris' | relative_url }}">Développeuse web à Paris</a>
+        <a href="{{ '/bruxelles' | relative_url }}">Bruxelles</a>
+        <a href="{{ '/montreal' | relative_url }}">Montréal &amp; Québec</a>
+      </nav>
     </div>
 
   </div>
@@ -63,10 +70,10 @@
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
       <span>© {{ site.time | date: '%Y' }} Aldjia Boughias · Développeuse web freelance · Lille</span>
-      <div style="display: flex; gap: 1.5rem;">
+      <nav aria-label="Liens légaux">
         <a href="{{ '/rgpd' | relative_url }}">Politique de confidentialité</a>
         <a href="{{ '/accessibilite' | relative_url }}">Accessibilité</a>
-      </div>
+      </nav>
     </div>
   </div>
 
