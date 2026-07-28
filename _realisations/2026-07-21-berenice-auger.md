@@ -8,7 +8,7 @@ secteur: "Art · Artisanat"
 annee: "2026"
 stack: ["Ruby on Rails", "SEO on-page", "Design sur mesure"]
 site: "https://www.bereniceauger.com/"
-image: /assets/images/bereniceauger.jpg
+image: /assets/images/logobereniceauger.jpg
 layout: default
 ---
 
@@ -64,7 +64,7 @@ layout: default
 <!-- IMAGE -->
 <section style="padding-bottom: 80px;">
   <div class="container">
-    <img src="/assets/images/bereniceauger.jpg"
+    <img src="/assets/images/logobereniceauger.jpg"
          alt="Bérénice Auger — site développé par Aldjia Boughias"
          style="width: 100%; border-radius: var(--radius); border: 1px solid var(--line); display: block;">
   </div>
