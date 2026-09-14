@@ -128,12 +128,12 @@
   display: flex;
   flex-direction: column;
 
-  &:hover { border-color: rgba(184, 151, 90, 0.30); }
+  &:hover { border-color: rgba(44, 74, 62, 0.30); }
 }
 
 .price-card.featured {
   border: $border-featured;
-  background: #FFF9F0;
+  background: #EEF3F1;
 }
 
 .price-card .price-amount {
@@ -247,7 +247,7 @@
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    border-color: rgba(184, 151, 90, 0.30);
+    border-color: rgba(44, 74, 62, 0.30);
     transform: translateY(-3px);
     box-shadow: 0 12px 36px rgba(26, 26, 24, 0.08);
   }
