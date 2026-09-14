@@ -174,7 +174,8 @@
   display: flex;
   white-space: nowrap;
   width: max-content;
-  animation: ticker-scroll 28s linear infinite;
+  will-change: transform;
+  animation: ticker-scroll 32s linear infinite;
 
   span {
     font-family: $font-serif;
@@ -182,12 +183,13 @@
     font-size: 1.05rem;
     color: $color-ink-3;
     flex-shrink: 0;
+    padding-right: 0;
   }
 }
 
 @keyframes ticker-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-25%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
