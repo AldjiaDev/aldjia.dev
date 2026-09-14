@@ -160,9 +160,39 @@
 }
 
 // ── Ticker ────────────────────────────────────────────────────────────────────
-// (déjà défini dans style.css — on surcharge seulement la couleur)
 
-.ticker { background: $color-bg-2 !important; }
+.ticker {
+  overflow: hidden;
+  border-top: $border-default;
+  border-bottom: $border-default;
+  padding: 0.9rem 0;
+  background: $color-bg-2;
+  user-select: none;
+}
+
+.ticker__inner {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+
+  span {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: $color-ink-3;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__inner { animation: none; }
+}
 
 // ── Sector list — format catalogue ───────────────────────────────────────────
 
