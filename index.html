@@ -16,6 +16,10 @@ faq_items:
     a: "Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins."
 ---
 
+{% include jsonld-localbusiness.html %}
+{% include jsonld-person.html %}
+{% include jsonld-faqpage.html %}
+
 <div class="home">
 
   <!-- =====================
@@ -23,26 +27,35 @@ faq_items:
        ===================== -->
   <section class="hero-section" aria-label="Introduction">
     <div class="container">
-      <div class="row align-items-center g-5">
 
-        <div class="col-lg-7">
-          <p class="kicker mb-4">Développement web · Art & Culture</p>
+      <p class="section-eyebrow">Développement web · Art &amp; Culture · Lille</p>
 
-          <h1 class="hero-title mb-0">
+      <div class="hero-grid">
+
+        <div class="hero-grid__content">
+
+          <h1 class="hero-title">
             Le web au service<br>
-            de l’art &amp; de la culture
+            de l'art &amp; de la culture
           </h1>
 
           <div class="hero-divider"></div>
 
-          <p class="hero-subtitle mb-3">
+          <p class="hero-subtitle">
             Galeriste, artiste, commissaire-priseur : votre site n'est pas un projet web
             comme les autres. Je suis développeuse web et fondatrice d'un média
             culturel depuis 2019 — je connais votre univers avant d'écrire
             la première ligne de code.
           </p>
 
-          <div class="hero-stats mb-2">
+          <figure class="hero-quote">
+            <blockquote>
+              "Sa passion pour l'art et la culture sont un vrai atout pour travailler sur des projets qui s'y rapportent."
+            </blockquote>
+            <figcaption>Héloïse de Baudus, commissaire-priseure &nbsp;★★★★★ Google</figcaption>
+          </figure>
+
+          <div class="hero-stats mb-4">
             <div class="stat">
               <span class="stat__num">★★★★★</span>
               <span class="stat__label">Avis Google</span>
@@ -59,16 +72,7 @@ faq_items:
             </div>
           </div>
 
-          <figure style="margin: 1.5rem 0 1.75rem; padding-left: 1rem; border-left: 2px solid var(--bordeaux); max-width: 500px;">
-            <blockquote style="font-size: .9rem; color: var(--muted); font-style: italic; line-height: 1.65; margin: 0 0 .4rem;">
-              "Sa passion pour l'art et la culture sont un vrai atout pour travailler sur des projets qui s'y rapportent."
-            </blockquote>
-            <figcaption style="font-size: .78rem; font-weight: 600; color: var(--ink);">
-              Héloïse de Baudus, commissaire-priseure &nbsp;★★★★★ Google
-            </figcaption>
-          </figure>
-
-          <div class="d-flex gap-3 flex-wrap">
+          <div class="hero-ctas">
             <a href="{{ site.cal_url }}"
                target="_blank"
                rel="noopener"
@@ -80,44 +84,24 @@ faq_items:
             </a>
           </div>
 
-          <p class="mt-3 mb-0" style="font-size: .85rem; color: var(--muted);">
-            30 min · sans engagement · réponse sous 48h
+          <p class="hero-note">
+            30 min · sans engagement · réponse sous 48h<br>
+            <a href="{{ '/processus' | relative_url }}">Mon processus de travail →</a>
           </p>
-          <p class="mt-2 mb-0" style="font-size: .82rem; color: var(--muted);">
-            Comment ça se passe ? →
-            <a href="{{ '/processus' | relative_url }}"
-               style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
-              Voir mon processus de travail
-            </a>
-          </p>
+
         </div>
 
-        <div class="col-lg-5 d-none d-lg-flex justify-content-end">
-          <div style="position: relative; width: 100%; max-width: 420px;">
-            <div style="
-              position: absolute; top: -20px; right: -20px;
-              width: 180px; height: 180px;
-              border: 1px solid var(--bordeaux-mid);
-              border-radius: 2px;
-            "></div>
-            <picture>
-              <source srcset="{{ '/assets/images/portrait.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-                   alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
-                   width="600" height="800"
-                   loading="eager"
-                   fetchpriority="high"
-                   style="
-                     width: 100%;
-                     aspect-ratio: 3/4;
-                     object-fit: cover;
-                     border-radius: 2px;
-                     position: relative;
-                     z-index: 1;
-                     border: 1px solid var(--line);
-                   ">
-            </picture>
-          </div>
+        <div class="hero-grid__portrait">
+          <div class="hero-portrait-frame" aria-hidden="true"></div>
+          <picture>
+            <source srcset="{{ '/assets/images/portrait.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+                 alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
+                 width="600" height="800"
+                 loading="eager"
+                 fetchpriority="high"
+                 class="hero-portrait-img">
+          </picture>
         </div>
 
       </div>
@@ -140,16 +124,14 @@ faq_items:
   <section class="section" aria-labelledby="realisation-vedette">
     <div class="container">
 
-      <div class="row align-items-center mb-5">
-        <div class="col">
-          <p class="kicker mb-2">Réalisation récente</p>
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <p class="section-eyebrow">Réalisation récente</p>
           <h2 id="realisation-vedette" class="section-title mb-0">Un site pour une maison de ventes aux enchères</h2>
         </div>
-        <div class="col-auto d-none d-md-block">
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">
-            Toutes les réalisations
-          </a>
-        </div>
+        <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary d-none d-md-inline-flex">
+          Toutes les réalisations
+        </a>
       </div>
 
       <div class="featured-project" style="background: var(--ink); border-radius: var(--radius);">
@@ -157,23 +139,18 @@ faq_items:
 
           <div class="col-lg-7 p-4 p-lg-5">
             <p class="project-label mb-3">Commissaires-priseurs · Mirabili Enchères</p>
-
             <h3>Mirabili Enchères —<br>cabinet de curiosités<br>en ligne</h3>
-
             <p class="mt-3 mb-4">
               Application web Ruby on Rails pour une maison de ventes aux enchères.
-              Conçu comme un cabinet de curiosités numérique : présentation des ventes,
-              catalogue en ligne, formulaire d'estimation, SEO travaillé
-              pour le référencement des lots et des vacations.
+              Catalogue en ligne, formulaire d'estimation structuré, agenda des vacations,
+              SEO travaillé lot par lot pour que chaque vente existe sur Google avant qu'elle ait lieu.
             </p>
-
             <div class="d-flex flex-wrap gap-2 mb-4">
               <span class="project-tag">Ruby on Rails</span>
               <span class="project-tag">SEO</span>
               <span class="project-tag">Commissaires-priseurs</span>
-              <span class="project-tag">Cabinet de curiosités</span>
+              <span class="project-tag">Back-office</span>
             </div>
-
             <a href="/realisations/mirabili-encheres/"
                class="btn btn-bordeaux"
                style="background: var(--bordeaux); border-color: var(--bordeaux); color: #fff;">
@@ -182,20 +159,12 @@ faq_items:
           </div>
 
           <div class="col-lg-5 d-none d-lg-flex">
-            <div style="
-              border-left: 1px solid rgba(247,244,239,.08);
-              flex: 1;
-              border-radius: 0 var(--radius) var(--radius) 0;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 2rem;
-            ">
+            <div style="border-left: 1px solid rgba(247,244,239,.08); flex: 1; border-radius: 0 var(--radius) var(--radius) 0; display: flex; align-items: center; justify-content: center; padding: 2rem;">
               <img src="{{ '/assets/images/mirabili.jpg' | relative_url }}"
                    alt="Mirabili Enchères — site réalisé par Aldjia Boughias"
                    width="1866" height="1507"
                    loading="lazy"
-                   style="width: 100%; border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,.5); display: block;">
+                   style="width: 100%; border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.5); display: block;">
             </div>
           </div>
 
@@ -206,68 +175,62 @@ faq_items:
   </section>
 
   <!-- =====================
-       MINI PORTFOLIO
+       SECTEURS — format catalogue
        ===================== -->
-  <section class="section bg-white-warm" aria-labelledby="autres-projets">
+  <section class="section section--alt" aria-labelledby="secteurs">
     <div class="container">
 
-      <div class="row align-items-end mb-5">
-        <div class="col-lg-6">
-          <p class="kicker mb-3">Portfolio</p>
-          <h2 id="autres-projets" class="section-title mb-0">D'autres projets livrés</h2>
+      <div class="row align-items-end mb-5 g-4">
+        <div class="col-lg-5">
+          <p class="section-eyebrow">Secteurs</p>
+          <h2 id="secteurs" class="section-title mb-0">Avec qui je travaille</h2>
         </div>
-        <div class="col-lg-4 offset-lg-2 d-none d-lg-block text-end">
-          <a href="{{ '/realisations' | relative_url }}" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
-            Voir toutes les réalisations →
-          </a>
+        <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
+          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
+            Professionnels du monde de l'art et de la culture qui veulent une présence en ligne à la hauteur de leur travail.
+          </p>
         </div>
       </div>
 
-      <div class="row g-4">
+      <nav class="sector-list" aria-label="Secteurs">
 
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ '/realisations/berenice-auger/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div class="home-article-card" style="height: 100%;">
-              <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}"
-                   alt="Site web Bérénice Auger — artiste multidisciplinaire"
-                   loading="lazy"
-                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
-              <p class="kicker mb-1" style="font-size: .65rem;">Artiste · Ruby on Rails · 2026</p>
-              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Bérénice Auger</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Galerie, boutique, ateliers — site complet pour une artiste multidisciplinaire basée au Québec.</p>
-            </div>
-          </a>
-        </div>
+        <a href="/secteurs/galeries-art/" class="sector-list-item">
+          <span class="sector-list-num">01</span>
+          <div class="sector-list-body">
+            <h3 class="sector-list-name">Galeries d'art</h3>
+            <p class="sector-list-desc">Votre site ne reflète pas la qualité de vos expositions ? Je crée un espace en ligne qui met vos artistes et œuvres en valeur.</p>
+          </div>
+          <span class="sector-list-arrow">→</span>
+        </a>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div class="home-article-card" style="height: 100%;">
-              <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
-                   alt="Art au Féminin — plateforme éditoriale culturelle"
-                   loading="lazy"
-                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
-              <p class="kicker mb-1" style="font-size: .65rem;">Média culturel · Gatsby · 2021</p>
-              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Art au Féminin</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme éditoriale et podcast dédié aux artistes femmes dans l'histoire de l'art.</p>
-            </div>
-          </a>
-        </div>
+        <a href="/secteurs/artistes/" class="sector-list-item">
+          <span class="sector-list-num">02</span>
+          <div class="sector-list-body">
+            <h3 class="sector-list-name">Artistes</h3>
+            <p class="sector-list-desc">Votre travail mérite mieux qu'un PDF envoyé par email. Un portfolio en ligne qui parle à vos collectionneurs et institutions.</p>
+          </div>
+          <span class="sector-list-arrow">→</span>
+        </a>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ '/realisations/readnest/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div class="home-article-card" style="height: 100%;">
-              <img src="{{ '/assets/images/readnest.jpg' | relative_url }}"
-                   alt="Readnest — plateforme communautaire Ruby on Rails"
-                   loading="lazy"
-                   style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
-              <p class="kicker mb-1" style="font-size: .65rem;">Communauté · Ruby on Rails · 2025</p>
-              <h3 style="font-size: 1.1rem; margin-bottom: .4rem; line-height: 1.3;">Readnest</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Plateforme communautaire — gestion de rôles, carte interactive, catalogue de livres.</p>
-            </div>
-          </a>
-        </div>
+        <a href="/secteurs/maisons-de-ventes/" class="sector-list-item">
+          <span class="sector-list-num">03</span>
+          <div class="sector-list-body">
+            <h3 class="sector-list-name">Maisons de ventes</h3>
+            <p class="sector-list-desc">Vos lots méritent un catalogue en ligne digne de ce nom. Estimations, vacations, back-office — je connais le vocabulaire.</p>
+          </div>
+          <span class="sector-list-arrow">→</span>
+        </a>
 
-      </div>
+        <a href="/secteurs/institutions-culturelles/" class="sector-list-item">
+          <span class="sector-list-num">04</span>
+          <div class="sector-list-body">
+            <h3 class="sector-list-name">Institutions &amp; créatifs</h3>
+            <p class="sector-list-desc">Musées, éditeurs, photographes — votre mission culturelle a besoin d'un site qui lui ressemble et qui se trouve sur Google.</p>
+          </div>
+          <span class="sector-list-arrow">→</span>
+        </a>
+
+      </nav>
 
     </div>
   </section>
@@ -275,16 +238,15 @@ faq_items:
   <!-- =====================
        POURQUOI MOI
        ===================== -->
-  <section class="section bg-white-warm" aria-labelledby="differenciateur">
+  <section class="section" aria-labelledby="differenciateur">
     <div class="container">
 
       <div class="row align-items-end mb-5 g-4">
         <div class="col-lg-5">
-          <p class="kicker mb-3">Une double expertise</p>
+          <p class="section-eyebrow">Une double expertise</p>
           <h2 id="differenciateur" class="section-title mb-0">
             Beaux-Arts<br>
-            <em style="font-style: normal; color: var(--bordeaux);">+</em><br>
-            Développement web
+            <em>+ Développement web</em>
           </h2>
         </div>
         <div class="col-lg-6 offset-lg-1">
@@ -298,7 +260,6 @@ faq_items:
 
       <div class="row g-5 align-items-stretch">
 
-        <!-- Art au Féminin — projet fondateur mis en avant -->
         <div class="col-lg-6">
           <a href="{{ '/realisations/art-au-feminin/' | relative_url }}"
              class="aaf-showcase"
@@ -310,42 +271,35 @@ faq_items:
                    loading="lazy">
             </div>
             <div class="aaf-showcase__body">
-              <p class="kicker mb-2" style="font-size: .65rem;">Fondatrice · Depuis 2019</p>
+              <p class="section-eyebrow" style="font-size: .6rem; margin-bottom: .5rem;">Fondatrice · Depuis 2019</p>
               <h3 class="aaf-showcase__title">Art au Féminin</h3>
               <p class="aaf-showcase__desc">
                 Média culturel indépendant dédié aux artistes femmes dans l'histoire de l'art.
-                Podcast, articles de fond, sélections de livres —
-                fondé, conçu, développé et animé par mes soins.
+                Podcast, articles de fond, sélections de livres — fondé, conçu, développé et animé par mes soins.
               </p>
               <span class="aaf-showcase__link">Voir la réalisation →</span>
             </div>
           </a>
         </div>
 
-        <!-- Différenciateurs -->
         <div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center">
-          <div style="display: flex; flex-direction: column; gap: 2rem;">
-            <div>
-              <p class="kicker mb-1" style="font-size: .68rem;">Vous n'avez pas à tout expliquer</p>
-              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                Vernissage, vacation, catalogue raisonné — ce vocabulaire est le mien.
-                Nos échanges vont droit au but, sans pédagogie dans les deux sens.
-              </p>
+          <div class="differenciateur-list">
+
+            <div class="differenciateur-item">
+              <h3>Vous n'avez pas à tout expliquer</h3>
+              <p>Vernissage, vacation, catalogue raisonné — ce vocabulaire est le mien. Nos échanges vont droit au but, sans pédagogie dans les deux sens.</p>
             </div>
-            <div>
-              <p class="kicker mb-1" style="font-size: .68rem;">Beau et rapide — sans choisir</p>
-              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                Typographie soignée, hiérarchie visuelle maîtrisée, Core Web Vitals au vert.
-                Vous n'avez pas à sacrifier l'esthétique pour la performance.
-              </p>
+
+            <div class="differenciateur-item">
+              <h3>Beau et rapide — sans choisir</h3>
+              <p>Typographie soignée, hiérarchie visuelle maîtrisée, Core Web Vitals au vert. Vous n'avez pas à sacrifier l'esthétique pour la performance.</p>
             </div>
-            <div>
-              <p class="kicker mb-1" style="font-size: .68rem;">Zéro mauvaise surprise</p>
-              <p class="mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--muted);">
-                10 ans en relation client. Délais tenus, devis respecté,
-                communication directe. Ce qui est dit est fait.
-              </p>
+
+            <div class="differenciateur-item">
+              <h3>Zéro mauvaise surprise</h3>
+              <p>10 ans en relation client. Délais tenus, devis respecté, communication directe. Ce qui est dit est fait.</p>
             </div>
+
           </div>
           <div class="mt-5">
             <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
@@ -359,72 +313,56 @@ faq_items:
   </section>
 
   <!-- =====================
-       POUR QUI
+       PORTFOLIO
        ===================== -->
-  <section class="section" aria-labelledby="secteurs">
+  <section class="section section--alt" aria-labelledby="autres-projets">
     <div class="container">
 
-      <div class="row align-items-end mb-5">
-        <div class="col-lg-6">
-          <p class="kicker mb-3">Secteurs</p>
-          <h2 id="secteurs" class="section-title mb-0">Avec qui je travaille</h2>
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 id="autres-projets" class="section-title mb-0">D'autres projets livrés</h2>
         </div>
-        <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-            Professionnels du monde de l’art et de la culture qui veulent une présence en ligne à la hauteur de leur travail.
-          </p>
-        </div>
+        <a href="{{ '/realisations' | relative_url }}" class="d-none d-lg-inline" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
+          Voir toutes les réalisations →
+        </a>
       </div>
 
-      <div class="row g-0">
-        <div class="col-md-6 col-lg-3">
-          <a href="/secteurs/galeries-art/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card pe-4">
-              <div class="sector-number">01</div>
-              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Galeries d’art</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-                Votre site ne reflète pas la qualité de vos expositions ? Je crée un espace en ligne qui met vos artistes et œuvres en valeur.
-              </p>
-              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="/secteurs/artistes/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card px-lg-4">
-              <div class="sector-number">02</div>
-              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Artistes</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-                Votre travail mérite mieux qu’un PDF envoyé par email. Un portfolio en ligne qui parle à vos collectionneurs et institutions.
-              </p>
-              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="/secteurs/maisons-de-ventes/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card px-lg-4">
-              <div class="sector-number">03</div>
-              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Maisons de ventes</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-                Vos lots méritent un catalogue en ligne digne de ce nom. Estimations, vacations, back-office — je connais le vocabulaire.
-              </p>
-              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="/secteurs/institutions-culturelles/" style="text-decoration: none; color: inherit;">
-            <div class="sector-card ps-lg-4">
-              <div class="sector-number">04</div>
-              <h3 style="font-size: 1.2rem; margin-bottom: .4rem;">Institutions & créatifs</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-                Musées, éditeurs, photographes — votre mission culturelle a besoin d’un site qui lui ressemble et qui se trouve sur Google.
-              </p>
-              <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-            </div>
-          </a>
-        </div>
+      <div class="portfolio-grid-home">
+
+        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" class="portfolio-grid-item">
+          <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}"
+               alt="Site web Bérénice Auger — artiste multidisciplinaire"
+               loading="lazy"
+               class="portfolio-grid-img">
+          <div class="portfolio-grid-overlay">
+            <p class="portfolio-grid-tag">Artiste · Ruby on Rails · 2026</p>
+            <h3 class="portfolio-grid-name">Bérénice Auger</h3>
+          </div>
+        </a>
+
+        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="portfolio-grid-item">
+          <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
+               alt="Art au Féminin — plateforme éditoriale culturelle"
+               loading="lazy"
+               class="portfolio-grid-img">
+          <div class="portfolio-grid-overlay">
+            <p class="portfolio-grid-tag">Média culturel · Gatsby · 2021</p>
+            <h3 class="portfolio-grid-name">Art au Féminin</h3>
+          </div>
+        </a>
+
+        <a href="{{ '/realisations/readnest/' | relative_url }}" class="portfolio-grid-item">
+          <img src="{{ '/assets/images/readnest.jpg' | relative_url }}"
+               alt="Readnest — plateforme communautaire Ruby on Rails"
+               loading="lazy"
+               class="portfolio-grid-img">
+          <div class="portfolio-grid-overlay">
+            <p class="portfolio-grid-tag">Communauté · Ruby on Rails · 2025</p>
+            <h3 class="portfolio-grid-name">Readnest</h3>
+          </div>
+        </a>
+
       </div>
 
     </div>
@@ -433,24 +371,21 @@ faq_items:
   <!-- =====================
        TÉMOIGNAGES
        ===================== -->
-  <section class="section bg-white-warm" aria-labelledby="temoignages">
+  <section class="section" aria-labelledby="temoignages">
     <div class="container">
 
-      <div class="row align-items-end mb-5">
-        <div class="col-lg-6">
-          <p class="kicker mb-3">Témoignages</p>
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <p class="section-eyebrow">Témoignages</p>
           <h2 id="temoignages" class="section-title mb-0">Ce qu'ils en disent</h2>
         </div>
-        <div class="col-lg-4 offset-lg-2 d-none d-lg-flex align-items-end">
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            <a href="https://www.google.com/search?q=Aldjia+Boughias"
-               target="_blank"
-               rel="noopener"
-               class="review-source">
-              ★ Voir sur Google
-            </a>
-          </p>
-        </div>
+        <p class="muted mb-0 d-none d-lg-block" style="font-size: .88rem;">
+          <a href="https://www.google.com/search?q=Aldjia+Boughias"
+             target="_blank" rel="noopener"
+             class="review-source">
+            ★ Voir sur Google
+          </a>
+        </p>
       </div>
 
       <div class="temoignage-carousel-wrap">
@@ -463,20 +398,15 @@ faq_items:
                 <div class="temoignage-stars mb-3" aria-label="Note : {{ t.note }} étoile{% if t.note > 1 %}s{% endif %} sur 5" role="img">
                   {% for i in (1..t.note) %}★{% endfor %}
                 </div>
-                <blockquote class="temoignage-texte mb-0">
-                  {{ t.texte }}
-                </blockquote>
+                <blockquote class="temoignage-texte mb-0">{{ t.texte }}</blockquote>
                 <div class="temoignage-auteur">
                   <p class="mb-0" style="font-weight: 600; font-size: .9rem; color: var(--ink);">{{ t.nom }}</p>
                   <p class="mb-0 muted" style="font-size: .8rem;">{{ t.role }}</p>
                   {% if t.source == "Google" %}
                   <p class="mb-0 mt-2">
                     <a href="https://www.google.com/search?q=Aldjia+Boughias"
-                       target="_blank"
-                       rel="noopener"
-                       class="review-source">
-                      ★ Vérifié sur Google
-                    </a>
+                       target="_blank" rel="noopener"
+                       class="review-source">★ Vérifié sur Google</a>
                   </p>
                   {% endif %}
                 </div>
@@ -485,11 +415,8 @@ faq_items:
             {% endfor %}
           </div>
 
-          <!-- Contrôles -->
           <div class="temoignage-controls mt-4 d-flex align-items-center justify-content-center gap-4">
-            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev" aria-label="Avis précédent">
-              ←
-            </button>
+            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev" aria-label="Avis précédent">←</button>
             <div class="carousel-indicators-custom">
               {% for t in site.data.temoignages %}
               <button type="button"
@@ -500,9 +427,7 @@ faq_items:
               </button>
               {% endfor %}
             </div>
-            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next" aria-label="Avis suivant">
-              →
-            </button>
+            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next" aria-label="Avis suivant">→</button>
           </div>
 
         </div>
@@ -514,21 +439,17 @@ faq_items:
   <!-- =====================
        TARIFS
        ===================== -->
-  <section id="offres" class="section" aria-labelledby="tarifs">
+  <section id="offres" class="section section--alt" aria-labelledby="tarifs">
     <div class="container">
 
       <div class="text-center mb-5 maxw mx-auto">
-        <p class="kicker mb-3">Tarifs</p>
+        <p class="section-eyebrow" style="justify-content: center;">Tarifs</p>
         <h2 id="tarifs" class="section-title mb-3">Repères de prix</h2>
-        <p class="muted">
-          Des repères pour vous projeter. Le périmètre exact est défini ensemble lors de notre premier échange — sans engagement.
-        </p>
+        <p class="muted">Des repères pour vous projeter. Le périmètre exact est défini ensemble lors de notre premier échange — sans engagement.</p>
       </div>
 
-      <!-- 4 offres — CSS Grid -->
       <div class="offer-cards-grid">
 
-        <!-- Audit -->
         <div class="offer-card offer-card--featured" id="audit">
           <div class="offer-card__header">
             <span class="offer-card__tag">Commencer ici</span>
@@ -542,12 +463,9 @@ faq_items:
             <li>Recommandations priorisées</li>
             <li>Appel de restitution inclus</li>
           </ul>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
-            Commander l'audit
-          </a>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Commander l'audit</a>
         </div>
 
-        <!-- Site vitrine -->
         <div class="offer-card">
           <div class="offer-card__header">
             <h3 class="offer-card__name">Site vitrine</h3>
@@ -559,13 +477,10 @@ faq_items:
             <li>SEO on-page &amp; performance</li>
             <li>En ligne en 3 à 5 semaines</li>
           </ul>
-          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour artistes, galeristes, indépendants créatifs</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
-            Prendre RDV
-          </a>
+          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour artistes, galeristes, indépendants créatifs</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
         </div>
 
-        <!-- Site éditorial -->
         <div class="offer-card offer-card--featured">
           <div class="offer-card__header">
             <span class="offer-card__tag">Le plus populaire</span>
@@ -578,13 +493,10 @@ faq_items:
             <li>SEO on-page &amp; blog</li>
             <li>Évolutions facilitées</li>
           </ul>
-          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour galeries, institutions, maisons de ventes</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
-            Prendre RDV
-          </a>
+          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour galeries, institutions, maisons de ventes</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
         </div>
 
-        <!-- Application métier -->
         <div class="offer-card">
           <div class="offer-card__header">
             <h3 class="offer-card__name">Application métier</h3>
@@ -596,48 +508,21 @@ faq_items:
             <li>SEO on-page &amp; données structurées</li>
             <li>Architecture solide et évolutive</li>
           </ul>
-          <p style="font-size: .78rem; color: var(--muted); font-style: italic; margin: 0;">Pour maisons de ventes, institutions complexes</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">
-            Prendre RDV
-          </a>
+          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour maisons de ventes, institutions complexes</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
         </div>
 
       </div>
 
       <!-- Toujours inclus -->
-      <div style="margin: 3rem 0; padding: 1.75rem 2rem; background: var(--bordeaux-light); border-radius: var(--radius); border: 1px solid var(--bordeaux-mid);">
-        <p class="kicker mb-3" style="font-size: .68rem;">Dans chaque projet — sans exception</p>
+      <div class="always-included">
+        <p class="section-eyebrow" style="margin-bottom: 1rem;">Dans chaque projet — sans exception</p>
         <div class="row g-3">
-          <div class="col-sm-6 col-lg">
-            <div style="display: flex; gap: .6rem; align-items: flex-start;">
-              <span style="color: var(--bordeaux); flex-shrink: 0;">—</span>
-              <p class="mb-0" style="font-size: .88rem; line-height: 1.5; color: var(--ink);">SEO on-page intégré dès la conception</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg">
-            <div style="display: flex; gap: .6rem; align-items: flex-start;">
-              <span style="color: var(--bordeaux); flex-shrink: 0;">—</span>
-              <p class="mb-0" style="font-size: .88rem; line-height: 1.5; color: var(--ink);">Responsive mobile, tablette, desktop</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg">
-            <div style="display: flex; gap: .6rem; align-items: flex-start;">
-              <span style="color: var(--bordeaux); flex-shrink: 0;">—</span>
-              <p class="mb-0" style="font-size: .88rem; line-height: 1.5; color: var(--ink);">Images optimisées &amp; Core Web Vitals</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg">
-            <div style="display: flex; gap: .6rem; align-items: flex-start;">
-              <span style="color: var(--bordeaux); flex-shrink: 0;">—</span>
-              <p class="mb-0" style="font-size: .88rem; line-height: 1.5; color: var(--ink);">Documentation + prise en main à la livraison</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg">
-            <div style="display: flex; gap: .6rem; align-items: flex-start;">
-              <span style="color: var(--bordeaux); flex-shrink: 0;">—</span>
-              <p class="mb-0" style="font-size: .88rem; line-height: 1.5; color: var(--ink);">30 jours de support après la mise en ligne</p>
-            </div>
-          </div>
+          <div class="col-sm-6 col-lg"><div class="always-included-item">SEO on-page intégré dès la conception</div></div>
+          <div class="col-sm-6 col-lg"><div class="always-included-item">Responsive mobile, tablette, desktop</div></div>
+          <div class="col-sm-6 col-lg"><div class="always-included-item">Images optimisées &amp; Core Web Vitals</div></div>
+          <div class="col-sm-6 col-lg"><div class="always-included-item">Documentation + prise en main à la livraison</div></div>
+          <div class="col-sm-6 col-lg"><div class="always-included-item">30 jours de support après la mise en ligne</div></div>
         </div>
       </div>
 
@@ -646,55 +531,43 @@ faq_items:
         <div class="row align-items-center g-4">
 
           <div class="col-lg-4">
-            <p class="kicker mb-2">Après la livraison</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.5rem; font-weight: 600;">
-              Accompagnement continu
-            </h3>
-            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">
-              On ne disparaît pas après la mise en ligne.
-              Deux formules selon vos besoins.
-            </p>
+            <p class="section-eyebrow">Après la livraison</p>
+            <h3 class="section-title mb-2" style="font-size: 1.5rem !important; font-style: italic;">Accompagnement continu</h3>
+            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">On ne disparaît pas après la mise en ligne. Deux formules selon vos besoins.</p>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="p-4" style="border: 1px solid var(--bordeaux-mid); border-radius: var(--radius); background: var(--bordeaux-light);">
-              <p class="mb-1" style="font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bordeaux); font-weight: 500;">Forfait mensuel</p>
-              <p style="font-family: 'Cormorant Garant', serif; font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem;">350 €<span style="font-size: 1rem; font-weight: 400; color: var(--muted);"> HT / mois</span></p>
-              <p class="muted mb-0" style="font-size: .85rem;">Hébergement, suivi régulier, mises à jour, corrections, petites évolutions. Vous n'êtes jamais bloqué.</p>
+            <div class="post-delivery-card post-delivery-card--accent">
+              <span class="post-delivery-label">Forfait mensuel</span>
+              <p class="post-delivery-price">350 € <span>HT / mois</span></p>
+              <p class="post-delivery-desc">Hébergement, suivi régulier, mises à jour, corrections, petites évolutions. Vous n'êtes jamais bloqué.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="p-4" style="border: 1px solid var(--line); border-radius: var(--radius);">
-              <p class="mb-1" style="font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500;">Pack d'heures</p>
-              <p style="font-family: 'Cormorant Garant', serif; font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem;">Sur devis</p>
-              <p class="muted mb-0" style="font-size: .85rem;">Évolutions ponctuelles, nouvelles fonctionnalités, intégrations. Selon vos priorités du moment.</p>
+            <div class="post-delivery-card post-delivery-card--plain">
+              <span class="post-delivery-label post-delivery-label--muted">Pack d'heures</span>
+              <p class="post-delivery-price">Sur devis</p>
+              <p class="post-delivery-desc">Évolutions ponctuelles, nouvelles fonctionnalités, intégrations. Selon vos priorités du moment.</p>
             </div>
           </div>
 
         </div>
       </div>
 
-      <figure class="text-center mt-5 mb-4" style="max-width: 540px; margin-left: auto; margin-right: auto;">
-        <blockquote style="font-size: .95rem; font-style: italic; color: var(--muted); line-height: 1.7; margin: 0 0 .5rem;">
+      <figure class="text-center mt-5 mb-4 maxw mx-auto">
+        <blockquote style="font-size: .95rem; font-style: italic; color: var(--muted); line-height: 1.7; margin: 0 0 .5rem; border: none; padding: 0;">
           "Notre site est un vrai bijou, joli et élégant, et surtout un outil de travail efficace et parfaitement conçu."
         </blockquote>
-        <figcaption style="font-size: .78rem; font-weight: 600; color: var(--ink);">
-          Sophie Tiercelin, commissaire-priseure &nbsp;★★★★★ Google
-        </figcaption>
+        <figcaption style="font-size: .78rem; font-weight: 600; color: var(--ink);">Sophie Tiercelin, commissaire-priseure &nbsp;★★★★★ Google</figcaption>
       </figure>
 
       <p class="text-center muted" style="font-size: .9rem;">
         Pas sûr de quelle offre vous correspond ?
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
-           style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
-          On en parle en 30 minutes.
-        </a>
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">On en parle en 30 minutes.</a>
       </p>
-      <p class="text-center mt-3">
-        <a href="{{ '/tarifs' | relative_url }}" class="section-link" style="font-size: .875rem; color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">
-          Détail complet des tarifs et FAQ →
-        </a>
+      <p class="text-center mt-2">
+        <a href="{{ '/tarifs' | relative_url }}" style="font-size: .875rem; color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Détail complet des tarifs et FAQ →</a>
       </p>
 
     </div>
@@ -703,10 +576,10 @@ faq_items:
   <!-- =====================
        FAQ
        ===================== -->
-  <section id="faq" class="section section--alt" aria-labelledby="faq-titre">
+  <section id="faq" class="section" aria-labelledby="faq-titre">
     <div class="container">
 
-      <span class="section-label">FAQ</span>
+      <p class="section-eyebrow">FAQ</p>
       <h2 id="faq-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
 
       <div class="faq">
@@ -744,18 +617,15 @@ faq_items:
   <!-- =====================
        FORMULAIRE DE CONTACT
        ===================== -->
-  <section id="contact-form" class="section" aria-labelledby="form-titre">
+  <section id="contact-form" class="section section--alt" aria-labelledby="form-titre">
     <div class="container">
-
       <div class="row justify-content-center">
         <div class="col-lg-7">
 
           <div class="text-center mb-5">
-            <p class="kicker mb-3">Démarrer</p>
+            <p class="section-eyebrow" style="justify-content: center;">Démarrer</p>
             <h2 id="form-titre" class="section-title mb-3">Décrivez votre projet</h2>
-            <p class="muted" style="font-size: .95rem;">
-              Je vous réponds sous 48h ouvrées.
-            </p>
+            <p class="muted" style="font-size: .95rem;">Je vous réponds sous 48h ouvrées.</p>
           </div>
 
           <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
@@ -765,7 +635,7 @@ faq_items:
                 <label for="form-prenom" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Prénom</label>
                 <input type="text" id="form-prenom" name="prenom" required
                        placeholder="Votre prénom"
-                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
+                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
                        onfocus="this.style.borderColor='var(--bordeaux-mid)'"
                        onblur="this.style.borderColor='var(--line)'">
               </div>
@@ -773,7 +643,7 @@ faq_items:
                 <label for="form-email" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Email</label>
                 <input type="email" id="form-email" name="email" required
                        placeholder="vous@exemple.fr"
-                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
+                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
                        onfocus="this.style.borderColor='var(--bordeaux-mid)'"
                        onblur="this.style.borderColor='var(--line)'">
               </div>
@@ -782,7 +652,7 @@ faq_items:
             <div>
               <label for="form-type" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Type de projet</label>
               <select id="form-type" name="type_projet"
-                      style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s; appearance: none; cursor: pointer;"
+                      style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s; appearance: none; cursor: pointer;"
                       onfocus="this.style.borderColor='var(--bordeaux-mid)'"
                       onblur="this.style.borderColor='var(--line)'">
                 <option value="" disabled selected>Sélectionner…</option>
@@ -798,7 +668,7 @@ faq_items:
               <label for="form-message" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Message</label>
               <textarea id="form-message" name="message" required rows="5"
                         placeholder="Décrivez votre projet, vos besoins, vos questions…"
-                        style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; resize: vertical; transition: border-color .18s;"
+                        style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; resize: vertical; transition: border-color .18s;"
                         onfocus="this.style.borderColor='var(--bordeaux-mid)'"
                         onblur="this.style.borderColor='var(--line)'"></textarea>
             </div>
@@ -814,48 +684,41 @@ faq_items:
           <p class="text-center mt-4 muted" style="font-size: .88rem;">
             Ou réservez directement un créneau de 30 min
             <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
-               style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">
-              →
-            </a>
+               style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">→</a>
           </p>
 
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- =====================
        ARTICLES RÉCENTS
        ===================== -->
-  <section class="section bg-white-warm" aria-labelledby="articles-recents">
+  <section class="section" aria-labelledby="articles-recents">
     <div class="container">
 
-      <div class="row align-items-end mb-5">
-        <div class="col-lg-6">
-          <p class="kicker mb-3">Blog</p>
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <p class="section-eyebrow">Blog</p>
           <h2 id="articles-recents" class="section-title mb-0">Articles <em>récents</em></h2>
         </div>
-        <div class="col-lg-4 offset-lg-2 d-none d-lg-block text-end">
-          <a href="{{ '/blog' | relative_url }}" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
-            Voir tous les articles →
-          </a>
-        </div>
+        <a href="{{ '/blog' | relative_url }}" class="d-none d-lg-inline" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
+          Voir tous les articles →
+        </a>
       </div>
 
       <div class="row g-4">
         {% for post in site.posts limit:3 %}
         <div class="col-md-4">
           <a href="{{ post.url }}" style="text-decoration: none; display: block; height: 100%;">
-            <article class="home-article-card">
-              <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-              <h3 style="font-size: 1.2rem; margin-bottom: .6rem; line-height: 1.3;">
-                {{ post.title }}
-              </h3>
+            <div class="home-article-card" style="height: 100%;">
+              <p class="section-eyebrow" style="font-size: .6rem; margin-bottom: .5rem;">Article</p>
+              <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: .5rem; line-height: 1.3;">{{ post.title }}</h3>
               {% if post.description %}
               <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">{{ post.description }}</p>
               {% endif %}
-            </article>
+            </div>
           </a>
         </div>
         {% endfor %}
@@ -867,18 +730,16 @@ faq_items:
   <!-- =====================
        CTA FINAL
        ===================== -->
-  <section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
-    <div class="container text-center">
+  <section class="cta-dark" aria-label="Appel à l'action">
+    <div class="container">
 
-      <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">
-        Contact
-      </p>
+      <p class="section-eyebrow" style="color: rgba(249,246,240,.4); text-align: center; margin-bottom: 1.5rem;">Contact</p>
 
-      <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2.2rem, 4vw, 3.5rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
+      <h2 class="cta-dark__title">
         Votre site mérite<br>quelqu'un qui comprend votre projet.
       </h2>
 
-      <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
+      <p class="cta-dark__sub">
         30 minutes d'échange pour voir si je suis la bonne personne pour votre projet —
         sans engagement, sans jargon technique.
       </p>
@@ -886,13 +747,12 @@ faq_items:
       <a href="{{ site.cal_url }}"
          target="_blank"
          rel="noopener"
-         style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
+         class="cta-dark__btn">
         Réserver un créneau
       </a>
 
-      <p class="mt-4 mb-0" style="font-size: .85rem; color: rgba(247,244,239,.38); font-family: 'Cormorant Garant', serif; font-style: italic;">
-        Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-          style="color: rgba(247,244,239,.55); text-decoration: underline; text-underline-offset: 3px;">Art au Féminin</a>
+      <p class="cta-dark__note mt-4 mb-0">
+        Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener">Art au Féminin</a>
         · Développeuse spécialisée art &amp; culture depuis 2019
       </p>
 
