@@ -210,6 +210,10 @@
   const ambMesh = new THREE.Mesh(new THREE.TorusKnotGeometry(0.62, 0.2, 220, 36, 2, 3), ambMat);
   ambMesh.visible = false;
   scene.add(ambMesh);
+  // Jumelle à gauche : même sculpture, rotation et mouvement décalés
+  const ambMeshL = new THREE.Mesh(ambMesh.geometry, ambMat);
+  ambMeshL.visible = false;
+  scene.add(ambMeshL);
 
   // Sections sombres où la scène reste visible (data-ambient) — on ne rend que si l'une est à l'écran
   let ambientOn = 0;
@@ -295,7 +299,7 @@
     ambMat.uniforms.uTime.value = t;
     const mobile = window.innerWidth < 768;
     ambMat.uniforms.uOpacity.value = dark * (mobile ? 0.4 : 0.65);
-    ambMesh.visible = dark > 0.01;
+    ambMesh.visible = ambMeshL.visible = dark > 0.01;
     if (ambMesh.visible) {
       const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
       const visW = visH * camera.aspect;
@@ -304,6 +308,13 @@
       ambMesh.position.y = Math.sin(scrollY * 0.0006) * visH * 0.22 + Math.sin(t * 0.6) * 0.08 - cM.y * 0.1;
       ambMesh.rotation.x = t * 0.15 + scrollY * 0.0009;
       ambMesh.rotation.y = t * 0.22 + scrollY * 0.0006;
+
+      // Gauche : position symétrique, oscillation verticale en opposition de phase
+      ambMeshL.scale.setScalar(mobile ? 0.6 : 0.85);
+      ambMeshL.position.x = -visW * (mobile ? 0.42 : 0.47) + cM.x * 0.15;
+      ambMeshL.position.y = -Math.sin(scrollY * 0.0006) * visH * 0.22 + Math.cos(t * 0.55) * 0.08 - cM.y * 0.1;
+      ambMeshL.rotation.x = -t * 0.13 - scrollY * 0.0008;
+      ambMeshL.rotation.y = -t * 0.19 + scrollY * 0.0007;
     }
 
     // Role labels
