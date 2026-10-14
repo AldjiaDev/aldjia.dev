@@ -1021,7 +1021,31 @@ html, body { overflow-x: clip; }
 [data-ambient] #secteurs-sticky,
 [data-ambient] #projets-sticky { background: transparent !important; }
 
-/* Projets passe dans l'univers sombre : texte crème */
-#projets .projets-title { color: #EDE8DF; }
-#projets .projet-item { color: #EDE8DF; }
+/* ════════════════════════════════════════
+   RESPIRATIONS DE COULEUR — même alternance qu'au début de la page
+   (sombre → vermillon → sombre → crème → sombre)
+════════════════════════════════════════ */
+
+/* Projets : vermillion plein, rappel du hero */
+.band-vermillion,
+.band-vermillion #projets-sticky {
+  background: radial-gradient(ellipse 90% 80% at 30% 40%, #D2452A, #BE3220 55%, #9A2818);
+}
+#projets .projets-title,
+#projets .projet-item,
 #projets .projets-all { color: #EDE8DF; }
+
+/* Témoignages : fond crème éditorial, comme le ticker et « je les réunis. » */
+.band-cream { background: #F2EDE5; color: #1A1210; }
+.band-cream .testi-quote p { color: #1A1210; }
+.band-cream .testi-quote em { color: #BE3220; }
+.band-cream .testi-full { color: rgba(26,18,16,0.62); }
+.band-cream .testi-author strong { color: #1A1210; }
+.band-cream .testi-role { color: rgba(26,18,16,0.55); }
+.band-cream .testi-source { color: #BE3220; border-color: rgba(190,50,32,0.35); }
+.band-cream .testi-rating {
+  background: rgba(26,18,16,0.04); border-color: rgba(26,18,16,0.15); color: rgba(26,18,16,0.7);
+}
+.band-cream .testi-rating:hover { border-color: #BE3220; color: #1A1210; }
+.band-cream .testi-rating strong { color: #1A1210; }
+.band-cream .testi-rating-stars { color: #BE3220; }

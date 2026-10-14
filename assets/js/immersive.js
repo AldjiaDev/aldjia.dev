@@ -75,8 +75,8 @@
         // Mode « fil rouge » : fond sombre + lueurs orange / violet / vermillon
         // Noir #0E0C0A des sections « mots », halos vermillon #BE3220 et violet #7845D0 seulement
         vec3 amb = vec3(0.055, 0.047, 0.039);
-        amb += vec3(0.745, 0.196, 0.126) * exp(-dot(uv-b2,uv-b2)*3.5) * 0.16;
-        amb += vec3(0.471, 0.271, 0.816) * exp(-dot(uv-b1,uv-b1)*3.5) * 0.11;
+        amb += vec3(0.745, 0.196, 0.126) * exp(-dot(uv-b2,uv-b2)*3.2) * 0.22;
+        amb += vec3(0.471, 0.271, 0.816) * exp(-dot(uv-b1,uv-b1)*3.2) * 0.15;
         col = mix(col, amb, uDark);
 
         col += fract(sin(dot(uv,vec2(127.1,311.7)))*43758.5)*0.008;
