@@ -788,21 +788,72 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 .projets-all:hover { opacity: 1; }
 
-/* Témoignages */
-.quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; }
-.quote-card {
-  background: rgba(237,232,223,0.035); border: 0.5px solid rgba(237,232,223,0.09);
-  border-radius: 16px; padding: 2.5rem; margin: 0;
-  display: flex; flex-direction: column; gap: 1.5rem;
+/* Témoignages — citations éditoriales */
+.testi-head { margin-bottom: 5rem; }
+.testi-title {
+  font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.75rem);
+  font-weight: 400; line-height: 1.04; letter-spacing: -0.03em; color: #EDE8DF;
+  margin-bottom: 2rem;
 }
-.quote-stars { color: #F37E30; letter-spacing: 0.2em; font-size: 0.85rem; }
-.quote-text {
-  font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 1.15rem; line-height: 1.65; color: rgba(237,232,223,0.85); text-wrap: pretty;
+.testi-title em { color: #BE3220; font-style: italic; }
+.testi-rating {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  padding: 0.6rem 1.1rem; border-radius: 3rem;
+  background: rgba(237,232,223,0.05); border: 0.5px solid rgba(237,232,223,0.14);
+  font-size: 0.85rem; color: rgba(237,232,223,0.7); text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
 }
-.quote-author { display: flex; flex-direction: column; gap: 0.2rem; margin-top: auto; }
-.quote-author strong { font-weight: 500; color: #EDE8DF; font-size: 0.95rem; }
-.quote-author span { font-size: 0.8rem; color: rgba(237,232,223,0.45); }
+.testi-rating:hover { border-color: rgba(243,126,48,0.6); color: #EDE8DF; }
+.testi-rating strong { color: #EDE8DF; font-weight: 600; font-variant-numeric: tabular-nums; }
+.testi-rating-stars { color: #F37E30; letter-spacing: 0.15em; }
+
+.testi {
+  position: relative; margin: 0; max-width: 900px;
+  padding: 2rem 0 0 0;
+}
+.testi + .testi { margin-top: 7rem; }
+.testi--right { margin-left: auto; }
+
+.testi-quote { margin: 0 0 2.5rem; }
+.testi-quote p {
+  font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;
+  font-size: clamp(2rem, 4.6vw, 4.2rem); line-height: 1.12; letter-spacing: -0.02em;
+  color: #EDE8DF; text-wrap: balance;
+}
+.testi-quote em { color: #F37E30; }
+
+/* Mots révélés un par un (découpés par immersive.js) */
+.testi-quote[data-reveal] { opacity: 1; transform: none; }
+.qw {
+  display: inline-block; opacity: 0; transform: translateY(0.35em); filter: blur(6px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.revealed .qw { opacity: 1; transform: none; filter: blur(0); }
+
+.testi-body {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem;
+  max-width: 62ch;
+}
+.testi--right .testi-body { margin-left: auto; }
+.testi-full {
+  font-size: 0.975rem; line-height: 1.85; color: rgba(237,232,223,0.55); text-wrap: pretty;
+}
+.testi-author { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.testi-author-line { width: 2.5rem; height: 1px; background: linear-gradient(90deg, #F37E30, #7845D0); }
+.testi-author strong { display: block; font-weight: 500; color: #EDE8DF; font-size: 1rem; }
+.testi-role { display: block; font-size: 0.8rem; color: rgba(237,232,223,0.45); margin-top: 0.15rem; }
+.testi-source {
+  margin-left: auto; font-size: 0.75rem; letter-spacing: 0.08em; color: #F37E30;
+  padding: 0.35rem 0.75rem; border-radius: 2rem; border: 0.5px solid rgba(243,126,48,0.35);
+}
+
+@media (max-width: 768px) {
+  .testi-head { margin-bottom: 3rem; }
+  .testi + .testi { margin-top: 4.5rem; }
+  .testi-source { margin-left: 0; }
+}
 
 /* Conseils — derniers articles */
 .post-list { display: flex; flex-direction: column; gap: 0.25rem; margin: 2.5rem 0 3rem; }
@@ -870,8 +921,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 @media (max-width: 768px) {
   .std-section { padding: 6rem 1.25rem; }
-  .sector-grid, .quote-grid, .form-row { grid-template-columns: 1fr; }
-  .quote-card { padding: 1.75rem; }
+  .sector-grid, .form-row { grid-template-columns: 1fr; }
   .footer-band { grid-template-columns: 1fr 1fr; padding: 3.5rem 1.25rem 2.5rem; gap: 2rem 1.5rem; }
   .footer-nav a { padding: 0.65rem 0; margin: 0; }
   /* Le footer dépasse la hauteur d'écran : pas de révélation sticky sur mobile */
@@ -884,6 +934,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .qw { opacity: 1; transform: none; filter: none; transition: none; }
 }
 
 /* ════════════════════════════════════════

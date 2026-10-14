@@ -290,24 +290,37 @@ redirect_from:
     </div>
   </section>
 
-  <!-- ═══ CHAPITRE 6 — Ils en parlent ═════════════════════ -->
+  <!-- ═══ CHAPITRE 6 — Elles en parlent ═══════════════════ -->
   <section data-ambient id="temoignages" class="std-section" aria-labelledby="temoignages-title">
     <div class="std-inner">
-      <p class="about-label" data-reveal>Témoignages</p>
-      <h2 class="std-title" id="temoignages-title" data-reveal data-reveal-delay="0.1">Ce qu'elles <em>en disent.</em></h2>
-      <div class="quote-grid">
-        {% for t in site.data.temoignages %}
-        <figure class="quote-card" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.12 }}">
-          <p class="quote-stars" role="img" aria-label="Note : {{ t.note }} sur 5">{% for i in (1..t.note) %}★{% endfor %}</p>
-          <blockquote class="quote-text">« {{ t.texte }} »</blockquote>
-          <figcaption class="quote-author">
-            <strong>{{ t.nom }}</strong>
-            <span>{{ t.role }}{% if t.source == "Google" %} · avis Google{% endif %}</span>
-          </figcaption>
-        </figure>
-        {% endfor %}
+      <div class="testi-head">
+        <p class="about-label" data-reveal>Témoignages</p>
+        <h2 class="testi-title" id="temoignages-title" data-reveal data-reveal-delay="0.1">Ce qu'elles <em>en disent.</em></h2>
+        <a href="https://www.google.com/search?q=Aldjia+Boughias" target="_blank" rel="noopener" class="testi-rating" data-reveal data-reveal-delay="0.2">
+          <span class="testi-rating-stars" aria-hidden="true">★★★★★</span>
+          <span><strong>5,0</strong> sur Google</span>
+          <span class="sr-only">(ouvre dans un nouvel onglet)</span>
+        </a>
       </div>
-      <a href="https://www.google.com/search?q=Aldjia+Boughias" target="_blank" rel="noopener" class="text-link" data-reveal>Voir les avis sur Google ↗</a>
+
+      {% for t in site.data.temoignages %}
+      <figure class="testi{% cycle '', ' testi--right' %}">
+        <blockquote class="testi-quote" data-reveal data-split-words>
+          <p>{{ t.extrait }}</p>
+        </blockquote>
+        <div class="testi-body" data-reveal data-reveal-delay="0.35">
+          <p class="testi-full">« {{ t.texte }} »</p>
+          <figcaption class="testi-author">
+            <span class="testi-author-line" aria-hidden="true"></span>
+            <span>
+              <strong>{{ t.nom }}</strong>
+              <span class="testi-role">{{ t.role }}</span>
+            </span>
+            {% if t.source == "Google" %}<span class="testi-source" role="img" aria-label="Note : {{ t.note }} sur 5, avis Google">{% for i in (1..t.note) %}★{% endfor %} Google</span>{% endif %}
+          </figcaption>
+        </div>
+      </figure>
+      {% endfor %}
     </div>
   </section>
 

@@ -698,6 +698,31 @@
   /* ══════════════════════════════════════════════════════════
      REVEAL — entrée au scroll pour sections statiques
   ══════════════════════════════════════════════════════════ */
+  /* ── Citations : découpage mot par mot (révélées en cascade avec [data-reveal]) ── */
+  document.querySelectorAll('[data-split-words]').forEach(root => {
+    let i = 0;
+    const walk = node => {
+      [...node.childNodes].forEach(child => {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          child.textContent.split(/(\s+)/).forEach(part => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+            const w = document.createElement('span');
+            w.className = 'qw';
+            w.style.transitionDelay = (0.15 + i++ * 0.07) + 's';
+            w.textContent = part;
+            frag.appendChild(w);
+          });
+          child.replaceWith(frag);
+        } else if (child.nodeType === 1) {
+          walk(child);
+        }
+      });
+    };
+    walk(root);
+  });
+
   const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
