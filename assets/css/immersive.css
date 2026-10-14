@@ -1189,3 +1189,97 @@ html, body { overflow-x: clip; }
 
 .page-section--tight { padding-top: 2rem; padding-bottom: 4rem; }
 .page-section--tight .page-aside { margin-top: 0; }
+
+/* ════════════════════════════════════════
+   PAGE À PROPOS
+════════════════════════════════════════ */
+/* Phrase qui s'assemble : même mise en scène que « Mes conseils » */
+.assemble-section { height: 220vh; position: relative; }
+.assemble-section .conseils-title em { color: #BE3220; font-style: italic; }
+
+.about-hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 5rem; align-items: center; }
+.about-role { font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(237,232,223,0.5); margin: -1rem 0 1.75rem; }
+.about-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.5rem; }
+.about-portrait { margin: 0; position: relative; }
+.about-portrait::before {
+  content: ''; position: absolute; inset: -14px 14px 14px -14px; border-radius: 22px;
+  background: linear-gradient(135deg, #F37E30, #BE3220 50%, #7845D0); opacity: 0.85;
+}
+.about-portrait img {
+  position: relative; display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: 20px; outline: 1px solid rgba(255,255,255,0.1); outline-offset: -1px;
+}
+
+/* Boutons pilule partagés */
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 3rem;
+  font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; text-decoration: none;
+  color: #EDE8DF; border: 0.5px solid rgba(237,232,223,0.35);
+  transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+}
+.btn-pill:hover { background: rgba(237,232,223,0.08); border-color: #EDE8DF; }
+.btn-pill:active { transform: scale(0.96); }
+.btn-pill--solid { background: #BE3220; border-color: #BE3220; color: #fff; }
+.btn-pill--solid:hover { background: #9A2818; border-color: #9A2818; }
+.btn-pill--cream { background: #EDE8DF; border-color: #EDE8DF; color: #BE3220; }
+.btn-pill--cream:hover { background: #fff; border-color: #fff; }
+.btn-pill--light { border-color: rgba(237,232,223,0.55); }
+
+/* Cartes texte (approche) et cartes image (projets) — variantes des cartes éventail */
+.sc-card.sc-card--text { gap: 0.9rem; padding: 1.75rem 1.5rem; }
+.sc-desc { font-size: 0.85rem; line-height: 1.55; text-align: center; opacity: 0.85; text-wrap: pretty; }
+.sc-card.sc-card--project {
+  width: 280px; height: 380px; padding: 0.75rem 0.75rem 1.4rem; gap: 0.7rem;
+  justify-content: flex-start; overflow: hidden;
+}
+.sc-card--project img {
+  width: 100%; height: 150px; object-fit: cover; border-radius: 14px;
+  outline: 1px solid rgba(0,0,0,0.1); outline-offset: -1px;
+}
+.sc-card--project .sc-name { font-size: 1.4rem; }
+.sc-card--project .sc-desc { padding: 0 0.6rem; }
+
+/* Parcours — frise numérotée */
+.timeline { margin-top: 3.5rem; }
+.timeline-item {
+  display: grid; grid-template-columns: 7rem 1fr; gap: 2rem; align-items: start;
+  padding: 2.5rem 0; border-top: 0.5px solid rgba(237,232,223,0.14);
+}
+.timeline-n {
+  font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 4.5rem); line-height: 1;
+  background: linear-gradient(135deg, #F37E30, #BE3220 55%, #7845D0);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-kicker { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: #F37E30; margin-bottom: 0.6rem; }
+.timeline-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.6rem, 3vw, 2.4rem); color: #EDE8DF; margin-bottom: 0.9rem; }
+.timeline-text { max-width: 62ch; font-size: 1rem; line-height: 1.8; color: rgba(237,232,223,0.62); text-wrap: pretty; }
+
+/* Art au Féminin sur vermillon */
+.about-aaf { color: #EDE8DF; }
+.about-aaf-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center; }
+.about-aaf .page-h2 em { color: #1A1210; }
+.about-label--light { color: rgba(237,232,223,0.85); }
+.about-label--light::after { background: rgba(237,232,223,0.85); }
+.about-aaf-text { max-width: 56ch; font-size: 1.05rem; line-height: 1.8; color: rgba(237,232,223,0.85); margin-bottom: 1.25rem; text-wrap: pretty; }
+.about-aaf-text strong { color: #fff; font-weight: 600; }
+.about-aaf-img { margin: 0; }
+.about-aaf-img img {
+  display: block; width: 100%; height: auto; border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3); outline: 1px solid rgba(255,255,255,0.1); outline-offset: -1px;
+  transform: rotate(2deg);
+}
+
+@media (max-width: 992px) {
+  .about-hero-grid, .about-aaf-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .about-portrait { max-width: 380px; }
+}
+@media (max-width: 768px) {
+  .assemble-section { height: 200vh; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0.75rem; padding: 2rem 0; }
+  .sc-card.sc-card--text { height: auto; min-height: 210px; padding: 1.25rem 0.9rem; }
+  .sc-card--text .sc-name { font-size: 1.1rem; }
+  .sc-card--text .sc-desc { font-size: 0.75rem; }
+  .sc-card.sc-card--project { height: auto; width: 100%; }
+  .fan-section#about-projets .secteurs-stage { grid-template-columns: 1fr; }
+}

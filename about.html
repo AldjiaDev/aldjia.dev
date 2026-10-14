@@ -1,389 +1,202 @@
 ---
-layout: default
+layout: immersive
 title: "Aldjia Boughias — Développeuse web art & culture · Lille"
 description: "Développeuse web freelance à Lille, double formation Beaux-Arts + Ruby on Rails. Sites sur mesure pour galeries, artistes, maisons de ventes et institutions culturelles."
 permalink: /about/
-last_modified_at: 2026-07-28
+last_modified_at: 2026-10-14
 ---
 
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-center g-5">
-
-      <div class="col-lg-4">
-        <div style="position: relative; overflow: hidden;">
-          <div style="
-            position: absolute; top: -16px; left: -16px;
-            width: 120px; height: 120px;
-            border: 1px solid var(--bordeaux-mid);
-            border-radius: 2px;
-            z-index: 0;
-          "></div>
-          <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-               alt="Aldjia Boughias — développeuse web spécialisée art et culture"
-               width="600" height="800"
-               style="
-                 width: 100%;
-                 aspect-ratio: 3/4;
-                 object-fit: cover;
-                 border-radius: 2px;
-                 border: 1px solid var(--line);
-                 position: relative;
-                 z-index: 1;
-               ">
-        </div>
+<!-- ═══ EN-TÊTE — portrait + nom révélé mot à mot ═══ -->
+<section data-ambient class="page-hero about-hero" aria-labelledby="about-h1">
+  <div class="page-hero-inner about-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>À propos</p>
+      <h1 class="page-title" id="about-h1" data-reveal data-split-words>Aldjia <em>Boughias.</em></h1>
+      <p class="about-role" data-reveal data-reveal-delay="0.4">Développeuse web · Art &amp; Culture · Lille</p>
+      <p class="page-lead" data-reveal data-reveal-delay="0.5">Ce qui me différencie ne s'apprend pas en formation : ça vient de sept ans passés dans l'univers de l'art, comme fondatrice d'un média culturel et ancienne étudiante en histoire de l'art. Votre secteur est le mien, avant même qu'on commence à travailler ensemble.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.6">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Prendre rendez-vous →</a>
+        <a href="{{ '/realisations/' | relative_url }}" class="btn-pill">Voir les réalisations</a>
       </div>
-
-      <div class="col-lg-7 offset-lg-1">
-        <p class="kicker mb-4">Développeuse web · Art & Culture</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.8rem, 5vw, 4.5rem);
-          font-weight: 600;
-          line-height: 1.0;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Aldjia Boughias
-        </h1>
-        <p style="font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 480px; margin-bottom: 2rem;">
-          Développeuse web spécialisée art &amp; culture. Ce qui me différencie ne s'apprend
-          pas en formation : ça vient de sept ans passés dans l'univers de l'art,
-          comme fondatrice d'un média culturel et ancienne étudiante en histoire de l'art.
-          Votre secteur est le mien — avant même qu'on commence à travailler ensemble.
-        </p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Prendre RDV
-          </a>
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Voir le portfolio
-          </a>
-        </div>
-      </div>
-
     </div>
+    <figure class="about-portrait" data-reveal data-reveal-delay="0.2">
+      <picture>
+        <source srcset="{{ '/assets/images/portrait.webp' | relative_url }}" type="image/webp">
+        <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+             alt="Aldjia Boughias, développeuse web spécialisée art et culture"
+             width="2148" height="2591" fetchpriority="high">
+      </picture>
+    </figure>
   </div>
 </section>
 
-<div class="container">
-
-  <!-- APPROCHE -->
-  <section class="section pt-0" aria-labelledby="about-approche">
-    <div class="row g-5 align-items-start">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Approche</p>
-        <h2 id="about-approche" class="section-title mb-4">Comprendre avant de construire</h2>
-        <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          Mon point de départ n'est jamais technique — c'est toujours votre univers,
-          votre public, ce que vous voulez transmettre.
-          Ensuite seulement on parle de pages, de fonctionnalités et de code.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Dix ans de relation client m'ont appris à écouter, à cadrer et à livrer
-          ce qui a été promis — sans mauvaises surprises.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Cadrage clair</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Périmètre, priorités, planning définis ensemble avant de commencer.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Communication simple</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Pas de jargon. Même si vous n'êtes pas technique, vous comprenez chaque étape.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Rendu soigné</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Typographie, hiérarchie visuelle, performance — cohérent avec votre univers.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Base évolutive</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Ce que je livre, vous pouvez le faire grandir — sans tout reprendre de zéro.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TÉMOIGNAGES -->
-  <section class="section pt-0" aria-labelledby="about-temoignages">
-    <p class="kicker mb-5">Ce qu'ils disent</p>
-    <div class="row g-4">
-
-      <div class="col-lg-6">
-        <figure style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; height: 100%; margin: 0; display: flex; flex-direction: column; justify-content: space-between;">
-          <blockquote style="font-size: .95rem; color: var(--muted); line-height: 1.75; font-style: italic; margin: 0 0 1.5rem;">
-            "Que dire si ce n'est de faire confiance à Aldjia les yeux fermés ! Elle a su concevoir avec brio le site de notre maison de ventes aux enchères en se montrant passionnée, investie et à l'écoute. Sa passion pour l'art et la culture sont un vrai atout pour travailler sur des projets qui s'y rapportent."
-          </blockquote>
-          <figcaption>
-            <p style="font-weight: 600; font-size: .9rem; color: var(--ink); margin: 0;">Héloïse de Baudus</p>
-            <p style="font-size: .82rem; color: var(--muted); margin: 0;">Commissaire-priseure · Maison de ventes aux enchères</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin: .4rem 0 0; font-weight: 500;">★★★★★ Google</p>
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-6">
-        <figure style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; height: 100%; margin: 0; display: flex; flex-direction: column; justify-content: space-between;">
-          <blockquote style="font-size: .95rem; color: var(--muted); line-height: 1.75; font-style: italic; margin: 0 0 1.5rem;">
-            "Aldjia est tout simplement parfaite ! Dès le début du processus, elle a été dans l'écoute active et réactive, a systématiquement devancé toutes nos demandes. Grâce à toi Aldjia, notre site est un vrai bijou, joli et élégant, et surtout un outil de travail efficace et parfaitement conçu !"
-          </blockquote>
-          <figcaption>
-            <p style="font-weight: 600; font-size: .9rem; color: var(--ink); margin: 0;">Sophie Tiercelin</p>
-            <p style="font-size: .82rem; color: var(--muted); margin: 0;">Commissaire-priseure</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin: .4rem 0 0; font-weight: 500;">★★★★★ Google</p>
-          </figcaption>
-        </figure>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PHRASE FORTE -->
-  <section class="section pt-0">
-    <div style="
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 3rem 0;
-      text-align: center;
-    ">
-      <p style="
-        font-family: 'Cormorant Garant', serif;
-        font-style: italic;
-        font-size: clamp(1.5rem, 3vw, 2.2rem);
-        font-weight: 600;
-        color: var(--ink);
-        line-height: 1.4;
-        max-width: 720px;
-        margin: 0 auto;
-      ">
-        "La technologie au service de la culture."
-      </p>
-    </div>
-  </section>
-
-  <!-- PARCOURS -->
-  <section class="section pt-0" aria-label="Parcours">
-    <p class="kicker mb-4">Parcours</p>
-    <div class="row g-4">
-
-      <div class="col-md-4">
-        <div style="border-top: 2px solid var(--bordeaux); padding-top: 1.5rem;">
-          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
-            Histoire de l'Art
-          </h3>
-          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
-            Cours du soir aux Beaux-Arts, approfondis par des années de recherche et de création avec Art au Féminin. Votre vocabulaire, votre histoire et vos enjeux esthétiques sont les miens — sans que vous ayez à me les expliquer.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
-          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
-            Développement web
-          </h3>
-          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
-            Le Wagon — Ruby on Rails, JavaScript. Bootcamp intensif, projets en conditions réelles. Résultat : des sites solides, évolutifs et référencés dès la première ligne de code.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
-          <p class="mb-1" style="font-size: .78rem; color: var(--muted); letter-spacing: .04em;">Formation</p>
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; margin-bottom: .75rem;">
-            Apple Foundation Program
-          </h3>
-          <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">
-            Simplon — Swift, SwiftUI. Développement mobile et pensée produit. Une vision centrée sur l'expérience utilisateur, appliquée à chaque projet web.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ART AU FÉMININ -->
-  <section class="section pt-0">
-    <div class="about-art-box" style="background: var(--bordeaux-light); border: 1px solid var(--bordeaux-mid); border-radius: var(--radius);">
-      <div class="row g-5 align-items-center">
-
-        <div class="col-lg-7">
-          <p class="kicker mb-3">Projet fondateur</p>
-          <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; color: var(--ink); line-height: 1.15; margin-bottom: 1rem;">
-            Art au Féminin
-          </h2>
-          <p style="font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 0;">
-            <strong>Art au Féminin</strong> est un média culturel indépendant que j'ai fondé
-            par passion pour l'histoire de l'art — podcast, articles de fond, sélections de livres.
-            Une plateforme construite de A à Z, conçue, développée et animée par mes soins.
-            Je continue de le faire grandir : je construis actuellement une <strong>galerie d'art immersive en Three.js</strong>
-            pour lui donner une nouvelle dimension.
-            Ce projet dit mieux que n'importe quel diplôme ce que je cherche vraiment :
-            mettre la technologie au service de la culture.
-          </p>
-        </div>
-
-        <div class="col-lg-4 offset-lg-1 d-flex flex-column gap-3">
-          <img src="/assets/images/artaufeminin.jpeg" alt="Art au Féminin"
-               width="1000" height="1000"
-               style="width: 100%; border-radius: var(--radius); border: 1px solid var(--bordeaux-mid); display: block;">
-          <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-             style="font-size: .88rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-align: center;">
-            Découvrir artaufeminin.fr →
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPÉTENCES -->
-  <section class="section pt-0" aria-labelledby="about-competences">
-    <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2.5rem;">
-
-      <div class="row align-items-start g-4 mb-4">
-        <div class="col">
-          <p class="kicker mb-2">Stack technique</p>
-          <h2 id="about-competences" class="section-title mb-0">Compétences</h2>
-        </div>
-      </div>
-
-      <div class="row g-5">
-
-        <div class="col-md-6">
-          <p class="kicker mb-3" style="font-size: .68rem;">Langages & frameworks</p>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
-              <span style="font-size: .95rem; font-weight: 500;">Ruby on Rails</span>
-              <span style="font-size: .78rem; color: var(--bordeaux); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Principal</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
-              <span style="font-size: .95rem; font-weight: 500;">HTML · CSS · Bootstrap</span>
-              <span style="font-size: .78rem; color: var(--bordeaux); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Principal</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: .75rem;">
-              <span style="font-size: .95rem; font-weight: 500;">JavaScript</span>
-              <span style="font-size: .78rem; color: var(--muted); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Courant</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <span style="font-size: .95rem; font-weight: 500;">Swift · SwiftUI</span>
-              <span style="font-size: .78rem; color: var(--muted); font-family: 'Inter', sans-serif; letter-spacing: .04em;">Notions</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <p class="kicker mb-3" style="font-size: .68rem;">Outils & déploiement</p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="portfolio-tag">Git · GitHub</span>
-            <span class="portfolio-tag">Heroku</span>
-            <span class="portfolio-tag">GitHub Pages</span>
-            <span class="portfolio-tag">Supabase</span>
-            <span class="portfolio-tag">Jekyll</span>
-            <span class="portfolio-tag">PostgreSQL</span>
-            <span class="portfolio-tag">SEO on-page</span>
-            <span class="portfolio-tag">Schema.org</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETS -->
-  <section class="section pt-0" aria-labelledby="about-projets">
-    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-5">
-      <div>
-        <p class="kicker mb-2">Réalisations</p>
-        <h2 id="about-projets" class="section-title mb-0">Projets</h2>
-      </div>
-      <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary">Voir tout le portfolio</a>
-    </div>
-
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-4">
-        <a href="/realisations/mirabili-encheres/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/mirabili.jpg" alt="Mirabili Enchères" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p class="kicker mb-2" style="font-size: .65rem;">Commissaires-priseurs</p>
-              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Mirabili Enchères</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Application Ruby on Rails — catalogue, estimation en ligne, SEO structuré.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/artaufeminin.jpeg" alt="Art au Féminin" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p class="kicker mb-2" style="font-size: .65rem;">Plateforme éditoriale · Gatsby</p>
-              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Art au Féminin</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Podcast et plateforme dédiée aux artistes femmes dans l'histoire de l'art.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/logobereniceauger.jpg" alt="Bérénice Auger — artiste multidisciplinaire" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p class="kicker mb-2" style="font-size: .65rem;">Artiste · Ruby on Rails · Québec</p>
-              <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; flex: 1;">Bérénice Auger</h3>
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Galerie, boutique, ateliers — site complet pour une artiste multidisciplinaire au Québec.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-</div>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Contact</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2.2rem, 4vw, 3.5rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Travaillons ensemble.
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes pour voir si je suis la bonne personne pour votre projet —
-      sans engagement, sans jargon.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank"
-       rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
-      Réserver un créneau
-    </a>
-    <p class="mt-4 mb-0" style="font-size: .85rem; color: rgba(247,244,239,.38); font-family: 'Cormorant Garant', serif; font-style: italic;">
-      Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-        style="color: rgba(247,244,239,.55); text-decoration: underline; text-underline-offset: 3px;">Art au Féminin</a>
-      · Développeuse spécialisée art &amp; culture depuis 2019
-    </p>
+<!-- ═══ PHRASE FORTE — les lettres se rejoignent au scroll ═══ -->
+<section data-ambient data-assemble class="assemble-section" aria-label="Ma conviction">
+  <div class="conseils-sticky">
+    <p class="conseils-title"><span class="sr-only">La technologie au service de la culture.</span><span data-wave aria-hidden="true">La technologie au service<br>de <em>la culture.</em></span></p>
   </div>
+</section>
+
+<!-- ═══ APPROCHE — 4 principes en cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" id="approche" class="fan-section" aria-labelledby="approche-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Approche</p>
+      <h2 class="secteurs-title" id="approche-titre">Comprendre avant <em>de construire.</em></h2>
+      <p class="secteurs-lead">Mon point de départ n'est jamais technique : c'est votre univers, votre public, ce que vous voulez transmettre. Dix ans de relation client m'ont appris à écouter, cadrer et livrer ce qui a été promis.</p>
+    </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">01</span>
+          <h3 class="sc-name">Cadrage<br>clair</h3>
+          <p class="sc-desc">Périmètre, priorités et planning définis ensemble avant de commencer.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">02</span>
+          <h3 class="sc-name">Communication<br>simple</h3>
+          <p class="sc-desc">Pas de jargon : même sans être technique, vous comprenez chaque étape.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">03</span>
+          <h3 class="sc-name">Rendu<br>soigné</h3>
+          <p class="sc-desc">Typographie, hiérarchie visuelle, performance : cohérent avec votre univers.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <span class="sc-n">04</span>
+          <h3 class="sc-name">Base<br>évolutive</h3>
+          <p class="sc-desc">Ce que je livre, vous pouvez le faire grandir sans tout reprendre de zéro.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ PARCOURS — trois formations ═══ -->
+<section data-ambient class="page-section" aria-labelledby="parcours-titre">
+  <div class="page-inner">
+    <p class="about-label" data-reveal>Parcours</p>
+    <h2 class="page-h2" id="parcours-titre" data-reveal data-reveal-delay="0.1">L'art d'abord, <em>le code ensuite.</em></h2>
+    <ol class="timeline">
+      <li class="timeline-item" data-reveal>
+        <span class="timeline-n">01</span>
+        <div>
+          <p class="timeline-kicker">Formation · Beaux-Arts</p>
+          <h3 class="timeline-title">Histoire de l'art</h3>
+          <p class="timeline-text">Cours du soir aux Beaux-Arts, approfondis par des années de recherche et de création avec Art au Féminin. Votre vocabulaire, votre histoire et vos enjeux esthétiques sont les miens, sans que vous ayez à me les expliquer.</p>
+        </div>
+      </li>
+      <li class="timeline-item" data-reveal data-reveal-delay="0.1">
+        <span class="timeline-n">02</span>
+        <div>
+          <p class="timeline-kicker">Formation · Le Wagon</p>
+          <h3 class="timeline-title">Développement web</h3>
+          <p class="timeline-text">Ruby on Rails, JavaScript. Bootcamp intensif, projets en conditions réelles. Résultat : des sites solides, évolutifs et référencés dès la première ligne de code.</p>
+        </div>
+      </li>
+      <li class="timeline-item" data-reveal data-reveal-delay="0.2">
+        <span class="timeline-n">03</span>
+        <div>
+          <p class="timeline-kicker">Formation · Simplon</p>
+          <h3 class="timeline-title">Apple Foundation Program</h3>
+          <p class="timeline-text">Swift, SwiftUI. Développement mobile et pensée produit : une vision centrée sur l'expérience utilisateur, appliquée à chaque projet web.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ ART AU FÉMININ — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="aaf-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>Projet fondateur</p>
+      <h2 class="page-h2" id="aaf-titre" data-reveal data-reveal-delay="0.1">Art au <em>Féminin.</em></h2>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.2"><strong>Art au Féminin</strong> est un média culturel indépendant que j'ai fondé par passion pour l'histoire de l'art : podcast, articles de fond, sélections de livres. Une plateforme construite de A à Z, conçue, développée et animée par mes soins.</p>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.25">Je continue de la faire grandir avec une <strong>galerie d'art immersive en Three.js</strong>. Ce projet dit mieux que n'importe quel diplôme ce que je cherche vraiment : mettre la technologie au service de la culture.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--cream">Découvrir artaufeminin.fr ↗</a>
+        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="btn-pill btn-pill--light">L'étude de cas →</a>
+      </div>
+    </div>
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}" alt="Art au Féminin, média culturel dédié aux artistes femmes" width="1000" height="1000" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ TÉMOIGNAGES — même section crème que l'accueil ═══ -->
+<section id="temoignages" class="std-section band-cream" aria-label="Témoignages clientes">
+  <div class="std-inner">
+    {% for t in site.data.temoignages %}
+    <figure class="testi{% cycle '', ' testi--right' %}">
+      <blockquote class="testi-quote" data-reveal data-split-words>
+        <p>{{ t.extrait }}</p>
+      </blockquote>
+      <div class="testi-body" data-reveal data-reveal-delay="0.35">
+        <p class="testi-full">« {{ t.texte }} »</p>
+        <figcaption class="testi-author">
+          <span class="testi-author-line" aria-hidden="true"></span>
+          <span>
+            <strong>{{ t.nom }}</strong>
+            <span class="testi-role">{{ t.role }}</span>
+          </span>
+          {% if t.source == "Google" %}<span class="testi-source" role="img" aria-label="Note : {{ t.note }} sur 5, avis Google">{% for i in (1..t.note) %}★{% endfor %} Google</span>{% endif %}
+        </figcaption>
+      </div>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ═══ COMPÉTENCES — la même « Ma palette » que l'accueil ═══ -->
+{% include immersive-palette.html %}
+
+<!-- ═══ PROJETS — cartes image en éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="300" id="about-projets" class="fan-section" aria-labelledby="about-projets-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Réalisations</p>
+      <h2 class="secteurs-title" id="about-projets-titre">Quelques <em>projets.</em></h2>
+    </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <a href="{{ '/realisations/mirabili-encheres/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.08)">
+          <img src="{{ '/assets/images/mirabili.jpg' | relative_url }}" alt="" width="1866" height="1507" loading="lazy">
+          <span class="sc-badge">Commissaires-priseurs</span>
+          <h3 class="sc-name">Mirabili Enchères</h3>
+          <p class="sc-desc">Application Ruby on Rails : catalogue, estimation en ligne, SEO structuré.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}" alt="" width="1000" height="1000" loading="lazy">
+          <span class="sc-badge">Média culturel · Gatsby</span>
+          <h3 class="sc-name">Art au Féminin</h3>
+          <p class="sc-desc">Podcast et plateforme dédiés aux artistes femmes dans l'histoire de l'art.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}" alt="" width="2000" height="2000" loading="lazy">
+          <span class="sc-badge">Artiste · Ruby on Rails · Québec</span>
+          <h3 class="sc-name">Bérénice Auger</h3>
+          <p class="sc-desc">Galerie, boutique, ateliers : un site complet pour une artiste multidisciplinaire.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section data-ambient class="page-section page-section--tight" aria-label="Portfolio">
+  <p class="page-aside" data-reveal><a href="{{ '/realisations/' | relative_url }}" class="text-link">Voir tout le portfolio →</a></p>
 </section>

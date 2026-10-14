@@ -908,8 +908,10 @@
   });
 
   /* ── Conseils — les lettres éparpillées se rejoignent au scroll pour former la phrase ── */
-  const consSection = document.getElementById('conseils');
-  const consLetters = consSection ? [...consSection.querySelectorAll('.cl')] : [];
+  // Toute section [data-assemble] : ses lettres (.cl) se rejoignent au scroll
+  // (« Mes conseils » sur l'accueil, « La technologie au service de la culture » sur /about)
+  const asmSections = [...document.querySelectorAll('[data-assemble]')];
+  const consLetters = asmSections.flatMap(sec => [...sec.querySelectorAll('.cl')].map(l => (l._sec = sec, l)));
   const consReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Position de départ pseudo-aléatoire mais stable (même dessin à chaque visite)
   const rnd = (i, n) => { const x = Math.sin((i + 1) * n * 12.9898) * 43758.5453; return x - Math.floor(x); };
@@ -922,8 +924,9 @@
   });
   function updateConseils() {
     if (!consLetters.length) return;
-    const p = consReduced ? 1 : progress(consSection);
+    const prog = new Map(asmSections.map(sec => [sec, consReduced ? 1 : progress(sec)]));
     consLetters.forEach(l => {
+      const p = prog.get(l._sec);
       const k = clamp((p - 0.05 - l._d * 0.5) / 0.5, 0, 1);
       const q = Math.pow(1 - k, 3);                 // 1 = éparpillée, 0 = en place (ease-out)
       l.style.transform = q < 0.001 ? '' :
@@ -931,7 +934,7 @@
       l.style.opacity = 0.12 + 0.88 * (1 - q);
       l.style.filter  = q < 0.01 ? '' : `blur(${q * 6}px)`;
     });
-    consSection.classList.toggle('is-formed', p > 0.72);
+    asmSections.forEach(sec => sec.classList.toggle('is-formed', prog.get(sec) > 0.72));
   }
   window.addEventListener('scroll', updateConseils, { passive: true });
   updateConseils();

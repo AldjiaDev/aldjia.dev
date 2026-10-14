@@ -245,16 +245,7 @@ culturelles</h3>
     </div>
   </section>
 
-  <!-- ═══ TOOLKIT ═══════════════════════════════════════ -->
-  <section data-ambient id="toolkit" aria-labelledby="toolkit-title">
-    <div id="toolkit-sticky">
-      <div class="toolkit-header">
-        <h2 class="toolkit-title" id="toolkit-title">Ma palette</h2>
-        <p class="toolkit-sub" id="toolkit-sub">Développement web</p>
-      </div>
-      <div class="toolkit-stage" id="toolkit-stage" aria-hidden="true"></div>
-    </div>
-  </section>
+  {% include immersive-palette.html %}
 
   <!-- ═══ CHAPITRE 5 — Les projets ════════════════════════ -->
   <section id="projets" class="band-vermillion" aria-labelledby="projets-title">
@@ -309,7 +300,7 @@ culturelles</h3>
   </section>
 
   <!-- ═══ CONSEILS — titre ondulant, cliquable vers le blog ═══ -->
-  <section data-ambient id="conseils" aria-labelledby="conseils-title">
+  <section data-ambient data-assemble id="conseils" aria-labelledby="conseils-title">
     <div class="conseils-sticky">
       <h2 class="conseils-title" id="conseils-title">
         <a href="{{ '/blog/' | relative_url }}" class="conseils-link" data-wave aria-label="Mes conseils pour votre visibilité : lire les articles">Mes conseils pour<br>votre <em>visibilité</em><span class="conseils-arrow" aria-hidden="true">→</span></a>
