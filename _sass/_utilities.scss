@@ -10,6 +10,8 @@
 
 @media (max-width: 768px) { .container { padding: 0 1.5rem; } }
 @media (max-width: 576px) { .container { padding: 0 1.25rem; } }
+// La gouttière g-5 (3rem) dépassait le padding mobile (1.25rem) : on l'aligne
+@media (max-width: 576px) { .container .row.g-5 { --bs-gutter-x: 2.5rem; } }
 
 // ── Sections ──────────────────────────────────────────────────────────────────
 

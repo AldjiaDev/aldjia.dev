@@ -934,3 +934,49 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
+
+/* ════════════════════════════════════════
+   MOBILE — corrections responsive
+════════════════════════════════════════ */
+/* Filet de sécurité : jamais de scroll horizontal (clip ne casse pas les sticky) */
+html, body { overflow-x: clip; }
+
+@media (max-width: 768px) {
+  /* Qui je suis — chiffres sur une ligne qui tient dans l'écran */
+  #about { padding: 6rem 1.25rem; }
+  .abt-nums { gap: 1.25rem; margin-bottom: 3rem; }
+  .abt-num { font-size: 2.4rem; }
+  .abt-vbar { height: 3rem; }
+  .abt-statement { margin-bottom: 3.5rem; }
+
+  /* Art au Féminin — grille de stats compacte */
+  #aaf { padding: 6rem 1.25rem; min-height: 0; }
+  .aaf-grid > * { min-width: 0; }
+  .aaf-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .aaf-stat-box { padding: 1.1rem; }
+  .aaf-stat-n { font-size: 2rem; }
+
+  /* Libellés trop petits pour être lus */
+  .abt-eyebrow, .aaf-label, .about-label { font-size: 0.7rem; }
+  .offer-tag { font-size: 0.7rem; }
+
+  /* Cibles tactiles ≥ 44px */
+  .text-link, .aaf-link, .projets-all, .conseils-wave-cta {
+    display: inline-block; padding-top: 0.75rem; padding-bottom: 0.75rem;
+  }
+  .aaf-link { padding-bottom: 0.5rem; }
+  .cta-mail { padding: 0.9rem 0; margin-top: 1rem; }
+  .footer-cta-sub a { display: inline-block; padding: 0.8rem 0; }
+  .footer-legal a { display: inline-block; padding: 0.8rem 0; margin: -0.8rem 0; }
+}
+
+@media (max-width: 768px) {
+  /* Hero — accroche centrée, bouton sur une ligne */
+  .hero-meta { width: calc(100% - 2.5rem); text-align: center; bottom: 18%; }
+  .hero-tagline { text-wrap: balance; line-height: 1.6; }
+  .hero-cta { white-space: nowrap; }
+
+  /* Projets — noms sur une ligne (chaque lettre est un span animé) */
+  .projet-item { font-size: clamp(1.35rem, 6.2vw, 2rem); line-height: 1.9; }
+  .proj-name { white-space: nowrap; }
+}

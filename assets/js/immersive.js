@@ -126,6 +126,15 @@
 
   // ── FontLoader → TextGeometry "ALDJIA" + "BOUGHIAS" ─────────────────────
   let textGroup = null;
+  let textWidth = 0; // largeur du texte 3D en unités monde (ajustée à l'écran)
+
+  // Échelle qui fait tenir le texte dans la largeur visible (mobile)
+  function fitScale() {
+    if (!textWidth) return 1;
+    const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+    const visW = visH * camera.aspect;
+    return Math.min(1, (visW * 0.86) / textWidth);
+  }
   const fontLoader = new THREE.FontLoader();
   fontLoader.load(
     'https://cdn.jsdelivr.net/npm/three@0.145.0/examples/fonts/helvetiker_bold.typeface.json',
@@ -148,6 +157,10 @@
       mA.position.y =  hA / 2 + gap / 2;
       mB.position.y = -(hB / 2 + gap / 2);
 
+      textWidth = Math.max(
+        geoA.boundingBox.max.x - geoA.boundingBox.min.x,
+        geoB.boundingBox.max.x - geoB.boundingBox.min.x
+      );
       textGroup = new THREE.Group();
       textGroup.add(mA);
       textGroup.add(mB);
@@ -223,7 +236,7 @@
 
       // Scale : léger rétrécissement au fur et à mesure du scroll (1 → 0.55)
       const scaleV  = Math.max(0.55, 1 - sN * 0.16);
-      textGroup.scale.setScalar(scaleV);
+      textGroup.scale.setScalar(scaleV * fitScale());
 
       // Profondeur : légère avancée puis recul cinématique
       const moveZ   = Math.sin(sN * 0.9) * 0.4;
