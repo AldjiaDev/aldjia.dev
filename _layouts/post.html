@@ -1,84 +1,51 @@
 ---
-layout: default
+layout: immersive
 ---
+{% assign words = content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
 
-<article class="post-wrap">
-
-  <a href="{{ '/blog' | relative_url }}" class="post-back-link">
-    ← Articles
-  </a>
-
-  <header class="post-header">
-    <p class="kicker mb-3">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
-      {% if page.categories and page.categories.size > 0 %} · {{ page.categories | array_to_sentence_string }}{% endif %}
-      {% assign words = content | number_of_words %}
-      {% assign minutes = words | divided_by: 200 %}
-      {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
-       · {{ minutes }} min de lecture
+<!-- ═══ EN-TÊTE DE L'ARTICLE — sur la scène 3D ═══ -->
+<section data-ambient class="page-hero post-hero-head" aria-labelledby="post-h1">
+  <div class="page-hero-inner page-inner--narrow">
+    <a href="{{ '/blog/' | relative_url }}" class="post-back" data-reveal>← Tous les articles</a>
+    <p class="about-label" data-reveal>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d/%m/%Y" }}</time>
+      {% if page.categories and page.categories.size > 0 %} · {{ page.categories | join: " · " }}{% endif %}
+      · {{ minutes }} min de lecture
     </p>
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+    <h1 class="post-h1" id="post-h1" data-reveal data-split-words>{{ page.title }}</h1>
+    {% if page.description %}<p class="page-lead" data-reveal data-reveal-delay="0.4">{{ page.description }}</p>{% endif %}
+  </div>
+</section>
 
-  {% if page.image %}
-    <figure class="post-hero">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" width="1200" height="630">
+<!-- ═══ CORPS — page crème, lecture confortable ═══ -->
+<article class="band-cream post-paper">
+  <div class="post-paper-inner">
+    {% if page.image %}
+    <figure class="post-cover">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="1200" height="630">
       {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
     </figure>
-  {% endif %}
+    {% endif %}
 
-  <div class="post-content">
-    {{ content }}
+    <div class="post-body">
+      {{ content }}
+    </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+    <ul class="post-tags" aria-label="Mots-clés">
+      {% for tag in page.tags %}<li>#{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    <nav class="post-pager" aria-label="Navigation entre articles">
+      {% if page.previous.url %}
+      <a class="post-pager-link" href="{{ page.previous.url | relative_url }}"><span>← Article précédent</span>{{ page.previous.title }}</a>
+      {% else %}<span></span>{% endif %}
+      {% if page.next.url %}
+      <a class="post-pager-link post-pager-link--next" href="{{ page.next.url | relative_url }}"><span>Article suivant →</span>{{ page.next.title }}</a>
+      {% endif %}
+    </nav>
   </div>
-
-  <!-- CTA fin d'article -->
-  <aside style="
-    margin-top: 3rem;
-    padding: 2rem 2.5rem;
-    border: 1px solid var(--bordeaux-mid);
-    background: var(--bordeaux-light);
-    border-radius: var(--radius);
-  " aria-label="Prendre contact">
-    <p class="kicker mb-2" style="font-size: .65rem; color: var(--bordeaux);">Travaillons ensemble</p>
-    <p style="
-      font-family: 'Cormorant Garant', serif;
-      font-style: italic;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: .75rem;
-      line-height: 1.3;
-    ">Vous avez un projet de site pour votre galerie ou institution&nbsp;?</p>
-    <p class="muted mb-4" style="font-size: .92rem; line-height: 1.75;">
-      Premier échange de 30 minutes, sans engagement. On fait le point sur vos besoins et je vous oriente vers la meilleure solution.
-    </p>
-    <div class="d-flex gap-3 flex-wrap">
-      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary">
-        Réserver un créneau
-      </a>
-      <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-primary">
-        Écrire un message
-      </a>
-    </div>
-  </aside>
-
-  {% if page.tags and page.tags.size > 0 %}
-    <div class="post-tags">
-      {% for tag in page.tags %}
-        <span class="post-tag">#{{ tag }}</span>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  <nav class="post-pager" aria-label="Navigation entre articles">
-    {% if page.previous.url %}
-      <a class="prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
-    {% else %}
-      <span></span>
-    {% endif %}
-    {% if page.next.url %}
-      <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>
-    {% endif %}
-  </nav>
-
 </article>

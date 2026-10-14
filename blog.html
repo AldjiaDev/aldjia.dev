@@ -1,189 +1,89 @@
 ---
-layout: default
+layout: immersive
 title: "Articles — Web, Ruby on Rails & culture numérique"
 description: "Retours d'expérience d'Aldjia Boughias : développement web, Ruby on Rails, SEO et place du numérique dans le monde de l’art et de la culture."
 permalink: /blog/
+last_modified_at: 2026-10-14
 ---
+{% assign client_posts = site.posts | where: "audience", "clients" %}
+{% assign dev_posts = site.posts | where: "audience", "dev" %}
+{% assign first_post = client_posts.first %}
+{% assign other_posts = client_posts | shift %}
 
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Articles</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.8rem, 5vw, 4.5rem);
-          font-weight: 600;
-          line-height: 1.0;
-          letter-spacing: -0.02em;
-          margin-bottom: 0;
-        ">Écrits</h1>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Développement web, Ruby on Rails, SEO, numérique et culture — ce que j'apprends et ce que j'observe.
-        </p>
-      </div>
-    </div>
+<!-- ═══ EN-TÊTE ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="blog-h1">
+  <div class="page-hero-inner">
+    <p class="about-label" data-reveal>Articles</p>
+    <h1 class="page-title" id="blog-h1" data-reveal data-split-words>Mes conseils pour <em>votre visibilité.</em></h1>
+    <p class="page-lead" data-reveal data-reveal-delay="0.5">Développement web, SEO, numérique et culture : ce que j'apprends et ce que j'observe, pour les galeries, artistes, maisons de ventes et institutions qui veulent être trouvées en ligne.</p>
+    <p class="page-note" data-reveal data-reveal-delay="0.6">{{ client_posts.size }} conseils · {{ dev_posts.size }} articles techniques</p>
   </div>
 </section>
 
-<!-- LISTE DES ARTICLES -->
-<section style="padding-bottom: 96px;">
-  <div class="container">
-
-    {% assign client_posts = site.posts | where: "audience", "clients" %}
-    {% assign dev_posts = site.posts | where: "audience", "dev" %}
-    {% assign first_post = client_posts.first %}
-    {% assign other_posts = client_posts | shift %}
-
-    <!-- Article vedette -->
-    <article class="mb-5">
-      <a href="{{ first_post.url | relative_url }}" style="text-decoration: none; display: block;">
-        <div class="blog-featured-card">
-
-          {% if first_post.image %}
-            <div class="blog-featured-img">
-              <img src="{{ first_post.image | relative_url }}"
-                   alt="{{ first_post.image_alt | default: first_post.title | escape }}"
-                   width="800" height="320"
-                   style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                   loading="eager">
-            </div>
-          {% endif %}
-
-          <div class="blog-featured-body">
-            <p style="font-size: .72rem; color: var(--muted); margin-bottom: .75rem; letter-spacing: .06em; text-transform: uppercase; font-family: 'Inter', sans-serif;">
-              <time datetime="{{ first_post.date | date_to_xmlschema }}">
-                {{ first_post.date | date: "%-d %B %Y" }}
-              </time>
-              <span style="margin: 0 .5rem; opacity: .4;">·</span>
-              <span style="color: var(--bordeaux);">Article récent</span>
-            </p>
-            <h2 style="
-              font-family: 'Cormorant Garant', serif;
-              font-style: italic;
-              font-size: clamp(1.6rem, 3vw, 2.4rem);
-              font-weight: 600;
-              color: var(--ink);
-              line-height: 1.15;
-              margin-bottom: 1rem;
-            ">{{ first_post.title }}</h2>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; max-width: 480px;">
-              {% if first_post.description %}
-                {{ first_post.description | truncate: 160 }}
-              {% else %}
-                {{ first_post.excerpt | strip_html | truncate: 160 }}
-              {% endif %}
-            </p>
-            <span style="font-size: .85rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
-              Lire l'article →
-            </span>
-          </div>
-
-        </div>
-      </a>
-    </article>
-
-    <!-- Mini CTA -->
-    <div style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.25rem 0; margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-      <p class="mb-0" style="font-size: .92rem; color: var(--muted);">
-        Vous avez un projet web dans le monde de l'art ou de la culture ?
+<!-- ═══ ARTICLE À LA UNE — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="une-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>
+        Dernier article · <time datetime="{{ first_post.date | date_to_xmlschema }}">{{ first_post.date | date: "%-d/%m/%Y" }}</time>
       </p>
-      <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
-         style="font-size: .85rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .03em; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px;">
-        Parlons-en en 30 minutes →
-      </a>
+      <h2 class="page-h2 blog-une-title" id="une-titre" data-reveal data-reveal-delay="0.1">
+        <a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a>
+      </h2>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.2">{{ first_post.description | default: first_post.excerpt | strip_html | truncate: 180 }}</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ first_post.url | relative_url }}" class="btn-pill btn-pill--cream">Lire l'article →</a>
+      </div>
     </div>
+    {% if first_post.image %}
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ first_post.image | relative_url }}" alt="{{ first_post.image_alt | default: first_post.title | escape }}" width="1200" height="630" fetchpriority="high">
+    </figure>
+    {% endif %}
+  </div>
+</section>
 
-    <!-- Grille des articles clients -->
-    <div class="row g-4">
+<!-- ═══ TOUS LES CONSEILS — cartes de couleur ═══ -->
+{% assign palette = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#1A1210|#EDE8DF|rgba(237,232,223,0.6);#7845D0|#fff|rgba(255,255,255,0.75);#BE3220|#EDE8DF|rgba(237,232,223,0.75);#8B1A30|#EDE8DF|rgba(237,232,223,0.7)" | split: ";" %}
+<section data-ambient class="page-section" aria-labelledby="conseils-liste">
+  <div class="page-inner">
+    <p class="about-label" data-reveal>Conseils</p>
+    <h2 class="page-h2" id="conseils-liste" data-reveal data-reveal-delay="0.1">Tous les <em>articles.</em></h2>
+    <ul class="post-grid">
       {% for post in other_posts %}
-        <article class="col-md-6 col-lg-4">
-          <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div class="blog-article-card">
-
-              {% if post.image %}
-                <div class="blog-card-img-wrap">
-                  <img src="{{ post.image | relative_url }}"
-                       alt="{{ post.image_alt | default: post.title | escape }}"
-                       width="800" height="200"
-                       class="blog-card-img"
-                       loading="lazy">
-                </div>
-              {% endif %}
-
-              <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-                <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                  <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%-d %B %Y" }}
-                  </time>
-                </p>
-                <h2 style="
-                  font-family: 'Cormorant Garant', serif;
-                  font-style: italic;
-                  font-size: 1.2rem;
-                  font-weight: 600;
-                  color: var(--ink);
-                  line-height: 1.3;
-                  margin-bottom: .75rem;
-                  flex: 1;
-                ">{{ post.title }}</h2>
-                <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                  {% if post.description %}
-                    {{ post.description | truncate: 110 }}
-                  {% else %}
-                    {{ post.excerpt | strip_html | truncate: 110 }}
-                  {% endif %}
-                </p>
-                {% if post.tags and post.tags.size > 0 %}
-                  <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                    {% for tag in post.tags limit:2 %}
-                      <span style="font-size: .72rem; border: 1px solid var(--line); border-radius: 3px; padding: .15rem .5rem; color: var(--muted); font-family: 'Inter', sans-serif;">{{ tag }}</span>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-                <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
-                  Lire →
-                </span>
-              </div>
-
-            </div>
-          </a>
-        </article>
+      {% assign c = forloop.index0 | modulo: 6 %}
+      {% assign col = palette[c] | split: "|" %}
+      <li class="post-card-item" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 3 | times: 0.08 }}">
+        <a href="{{ post.url | relative_url }}" class="post-card" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--soft:{{ col[2] }}">
+          {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy">
+          {% endif %}
+          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d/%m/%Y" }}</time>
+          <h3 class="post-card-title">{{ post.title }}</h3>
+          <p class="post-card-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <span class="post-card-more">Lire →</span>
+        </a>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
+  </div>
+</section>
 
-    <!-- Articles techniques (repliés par défaut) -->
-    <div class="blog-dev-toggle">
-      <details>
-        <summary>Articles techniques (Ruby, Rails, Swift…)</summary>
-        <div class="row g-3 mt-3">
-          {% for post in dev_posts %}
-            <div class="col-md-6">
-              <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block;">
-                <div class="blog-dev-card">
-                  <p style="font-size: .75rem; color: var(--muted); margin-bottom: .4rem; font-family: 'Inter', sans-serif;">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
-                  </p>
-                  <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.05rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .4rem;">{{ post.title }}</h3>
-                  {% if post.description %}<p style="font-size: .82rem; color: var(--muted); line-height: 1.55; margin-bottom: 0;">{{ post.description | truncate: 100 }}</p>{% endif %}
-                </div>
-              </a>
-            </div>
-          {% endfor %}
-        </div>
-      </details>
-    </div>
-
-    <div class="text-center mt-5 pt-4" style="border-top: 1px solid var(--line);">
-      <p class="muted mb-4" style="font-size: .95rem;">Un projet en tête ?</p>
-      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-        En discuter
-      </a>
-    </div>
-
+<!-- ═══ ARTICLES TECHNIQUES — repliés ═══ -->
+<section data-ambient class="page-section page-section--tight" aria-labelledby="dev-titre">
+  <div class="page-inner page-inner--narrow">
+    <details class="dev-posts">
+      <summary><span id="dev-titre">Articles techniques</span> <span class="dev-posts-sub">Ruby, Rails, Swift, Jekyll · {{ dev_posts.size }}</span></summary>
+      <ul class="dev-list">
+        {% for post in dev_posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%Y" }}</time>
+            <span>{{ post.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
   </div>
 </section>
