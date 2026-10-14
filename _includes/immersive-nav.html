@@ -1,0 +1,17 @@
+<!-- Scène Three.js (décorative, fond de toutes les pages immersives) -->
+<canvas id="canvas" aria-hidden="true"></canvas>
+
+<!-- Nav — barre en verre + logo AB 3D -->
+<nav id="main-nav" aria-label="Navigation principale">
+  <a href="{{ '/' | relative_url }}" class="nav-home" aria-label="Aldjia Boughias — Accueil">
+    <canvas id="nav-ab-canvas" aria-hidden="true"></canvas>
+  </a>
+  <div class="nav-pill">
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}#parcours">parcours</a></li>
+      <li><a href="{{ '/' | relative_url }}#projets">réalisations</a></li>
+      <li><a href="{{ '/tarifs/' | relative_url }}"{% if page.url == '/tarifs/' %} aria-current="page"{% endif %}>tarifs</a></li>
+      <li class="nav-contact"><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>

@@ -5,6 +5,8 @@
      THREE.JS — gradient hero + initiales AB iridescentes
   ══════════════════════════════════════════════════════════ */
   const canvas   = document.getElementById('canvas');
+  // Page intérieure (tarifs…) : pas de hero, la scène est directement en mode sombre
+  const HAS_HERO = !!document.getElementById('hero');
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setClearColor(0x000000, 0);
@@ -145,7 +147,7 @@
     return Math.min(1, (visW * 0.86) / textWidth);
   }
   const fontLoader = new THREE.FontLoader();
-  fontLoader.load(
+  if (HAS_HERO) fontLoader.load(
     'https://cdn.jsdelivr.net/npm/three@0.145.0/examples/fonts/helvetiker_bold.typeface.json',
     function(font) {
       const opts = {
@@ -248,8 +250,8 @@
     // Après la zone Three.js (hero 100vh + scroll zone 200vh), la scène passe
     // en mode sombre au lieu de disparaître : elle reste le décor des sections sombres
     const zoneEnd = window.innerHeight * 3.1;
-    const dark = Math.max(0, Math.min(1, (scrollY - zoneEnd * 0.85) / (window.innerHeight * 0.6)));
-    const heroVisible = scrollY < zoneEnd + window.innerHeight * 0.4;
+    const dark = HAS_HERO ? Math.max(0, Math.min(1, (scrollY - zoneEnd * 0.85) / (window.innerHeight * 0.6))) : 1;
+    const heroVisible = HAS_HERO && scrollY < zoneEnd + window.innerHeight * 0.4;
 
     const t = clock.getElapsedTime();
     cM.x += (tM.x - cM.x) * 0.06;
@@ -322,8 +324,8 @@
     const labelIn  = Math.max(0, Math.min(1, (sp - 0.35) / 0.45));
     const labelOut = Math.max(0, Math.min(1, 1 - (scrollY - window.innerHeight*2.2) / (window.innerHeight*0.6)));
     const lo = Math.min(labelIn, labelOut);
-    roleDev.style.opacity = lo;
-    roleArt.style.opacity = lo;
+    if (roleDev) roleDev.style.opacity = lo;
+    if (roleArt) roleArt.style.opacity = lo;
 
     if (!heroVisible && ambientOn <= 0) return; // canvas entièrement recouvert : pas de rendu
     renderer.render(scene, camera);
@@ -337,7 +339,7 @@
   const track  = document.getElementById('ticker-track');
 
   // 4 copies (pair) pour boucle seamless à translateX(-50%)
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; track && i < 4; i++) {
     const txt = document.createElement('span');
     txt.className = 'ticker-text';
     txt.textContent = PHRASE;
@@ -388,7 +390,7 @@
 
   function updateSections() {
     // ── Gradient section ──
-    if (gradSection) {
+    if (gradSection && gradOutline && gradFill) {
       const p = progress(gradSection);
       // Section raccourcie (160vh) : le remplissage démarre plus tôt
       gradOutline.style.opacity = 1 - clamp((p - 0.1) / 0.45, 0, 1);
@@ -468,7 +470,7 @@
   const toolkitSub     = document.getElementById('toolkit-sub');
 
   // Créer les cards DOM
-  const cardEls = TOOLKIT.map((data, i) => {
+  const cardEls = !toolkitStage ? [] : TOOLKIT.map((data, i) => {
     const card = document.createElement('div');
     card.className = 'tk-card';
     card.style.background  = data.bg;
@@ -511,7 +513,7 @@
   }
 
   function updateToolkit() {
-    if (!toolkitSection) return;
+    if (!toolkitSection || !cardEls.length) return;
     const devEls = cardEls.filter((_, i) => TOOLKIT[i].group === 0);
     const artEls = cardEls.filter((_, i) => TOOLKIT[i].group === 1);
 
@@ -936,7 +938,7 @@
     const r = nav.getBoundingClientRect();
     const under = document.elementsFromPoint(innerWidth / 2, r.bottom + 4)
       .find(el => !nav.contains(el) && el.id !== 'canvas' && !el.classList.contains('role-label'));
-    nav.classList.toggle('light', !!under && scrollY > innerHeight * 3 && bgLuminance(under) > 0.6);
+    nav.classList.toggle('light', !!under && (!HAS_HERO || scrollY > innerHeight * 3) && bgLuminance(under) > 0.6);
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });

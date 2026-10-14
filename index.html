@@ -12,25 +12,7 @@ redirect_from:
 <div class="role-label role-dev" id="roleDev" aria-hidden="true">développeuse<br>web</div>
 <div class="role-label role-art" id="roleArt" aria-hidden="true">Fondatrice<br>& dev</div>
 
-<!-- Scène Three.js (décorative) -->
-<canvas id="canvas" aria-hidden="true"></canvas>
 
-<!-- Nav -->
-<nav id="main-nav" aria-label="Navigation principale">
-  <a href="{{ '/' | relative_url }}" class="nav-home" aria-label="Aldjia Boughias — Accueil">
-    <canvas id="nav-ab-canvas" aria-hidden="true"></canvas>
-  </a>
-  <div class="nav-pill">
-    <ul class="nav-links">
-      <li><a href="#parcours">parcours</a></li>
-      <li><a href="#projets">réalisations</a></li>
-      <li><a href="{{ '/tarifs/' | relative_url }}">tarifs</a></li>
-      <li class="nav-contact"><a href="#contact">contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main class="page" id="main-content">
 
   <!-- ═══ S1 — HERO ═══════════════════════════════════════ -->
   <section id="hero" aria-labelledby="hero-title">
@@ -334,32 +316,3 @@ culturelles</h3>
       </h2>
     </div>
   </section>
-
-  <!-- ═══ CHAPITRE FINAL — bouton 3D « Travaillons ensemble » ═══
-       Rendu Three.js (immersive.js) ; le lien HTML par-dessus porte le clic,
-       le clavier, l'accessibilité et le SEO. Bouton CSS si WebGL indisponible. -->
-  <section data-ambient id="contact" aria-label="Travaillons ensemble">
-    <div class="cta3d-sticky">
-      <div class="cta3d" id="cta3d">
-        <canvas id="cta3d-canvas" aria-hidden="true"></canvas>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="cta3d-link" id="cta3d-link">
-          Travaillons ensemble<span class="sr-only"> : prendre rendez-vous, 30 minutes gratuites (nouvel onglet)</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FIN + FOOTER ═══════════════════════════════════ -->
-  <section id="fin">
-    <div id="fin-sticky">
-      <div class="fin-blocks" aria-hidden="true">
-        <div class="fin-block left" id="fin-left"></div>
-        <div class="fin-block right" id="fin-right"></div>
-      </div>
-      <footer class="fin-content" id="fin-content">
-        {% include footer-content.html %}
-      </footer>
-    </div>
-  </section>
-
-</main>
