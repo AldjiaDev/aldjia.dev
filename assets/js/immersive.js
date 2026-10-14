@@ -653,6 +653,53 @@
   window.addEventListener('resize', updateFooter,  { passive: true });
   updateFooter();
 
+  /* ── Footer : signature géante, ajustée à la largeur, halo qui suit la souris ── */
+  (function initFinSign() {
+    const sign = document.getElementById('fin-sign');
+    const name = document.getElementById('fin-name');
+    const clock = document.getElementById('fin-clock');
+    if (!sign || !name) return;
+
+    // Heure de Lille, mise à jour chaque minute
+    const fmt = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' });
+    const tickClock = () => { if (clock) clock.textContent = fmt.format(new Date()); };
+    tickClock(); setInterval(tickClock, 30000);
+
+    // Le nom occupe toute la largeur (une ligne sur ordinateur)
+    function fit() {
+      if (window.innerWidth <= 768) { name.style.fontSize = '23vw'; return; }
+      name.style.fontSize = '100px';
+      name.style.width = 'max-content';               // mesure la largeur réelle du texte
+      const w = name.getBoundingClientRect().width, avail = sign.clientWidth * 0.94;
+      name.style.width = '';
+      name.style.fontSize = (100 * avail / w) + 'px';
+    }
+    fit(); window.addEventListener('resize', fit);
+    if (document.fonts) document.fonts.ready.then(fit);
+
+    // Halo : suit la souris, sinon dérive doucement (mobile / sans survol)
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let tx = 30, ty = 50, x = 30, y = 50, lastMove = -1e9, visible = false;
+    name.addEventListener('pointermove', e => {
+      const r = name.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width * 100;
+      ty = (e.clientY - r.top) / r.height * 100;
+      lastMove = performance.now();
+    });
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(name);
+    (function loop(t) {
+      requestAnimationFrame(loop);
+      if (!visible) return;
+      if (t - lastMove > 1500 && !reduced) {      // pas de souris : balade lente
+        tx = 50 + Math.sin(t * 0.00045) * 42;
+        ty = 50 + Math.cos(t * 0.0007) * 30;
+      }
+      x += (tx - x) * 0.08; y += (ty - y) * 0.08;
+      name.style.setProperty('--mx', x.toFixed(2) + '%');
+      name.style.setProperty('--my', y.toFixed(2) + '%');
+    })(0);
+  }());
+
   /* ══════════════════════════════════════════════════════════
      SEO WAVE — shader Three.js : lignes glowing réactives
   ══════════════════════════════════════════════════════════ */
