@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Aldjia Boughias — Développeuse web · Art & Culture · Lille"
-email: boughias.aldjia@gmail.com
+email: aldjia.boughias@gmail.com
 
 description: >-
   Développeuse web freelance spécialisée art & culture. Sites et applications Ruby on Rails
@@ -31,7 +31,7 @@ url: "https://aldjia.dev"
 
 author:
   name: "Aldjia Boughias"
-  email: "boughias.aldjia@gmail.com"
+  email: "aldjia.boughias@gmail.com"
 
 timezone: Europe/Paris
 
