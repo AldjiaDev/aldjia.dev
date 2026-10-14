@@ -501,7 +501,10 @@
   function fanCards(els, k, opacity) {
     const n = els.length;
     const e = 1 - Math.pow(1 - k, 3);
-    const gap = Math.min(165, (window.innerWidth - 300) / Math.max(n - 1, 1));
+    const half = (n - 1) / 2, a = (9 * half) * Math.PI / 180;
+    const cw = els[0].offsetWidth || 230, ch = els[0].offsetHeight || 300;
+    const halfBox = cw / 2 * Math.cos(a) + ch * 0.88 * Math.sin(a);
+    const gap = half ? Math.min(165, (window.innerWidth / 2 - 24 - halfBox) / half) : 0;
     els.forEach((el, i) => {
       const spread = i - (n - 1) / 2;
       el.style.setProperty('--tx',  (spread * gap * e) + 'px');
@@ -545,26 +548,34 @@
      Les cartes sont de vrais liens dans le HTML ; ici on ne pilote que
      --tx / --ty / --rot. Sur mobile : grille CSS, pas d'éventail.
   ══════════════════════════════════════════════════════════ */
-  const secSection = document.getElementById('secteurs');
-  const secCards   = [...document.querySelectorAll('#secteurs-stage .sc-item')];
-  const secMobile  = window.matchMedia('(max-width: 768px)');
+  // Générique : toute section [data-fan] dont les .sc-item s'ouvrent en éventail
+  // (« Pour qui » sur l'accueil, « Les offres » sur /tarifs). data-fan-gap = écart max (px).
+  const fanSecs = [...document.querySelectorAll('[data-fan]')].map(sec => ({
+    sec, items: [...sec.querySelectorAll('.sc-item')], maxGap: +sec.dataset.fanGap || 165
+  }));
+  const secMobile = window.matchMedia('(max-width: 768px)');
 
   function updateSecteurs() {
-    if (!secSection || !secCards.length) return;
-    if (secMobile.matches) {
-      secCards.forEach(el => el.style.cssText = '');
-      return;
-    }
-    const p = progress(secSection);
-    const e = 1 - Math.pow(1 - clamp((p - 0.05) / 0.6, 0, 1), 3);
-    const n = secCards.length;
-    const gap = Math.min(165, (window.innerWidth - 300) / (n - 1));
-    secCards.forEach((el, i) => {
-      const spread = i - (n - 1) / 2;
-      el.style.setProperty('--tx',  (spread * gap * e) + 'px');
-      el.style.setProperty('--ty',  (spread * spread * 9 * e + (1 - e) * 60) + 'px');
-      el.style.setProperty('--rot', (spread * 9 * e) + 'deg');
-      el.style.opacity = clamp(p / 0.08, 0, 1);
+    fanSecs.forEach(({ sec, items, maxGap }) => {
+      if (!items.length) return;
+      if (secMobile.matches) { items.forEach(el => el.style.cssText = ''); return; }
+      const p = progress(sec);
+      const e = 1 - Math.pow(1 - clamp((p - 0.05) / 0.6, 0, 1), 3);
+      const n = items.length;
+      // Écart borné pour que les cartes des bords restent dans l'écran (marge pour la rotation)
+      const card = items[0].firstElementChild || items[0];
+      const cw = card.offsetWidth || 230, ch = card.offsetHeight || 300;
+      const half = (n - 1) / 2, a = (9 * half) * Math.PI / 180;             // angle de la carte du bord
+      // Rotation autour d'un point à 88 % de la hauteur : le coin haut part vers l'extérieur
+      const halfBox = cw / 2 * Math.cos(a) + ch * 0.88 * Math.sin(a);
+      const gap = half ? Math.min(maxGap, (window.innerWidth / 2 - 24 - halfBox) / half) : 0;
+      items.forEach((el, i) => {
+        const spread = i - (n - 1) / 2;
+        el.style.setProperty('--tx',  (spread * gap * e) + 'px');
+        el.style.setProperty('--ty',  (spread * spread * 9 * e + (1 - e) * 60) + 'px');
+        el.style.setProperty('--rot', (spread * 9 * e) + 'deg');
+        el.style.opacity = clamp(p / 0.08, 0, 1);
+      });
     });
   }
   window.addEventListener('scroll', updateSecteurs, { passive: true });

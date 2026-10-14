@@ -770,8 +770,8 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 
 /* Pour qui — cartes secteurs en éventail (cf. « Ma palette ») */
 @property --lift { syntax: '<length>'; inherits: false; initial-value: 0px; }
-#secteurs { height: 230vh; position: relative; }
-#secteurs-sticky {
+#secteurs, .fan-section { height: 230vh; position: relative; }
+#secteurs-sticky, .fan-sticky {
   position: sticky; top: 0; height: 100vh; overflow: hidden;
   display: flex; flex-direction: column; align-items: center;
   padding: 6.5rem 2rem 0;
@@ -838,8 +838,12 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 
 /* Mobile : grille 2 colonnes de cartes légèrement inclinées, pas d'éventail */
 @media (max-width: 768px) {
-  #secteurs { height: auto; padding: 6rem 1.25rem; }
-  #secteurs-sticky { position: static; height: auto; padding: 0; overflow: visible; }
+  #secteurs, .fan-section { height: auto; padding: 6rem 1.25rem; }
+  #secteurs-sticky, .fan-sticky { position: static; height: auto; padding: 0; overflow: visible; }
+  /* Offres : une colonne, cartes à hauteur de contenu */
+  .fan-section .secteurs-stage { grid-template-columns: 1fr; gap: 1.5rem; }
+  .fan-section .sc-item:nth-child(even) { transform: rotate(1.5deg); }
+  .sc-card.sc-card--offer { height: auto; padding: 1.75rem 1.5rem; }
   .secteurs-stage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; }
   .sc-item { position: static; opacity: 1; transform: rotate(-1.5deg); }
   .sc-item:nth-child(even) { transform: rotate(1.5deg) translateY(1rem); }
@@ -1019,6 +1023,7 @@ html, body { overflow-x: clip; }
 [data-ambient],
 [data-ambient] #toolkit-sticky,
 [data-ambient] #secteurs-sticky,
+[data-ambient] .fan-sticky,
 [data-ambient] #projets-sticky { background: transparent !important; }
 
 /* ════════════════════════════════════════
@@ -1086,29 +1091,17 @@ html, body { overflow-x: clip; }
   font-size: 0.95rem; line-height: 1.8; color: rgba(237,232,223,0.55); text-wrap: balance;
 }
 
-/* Offres — cartes de couleur avec le même soulèvement que les cartes de l'accueil */
-.offer-grid {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem;
-  margin-top: 3.5rem; align-items: stretch;
+/* Offres — mêmes cartes en éventail que « Pour qui », en plus grand pour le contenu */
+.sc-card.sc-card--offer {
+  width: 270px; height: 390px; padding: 1.5rem 1.4rem 1.4rem;
+  align-items: stretch; justify-content: flex-start; gap: 0.75rem; text-align: left;
 }
-@property --rv { syntax: '<length>'; inherits: false; initial-value: 0px; }
-.offer-card {
-  display: flex; flex-direction: column; gap: 1rem;
-  padding: 2rem 1.6rem 1.75rem; border-radius: 20px;
-  background: var(--bg); color: var(--fg);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 18px 40px rgba(0,0,0,0.35);
-  transform: translateY(calc(var(--lift) + var(--rv)));
-  transition: --lift 0.35s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.35s,
-              --rv 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-}
-/* Apparition : décalage --rv animé, compatible avec le soulèvement --lift */
-.offer-card[data-reveal] { --rv: 32px; transform: translateY(calc(var(--lift) + var(--rv))); }
-.offer-card[data-reveal].revealed { --rv: 0px; }
-.offer-card:hover, .offer-card:focus-within {
-  --lift: -14px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 30px 60px rgba(0,0,0,0.5);
-}
-.offer-card--featured { box-shadow: 0 0 0 1px rgba(243,126,48,0.6), 0 24px 60px rgba(190,50,32,0.45); }
+.sc-card--featured { box-shadow: 0 0 0 1px rgba(243,126,48,0.6), 0 24px 60px rgba(190,50,32,0.45); }
+.sc-card--offer .offer-name { font-size: 1.45rem; margin-top: 0.25rem; }
+.sc-card--offer .offer-price { font-size: 2.3rem; }
+.sc-card--offer .offer-list { gap: 0.4rem; padding-top: 0.8rem; }
+.sc-card--offer .offer-list li { font-size: 0.82rem; }
+.sc-card--offer .offer-cta { margin-top: auto; }
 .offer-tag {
   align-self: flex-start; padding: 0.35rem 0.85rem; border-radius: 2rem; background: var(--badge);
   font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
@@ -1185,13 +1178,14 @@ html, body { overflow-x: clip; }
 .faq-item p { padding: 0 3rem 1.75rem 0; font-size: 0.975rem; line-height: 1.8; color: rgba(237,232,223,0.62); text-wrap: pretty; }
 
 @media (max-width: 992px) {
-  .offer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .page-cols { grid-template-columns: 1fr; gap: 4rem; }
 }
 @media (max-width: 768px) {
   .page-hero { padding: 8rem 1.25rem 4rem; min-height: 80vh; }
   .page-section, .page-quote { padding: 5.5rem 1.25rem; }
-  .offer-grid { grid-template-columns: 1fr; }
   .faq-item summary { font-size: 1.1rem; }
   .faq-item p { padding-right: 0; }
 }
+
+.page-section--tight { padding-top: 2rem; padding-bottom: 4rem; }
+.page-section--tight .page-aside { margin-top: 0; }

@@ -32,67 +32,78 @@ faq_items:
   </div>
 </section>
 
-<!-- ═══ LES 4 OFFRES — cartes de couleur, comme sur l'accueil ═══ -->
-<section data-ambient id="offres" class="page-section" aria-labelledby="offres-titre">
-  <div class="page-inner">
-    <p class="about-label" data-reveal>Les offres</p>
-    <h2 class="page-h2" id="offres-titre" data-reveal data-reveal-delay="0.1">Repères <em>de prix.</em></h2>
-
-    <ul class="offer-grid">
-      <li class="offer-card" id="audit" style="--bg:#EDE8DF;--fg:#1A1210;--soft:rgba(26,18,16,0.62);--badge:rgba(26,18,16,0.08)" data-reveal data-reveal-delay="0.05">
-        <span class="offer-tag">Commencer ici</span>
-        <h3 class="offer-name">Audit web</h3>
-        <p class="offer-price">250 €<span>HT · à partir de</span></p>
-        <ul class="offer-list">
+<!-- ═══ LES 4 OFFRES — cartes en éventail, comme « Pour qui » sur l'accueil ═══ -->
+<section data-ambient data-fan data-fan-gap="255" id="offres" class="fan-section" aria-labelledby="offres-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Les offres</p>
+      <h2 class="secteurs-title" id="offres-titre">Repères <em>de prix.</em></h2>
+    </div>
+    <ul class="secteurs-stage">
+        <li class="sc-item" id="audit">
+          <div class="sc-card sc-card--offer" style="--bg:#EDE8DF;--fg:#1A1210;--soft:rgba(26,18,16,0.62);--badge:rgba(26,18,16,0.08)">
+          <span class="offer-tag">Commencer ici</span>
+          <h3 class="offer-name">Audit web</h3>
+          <p class="offer-price">250 €<span>HT · à partir de</span></p>
+          <ul class="offer-list">
           <li>Analyse UX &amp; parcours utilisateur</li>
           <li>Audit SEO on-page</li>
           <li>Performance &amp; accessibilité</li>
           <li>Recommandations priorisées</li>
           <li>Appel de restitution inclus</li>
-        </ul>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Commander l'audit →</a>
-      </li>
-      <li class="offer-card" style="--bg:#F37E30;--fg:#1A1210;--soft:rgba(26,18,16,0.7);--badge:rgba(26,18,16,0.1)" data-reveal data-reveal-delay="0.12">
-        <span class="offer-tag">Artistes · galeristes · indépendants</span>
-        <h3 class="offer-name">Site vitrine</h3>
-        <p class="offer-price">1 500 €<span>HT · à partir de</span></p>
-        <ul class="offer-list">
+          </ul>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Commander l'audit →</a>
+          </div>
+        </li>
+        <li class="sc-item">
+          <div class="sc-card sc-card--offer" style="--bg:#F37E30;--fg:#1A1210;--soft:rgba(26,18,16,0.7);--badge:rgba(26,18,16,0.1)">
+          <span class="offer-tag">Artistes · galeristes · indépendants</span>
+          <h3 class="offer-name">Site vitrine</h3>
+          <p class="offer-price">1 500 €<span>HT · à partir de</span></p>
+          <ul class="offer-list">
           <li>Design soigné et identitaire</li>
           <li>Portfolio, services, contact</li>
           <li>SEO on-page &amp; performance</li>
           <li>En ligne en 3 à 5 semaines</li>
-        </ul>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
-      </li>
-      <li class="offer-card offer-card--featured" style="--bg:#BE3220;--fg:#EDE8DF;--soft:rgba(237,232,223,0.75);--badge:rgba(237,232,223,0.16)" data-reveal data-reveal-delay="0.19">
-        <span class="offer-tag">Le plus demandé</span>
-        <h3 class="offer-name">Site éditorial</h3>
-        <p class="offer-price">3 500 €<span>HT · à partir de</span></p>
-        <ul class="offer-list">
+          </ul>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
+          </div>
+        </li>
+        <li class="sc-item">
+          <div class="sc-card sc-card--offer sc-card--featured" style="--bg:#BE3220;--fg:#EDE8DF;--soft:rgba(237,232,223,0.75);--badge:rgba(237,232,223,0.16)">
+          <span class="offer-tag">Le plus demandé</span>
+          <h3 class="offer-name">Site éditorial</h3>
+          <p class="offer-price">3 500 €<span>HT · à partir de</span></p>
+          <ul class="offer-list">
           <li>Contenu que vous gérez seul</li>
           <li>Agenda, catalogue, actualités</li>
           <li>SEO on-page &amp; blog</li>
           <li>Évolutions facilitées</li>
-        </ul>
-        <p class="offer-for">Pour galeries, institutions, maisons de ventes</p>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
-      </li>
-      <li class="offer-card" style="--bg:#7845D0;--fg:#fff;--soft:rgba(255,255,255,0.75);--badge:rgba(255,255,255,0.16)" data-reveal data-reveal-delay="0.26">
-        <span class="offer-tag">Maisons de ventes · institutions</span>
-        <h3 class="offer-name">Application métier</h3>
-        <p class="offer-price">6 000 €<span>HT · à partir de</span></p>
-        <ul class="offer-list">
+          </ul>
+          <p class="offer-for">Pour galeries, institutions, maisons de ventes</p>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
+          </div>
+        </li>
+        <li class="sc-item">
+          <div class="sc-card sc-card--offer" style="--bg:#7845D0;--fg:#fff;--soft:rgba(255,255,255,0.75);--badge:rgba(255,255,255,0.16)">
+          <span class="offer-tag">Maisons de ventes · institutions</span>
+          <h3 class="offer-name">Application métier</h3>
+          <p class="offer-price">6 000 €<span>HT · à partir de</span></p>
+          <ul class="offer-list">
           <li>Back-office sur mesure</li>
           <li>Catalogue interactif, estimation</li>
           <li>SEO on-page &amp; données structurées</li>
           <li>Architecture solide et évolutive</li>
-        </ul>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
-      </li>
+          </ul>
+          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-cta">Prendre rendez-vous →</a>
+          </div>
+        </li>
     </ul>
-
-    <p class="page-aside" data-reveal>Les tarifs affichés sont des points de départ. Le périmètre exact, et donc le prix final, est toujours défini ensemble lors du premier échange, sans engagement. L'objectif n'est pas de tout faire rentrer dans une case, mais de trouver la solution juste pour votre projet et votre budget.</p>
   </div>
+</section>
+
+<section data-ambient class="page-section page-section--tight" aria-label="À propos des tarifs">
+  <p class="page-aside" data-reveal>Les tarifs affichés sont des points de départ. Le périmètre exact, et donc le prix final, est toujours défini ensemble lors du premier échange, sans engagement. L'objectif n'est pas de tout faire rentrer dans une case, mais de trouver la solution juste pour votre projet et votre budget.</p>
 </section>
 
 <!-- ═══ TÉMOIGNAGE — respiration crème, comme sur l'accueil ═══ -->
