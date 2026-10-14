@@ -479,8 +479,14 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    CONSEILS — Cards éditoriales
 ════════════════════════════════════════ */
-#conseils { background: #0E0C0A; padding: 12rem 2rem; }
-.conseils-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+/* La section reste à l'écran le temps que les lettres se rejoignent (cf. immersive.js) */
+#conseils { background: #0E0C0A; height: 220vh; position: relative; }
+.conseils-sticky {
+  position: sticky; top: 0; height: 100vh; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 2rem; text-align: center;
+}
+.cl { display: inline-block; will-change: transform, opacity; }
 .conseils-title {
   font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 7.5vw, 7rem);
   font-weight: 400; color: #EDE8DF; letter-spacing: -0.03em; line-height: 1.05;
@@ -920,7 +926,8 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   .testi-foot { margin-top: 4rem; }
   .testi + .testi { margin-top: 4.5rem; }
   .testi-source { margin-left: 0; }
-  #conseils { padding: 8rem 1.25rem; }
+  #conseils { height: 200vh; }
+  .conseils-sticky { padding: 0 1.25rem; }
   .conseils-arrow { font-size: 0.7em; }
 }
 

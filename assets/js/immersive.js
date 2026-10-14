@@ -872,11 +872,15 @@
             const word = document.createElement('span');
             word.className = 'cw-word';
             [...part].forEach(c => {
+              // .cl : enveloppe qui vole vers sa place (scroll) ; .cw : la vague à l'intérieur
+              const holder = document.createElement('span');
+              holder.className = 'cl';
               const l = document.createElement('span');
               l.className = 'cw';
               l.style.animationDelay = (i++ * 0.06) + 's';
               l.textContent = c;
-              word.appendChild(l);
+              holder.appendChild(l);
+              word.appendChild(holder);
             });
             frag.appendChild(word);
           });
@@ -888,6 +892,35 @@
     };
     walk(root);
   });
+
+  /* ── Conseils — les lettres éparpillées se rejoignent au scroll pour former la phrase ── */
+  const consSection = document.getElementById('conseils');
+  const consLetters = consSection ? [...consSection.querySelectorAll('.cl')] : [];
+  const consReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Position de départ pseudo-aléatoire mais stable (même dessin à chaque visite)
+  const rnd = (i, n) => { const x = Math.sin((i + 1) * n * 12.9898) * 43758.5453; return x - Math.floor(x); };
+  consLetters.forEach((l, i) => {
+    l._sx = (rnd(i, 1) - 0.5) * 90;   // vw
+    l._sy = (rnd(i, 2) - 0.5) * 80;   // vh
+    l._sr = (rnd(i, 3) - 0.5) * 240;  // deg
+    l._ss = 0.4 + rnd(i, 4) * 1.8;    // échelle
+    l._d  = rnd(i, 5) * 0.3;          // décalage d'arrivée
+  });
+  function updateConseils() {
+    if (!consLetters.length) return;
+    const p = consReduced ? 1 : progress(consSection);
+    consLetters.forEach(l => {
+      const k = clamp((p - 0.05 - l._d * 0.5) / 0.5, 0, 1);
+      const q = Math.pow(1 - k, 3);                 // 1 = éparpillée, 0 = en place (ease-out)
+      l.style.transform = q < 0.001 ? '' :
+        `translate(${l._sx * q}vw, ${l._sy * q}vh) rotate(${l._sr * q}deg) scale(${1 + (l._ss - 1) * q})`;
+      l.style.opacity = 0.12 + 0.88 * (1 - q);
+      l.style.filter  = q < 0.01 ? '' : `blur(${q * 6}px)`;
+    });
+    consSection.classList.toggle('is-formed', p > 0.72);
+  }
+  window.addEventListener('scroll', updateConseils, { passive: true });
+  updateConseils();
 
   // Nav claire (texte sombre) seulement quand la section sous la nav a un fond clair
   function bgLuminance(el) {
