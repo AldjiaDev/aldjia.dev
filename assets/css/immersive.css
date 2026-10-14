@@ -179,8 +179,10 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   padding: 2.5rem 0;
 }
 .ticker-track {
-  display: block; white-space: nowrap; line-height: 1;
-  animation: ticker-scroll 14s linear infinite;
+  /* Largeur = contenu (4 copies) : -50 % = exactement 2 copies → boucle sans saut.
+     Durée recalculée en JS selon la longueur réelle du texte. */
+  display: inline-block; width: max-content; white-space: nowrap; line-height: 1;
+  animation: ticker-scroll 60s linear infinite;
   will-change: transform;
 }
 .ticker-text {

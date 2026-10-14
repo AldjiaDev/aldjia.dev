@@ -350,6 +350,16 @@
     sep.textContent = ' · ';
     track.appendChild(sep);
   }
+  // Vitesse constante (~260 px/s) quelle que soit la taille d'écran :
+  // la piste défile de la moitié de sa largeur (2 copies de la phrase) par cycle
+  function tickerSpeed() {
+    if (!track) return;
+    const half = track.scrollWidth / 2;
+    track.style.animationDuration = Math.max(20, half / 260) + 's';
+  }
+  tickerSpeed();
+  window.addEventListener('resize', tickerSpeed);
+  if (document.fonts) document.fonts.ready.then(tickerSpeed);
 
   /* ══════════════════════════════════════════════════════════
      INTERSECTION OBSERVER — mots narratifs
