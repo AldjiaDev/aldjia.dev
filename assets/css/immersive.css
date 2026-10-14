@@ -1466,3 +1466,14 @@ html, body { overflow-x: clip; }
   .pager-card, .pager-card--next { min-height: 180px; transform: translateY(var(--lift)) rotate(-1deg); }
   .pager-card--next { transform: translateY(var(--lift)) rotate(1deg); }
 }
+
+/* Chiffres « Qui je suis » : 5 repères */
+#about { max-width: 1100px; }
+.abt-nums { gap: 2.5rem; flex-wrap: wrap; }
+.abt-num { font-size: clamp(2.6rem, 4.6vw, 4.6rem); font-variant-numeric: tabular-nums; }
+.abt-num-l { max-width: 14ch; margin-left: auto; margin-right: auto; }
+@media (max-width: 900px) {
+  .abt-nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .abt-vbar { display: none; }
+  .abt-num-item:last-child { grid-column: 1 / -1; }
+}
