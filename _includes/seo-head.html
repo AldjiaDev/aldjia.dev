@@ -1,0 +1,61 @@
+<title>{% if page.title %}{{ page.title }} | {% endif %}Aldjia Dev</title>
+<meta name="author" content="Aldjia Boughias" />
+<meta name="robots" content="{{ page.robots | default: 'index,follow' }}">
+<meta name="google-site-verification" content="YONtUfQTjoo8u2TkqnItrM2COezKDOOnUvM9g-V-t1k" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" />
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" />
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" />
+
+{% seo title=false %}
+
+<!-- Open Graph image — surcharge explicite pour largeur/hauteur/alt -->
+{% if page.og_image %}
+  <meta property="og:image" content="{{ page.og_image | prepend: site.url }}">
+{% elsif page.image %}
+  <meta property="og:image" content="{{ page.image | prepend: site.url }}">
+{% else %}
+  <meta property="og:image" content="{{ '/assets/images/og-default.jpg' | prepend: site.url }}">
+{% endif %}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.title | default: site.title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+{% if page.og_image %}
+  <meta name="twitter:image" content="{{ page.og_image | prepend: site.url }}">
+{% elsif page.image %}
+  <meta name="twitter:image" content="{{ page.image | prepend: site.url }}">
+{% else %}
+  <meta name="twitter:image" content="{{ '/assets/images/og-default.jpg' | prepend: site.url }}">
+{% endif %}
+
+{% if page.url == "/" %}
+  {% include jsonld-person.html %}
+  {% include jsonld-localbusiness.html %}
+{% elsif page.url == "/about/" %}
+  {% include jsonld-person.html %}
+  {% include jsonld-breadcrumb.html %}
+{% elsif page.url contains "/realisations/" and page.url != "/realisations/" %}
+  {% include jsonld-breadcrumb.html parent="Réalisations" parent_url="/realisations/" %}
+{% else %}
+  {% include jsonld-breadcrumb.html %}
+{% endif %}
+
+{% if page.schema_service_name %}
+  {% include jsonld-service.html %}
+{% endif %}
+
+{% if page.faq_items %}
+  {% include jsonld-faqpage.html %}
+{% endif %}
+
+{% if page.layout == "post" %}
+  {% include jsonld-post.html %}
+{% endif %}
+
+{% if page.title == "Dev Zone" or page.title == "Art au féminin" %}
+  {% include jsonld-podcast.html %}
+{% endif %}

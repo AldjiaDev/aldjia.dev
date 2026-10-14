@@ -1,764 +1,456 @@
 ---
-layout: default
-title: "Aldjia Boughias — Développeuse web · Art & Culture · Lille"
-description: "Développeuse web freelance à Lille, spécialisée art & culture. Sites sur mesure pour galeries, artistes, maisons de ventes et institutions culturelles. SEO inclus."
-last_modified_at: 2026-07-28
+layout: immersive
+title: "Développeuse web Art & Culture à Lille"
+description: "Développeuse web freelance à Lille, fondatrice d'Art au Féminin. Sites sur mesure et SEO pour galeries d'art, artistes, maisons de ventes et institutions culturelles."
+last_modified_at: 2026-10-14
+redirect_from:
+  - /demo-threejs.html
+  - /demo-threejs/
 faq_items:
+  - q: "Combien coûte un site web pour une galerie ou un artiste ?"
+    a: "Un site vitrine démarre à 1 500 € HT, un site éditorial (galerie, institution) à 3 500 € HT, une application métier (maison de ventes) à 6 000 € HT. Un audit de votre site existant démarre à 250 € HT. Le périmètre exact est défini ensemble, sans engagement."
   - q: "Est-ce que je pourrai gérer mon site seul après la livraison ?"
-    a: "Oui. Je conçois les sites pour que vous puissiez mettre à jour vos contenus sans toucher au code. Une prise en main est incluse à la livraison."
+    a: "Oui. Je conçois les sites pour que vous puissiez mettre à jour vos expositions, œuvres et actualités sans toucher au code. Une prise en main est incluse à la livraison."
   - q: "Combien de temps dure un projet ?"
     a: "Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange."
-  - q: "Travaillez-vous à distance ?"
-    a: "Oui, 100 % en remote. Mes clients sont à Lille, Paris, Montréal et partout en France. Tout se fait en visio, avec des points réguliers."
-  - q: "Quelle est la différence entre un audit et une refonte ?"
-    a: "L'audit analyse votre site existant et vous livre un rapport d'action sans engagement. La refonte, c'est l'étape suivante si vous souhaitez implémenter les recommandations."
-  - q: "Que se passe-t-il après la livraison ?"
-    a: "Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins."
+  - q: "Le référencement (SEO) est-il inclus ?"
+    a: "Oui, dans chaque projet : structure des pages, balises, données structurées Schema.org, performance et Core Web Vitals. L'objectif est que vos expositions, artistes et ventes apparaissent sur Google."
+  - q: "Travaillez-vous uniquement à Lille ?"
+    a: "Je suis basée à Lille et je travaille 100 % à distance : Lille, Hauts-de-France, Paris, Bruxelles, Montréal et partout en France. Tout se fait en visio, avec des points réguliers."
+  - q: "Que se passe-t-il après la mise en ligne ?"
+    a: "30 jours de support sont inclus. Ensuite, deux options : un forfait mensuel (350 € HT) pour l'hébergement, le suivi et les évolutions, ou un pack d'heures pour des besoins ponctuels."
 ---
 
-{% include jsonld-localbusiness.html %}
-{% include jsonld-person.html %}
-{% include jsonld-faqpage.html %}
+<!-- Libellés fixes (apparaissent pendant la zone de scroll) -->
+<div class="role-label role-dev" id="roleDev" aria-hidden="true">développeuse<br>web</div>
+<div class="role-label role-art" id="roleArt" aria-hidden="true">Fondatrice<br>& dev</div>
 
-<div class="home">
+<!-- Scène Three.js (décorative) -->
+<canvas id="canvas" aria-hidden="true"></canvas>
 
-  <!-- =====================
-       HERO
-       ===================== -->
-  <section class="hero-section" aria-label="Introduction">
-    <div class="container">
-
-      <p class="section-eyebrow">Développement web · Art &amp; Culture · Lille</p>
-
-      <h1 class="hero-title">
-        Le web au service<br>
-        de l'art &amp; de la culture.
-      </h1>
-
-      <div class="hero-divider"></div>
-
-      <div class="hero-grid">
-
-        <div class="hero-grid__content">
-
-          <p class="hero-subtitle">
-            Galeriste, artiste, commissaire-priseur : votre site n'est pas un projet web
-            comme les autres. Je suis développeuse web et fondatrice d'un média
-            culturel depuis 2019 — je connais votre univers avant d'écrire
-            la première ligne de code.
-          </p>
-
-          <figure class="hero-quote">
-            <blockquote>
-              "Sa passion pour l'art et la culture sont un vrai atout pour travailler sur des projets qui s'y rapportent."
-            </blockquote>
-            <figcaption>Héloïse de Baudus, commissaire-priseure &nbsp;★★★★★ Google</figcaption>
-          </figure>
-
-          <div class="hero-stats mb-4">
-            <div class="stat">
-              <span class="stat__num">★★★★★</span>
-              <span class="stat__label">Avis Google</span>
-            </div>
-            <div class="stat-sep" aria-hidden="true"></div>
-            <div class="stat">
-              <span class="stat__num">2019</span>
-              <span class="stat__label">Fondatrice Art au Féminin</span>
-            </div>
-            <div class="stat-sep" aria-hidden="true"></div>
-            <div class="stat">
-              <span class="stat__num">SEO</span>
-              <span class="stat__label">Inclus par défaut</span>
-            </div>
-          </div>
-
-          <div class="hero-ctas">
-            <a href="{{ site.cal_url }}"
-               target="_blank"
-               rel="noopener"
-               class="btn btn-primary btn-lg">
-              Discutons de votre projet
-            </a>
-            <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
-              Voir les réalisations
-            </a>
-          </div>
-
-          <p class="hero-note">
-            30 min · sans engagement · réponse sous 48h<br>
-            <a href="{{ '/processus' | relative_url }}">Mon processus de travail →</a>
-          </p>
-
-        </div>
-
-        <div class="hero-grid__portrait">
-          <div class="hero-portrait-frame" aria-hidden="true"></div>
-          <picture>
-            <source srcset="{{ '/assets/images/portrait.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
-                 alt="Aldjia Boughias — développeuse web spécialisée art et culture, Lille"
-                 width="600" height="800"
-                 loading="eager"
-                 fetchpriority="high"
-                 class="hero-portrait-img">
-          </picture>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================
-       TICKER
-       ===================== -->
-  <div class="ticker" aria-hidden="true" role="presentation">
-    <div class="ticker__inner">
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
-      <span>Galeries d'art &nbsp;·&nbsp; Artistes &nbsp;·&nbsp; Sculpteurs &nbsp;·&nbsp; Maisons de ventes &nbsp;·&nbsp; Institutions culturelles &nbsp;·&nbsp; Photographes &nbsp;·&nbsp; </span>
-    </div>
+<!-- Nav -->
+<nav id="main-nav" aria-label="Navigation principale">
+  <a href="{{ '/' | relative_url }}" class="nav-home" aria-label="Aldjia Boughias — Accueil">
+    <canvas id="nav-ab-canvas" aria-hidden="true"></canvas>
+  </a>
+  <div class="nav-pill">
+    <ul class="nav-links">
+      <li><a href="#parcours">parcours</a></li>
+      <li><a href="#projets">réalisations</a></li>
+      <li><a href="#tarifs">tarifs</a></li>
+      <li class="nav-contact"><a href="#contact">contact</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- =====================
-       RÉALISATION VEDETTE
-       ===================== -->
-  <section class="section" aria-labelledby="realisation-vedette">
-    <div class="container">
+<main class="page" id="main-content">
 
-      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
-        <div>
-          <p class="section-eyebrow">Réalisation récente</p>
-          <h2 id="realisation-vedette" class="section-title mb-0">Un site pour une maison de ventes aux enchères</h2>
-        </div>
-        <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary d-none d-md-inline-flex">
-          Toutes les réalisations
-        </a>
-      </div>
-
-      <div class="featured-project" style="background: var(--ink); border-radius: var(--radius);">
-        <div class="row g-0 align-items-stretch">
-
-          <div class="col-lg-7 p-4 p-lg-5">
-            <p class="project-label mb-3">Commissaires-priseurs · Mirabili Enchères</p>
-            <h3>Mirabili Enchères —<br>cabinet de curiosités<br>en ligne</h3>
-            <p class="mt-3 mb-4">
-              Application web Ruby on Rails pour une maison de ventes aux enchères.
-              Catalogue en ligne, formulaire d'estimation structuré, agenda des vacations,
-              SEO travaillé lot par lot pour que chaque vente existe sur Google avant qu'elle ait lieu.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <span class="project-tag">Ruby on Rails</span>
-              <span class="project-tag">SEO</span>
-              <span class="project-tag">Commissaires-priseurs</span>
-              <span class="project-tag">Back-office</span>
-            </div>
-            <a href="/realisations/mirabili-encheres/"
-               class="btn btn-bordeaux"
-               style="background: var(--bordeaux); border-color: var(--bordeaux); color: #fff;">
-              Voir le cas client
-            </a>
-          </div>
-
-          <div class="col-lg-5 d-none d-lg-flex">
-            <div style="border-left: 1px solid rgba(247,244,239,.08); flex: 1; border-radius: 0 var(--radius) var(--radius) 0; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-              <img src="{{ '/assets/images/mirabili.jpg' | relative_url }}"
-                   alt="Mirabili Enchères — site réalisé par Aldjia Boughias"
-                   width="1866" height="1507"
-                   loading="lazy"
-                   style="width: 100%; border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.5); display: block;">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+  <!-- ═══ S1 — HERO ═══════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="hero-meta" id="hero-meta-el">
+      <h1 class="hero-tagline" id="hero-title"><span class="sr-only">Aldjia Boughias, </span>Développeuse web · Art &amp; Culture · Lille</h1>
+      <p class="sr-only">Sites web sur mesure et référencement pour les galeries d'art, les artistes, les maisons de ventes aux enchères et les institutions culturelles.</p>
+      <a href="#contact" class="hero-cta">Démarrer un projet →</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- =====================
-       SECTEURS — format catalogue
-       ===================== -->
-  <section class="section section--alt" aria-labelledby="secteurs">
-    <div class="container">
-
-      <div class="row align-items-end mb-5 g-4">
-        <div class="col-lg-5">
-          <p class="section-eyebrow">Secteurs</p>
-          <h2 id="secteurs" class="section-title mb-0">Avec qui je travaille</h2>
-        </div>
-        <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
-          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-            Professionnels du monde de l'art et de la culture qui veulent une présence en ligne à la hauteur de leur travail.
-          </p>
-        </div>
-      </div>
-
-      <nav class="sector-list" aria-label="Secteurs">
-
-        <a href="/secteurs/galeries-art/" class="sector-list-item">
-          <span class="sector-list-num">01</span>
-          <div class="sector-list-body">
-            <h3 class="sector-list-name">Galeries d'art</h3>
-            <p class="sector-list-desc">Votre site ne reflète pas la qualité de vos expositions ? Je crée un espace en ligne qui met vos artistes et œuvres en valeur.</p>
-          </div>
-          <span class="sector-list-arrow">→</span>
-        </a>
-
-        <a href="/secteurs/artistes/" class="sector-list-item">
-          <span class="sector-list-num">02</span>
-          <div class="sector-list-body">
-            <h3 class="sector-list-name">Artistes</h3>
-            <p class="sector-list-desc">Votre travail mérite mieux qu'un PDF envoyé par email. Un portfolio en ligne qui parle à vos collectionneurs et institutions.</p>
-          </div>
-          <span class="sector-list-arrow">→</span>
-        </a>
-
-        <a href="/secteurs/maisons-de-ventes/" class="sector-list-item">
-          <span class="sector-list-num">03</span>
-          <div class="sector-list-body">
-            <h3 class="sector-list-name">Maisons de ventes</h3>
-            <p class="sector-list-desc">Vos lots méritent un catalogue en ligne digne de ce nom. Estimations, vacations, back-office — je connais le vocabulaire.</p>
-          </div>
-          <span class="sector-list-arrow">→</span>
-        </a>
-
-        <a href="/secteurs/institutions-culturelles/" class="sector-list-item">
-          <span class="sector-list-num">04</span>
-          <div class="sector-list-body">
-            <h3 class="sector-list-name">Institutions &amp; créatifs</h3>
-            <p class="sector-list-desc">Musées, éditeurs, photographes — votre mission culturelle a besoin d'un site qui lui ressemble et qui se trouve sur Google.</p>
-          </div>
-          <span class="sector-list-arrow">→</span>
-        </a>
-
-      </nav>
-
-    </div>
+  <!-- ═══ S2 — THREE.JS SCROLL ZONE ══════════════════════ -->
+  <section id="scroll-zone" aria-hidden="true">
+    <div class="sticky-inner"></div>
   </section>
 
-  <!-- =====================
-       POURQUOI MOI
-       ===================== -->
-  <section class="section" aria-labelledby="differenciateur">
-    <div class="container">
+  <!-- ═══ S3 — TICKER ══════════════════════════════════════ -->
+  <section id="ticker-section" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track"></div>
+  </section>
 
-      <div class="row align-items-end mb-5 g-4">
-        <div class="col-lg-5">
-          <p class="section-eyebrow">Une double expertise</p>
-          <h2 id="differenciateur" class="section-title mb-0">
-            Beaux-Arts<br>
-            <em>+ Développement web</em>
-          </h2>
-        </div>
-        <div class="col-lg-6 offset-lg-1">
-          <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-            Je ne traduis pas votre vision en code — je la comprends parce que j'y suis.
-            Fondatrice d'un média culturel depuis 2019, je vis dans le monde de l'art
-            avant d'en construire les sites.
-          </p>
-        </div>
-      </div>
+  <!-- ═══ CHAPITRE 1 — L'histoire, mot à mot ═════════════ -->
+  <section class="word-section" id="parcours">
+    <p class="word-reveal" data-word>Fondatrice</p>
+  </section>
+  <section class="word-section phrase">
+    <p class="word-reveal" data-word>d'ART AU FÉMININ.</p>
+  </section>
+  <section class="word-section">
+    <p class="word-reveal" data-word>Aussi</p>
+  </section>
+  <section class="word-section phrase">
+    <p class="word-reveal" data-word>développeuse.</p>
+  </section>
 
-      <div class="row g-5 align-items-stretch">
-
-        <div class="col-lg-6">
-          <a href="{{ '/realisations/art-au-feminin/' | relative_url }}"
-             class="aaf-showcase"
-             aria-label="Voir la réalisation Art au Féminin">
-            <div class="aaf-showcase__img">
-              <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
-                   alt="Art au Féminin — plateforme culturelle fondée par Aldjia Boughias"
-                   width="1000" height="1000"
-                   loading="lazy">
-            </div>
-            <div class="aaf-showcase__body">
-              <p class="section-eyebrow" style="font-size: .6rem; margin-bottom: .5rem;">Fondatrice · Depuis 2019</p>
-              <h3 class="aaf-showcase__title">Art au Féminin</h3>
-              <p class="aaf-showcase__desc">
-                Média culturel indépendant dédié aux artistes femmes dans l'histoire de l'art.
-                Podcast, articles de fond, sélections de livres — fondé, conçu, développé et animé par mes soins.
-              </p>
-              <span class="aaf-showcase__link">Voir la réalisation →</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center">
-          <div class="differenciateur-list">
-
-            <div class="differenciateur-item">
-              <h3>Vous n'avez pas à tout expliquer</h3>
-              <p>Vernissage, vacation, catalogue raisonné — ce vocabulaire est le mien. Nos échanges vont droit au but, sans pédagogie dans les deux sens.</p>
-            </div>
-
-            <div class="differenciateur-item">
-              <h3>Beau et rapide — sans choisir</h3>
-              <p>Typographie soignée, hiérarchie visuelle maîtrisée, Core Web Vitals au vert. Vous n'avez pas à sacrifier l'esthétique pour la performance.</p>
-            </div>
-
-            <div class="differenciateur-item">
-              <h3>Zéro mauvaise surprise</h3>
-              <p>10 ans en relation client. Délais tenus, devis respecté, communication directe. Ce qui est dit est fait.</p>
-            </div>
-
-          </div>
-          <div class="mt-5">
-            <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
-              En savoir plus sur mon parcours
-            </a>
-          </div>
-        </div>
-
+  <section id="gradient-section">
+    <div id="gradient-sticky">
+      <div class="gradient-bg"></div>
+      <div class="gradient-noise"></div>
+      <div class="gradient-text-wrap">
+        <div class="gradient-text-outline" id="grad-outline" aria-hidden="true">les deux.</div>
+        <p class="gradient-text-fill" id="grad-fill">les deux.</p>
       </div>
     </div>
   </section>
 
-  <!-- =====================
-       PORTFOLIO
-       ===================== -->
-  <section class="section section--alt" aria-labelledby="autres-projets">
-    <div class="container">
-
-      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
-        <div>
-          <p class="section-eyebrow">Portfolio</p>
-          <h2 id="autres-projets" class="section-title mb-0">D'autres projets livrés</h2>
-        </div>
-        <a href="{{ '/realisations' | relative_url }}" class="d-none d-lg-inline" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
-          Voir toutes les réalisations →
-        </a>
+  <section id="split-section">
+    <div id="split-sticky">
+      <div class="split-blocks" id="split-blocks" aria-hidden="true">
+        <div class="split-block left"  id="split-left"></div>
+        <div class="split-block right" id="split-right"></div>
       </div>
-
-      <div class="portfolio-grid-home">
-
-        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" class="portfolio-grid-item">
-          <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}"
-               alt="Site web Bérénice Auger — artiste multidisciplinaire"
-               loading="lazy"
-               class="portfolio-grid-img">
-          <div class="portfolio-grid-overlay">
-            <p class="portfolio-grid-tag">Artiste · Ruby on Rails · 2026</p>
-            <h3 class="portfolio-grid-name">Bérénice Auger</h3>
-          </div>
-        </a>
-
-        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="portfolio-grid-item">
-          <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}"
-               alt="Art au Féminin — plateforme éditoriale culturelle"
-               loading="lazy"
-               class="portfolio-grid-img">
-          <div class="portfolio-grid-overlay">
-            <p class="portfolio-grid-tag">Média culturel · Gatsby · 2021</p>
-            <h3 class="portfolio-grid-name">Art au Féminin</h3>
-          </div>
-        </a>
-
-        <a href="{{ '/realisations/readnest/' | relative_url }}" class="portfolio-grid-item">
-          <img src="{{ '/assets/images/readnest.jpg' | relative_url }}"
-               alt="Readnest — plateforme communautaire Ruby on Rails"
-               loading="lazy"
-               class="portfolio-grid-img">
-          <div class="portfolio-grid-overlay">
-            <p class="portfolio-grid-tag">Communauté · Ruby on Rails · 2025</p>
-            <h3 class="portfolio-grid-name">Readnest</h3>
-          </div>
-        </a>
-
-      </div>
-
+      <p class="split-bridge-text" id="split-text">je les réunis.</p>
     </div>
   </section>
 
-  <!-- =====================
-       TÉMOIGNAGES
-       ===================== -->
-  <section class="section" aria-labelledby="temoignages">
-    <div class="container">
-
-      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
-        <div>
-          <p class="section-eyebrow">Témoignages</p>
-          <h2 id="temoignages" class="section-title mb-0">Ce qu'ils en disent</h2>
-        </div>
-        <p class="muted mb-0 d-none d-lg-block" style="font-size: .88rem;">
-          <a href="https://www.google.com/search?q=Aldjia+Boughias"
-             target="_blank" rel="noopener"
-             class="review-source">
-            ★ Voir sur Google
-          </a>
-        </p>
-      </div>
-
-      <div class="temoignage-carousel-wrap">
-        <div id="carouselTemoignages" class="carousel slide" data-bs-ride="false">
-
-          <div class="carousel-inner" aria-live="polite" aria-atomic="true">
-            {% for t in site.data.temoignages %}
-            <div class="carousel-item{% if forloop.first %} active{% endif %}">
-              <div class="temoignage-card mx-auto">
-                <div class="temoignage-stars mb-3" aria-label="Note : {{ t.note }} étoile{% if t.note > 1 %}s{% endif %} sur 5" role="img">
-                  {% for i in (1..t.note) %}★{% endfor %}
-                </div>
-                <blockquote class="temoignage-texte mb-0">{{ t.texte }}</blockquote>
-                <div class="temoignage-auteur">
-                  <p class="mb-0" style="font-weight: 600; font-size: .9rem; color: var(--ink);">{{ t.nom }}</p>
-                  <p class="mb-0 muted" style="font-size: .8rem;">{{ t.role }}</p>
-                  {% if t.source == "Google" %}
-                  <p class="mb-0 mt-2">
-                    <a href="https://www.google.com/search?q=Aldjia+Boughias"
-                       target="_blank" rel="noopener"
-                       class="review-source">★ Vérifié sur Google</a>
-                  </p>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-
-          <div class="temoignage-controls mt-4 d-flex align-items-center justify-content-center gap-4">
-            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev" aria-label="Avis précédent">←</button>
-            <div class="carousel-indicators-custom">
-              {% for t in site.data.temoignages %}
-              <button type="button"
-                data-bs-target="#carouselTemoignages"
-                data-bs-slide-to="{{ forloop.index0 }}"
-                {% if forloop.first %}class="active" aria-current="true"{% endif %}
-                aria-label="Avis {{ forloop.index }}">
-              </button>
-              {% endfor %}
-            </div>
-            <button class="temoignage-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next" aria-label="Avis suivant">→</button>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
+  <section id="aujourdhui">
+    <p class="auj-word" id="auj-word">Aujourd'hui</p>
   </section>
 
-  <!-- =====================
-       TARIFS
-       ===================== -->
-  <section id="offres" class="section section--alt" aria-labelledby="tarifs">
-    <div class="container">
-
-      <div class="text-center mb-5 maxw mx-auto">
-        <p class="section-eyebrow" style="justify-content: center;">Tarifs</p>
-        <h2 id="tarifs" class="section-title mb-3">Repères de prix</h2>
-        <p class="muted">Des repères pour vous projeter. Le périmètre exact est défini ensemble lors de notre premier échange — sans engagement.</p>
-      </div>
-
-      <div class="offer-cards-grid">
-
-        <div class="offer-card offer-card--featured" id="audit">
-          <div class="offer-card__header">
-            <span class="offer-card__tag">Commencer ici</span>
-            <h3 class="offer-card__name">Audit web</h3>
-          </div>
-          <div class="offer-card__price">250 € <span>HT · à partir de</span></div>
-          <ul class="offer-card__list">
-            <li>Analyse UX &amp; parcours utilisateur</li>
-            <li>Audit SEO on-page</li>
-            <li>Performance &amp; accessibilité</li>
-            <li>Recommandations priorisées</li>
-            <li>Appel de restitution inclus</li>
-          </ul>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Commander l'audit</a>
-        </div>
-
-        <div class="offer-card">
-          <div class="offer-card__header">
-            <h3 class="offer-card__name">Site vitrine</h3>
-          </div>
-          <div class="offer-card__price">1 500 € <span>HT · à partir de</span></div>
-          <ul class="offer-card__list">
-            <li>Design soigné et identitaire</li>
-            <li>Portfolio, services, contact</li>
-            <li>SEO on-page &amp; performance</li>
-            <li>En ligne en 3 à 5 semaines</li>
-          </ul>
-          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour artistes, galeristes, indépendants créatifs</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
-        </div>
-
-        <div class="offer-card offer-card--featured">
-          <div class="offer-card__header">
-            <span class="offer-card__tag">Le plus populaire</span>
-            <h3 class="offer-card__name">Site éditorial</h3>
-          </div>
-          <div class="offer-card__price">3 500 € <span>HT · à partir de</span></div>
-          <ul class="offer-card__list">
-            <li>Contenu que vous gérez seul</li>
-            <li>Agenda, catalogue, actualités</li>
-            <li>SEO on-page &amp; blog</li>
-            <li>Évolutions facilitées</li>
-          </ul>
-          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour galeries, institutions, maisons de ventes</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
-        </div>
-
-        <div class="offer-card">
-          <div class="offer-card__header">
-            <h3 class="offer-card__name">Application métier</h3>
-          </div>
-          <div class="offer-card__price">6 000 € <span>HT · à partir de</span></div>
-          <ul class="offer-card__list">
-            <li>Back-office sur mesure</li>
-            <li>Catalogue interactif, estimation</li>
-            <li>SEO on-page &amp; données structurées</li>
-            <li>Architecture solide et évolutive</li>
-          </ul>
-          <p class="muted mb-0" style="font-size: .78rem; font-style: italic;">Pour maisons de ventes, institutions complexes</p>
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="offer-card__cta">Prendre RDV</a>
-        </div>
-
-      </div>
-
-      <!-- Toujours inclus -->
-      <div class="always-included">
-        <p class="section-eyebrow" style="margin-bottom: 1rem;">Dans chaque projet — sans exception</p>
-        <div class="row g-3">
-          <div class="col-sm-6 col-lg"><div class="always-included-item">SEO on-page intégré dès la conception</div></div>
-          <div class="col-sm-6 col-lg"><div class="always-included-item">Responsive mobile, tablette, desktop</div></div>
-          <div class="col-sm-6 col-lg"><div class="always-included-item">Images optimisées &amp; Core Web Vitals</div></div>
-          <div class="col-sm-6 col-lg"><div class="always-included-item">Documentation + prise en main à la livraison</div></div>
-          <div class="col-sm-6 col-lg"><div class="always-included-item">30 jours de support après la mise en ligne</div></div>
-        </div>
-      </div>
-
-      <!-- Accompagnement post-livraison -->
-      <div style="border-top: 1px solid var(--line); padding-top: 2.5rem;">
-        <div class="row align-items-center g-4">
-
-          <div class="col-lg-4">
-            <p class="section-eyebrow">Après la livraison</p>
-            <h3 class="section-title mb-2" style="font-size: 1.5rem !important; font-style: italic;">Accompagnement continu</h3>
-            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">On ne disparaît pas après la mise en ligne. Deux formules selon vos besoins.</p>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="post-delivery-card post-delivery-card--accent">
-              <span class="post-delivery-label">Forfait mensuel</span>
-              <p class="post-delivery-price">350 € <span>HT / mois</span></p>
-              <p class="post-delivery-desc">Hébergement, suivi régulier, mises à jour, corrections, petites évolutions. Vous n'êtes jamais bloqué.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="post-delivery-card post-delivery-card--plain">
-              <span class="post-delivery-label post-delivery-label--muted">Pack d'heures</span>
-              <p class="post-delivery-price">Sur devis</p>
-              <p class="post-delivery-desc">Évolutions ponctuelles, nouvelles fonctionnalités, intégrations. Selon vos priorités du moment.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <figure class="text-center mt-5 mb-4 maxw mx-auto">
-        <blockquote style="font-size: .95rem; font-style: italic; color: var(--muted); line-height: 1.7; margin: 0 0 .5rem; border: none; padding: 0;">
-          "Notre site est un vrai bijou, joli et élégant, et surtout un outil de travail efficace et parfaitement conçu."
-        </blockquote>
-        <figcaption style="font-size: .78rem; font-weight: 600; color: var(--ink);">Sophie Tiercelin, commissaire-priseure &nbsp;★★★★★ Google</figcaption>
-      </figure>
-
-      <p class="text-center muted" style="font-size: .9rem;">
-        Pas sûr de quelle offre vous correspond ?
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">On en parle en 30 minutes.</a>
+  <!-- ═══ CHAPITRE 2 — Qui je suis ═══════════════════════ -->
+  <section class="dark-band" aria-labelledby="about-title">
+    <div id="about">
+      <span class="abt-eyebrow" data-reveal data-reveal-delay="0">qui je suis</span>
+      <h2 class="abt-big" id="about-title" data-reveal data-reveal-delay="0.08">
+        Fondatrice<br>d'<em>ART AU FÉMININ.</em>
+      </h2>
+      <p class="abt-caption" data-reveal data-reveal-delay="0.18">Média culturel · Galerie 3D · Lille</p>
+      <p class="abt-desc" data-reveal data-reveal-delay="0.26">
+        Formée aux Beaux-Arts, j'ai fondé <strong>ART AU FÉMININ</strong> en 2019, un média et une galerie entièrement en&nbsp;3D dédiés aux femmes artistes. Celles que l'Histoire a effacées, et celles qui créent aujourd'hui. Puis je suis devenue développeuse web, pour construire moi-même les outils dont le monde de l'art a besoin.
       </p>
-      <p class="text-center mt-2">
-        <a href="{{ '/tarifs' | relative_url }}" style="font-size: .875rem; color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px;">Détail complet des tarifs et FAQ →</a>
+      <p class="abt-statement" data-reveal data-reveal-delay="0.36">
+        On échange sur votre univers,<br>puis je passe au code.
       </p>
-
-    </div>
-  </section>
-
-  <!-- =====================
-       FAQ
-       ===================== -->
-  <section id="faq" class="section" aria-labelledby="faq-titre">
-    <div class="container">
-
-      <p class="section-eyebrow">FAQ</p>
-      <h2 id="faq-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
-
-      <div class="faq">
-
-        <details class="faq__item">
-          <summary class="faq__q">Est-ce que je pourrai gérer mon site seul après la livraison ?</summary>
-          <p class="faq__a">Oui. Je conçois les sites pour que vous puissiez mettre à jour vos contenus sans toucher au code. Une prise en main est incluse à la livraison.</p>
-        </details>
-
-        <details class="faq__item">
-          <summary class="faq__q">Combien de temps dure un projet ?</summary>
-          <p class="faq__a">Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange.</p>
-        </details>
-
-        <details class="faq__item">
-          <summary class="faq__q">Travaillez-vous à distance ?</summary>
-          <p class="faq__a">Oui, 100% en remote. Mes clients sont à Lille, Paris, et au-delà. Tout se fait en visio, avec des points réguliers.</p>
-        </details>
-
-        <details class="faq__item">
-          <summary class="faq__q">Quelle est la différence entre l'audit et une refonte ?</summary>
-          <p class="faq__a">L'audit analyse votre site existant et vous livre un rapport d'action sans engagement. La refonte, c'est l'étape suivante si vous souhaitez implémenter les recommandations.</p>
-        </details>
-
-        <details class="faq__item">
-          <summary class="faq__q">Que se passe-t-il après la livraison ?</summary>
-          <p class="faq__a">Deux options : un forfait mensuel (350 € HT) pour un suivi régulier, ou un pack d'heures pour des évolutions ponctuelles. Vous choisissez selon vos besoins.</p>
-        </details>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =====================
-       FORMULAIRE DE CONTACT
-       ===================== -->
-  <section id="contact-form" class="section section--alt" aria-labelledby="form-titre">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-
-          <div class="text-center mb-5">
-            <p class="section-eyebrow" style="justify-content: center;">Démarrer</p>
-            <h2 id="form-titre" class="section-title mb-3">Décrivez votre projet</h2>
-            <p class="muted" style="font-size: .95rem;">Je vous réponds sous 48h ouvrées.</p>
-          </div>
-
-          <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
-
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="form-prenom" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Prénom</label>
-                <input type="text" id="form-prenom" name="prenom" required
-                       placeholder="Votre prénom"
-                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
-                       onfocus="this.style.borderColor='var(--bordeaux-mid)'"
-                       onblur="this.style.borderColor='var(--line)'">
-              </div>
-              <div class="col-sm-6">
-                <label for="form-email" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Email</label>
-                <input type="email" id="form-email" name="email" required
-                       placeholder="vous@exemple.fr"
-                       style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s;"
-                       onfocus="this.style.borderColor='var(--bordeaux-mid)'"
-                       onblur="this.style.borderColor='var(--line)'">
-              </div>
-            </div>
-
-            <div>
-              <label for="form-type" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Type de projet</label>
-              <select id="form-type" name="type_projet"
-                      style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; transition: border-color .18s; appearance: none; cursor: pointer;"
-                      onfocus="this.style.borderColor='var(--bordeaux-mid)'"
-                      onblur="this.style.borderColor='var(--line)'">
-                <option value="" disabled selected>Sélectionner…</option>
-                <option value="audit">Audit web</option>
-                <option value="vitrine">Site vitrine</option>
-                <option value="editorial">Site éditorial</option>
-                <option value="application">Application métier</option>
-                <option value="autre">Autre</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="form-message" style="font-size: .8rem; font-weight: 600; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: .4rem;">Message</label>
-              <textarea id="form-message" name="message" required rows="5"
-                        placeholder="Décrivez votre projet, vos besoins, vos questions…"
-                        style="width: 100%; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: .93rem; outline: none; resize: vertical; transition: border-color .18s;"
-                        onfocus="this.style.borderColor='var(--bordeaux-mid)'"
-                        onblur="this.style.borderColor='var(--line)'"></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="btn btn-primary btn-lg w-100">
-                Envoyer ma demande
-              </button>
-            </div>
-
-          </form>
-
-          <p class="text-center mt-4 muted" style="font-size: .88rem;">
-            Ou réservez directement un créneau de 30 min
-            <a href="{{ site.cal_url }}" target="_blank" rel="noopener"
-               style="color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">→</a>
-          </p>
-
+      <div class="abt-nums" data-reveal data-reveal-delay="0.46">
+        <div class="abt-num-item">
+          <span class="abt-num">66+</span>
+          <span class="abt-num-l">articles publiés</span>
+        </div>
+        <div class="abt-vbar" aria-hidden="true"></div>
+        <div class="abt-num-item">
+          <span class="abt-num">2019</span>
+          <span class="abt-num-l">dans le monde de l'art</span>
+        </div>
+        <div class="abt-vbar" aria-hidden="true"></div>
+        <div class="abt-num-item">
+          <span class="abt-num">100%</span>
+          <span class="abt-num-l">art &amp; culture</span>
         </div>
       </div>
+      <ul class="abt-chips" data-reveal data-reveal-delay="0.56" aria-label="Compétences">
+        <li class="abt-chip">Ruby on Rails</li>
+        <li class="abt-chip">Jekyll · Prismic</li>
+        <li class="abt-chip">JavaScript · Three.js</li>
+        <li class="abt-chip">Swift · SwiftUI</li>
+        <li class="abt-chip">SEO culturel</li>
+        <li class="abt-chip">Direction artistique</li>
+      </ul>
+      <a href="{{ '/about/' | relative_url }}" class="text-link" data-reveal data-reveal-delay="0.62">Mon parcours complet →</a>
     </div>
   </section>
 
-  <!-- =====================
-       ARTICLES RÉCENTS
-       ===================== -->
-  <section class="section" aria-labelledby="articles-recents">
-    <div class="container">
-
-      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+  <!-- ═══ CHAPITRE 3 — La preuve : Art au Féminin ═══════ -->
+  <section id="aaf" aria-labelledby="aaf-title">
+    <div class="aaf-inner">
+      <p class="aaf-label" data-reveal data-reveal-delay="0">Projet fondateur</p>
+      <div class="aaf-grid">
         <div>
-          <p class="section-eyebrow">Blog</p>
-          <h2 id="articles-recents" class="section-title mb-0">Articles <em>récents</em></h2>
+          <h2 class="aaf-title" id="aaf-title" data-reveal data-reveal-delay="0.1">ART AU<br><em>FÉMININ</em></h2>
+          <p class="aaf-body" data-reveal data-reveal-delay="0.2">
+            Média culturel et galerie <strong>entièrement en 3D</strong> que j'ai fondés pour rendre visibles les femmes artistes, celles que l'Histoire a effacées et celles qui créent aujourd'hui. 66 articles, une galerie 3D en ligne, une newsletter, un SEO construit pierre par pierre.
+          </p>
+          <p class="aaf-body" data-reveal data-reveal-delay="0.3">
+            Un projet entièrement développé et maintenu par mes soins : Three.js, Jekyll, Prismic CMS, SEO éditorial, design et direction artistique.
+          </p>
+          <div class="link-row" data-reveal data-reveal-delay="0.4">
+            <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="aaf-link">Lire l'étude de cas →</a>
+            <a href="https://galerie.artaufeminin.fr/" target="_blank" rel="noopener" class="aaf-link">Visiter la galerie 3D ↗</a>
+          </div>
         </div>
-        <a href="{{ '/blog' | relative_url }}" class="d-none d-lg-inline" style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
-          Voir tous les articles →
-        </a>
+        <div class="aaf-stats">
+          <div class="aaf-stat-box" data-reveal data-reveal-delay="0.1">
+            <p class="aaf-stat-n">66</p>
+            <p class="aaf-stat-l">articles sur les femmes artistes</p>
+          </div>
+          <div class="aaf-stat-box" data-reveal data-reveal-delay="0.2">
+            <p class="aaf-stat-n">3D</p>
+            <p class="aaf-stat-l">galerie entièrement en 3D</p>
+          </div>
+          <div class="aaf-stat-box" data-reveal data-reveal-delay="0.3">
+            <p class="aaf-stat-n">Prismic</p>
+            <p class="aaf-stat-l">CMS headless + Jekyll</p>
+          </div>
+          <div class="aaf-stat-box" data-reveal data-reveal-delay="0.4">
+            <p class="aaf-stat-n">SEO</p>
+            <p class="aaf-stat-l">référencement éditorial &amp; local</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="row g-4">
-        {% for post in site.posts limit:3 %}
-        <div class="col-md-4">
-          <a href="{{ post.url }}" style="text-decoration: none; display: block; height: 100%;">
-            <div class="home-article-card" style="height: 100%;">
-              <p class="section-eyebrow" style="font-size: .6rem; margin-bottom: .5rem;">Article</p>
-              <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: .5rem; line-height: 1.3;">{{ post.title }}</h3>
-              {% if post.description %}
-              <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">{{ post.description }}</p>
-              {% endif %}
-            </div>
+  <!-- ═══ CHAPITRE 4 — Pour qui ══════════════════════════ -->
+  <section id="secteurs" class="std-section" aria-labelledby="secteurs-title">
+    <div class="std-inner">
+      <p class="about-label" data-reveal>Pour qui</p>
+      <h2 class="std-title" id="secteurs-title" data-reveal data-reveal-delay="0.1">Des sites web pour celles et ceux<br>qui font vivre <em>l'art.</em></h2>
+      <p class="std-lead" data-reveal data-reveal-delay="0.2">Galeriste, artiste, commissaire-priseur : votre site n'est pas un projet web comme les autres. Je connais votre vocabulaire, vos saisons, vos publics, avant d'écrire la première ligne de code.</p>
+
+      <ul class="sector-grid">
+        <li data-reveal data-reveal-delay="0.05">
+          <a href="{{ '/secteurs/galeries-art/' | relative_url }}" class="sector-card">
+            <span class="sector-n">01</span>
+            <h3 class="sector-name">Galeries d'art</h3>
+            <p class="sector-desc">Expositions, artistes représentés, vernissages : un site à la hauteur de votre programmation.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
           </a>
-        </div>
+        </li>
+        <li data-reveal data-reveal-delay="0.12">
+          <a href="{{ '/secteurs/artistes/' | relative_url }}" class="sector-card">
+            <span class="sector-n">02</span>
+            <h3 class="sector-name">Artistes</h3>
+            <p class="sector-desc">Un portfolio qui parle à vos collectionneurs, commissaires et institutions, mieux qu'un PDF.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal data-reveal-delay="0.19">
+          <a href="{{ '/secteurs/maisons-de-ventes/' | relative_url }}" class="sector-card">
+            <span class="sector-n">03</span>
+            <h3 class="sector-name">Maisons de ventes</h3>
+            <p class="sector-desc">Catalogue en ligne, estimations, agenda des vacations, back-office : je parle votre langue.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal data-reveal-delay="0.26">
+          <a href="{{ '/secteurs/institutions-culturelles/' | relative_url }}" class="sector-card">
+            <span class="sector-n">04</span>
+            <h3 class="sector-name">Institutions culturelles</h3>
+            <p class="sector-desc">Musées, centres d'art, festivals : une mission culturelle qui se trouve sur Google.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal data-reveal-delay="0.33">
+          <a href="{{ '/secteurs/sculpteurs/' | relative_url }}" class="sector-card">
+            <span class="sector-n">05</span>
+            <h3 class="sector-name">Sculpteurs</h3>
+            <p class="sector-desc">Vues multiples, matériaux, dimensions, œuvres in situ : montrer le volume à l'écran.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal data-reveal-delay="0.40">
+          <a href="{{ '/secteurs/photographes/' | relative_url }}" class="sector-card">
+            <span class="sector-n">06</span>
+            <h3 class="sector-name">Photographes</h3>
+            <p class="sector-desc">Des séries qui s'affichent vite et net, sur tous les écrans, sans trahir vos tirages.</p>
+            <span class="sector-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SEO — Visibilité ═════════════════════════════════ -->
+  <section id="seo-section" aria-labelledby="seo-title">
+    <div id="seo-sticky">
+      <canvas id="seo-canvas" aria-hidden="true"></canvas>
+      <div class="seo-header">
+        <p class="about-label" data-reveal data-reveal-delay="0">SEO &amp; Visibilité</p>
+        <h2 class="seo-title" id="seo-title" data-reveal data-reveal-delay="0.1">Votre univers mérite<br>d'être <em>trouvé.</em></h2>
+      </div>
+      <ul class="seo-cards-wrap" id="seo-cards">
+        <li class="seo-card"><span class="seo-card-n">01</span><h3 class="seo-card-title">Audit SEO complet de votre site</h3></li>
+        <li class="seo-card"><span class="seo-card-n">02</span><h3 class="seo-card-title">Référencement local — galeries &amp; maisons de ventes</h3></li>
+        <li class="seo-card"><span class="seo-card-n">03</span><h3 class="seo-card-title">SEO éditorial — articles, artistes, œuvres</h3></li>
+        <li class="seo-card"><span class="seo-card-n">04</span><h3 class="seo-card-title">Données structurées Schema.org pour les arts</h3></li>
+        <li class="seo-card"><span class="seo-card-n">05</span><h3 class="seo-card-title">Performance &amp; Core Web Vitals</h3></li>
+        <li class="seo-card"><span class="seo-card-n">06</span><h3 class="seo-card-title">Stratégie de contenu culturel</h3></li>
+      </ul>
+      <div class="seo-dots" id="seo-dots" aria-hidden="true">
+        <span class="seo-dot"></span><span class="seo-dot"></span><span class="seo-dot"></span>
+        <span class="seo-dot"></span><span class="seo-dot"></span><span class="seo-dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOOLKIT ═══════════════════════════════════════ -->
+  <section id="toolkit" aria-labelledby="toolkit-title">
+    <div id="toolkit-sticky">
+      <div class="toolkit-header">
+        <h2 class="toolkit-title" id="toolkit-title">Ma palette</h2>
+        <p class="toolkit-sub" id="toolkit-sub">Développement web</p>
+      </div>
+      <div class="toolkit-stage" id="toolkit-stage" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPITRE 5 — Les projets ════════════════════════ -->
+  <section id="projets" aria-labelledby="projets-title">
+    <div id="projets-sticky">
+      <div class="projets-inner">
+        <h2 class="projets-title" id="projets-title">Projets</h2>
+        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="projet-item" aria-label="ART AU FÉMININ — média culturel">
+          <span class="proj-name">ART AU FÉMININ</span></a>
+        <a href="https://galerie.artaufeminin.fr/" target="_blank" rel="noopener" class="projet-item" aria-label="Galerie ART AU FÉMININ — galerie 3D (nouvel onglet)">
+          <span class="proj-name">Galerie ART AU FÉMININ</span></a>
+        <a href="{{ '/realisations/mirabili-encheres/' | relative_url }}" class="projet-item" aria-label="Mirabili Enchères — maison de ventes">
+          <span class="proj-name">Mirabili Enchères</span></a>
+        <a href="{{ '/realisations/aurelie-de-baudus/' | relative_url }}" class="projet-item" aria-label="Aurélie de Baudus — commissaire-priseure">
+          <span class="proj-name">Aurélie de Baudus</span></a>
+        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" class="projet-item" aria-label="Bérénice Auger — artiste">
+          <span class="proj-name">Bérénice Auger</span></a>
+        <a href="{{ '/realisations/' | relative_url }}" class="projets-all">Toutes les réalisations →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPITRE 6 — Ils en parlent ═════════════════════ -->
+  <section id="temoignages" class="std-section" aria-labelledby="temoignages-title">
+    <div class="std-inner">
+      <p class="about-label" data-reveal>Témoignages</p>
+      <h2 class="std-title" id="temoignages-title" data-reveal data-reveal-delay="0.1">Ce qu'elles <em>en disent.</em></h2>
+      <div class="quote-grid">
+        {% for t in site.data.temoignages %}
+        <figure class="quote-card" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.12 }}">
+          <p class="quote-stars" role="img" aria-label="Note : {{ t.note }} sur 5">{% for i in (1..t.note) %}★{% endfor %}</p>
+          <blockquote class="quote-text">« {{ t.texte }} »</blockquote>
+          <figcaption class="quote-author">
+            <strong>{{ t.nom }}</strong>
+            <span>{{ t.role }}{% if t.source == "Google" %} · avis Google{% endif %}</span>
+          </figcaption>
+        </figure>
         {% endfor %}
       </div>
-
+      <a href="https://www.google.com/search?q=Aldjia+Boughias" target="_blank" rel="noopener" class="text-link" data-reveal>Voir les avis sur Google ↗</a>
     </div>
   </section>
 
-  <!-- =====================
-       CTA FINAL
-       ===================== -->
-  <section class="cta-dark" aria-label="Appel à l'action">
-    <div class="container">
+  <!-- ═══ CHAPITRE 7 — Travailler ensemble : offres ══════ -->
+  <section id="tarifs" class="std-section std-section--alt" aria-labelledby="tarifs-title">
+    <div class="std-inner">
+      <p class="about-label" data-reveal>Offres &amp; tarifs</p>
+      <h2 class="std-title" id="tarifs-title" data-reveal data-reveal-delay="0.1">Des prix clairs,<br><em>sans surprise.</em></h2>
+      <p class="std-lead" data-reveal data-reveal-delay="0.2">Des repères pour vous projeter. Le périmètre exact est défini ensemble lors d'un premier échange gratuit de 30 minutes.</p>
 
-      <p class="section-eyebrow" style="color: rgba(249,246,240,.4); text-align: center; margin-bottom: 1.5rem;">Contact</p>
+      <ul class="offer-grid">
+        <li class="offer" data-reveal data-reveal-delay="0.05">
+          <span class="offer-tag">Commencer ici</span>
+          <h3 class="offer-name">Audit web</h3>
+          <p class="offer-price">250 € <span>HT · à partir de</span></p>
+          <p class="offer-desc">UX, SEO, performance et accessibilité de votre site actuel. Recommandations priorisées et appel de restitution.</p>
+        </li>
+        <li class="offer" data-reveal data-reveal-delay="0.12">
+          <h3 class="offer-name">Site vitrine</h3>
+          <p class="offer-price">1 500 € <span>HT · à partir de</span></p>
+          <p class="offer-desc">Portfolio, présentation, contact. En ligne en 3 à 5 semaines. Pour artistes et indépendants créatifs.</p>
+        </li>
+        <li class="offer offer--featured" data-reveal data-reveal-delay="0.19">
+          <span class="offer-tag">Le plus demandé</span>
+          <h3 class="offer-name">Site éditorial</h3>
+          <p class="offer-price">3 500 € <span>HT · à partir de</span></p>
+          <p class="offer-desc">Expositions, agenda, catalogue, actualités que vous gérez seul. Pour galeries et institutions.</p>
+        </li>
+        <li class="offer" data-reveal data-reveal-delay="0.26">
+          <h3 class="offer-name">Application métier</h3>
+          <p class="offer-price">6 000 € <span>HT · à partir de</span></p>
+          <p class="offer-desc">Back-office sur mesure, catalogue de lots, formulaire d'estimation. Pour maisons de ventes.</p>
+        </li>
+      </ul>
 
-      <h2 class="cta-dark__title">
-        Votre site mérite<br>quelqu'un qui comprend votre projet.
-      </h2>
-
-      <p class="cta-dark__sub">
-        30 minutes d'échange pour voir si je suis la bonne personne pour votre projet —
-        sans engagement, sans jargon technique.
-      </p>
-
-      <a href="{{ site.cal_url }}"
-         target="_blank"
-         rel="noopener"
-         class="cta-dark__btn">
-        Réserver un créneau
-      </a>
-
-      <p class="cta-dark__note mt-4 mb-0">
-        Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener">Art au Féminin</a>
-        · Développeuse spécialisée art &amp; culture depuis 2019
-      </p>
-
+      <p class="offer-included" data-reveal>Toujours inclus : SEO dès la conception · responsive · Core Web Vitals · prise en main · 30 jours de support</p>
+      <div class="link-row link-row--center" data-reveal>
+        <a href="{{ '/tarifs/' | relative_url }}" class="text-link">Détail des tarifs →</a>
+        <a href="{{ '/processus/' | relative_url }}" class="text-link">Comment je travaille →</a>
+      </div>
     </div>
   </section>
 
-</div>
+  <!-- ═══ FAQ ═══════════════════════════════════════════ -->
+  <section id="faq" class="std-section" aria-labelledby="faq-title">
+    <div class="std-inner std-inner--narrow">
+      <p class="about-label" data-reveal>Questions fréquentes</p>
+      <h2 class="std-title" id="faq-title" data-reveal data-reveal-delay="0.1">Avant de <em>se lancer.</em></h2>
+      <div class="faq-list">
+        {% for item in page.faq_items %}
+        <details class="faq-item">
+          <summary>{{ item.q }}</summary>
+          <p>{{ item.a }}</p>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONSEILS ════════════════════════════════════════ -->
+  <section id="conseils" aria-labelledby="conseils-title">
+    <div class="conseils-inner">
+      <h2 class="conseils-title" id="conseils-title" data-reveal data-reveal-delay="0">Mes conseils pour<br>votre <em>visibilité</em></h2>
+      <ul class="post-list" data-reveal data-reveal-delay="0.1">
+        {% for post in site.posts limit: 3 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <a href="{{ '/blog/' | relative_url }}" class="conseils-wave-cta" id="conseils-cta" aria-label="Découvrir les articles" data-reveal data-reveal-delay="0.2">Découvrir les articles →</a>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPITRE FINAL — Travaillons ensemble ═══════════ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="cta-inner">
+      <h2 class="cta-title" id="contact-title" data-reveal data-reveal-delay="0">Travaillons<br><em>ensemble.</em></h2>
+      <p class="cta-sub" data-reveal data-reveal-delay="0.15">Je travaille exclusivement avec des acteurs du monde de l'art et de la culture. Prenons 30 minutes pour parler de votre projet, gratuitement et sans engagement.</p>
+      <div data-reveal data-reveal-delay="0.3">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="cta-btn-primary">
+          Prendre rendez-vous — 30 min →
+        </a>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-reveal data-reveal-delay="0.4">
+        <p class="contact-form-intro">Ou décrivez votre projet, je réponds sous 48 h ouvrées.</p>
+        <input type="hidden" name="_next" value="{{ '/contact-merci/' | absolute_url }}">
+        <div class="sr-only" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+        <div class="form-row">
+          <label>
+            <span>Prénom</span>
+            <input type="text" name="prenom" autocomplete="given-name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+        </div>
+        <label>
+          <span>Type de projet</span>
+          <select name="type_projet">
+            <option value="">Sélectionner…</option>
+            <option value="audit">Audit web</option>
+            <option value="vitrine">Site vitrine</option>
+            <option value="editorial">Site éditorial</option>
+            <option value="application">Application métier</option>
+            <option value="autre">Autre</option>
+          </select>
+        </label>
+        <label>
+          <span>Votre projet</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="form-submit">Envoyer ma demande</button>
+      </form>
+
+      <a href="mailto:contact@aldjia.dev" class="cta-mail">contact@aldjia.dev</a>
+    </div>
+  </section>
+
+  <!-- ═══ FIN + FOOTER ═══════════════════════════════════ -->
+  <section id="fin">
+    <div id="fin-sticky">
+      <div class="fin-blocks" aria-hidden="true">
+        <div class="fin-block left" id="fin-left"></div>
+        <div class="fin-block right" id="fin-right"></div>
+      </div>
+      <footer class="fin-content" id="fin-content">
+        {% include footer-content.html %}
+      </footer>
+    </div>
+  </section>
+
+</main>

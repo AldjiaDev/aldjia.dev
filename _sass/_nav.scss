@@ -102,138 +102,135 @@
 }
 
 // ── Footer ────────────────────────────────────────────────────────────────────
+// Même footer que la page d'accueil immersive (contenu : _includes/footer-content.html).
+// Les !important battent les anciennes règles .site-footer de style.css.
+
+$footer-bg:    #0E0C0A;
+$footer-cream: #EDE8DF;
+$footer-red:   #BE3220;
 
 .site-footer {
-  background: $color-bg-2 !important;
-  border-top: $border-default !important;
+  position: relative;
+  background: $footer-bg !important;
+  border-top: none !important;
   margin-top: auto;
+  color: rgba($footer-cream, 0.7);
+  font-family: $font-sans;
+
+  // Filet dégradé — reprend les blocs orange / violet de l'accueil
+  &::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #F37E30, $footer-red 45%, #7845D0);
+  }
+
+  p, a, span {
+    font-family: $font-sans !important;
+    letter-spacing: 0 !important;
+    font-weight: $weight-regular;
+  }
 }
 
-.footer-inner {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: $space-xl;
-  padding: $space-2xl $space-xl;
-  max-width: 1100px;
+.site-footer-inner {
+  max-width: 1280px;
   margin: 0 auto;
 }
 
-.footer-col {
+.site-footer .footer-band {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, auto);
+  gap: 4rem;
+  align-items: start;
+  padding: 5rem 5vw 3.5rem;
+}
+
+.site-footer .footer-cta-main {
+  font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  font-weight: $weight-medium !important;
+  line-height: 1.4;
+  color: $footer-cream !important;
+  margin: 0 0 1.25rem;
+}
+
+.site-footer .footer-cta-sub {
+  margin: 0;
+  a {
+    font-size: 0.8125rem !important;
+    color: rgba($footer-cream, 0.55) !important;
+    text-decoration: none;
+    &:hover { color: $footer-cream !important; }
+  }
+}
+
+.site-footer .footer-rdv {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  background: $footer-red;
+  border-radius: 3rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  &:hover { background: #9A2818; color: #fff !important; }
+}
+
+.site-footer .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
 }
 
-.footer-col nav {
-  display: contents;
-}
-
-.footer-col-title {
-  display: block;
-  font-family: $font-sans !important;
-  font-size: $size-xs;
-  font-weight: $weight-medium;
-  letter-spacing: $tracking-wide;
-  text-transform: uppercase;
-  color: $color-ink-2 !important;
-  margin-bottom: 0.25rem;
-}
-
-.footer-col a {
-  font-size: $size-small !important;
-  color: $color-ink-3 !important;
-  font-weight: $weight-regular;
-  font-family: $font-sans !important;
-  letter-spacing: 0 !important;
-  transition: color 0.2s;
-  padding: 0.35rem 0;
-
-  &:hover { color: $color-ink !important; }
-}
-
-.footer-brand {
-  // Surcharge le style inline existant
-  font-family: $font-serif !important;
-  font-size: 1.3rem !important;
+.site-footer .footer-nav-title {
+  font-size: 0.75rem !important;
   font-weight: $weight-medium !important;
-  color: $color-ink !important;
-  letter-spacing: -0.02em !important;
-  text-transform: none !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  color: rgba($footer-cream, 0.45) !important;
+  margin: 0 0 1rem;
+}
+
+.site-footer .footer-nav a {
+  font-size: 0.9rem !important;
+  color: rgba($footer-cream, 0.7) !important;
   text-decoration: none;
-
-  p {
-    font-family: $font-sans !important;
-    font-size: $size-small !important;
-    color: $color-ink-3 !important;
-    line-height: 1.6;
-    margin-top: 0.75rem;
-    letter-spacing: 0 !important;
-  }
+  padding: 0.3rem 0;
+  margin-bottom: 0.15rem;
+  transition: color 0.2s;
+  &:hover { color: $footer-cream !important; }
 }
 
-.footer-bottom {
-  border-top: $border-default;
-  padding: 1rem $space-xl;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.footer-bottom-inner {
+.site-footer .footer-bottom {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: $size-xs;
-  color: $color-ink-4;
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 5vw;
+  max-width: none;
 
   span, a {
-    font-size: $size-xs !important;
-    color: $color-ink-4 !important;
-    letter-spacing: 0 !important;
-    font-weight: $weight-regular !important;
+    font-size: 0.72rem !important;
+    color: rgba($footer-cream, 0.4) !important;
   }
+}
+
+.site-footer .footer-legal {
+  display: flex;
+  gap: 1.5rem;
 
   a {
+    display: inline-block;
+    padding: 0.8rem 0;
+    margin: -0.8rem 0;
     text-decoration: underline;
     text-underline-offset: 3px;
-    &:hover { color: $color-ink-3 !important; }
+    &:hover { color: rgba($footer-cream, 0.75) !important; }
   }
 }
 
-// Icônes sociales dans le footer
-.footer-social-link {
-  opacity: 0.55;
-  transition: opacity 0.2s;
-  display: inline-flex;
-  padding: 0.75rem;
-  margin: -0.75rem 0;
-
-  &:hover, &:focus-visible { opacity: 1; }
-}
-
-// Neutralise les règles blanc-sur-noir de style.css (footer était foncé)
-.site-footer,
-.site-footer p,
-.site-footer a,
-.site-footer span {
-  color: $color-ink-3 !important;
-  letter-spacing: 0 !important;
-}
-
-.site-footer a:hover { color: $color-ink !important; }
-
-// Surcharge spécificité 0,2,0 de style.css pour .site-footer .footer-brand
-.site-footer .footer-brand {
-  color: $color-ink !important;
-  font-family: $font-serif !important;
-  font-size: 1.3rem !important;
-  font-weight: $weight-medium !important;
-  letter-spacing: -0.02em !important;
-  text-transform: none !important;
-}
-
-.site-footer .footer-col-title { color: $color-ink-2 !important; }
+.site-footer :focus-visible { outline-color: #F37E30 !important; }
 
 // ── Responsive nav ────────────────────────────────────────────────────────────
 
@@ -265,18 +262,14 @@
 @media (max-width: 768px) {
   .nav-inner { padding: 0.75rem 1.5rem; }
 
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2.5rem 1.5rem;
-  }
-
-  .footer-bottom { padding: 1rem 1.5rem; }
+  .site-footer .footer-band { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 4rem 1.5rem 3rem; }
+  .site-footer .footer-cta { grid-column: 1 / -1; }
+  .site-footer .footer-bottom { padding: 1.25rem 1.5rem; }
 }
 
 @media (max-width: 576px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    padding: 2rem 1.25rem;
-  }
+  // Cibles tactiles ~44px
+  .site-footer .footer-band { padding: 3.5rem 1.25rem 2.5rem; gap: 2rem 1.5rem; }
+  .site-footer .footer-nav a { padding: 0.65rem 0; margin: 0; }
+  .site-footer .footer-bottom { flex-direction: column; align-items: flex-start; padding: 1.25rem; }
 }

@@ -1,0 +1,17 @@
+{% if jekyll.environment == "production" %}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HJ5JJ91PQX');
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HJ5JJ91PQX';
+      s.async = true;
+      document.head.appendChild(s);
+    }, 3000);
+  });
+</script>
+{% endif %}
