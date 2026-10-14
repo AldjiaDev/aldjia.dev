@@ -1,230 +1,95 @@
 ---
-layout: default
+layout: immersive
 title: "Portfolio — Sites et applications web · Art & Culture"
 description: "Portfolio d'Aldjia Boughias : sites et applications pour commissaires-priseurs, galeries d'art, artistes et éditeurs. Ruby on Rails, Jekyll, SEO on-page."
 permalink: /realisations/
+last_modified_at: 2026-10-14
 ---
 
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Portfolio</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.8rem, 5vw, 4.5rem);
-          font-weight: 600;
-          line-height: 1.0;
-          letter-spacing: -0.02em;
-          margin-bottom: 0;
-        ">Réalisations</h1>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Chaque projet est conçu sur mesure, sans template. Voici quelques exemples récents.
-        </p>
-      </div>
-    </div>
+<!-- ═══ EN-TÊTE ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="real-h1">
+  <div class="page-hero-inner">
+    <p class="about-label" data-reveal>Portfolio</p>
+    <h1 class="page-title" id="real-h1" data-reveal data-split-words><em>Réalisations.</em></h1>
+    <p class="page-lead" data-reveal data-reveal-delay="0.4">Chaque projet est conçu sur mesure, sans template : maisons de ventes, artistes, plateformes culturelles et applications métier. Voici quelques exemples récents.</p>
+    <p class="page-note" data-reveal data-reveal-delay="0.5">6 projets · 2021 → 2026 · Ruby on Rails, Jekyll, Gatsby, SEO</p>
   </div>
 </section>
 
-<!-- LISTE DES PROJETS -->
-<section style="padding-bottom: 96px;">
-  <div class="container">
-
-    <!-- MIRABILI — projet vedette -->
-    <article class="mb-5">
-      <a href="/realisations/mirabili-encheres/" style="text-decoration: none; display: block;">
-        <div class="blog-featured-card">
-
-          <div class="blog-featured-img">
-            <img src="/assets/images/mirabili.jpg"
-                 alt="Mirabili Enchères — application web développée par Aldjia Boughias"
-                 width="1866" height="1507"
-                 style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                 loading="eager">
-          </div>
-
-          <div class="blog-featured-body">
-            <p style="font-size: .72rem; color: var(--muted); margin-bottom: .75rem; letter-spacing: .06em; text-transform: uppercase; font-family: 'Inter', sans-serif;">
-              Commissaires-priseurs · 2026
-              <span style="margin: 0 .5rem; opacity: .4;">·</span>
-              <span style="color: var(--bordeaux);">Projet récent</span>
-            </p>
-            <h2 style="
-              font-family: 'Cormorant Garant', serif;
-              font-style: italic;
-              font-size: clamp(1.6rem, 3vw, 2.4rem);
-              font-weight: 600;
-              color: var(--ink);
-              line-height: 1.15;
-              margin-bottom: 1rem;
-            ">Mirabili Enchères</h2>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; max-width: 480px;">
-              Application Ruby on Rails pour une maison de ventes aux enchères — catalogue de lots,
-              agenda des vacations, formulaire d'estimation et SEO on-page structuré.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.5rem;">
-              <span class="portfolio-tag">Ruby on Rails</span>
-              <span class="portfolio-tag">SEO on-page</span>
-              <span class="portfolio-tag">Commissaires-priseurs</span>
-            </div>
-            <span style="font-size: .85rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">
-              Voir le cas client →
-            </span>
-          </div>
-
-        </div>
-      </a>
-    </article>
-
-    <!-- Séparateur -->
-    <div style="border-top: 1px solid var(--line); margin-bottom: 2.5rem;"></div>
-
-    <!-- Grille des autres projets -->
-    <div class="row g-4">
-
-      <article class="col-md-6 col-lg-4">
-        <a href="/realisations/aurelie-de-baudus/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/aurelie-debaudus.jpg" alt="Aurélie de Baudus" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                Site vitrine · Coaching
-              </p>
-              <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem; flex: 1;">
-                Aurélie de Baudus
-              </h2>
-              <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                Site vitrine pour une coach de vie et bibliothérapeute à Lambersart.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                <span class="portfolio-tag">Site vitrine</span>
-                <span class="portfolio-tag">Coaching</span>
-              </div>
-              <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">Voir le cas client →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-md-6 col-lg-4">
-        <a href="/realisations/art-au-feminin/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/artaufeminin.jpeg" alt="Art au Féminin" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                Plateforme éditoriale · Projet fondateur
-              </p>
-              <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem; flex: 1;">
-                Art au Féminin
-              </h2>
-              <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                Podcast, blog éditorial, sélection de livres — une plateforme culturelle complète.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                <span class="portfolio-tag">Podcast</span>
-                <span class="portfolio-tag">Art & Culture</span>
-              </div>
-              <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">Découvrir →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-md-6 col-lg-4">
-        <a href="/realisations/readnest/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/readnest.jpg" alt="Readnest" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                Application web · Littérature & Édition
-              </p>
-              <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem; flex: 1;">
-                Readnest
-              </h2>
-              <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                Connecter lecteurs, maisons d'édition et librairies — Ruby on Rails, carte interactive.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                <span class="portfolio-tag">Ruby on Rails</span>
-                <span class="portfolio-tag">Communauté</span>
-              </div>
-              <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">Voir le cas client →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-md-6 col-lg-4">
-        <a href="/realisations/quotety/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/quotety.jpg" alt="Quotety" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                Application web · Back-office sur mesure
-              </p>
-              <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem; flex: 1;">
-                Quotety
-              </h2>
-              <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                Gestion des permissions, administration sur mesure, catalogue sans toucher au code.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                <span class="portfolio-tag">Ruby on Rails</span>
-                <span class="portfolio-tag">Back-office</span>
-              </div>
-              <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">Voir le cas client →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="col-md-6 col-lg-4">
-        <a href="/realisations/berenice-auger/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="blog-article-card">
-            <div class="blog-card-img-wrap">
-              <img src="/assets/images/logobereniceauger.jpg" alt="Bérénice Auger" width="800" height="200" class="blog-card-img" loading="lazy">
-            </div>
-            <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
-              <p style="font-size: .75rem; color: var(--muted); margin-bottom: .6rem; font-family: 'Inter', sans-serif;">
-                Site d'artiste · Art & Artisanat
-              </p>
-              <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem; flex: 1;">
-                Bérénice Auger
-              </h2>
-              <p style="font-size: .85rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
-                Site sur mesure pour une artiste multidisciplinaire — galerie, boutique et ateliers créatifs.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem;">
-                <span class="portfolio-tag">Ruby on Rails</span>
-                <span class="portfolio-tag">Site d'artiste</span>
-              </div>
-              <span style="font-size: .8rem; color: var(--bordeaux); font-weight: 500; letter-spacing: .04em;">Voir le cas client →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
+<!-- ═══ PROJET À LA UNE — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="mirabili-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>À la une · Commissaires-priseurs</p>
+      <h2 class="page-h2" id="mirabili-titre" data-reveal data-reveal-delay="0.1">Mirabili <em>Enchères.</em></h2>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.2">Application <strong>Ruby on Rails</strong> pour une maison de ventes aux enchères : catalogue de lots, agenda des vacations, formulaire d'estimation et <strong>SEO on-page structuré</strong>, pour que chaque vente existe sur Google avant d'avoir lieu.</p>
+      <ul class="tag-row" data-reveal data-reveal-delay="0.25" aria-label="Technologies">
+        <li>Ruby on Rails</li><li>SEO on-page</li><li>Schema.org</li><li>Catalogue en ligne</li>
+      </ul>
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ '/realisations/mirabili-encheres/' | relative_url }}" class="btn-pill btn-pill--cream">Voir le cas client →</a>
+        <a href="https://www.mirabili-encheres.com/" target="_blank" rel="noopener" class="btn-pill btn-pill--light">Visiter le site ↗</a>
+      </div>
     </div>
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ '/assets/images/mirabili.jpg' | relative_url }}" alt="Mirabili Enchères, application web développée par Aldjia Boughias" width="1866" height="1507" fetchpriority="high">
+    </figure>
+  </div>
+</section>
 
-    <!-- CTA -->
-    <div class="text-center mt-5 pt-4" style="border-top: 1px solid var(--line);">
-      <p class="muted mb-4" style="font-size: .95rem;">Un projet similaire en tête ?</p>
-      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-        En discuter
-      </a>
+<!-- ═══ TOUS LES PROJETS — cartes image en éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="250" id="tous-projets" class="fan-section" aria-labelledby="tous-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Et aussi</p>
+      <h2 class="secteurs-title" id="tous-titre">D'autres projets <em>livrés.</em></h2>
     </div>
-
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <a href="{{ '/realisations/aurelie-de-baudus/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.08)">
+          <img src="{{ '/assets/images/aurelie-debaudus.jpg' | relative_url }}" alt="" loading="lazy">
+          <span class="sc-badge">Site vitrine · Coaching</span>
+          <h3 class="sc-name">Aurélie de Baudus</h3>
+          <p class="sc-desc">Site vitrine pour une coach de vie et bibliothérapeute à Lambersart.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/readnest/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <img src="{{ '/assets/images/readnest.jpg' | relative_url }}" alt="" loading="lazy">
+          <span class="sc-badge">Littérature · Édition</span>
+          <h3 class="sc-name">Readnest</h3>
+          <p class="sc-desc">Relier lecteurs, maisons d'édition et librairies, avec une carte interactive.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/art-au-feminin/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}" alt="" loading="lazy">
+          <span class="sc-badge">Projet fondateur · Podcast</span>
+          <h3 class="sc-name">Art au Féminin</h3>
+          <p class="sc-desc">Podcast, blog éditorial, sélection de livres : une plateforme culturelle complète.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/quotety/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#1A1210;--fg:#EDE8DF;--badge:rgba(237,232,223,0.12)">
+          <img src="{{ '/assets/images/quotety.jpg' | relative_url }}" alt="" loading="lazy">
+          <span class="sc-badge">Back-office sur mesure</span>
+          <h3 class="sc-name">Quotety</h3>
+          <p class="sc-desc">Permissions, administration sur mesure, catalogue sans toucher au code.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/realisations/berenice-auger/' | relative_url }}" class="sc-card sc-card--project" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <img src="{{ '/assets/images/logobereniceauger.jpg' | relative_url }}" alt="" loading="lazy">
+          <span class="sc-badge">Site d'artiste · Québec</span>
+          <h3 class="sc-name">Bérénice Auger</h3>
+          <p class="sc-desc">Galerie, boutique et ateliers pour une artiste multidisciplinaire.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>

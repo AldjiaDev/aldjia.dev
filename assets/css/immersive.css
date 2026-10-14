@@ -1283,3 +1283,10 @@ html, body { overflow-x: clip; }
   .sc-card.sc-card--project { height: auto; width: 100%; }
   .fan-section#about-projets .secteurs-stage { grid-template-columns: 1fr; }
 }
+
+/* Étiquettes de technologies (projet à la une) */
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0.5rem; }
+.tag-row li {
+  padding: 0.4rem 0.9rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em;
+  color: #EDE8DF; background: rgba(237,232,223,0.14); border: 0.5px solid rgba(237,232,223,0.3);
+}
