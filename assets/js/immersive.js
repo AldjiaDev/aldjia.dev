@@ -321,8 +321,9 @@
     // ── Gradient section ──
     if (gradSection) {
       const p = progress(gradSection);
-      gradOutline.style.opacity = 1 - clamp((p - 0.3) / 0.35, 0, 1);
-      gradFill.style.opacity    =     clamp((p - 0.3) / 0.45, 0, 1);
+      // Section raccourcie (160vh) : le remplissage démarre plus tôt
+      gradOutline.style.opacity = 1 - clamp((p - 0.1) / 0.45, 0, 1);
+      gradFill.style.opacity    =     clamp((p - 0.1) / 0.5, 0, 1);
     }
 
     // ── Split section ──

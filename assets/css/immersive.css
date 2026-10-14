@@ -220,7 +220,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S8 — GRADIENT "les deux."
 ════════════════════════════════════════ */
-#gradient-section { height: 280vh; position: relative; }
+#gradient-section { height: 160vh; position: relative; }
 #gradient-sticky {
   position: sticky; top: 0; height: 100vh;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
@@ -254,7 +254,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S9 — SPLIT "je les réunis."
 ════════════════════════════════════════ */
-#split-section { height: 320vh; position: relative; background: #F2EDE5; }
+#split-section { height: 220vh; position: relative; background: #F2EDE5; }
 #split-sticky {
   position: sticky; top: 0; height: 100vh;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
