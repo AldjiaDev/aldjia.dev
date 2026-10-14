@@ -314,7 +314,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 .abt-eyebrow {
   display: block; font-size: 0.625rem; font-weight: 500;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(232,72,32,0.85); margin-bottom: 2rem;
+  color: #F37E30; margin-bottom: 2rem;
 }
 .abt-big {
   font-family: 'Playfair Display', serif; font-style: italic;
@@ -322,7 +322,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   line-height: 1.0; letter-spacing: -0.03em; color: #EDE8DF;
   margin-bottom: 0.75rem;
 }
-.abt-big em { color: rgba(232,72,32,0.9); font-style: italic; }
+.abt-big em { color: #BE3220; font-style: italic; }
 .abt-caption {
   font-size: 0.8125rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: rgba(237,232,223,0.32);
@@ -368,7 +368,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* Garder .about-label pour section SEO */
 .about-label {
   font-size: 0.625rem; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; color: #BE3220; margin-bottom: 2rem;
+  text-transform: uppercase; color: #F37E30; margin-bottom: 2rem;
   display: flex; align-items: center; gap: 0.75rem;
 }
 .about-label::after { content: ''; flex: 0 0 24px; height: 0.5px; background: currentColor; opacity: 0.35; }
@@ -383,7 +383,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 .aaf-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
 .aaf-label {
   font-size: 0.625rem; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; color: #BE3220; margin-bottom: 2.5rem;
+  text-transform: uppercase; color: #F37E30; margin-bottom: 2.5rem;
   display: flex; align-items: center; gap: 0.75rem;
 }
 .aaf-label::after { content: ''; flex: 0 0 24px; height: 0.5px; background: currentColor; opacity: 0.35; }
@@ -435,8 +435,8 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   font-weight: 400; line-height: 1.08; letter-spacing: -0.025em; color: #EDE8DF;
 }
 .seo-title em { color: #BE3220; font-style: italic; }
-#seo-section .about-label { color: rgba(190,50,32,0.85); }
-#seo-section .about-label::after { background: rgba(190,50,32,0.85); }
+#seo-section .about-label { color: #F37E30; }
+#seo-section .about-label::after { background: #F37E30; }
 .seo-cards-wrap {
   display: flex; flex-direction: column; gap: 0.55rem;
   width: 100%; max-width: 700px;
@@ -893,7 +893,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   font-size: clamp(2rem, 4.6vw, 4.2rem); line-height: 1.12; letter-spacing: -0.02em;
   color: #EDE8DF; text-wrap: balance;
 }
-.testi-quote em { color: #F37E30; }
+.testi-quote em { color: #BE3220; }
 
 /* Mots révélés un par un (découpés par immersive.js) */
 .testi-quote[data-reveal] { opacity: 1; transform: none; }

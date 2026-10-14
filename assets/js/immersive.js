@@ -73,10 +73,10 @@
         col = mix(col,c3,g3*0.60);
         col = mix(col,c4,g4*0.55);
         // Mode « fil rouge » : fond sombre + lueurs orange / violet / vermillon
+        // Noir #0E0C0A des sections « mots », halos vermillon #BE3220 et violet #7845D0 seulement
         vec3 amb = vec3(0.055, 0.047, 0.039);
-        amb += vec3(0.95, 0.45, 0.17) * exp(-dot(uv-b2,uv-b2)*3.2) * 0.17;
-        amb += vec3(0.47, 0.27, 0.82) * exp(-dot(uv-b1,uv-b1)*3.2) * 0.15;
-        amb += vec3(0.75, 0.20, 0.13) * g3 * 0.08;
+        amb += vec3(0.745, 0.196, 0.126) * exp(-dot(uv-b2,uv-b2)*3.5) * 0.16;
+        amb += vec3(0.471, 0.271, 0.816) * exp(-dot(uv-b1,uv-b1)*3.5) * 0.11;
         col = mix(col, amb, uDark);
 
         col += fract(sin(dot(uv,vec2(127.1,311.7)))*43758.5)*0.008;
@@ -198,8 +198,9 @@
       varying vec3 vViewDir;
       void main() {
         float fresnel = pow(1.0 - max(dot(vNormal, vViewDir), 0.0), 1.8);
-        float hue = fract(fresnel * 1.4 + uTime * 0.08);
-        vec3 rgb = clamp(abs(mod(hue * 6.0 + vec3(0.0, 4.0, 2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+        float h = fract(fresnel * 1.2 + uTime * 0.06);
+        vec3 cO = vec3(0.953, 0.494, 0.188), cV = vec3(0.745, 0.196, 0.126), cP = vec3(0.471, 0.271, 0.816);
+        vec3 rgb = h < 0.333 ? mix(cO, cV, h * 3.0) : h < 0.666 ? mix(cV, cP, (h - 0.333) * 3.0) : mix(cP, cO, (h - 0.666) * 3.0);
         vec3 col = mix(vec3(0.93, 0.91, 0.87) * 0.22, rgb, fresnel);
         gl_FragColor = vec4(col, uOpacity * (0.3 + 0.7 * fresnel));
       }
@@ -456,7 +457,7 @@
     { name: 'Three.js',       badge: 'Web 3D',       bg: '#1A1210', fg: '#EDE8DF', badgeBg: 'rgba(237,232,223,0.12)', border: '1px solid rgba(237,232,223,0.1)', group: 0 },
     { name: 'Swift',          badge: 'iOS · macOS',  bg: '#3A7FD0', fg: '#fff',    badgeBg: 'rgba(255,255,255,0.18)', group: 0 },
     // Groupe art
-    { name: 'Figma',          badge: 'Design UI',    bg: '#6B3FBE', fg: '#fff',    badgeBg: 'rgba(255,255,255,0.18)', group: 1 },
+    { name: 'Figma',          badge: 'Design UI',    bg: '#7845D0', fg: '#fff',    badgeBg: 'rgba(255,255,255,0.18)', group: 1 },
     { name: 'Direction\nart.', badge: 'DA',  bg: '#8B1A30', fg: '#EDE8DF', badgeBg: 'rgba(237,232,223,0.15)', group: 1 },
     { name: 'Histoire\nde l\'art', badge: 'Culture', bg: '#3A5038', fg: '#EDE8DF', badgeBg: 'rgba(237,232,223,0.15)', group: 1 },
   ];
@@ -1000,8 +1001,8 @@
           float diff = max(dot(n, L), 0.0) * 0.4 + 0.6;
           float spec = pow(max(dot(reflect(-L, n), v), 0.0), 28.0) * (0.35 + 0.25 * uHover);
           float fres = pow(1.0 - max(dot(n, v), 0.0), 2.0);
-          float hue = fract(fres * 1.5 + uTime * 0.1);
-          vec3 iri = clamp(abs(mod(hue * 6.0 + vec3(0.0, 4.0, 2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+          float hh = fract(fres * 1.5 + uTime * 0.1);
+          vec3 iri = hh < 0.333 ? mix(c1, vec3(0.93, 0.91, 0.87), hh * 3.0) : hh < 0.666 ? mix(vec3(0.93, 0.91, 0.87), c3, (hh - 0.333) * 3.0) : mix(c3, c1, (hh - 0.666) * 3.0);
           vec3 col = base * diff + iri * fres * (0.3 + 0.35 * uHover) + spec;
           gl_FragColor = vec4(col, uOpacity);
         }`,
