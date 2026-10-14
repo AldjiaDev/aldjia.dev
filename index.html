@@ -324,16 +324,12 @@ redirect_from:
     </div>
   </section>
 
-  <!-- ═══ CONSEILS ════════════════════════════════════════ -->
+  <!-- ═══ CONSEILS — titre ondulant, cliquable vers le blog ═══ -->
   <section data-ambient id="conseils" aria-labelledby="conseils-title">
     <div class="conseils-inner">
-      <h2 class="conseils-title" id="conseils-title" data-reveal data-reveal-delay="0">Mes conseils pour<br>votre <em>visibilité</em></h2>
-      <ul class="post-list" data-reveal data-reveal-delay="0.1">
-        {% for post in site.posts limit: 3 %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-      <a href="{{ '/blog/' | relative_url }}" class="conseils-wave-cta" id="conseils-cta" aria-label="Découvrir les articles" data-reveal data-reveal-delay="0.2">Découvrir les articles →</a>
+      <h2 class="conseils-title" id="conseils-title" data-reveal>
+        <a href="{{ '/blog/' | relative_url }}" class="conseils-link" data-wave aria-label="Mes conseils pour votre visibilité : lire les articles">Mes conseils pour<br>votre <em>visibilité</em><span class="conseils-arrow" aria-hidden="true">→</span></a>
+      </h2>
     </div>
   </section>
 

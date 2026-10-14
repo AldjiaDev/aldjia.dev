@@ -479,32 +479,35 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    CONSEILS — Cards éditoriales
 ════════════════════════════════════════ */
-#conseils { background: #0E0C0A; padding: 10rem 2rem; }
-.conseils-inner {
-  max-width: 800px; margin: 0 auto;
-  display: flex; flex-direction: column; align-items: center; gap: 3.5rem;
-  text-align: center;
-}
+#conseils { background: #0E0C0A; padding: 12rem 2rem; }
+.conseils-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
 .conseils-title {
-  font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 400; color: #EDE8DF; letter-spacing: -0.025em; line-height: 1.1;
+  font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 7.5vw, 7rem);
+  font-weight: 400; color: #EDE8DF; letter-spacing: -0.03em; line-height: 1.05;
 }
-.conseils-title em { color: #BE3220; font-style: italic; }
-.conseils-wave-cta {
-  font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: clamp(1rem, 1.8vw, 1.3rem);
-  color: rgba(237,232,223,0.38); text-decoration: none;
-  letter-spacing: 0.01em; transition: color 0.4s;
+.conseils-title em { color: #BE3220; font-style: italic; transition: color 0.4s; }
+
+/* Titre cliquable qui ondule ; l'amplitude grandit au survol (--amp animée via @property) */
+@property --amp { syntax: '<length>'; inherits: true; initial-value: 0px; }
+.conseils-link {
+  --amp: 0.06em;
+  display: inline-block; color: inherit; text-decoration: none;
+  transition: --amp 0.6s cubic-bezier(0.2, 0, 0, 1);
 }
-.conseils-wave-cta:hover { color: rgba(237,232,223,0.75); }
+.conseils-link:hover, .conseils-link:focus-visible { --amp: 0.16em; }
+.conseils-link:hover em, .conseils-link:focus-visible em { color: #F37E30; }
+.cw-word { display: inline-block; white-space: nowrap; }
+.cw { display: inline-block; animation: conseilWave 2.8s ease-in-out infinite; }
 @keyframes conseilWave {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+  50%      { transform: translateY(calc(-1 * var(--amp))); }
 }
-.cw { display: inline-block; }
-.conseils-wave-cta:hover .cw {
-  animation: conseilWave 1s ease-in-out infinite;
+.conseils-arrow {
+  display: inline-block; margin-left: 0.25em; font-style: normal;
+  font-size: 0.6em; vertical-align: 0.15em; color: #F37E30;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
+.conseils-link:hover .conseils-arrow { transform: translateX(0.2em); }
 
 /* ════════════════════════════════════════
    CTA — Travaillons ensemble
@@ -853,16 +856,9 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   .testi-head { margin-bottom: 3rem; }
   .testi + .testi { margin-top: 4.5rem; }
   .testi-source { margin-left: 0; }
+  #conseils { padding: 8rem 1.25rem; }
+  .conseils-arrow { font-size: 0.7em; }
 }
-
-/* Conseils — derniers articles */
-.post-list { display: flex; flex-direction: column; gap: 0.25rem; margin: 2.5rem 0 3rem; }
-.post-list a {
-  display: block; padding: 0.6rem 0;
-  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
-  color: rgba(237,232,223,0.7); text-decoration: none; transition: color 0.2s;
-}
-.post-list a:hover { color: #EDE8DF; }
 
 /* Formulaire de contact */
 .contact-form {
@@ -935,6 +931,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
   .qw { opacity: 1; transform: none; filter: none; transition: none; }
+  .cw { animation: none; }
 }
 
 /* ════════════════════════════════════════
@@ -962,7 +959,7 @@ html, body { overflow-x: clip; }
   .abt-eyebrow, .aaf-label, .about-label { font-size: 0.7rem; }
 
   /* Cibles tactiles ≥ 44px */
-  .text-link, .aaf-link, .projets-all, .conseils-wave-cta {
+  .text-link, .aaf-link, .projets-all {
     display: inline-block; padding-top: 0.75rem; padding-bottom: 0.75rem;
   }
   .aaf-link { padding-bottom: 0.5rem; }

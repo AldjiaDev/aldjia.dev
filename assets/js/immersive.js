@@ -829,13 +829,37 @@
   const nav = document.getElementById('main-nav');
   const tickerEl = document.getElementById('ticker-section');
 
-  /* ── Conseils — wave sur la phrase CTA ── */
-  const conseilsCta = document.getElementById('conseils-cta');
-  if (conseilsCta) {
-    conseilsCta.innerHTML = [...conseilsCta.textContent].map((c, i) =>
-      `<span class="cw" style="animation-delay:${i * 0.05}s">${c === ' ' ? '&nbsp;' : c}</span>`
-    ).join('');
-  }
+  /* ── Conseils — titre qui ondule lettre par lettre ([data-wave]) ── */
+  // Les lettres sont groupées par mot (nowrap) pour ne jamais couper un mot en fin de ligne ;
+  // <em>, <br> et la flèche sont conservés.
+  document.querySelectorAll('[data-wave]').forEach(root => {
+    let i = 0;
+    const walk = node => {
+      [...node.childNodes].forEach(child => {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          child.textContent.split(/(\s+)/).forEach(part => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+            const word = document.createElement('span');
+            word.className = 'cw-word';
+            [...part].forEach(c => {
+              const l = document.createElement('span');
+              l.className = 'cw';
+              l.style.animationDelay = (i++ * 0.06) + 's';
+              l.textContent = c;
+              word.appendChild(l);
+            });
+            frag.appendChild(word);
+          });
+          child.replaceWith(frag);
+        } else if (child.nodeType === 1 && child.tagName !== 'BR') {
+          walk(child);
+        }
+      });
+    };
+    walk(root);
+  });
 
   // Nav claire (texte sombre) seulement quand la section sous la nav a un fond clair
   function bgLuminance(el) {
