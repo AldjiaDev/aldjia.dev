@@ -245,7 +245,6 @@
     const zoneEnd = window.innerHeight * 3.1;
     const dark = Math.max(0, Math.min(1, (scrollY - zoneEnd * 0.85) / (window.innerHeight * 0.6)));
     const heroVisible = scrollY < zoneEnd + window.innerHeight * 0.4;
-    if (!heroVisible && ambientOn <= 0) return; // canvas entièrement recouvert : pas de rendu
 
     const t = clock.getElapsedTime();
     cM.x += (tM.x - cM.x) * 0.06;
@@ -314,6 +313,7 @@
     roleDev.style.opacity = lo;
     roleArt.style.opacity = lo;
 
+    if (!heroVisible && ambientOn <= 0) return; // canvas entièrement recouvert : pas de rendu
     renderer.render(scene, camera);
   }
   tick();

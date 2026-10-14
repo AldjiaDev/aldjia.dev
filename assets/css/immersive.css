@@ -547,7 +547,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S11 — TOOLKIT (fan cards)
 ════════════════════════════════════════ */
-#toolkit { height: 480vh; background: #0E0C0A; }
+#toolkit { height: 340vh; background: #0E0C0A; }
 #toolkit-sticky {
   position: sticky; top: 0; height: 100vh;
   display: flex; flex-direction: column; align-items: center;
@@ -588,7 +588,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S12 — PROJETS
 ════════════════════════════════════════ */
-#projets { height: 700vh; position: relative; }
+#projets { height: 300vh; position: relative; }
 #projets-sticky {
   position: sticky; top: 0; height: 100vh; overflow: hidden;
   background: #F2EDE5;
@@ -986,5 +986,11 @@ html, body { overflow-x: clip; }
    (fond sombre animé + sculpture iridescente, cf. immersive.js)
 ════════════════════════════════════════ */
 [data-ambient],
-[data-ambient] #toolkit-sticky { background: transparent !important; }
+[data-ambient] #toolkit-sticky,
+[data-ambient] #projets-sticky { background: transparent !important; }
+
+/* Projets passe dans l'univers sombre : texte crème */
+#projets .projets-title { color: #EDE8DF; }
+#projets .projet-item { color: #EDE8DF; }
+#projets .projets-all { color: #EDE8DF; }
 .std-section--alt[data-ambient] { background: rgba(237,232,223,0.025) !important; }
