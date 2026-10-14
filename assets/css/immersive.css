@@ -790,13 +790,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 .projets-all:hover { opacity: 1; }
 
 /* Témoignages — citations éditoriales */
-.testi-head { margin-bottom: 5rem; }
-.testi-title {
-  font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.75rem);
-  font-weight: 400; line-height: 1.04; letter-spacing: -0.03em; color: #EDE8DF;
-  margin-bottom: 2rem;
-}
-.testi-title em { color: #BE3220; font-style: italic; }
+.testi-foot { margin-top: 6rem; text-align: center; }
 .testi-rating {
   display: inline-flex; align-items: center; gap: 0.75rem;
   padding: 0.6rem 1.1rem; border-radius: 3rem;
@@ -851,7 +845,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 
 @media (max-width: 768px) {
-  .testi-head { margin-bottom: 3rem; }
+  .testi-foot { margin-top: 4rem; }
   .testi + .testi { margin-top: 4.5rem; }
   .testi-source { margin-left: 0; }
   #conseils { padding: 8rem 1.25rem; }
