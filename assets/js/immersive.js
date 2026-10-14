@@ -541,6 +541,38 @@
   window.addEventListener('scroll', updateToolkit, { passive: true });
   updateToolkit();
 
+  /* ══════════════════════════════════════════════════════════
+     POUR QUI — cartes secteurs en éventail (même geste que « Ma palette »)
+     Les cartes sont de vrais liens dans le HTML ; ici on ne pilote que
+     --tx / --ty / --rot. Sur mobile : grille CSS, pas d'éventail.
+  ══════════════════════════════════════════════════════════ */
+  const secSection = document.getElementById('secteurs');
+  const secCards   = [...document.querySelectorAll('#secteurs-stage .sc-item')];
+  const secMobile  = window.matchMedia('(max-width: 768px)');
+
+  function updateSecteurs() {
+    if (!secSection || !secCards.length) return;
+    if (secMobile.matches) {
+      secCards.forEach(el => el.style.cssText = '');
+      return;
+    }
+    const p = progress(secSection);
+    const e = 1 - Math.pow(1 - clamp((p - 0.05) / 0.6, 0, 1), 3);
+    const n = secCards.length;
+    const gap = Math.min(165, (window.innerWidth - 300) / (n - 1));
+    secCards.forEach((el, i) => {
+      const spread = i - (n - 1) / 2;
+      el.style.setProperty('--tx',  (spread * gap * e) + 'px');
+      el.style.setProperty('--ty',  (spread * spread * 9 * e + (1 - e) * 60) + 'px');
+      el.style.setProperty('--rot', (spread * 9 * e) + 'deg');
+      el.style.opacity = clamp(p / 0.08, 0, 1);
+    });
+  }
+  window.addEventListener('scroll', updateSecteurs, { passive: true });
+  window.addEventListener('resize', updateSecteurs);
+  secMobile.addEventListener('change', updateSecteurs);
+  updateSecteurs();
+
   /* ── Projets — apparition ondulante au scroll ── */
   const projetsSection = document.getElementById('projets');
   const projetItems    = document.querySelectorAll('.projet-item');

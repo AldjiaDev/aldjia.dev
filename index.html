@@ -176,60 +176,64 @@ redirect_from:
     </div>
   </section>
 
-  <!-- ═══ CHAPITRE 4 — Pour qui ══════════════════════════ -->
-  <section data-ambient id="secteurs" class="std-section" aria-labelledby="secteurs-title">
-    <div class="std-inner">
-      <p class="about-label" data-reveal>Pour qui</p>
-      <h2 class="std-title" id="secteurs-title" data-reveal data-reveal-delay="0.1">Des sites web pour celles et ceux<br>qui font vivre <em>l'art.</em></h2>
-      <p class="std-lead" data-reveal data-reveal-delay="0.2">Galeriste, artiste, commissaire-priseur : votre site n'est pas un projet web comme les autres. Je connais votre vocabulaire, vos saisons, vos publics, avant d'écrire la première ligne de code.</p>
-
-      <ul class="sector-grid">
-        <li data-reveal data-reveal-delay="0.05">
-          <a href="{{ '/secteurs/galeries-art/' | relative_url }}" class="sector-card">
-            <span class="sector-n">01</span>
-            <h3 class="sector-name">Galeries d'art</h3>
-            <p class="sector-desc">Expositions, artistes représentés, vernissages : un site à la hauteur de votre programmation.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+  <!-- ═══ CHAPITRE 4 — Pour qui : cartes en éventail (comme « Ma palette ») ═══ -->
+  <section data-ambient id="secteurs" aria-labelledby="secteurs-title">
+    <div id="secteurs-sticky">
+      <div class="secteurs-header">
+        <p class="about-label secteurs-label">Pour qui</p>
+        <h2 class="secteurs-title" id="secteurs-title">Des sites web pour celles et ceux<br>qui font vivre <em>l'art.</em></h2>
+        <p class="secteurs-lead">Galeristes, artistes, commissaires-priseurs : je connais votre vocabulaire avant d'écrire la première ligne de code.</p>
+      </div>
+      <ul class="secteurs-stage" id="secteurs-stage">
+        <li class="sc-item">
+          <a href="{{ '/secteurs/galeries-art/' | relative_url }}" class="sc-card" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+            <span class="sc-n">01</span>
+            <h3 class="sc-name">Galeries
+d'art</h3>
+            <span class="sc-badge">Expositions · vernissages</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
-        <li data-reveal data-reveal-delay="0.12">
-          <a href="{{ '/secteurs/artistes/' | relative_url }}" class="sector-card">
-            <span class="sector-n">02</span>
-            <h3 class="sector-name">Artistes</h3>
-            <p class="sector-desc">Un portfolio qui parle à vos collectionneurs, commissaires et institutions, mieux qu'un PDF.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+        <li class="sc-item">
+          <a href="{{ '/secteurs/artistes/' | relative_url }}" class="sc-card" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+            <span class="sc-n">02</span>
+            <h3 class="sc-name">Artistes</h3>
+            <span class="sc-badge">Portfolio · collectionneurs</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
-        <li data-reveal data-reveal-delay="0.19">
-          <a href="{{ '/secteurs/maisons-de-ventes/' | relative_url }}" class="sector-card">
-            <span class="sector-n">03</span>
-            <h3 class="sector-name">Maisons de ventes</h3>
-            <p class="sector-desc">Catalogue en ligne, estimations, agenda des vacations, back-office : je parle votre langue.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+        <li class="sc-item">
+          <a href="{{ '/secteurs/maisons-de-ventes/' | relative_url }}" class="sc-card" style="--bg:#E8C83A;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+            <span class="sc-n">03</span>
+            <h3 class="sc-name">Maisons
+de ventes</h3>
+            <span class="sc-badge">Catalogue · vacations</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
-        <li data-reveal data-reveal-delay="0.26">
-          <a href="{{ '/secteurs/institutions-culturelles/' | relative_url }}" class="sector-card">
-            <span class="sector-n">04</span>
-            <h3 class="sector-name">Institutions culturelles</h3>
-            <p class="sector-desc">Musées, centres d'art, festivals : une mission culturelle qui se trouve sur Google.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+        <li class="sc-item">
+          <a href="{{ '/secteurs/institutions-culturelles/' | relative_url }}" class="sc-card" style="--bg:#1A1210;--fg:#EDE8DF;--badge:rgba(237,232,223,0.12)">
+            <span class="sc-n">04</span>
+            <h3 class="sc-name">Institutions
+culturelles</h3>
+            <span class="sc-badge">Musées · festivals</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
-        <li data-reveal data-reveal-delay="0.33">
-          <a href="{{ '/secteurs/sculpteurs/' | relative_url }}" class="sector-card">
-            <span class="sector-n">05</span>
-            <h3 class="sector-name">Sculpteurs</h3>
-            <p class="sector-desc">Vues multiples, matériaux, dimensions, œuvres in situ : montrer le volume à l'écran.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+        <li class="sc-item">
+          <a href="{{ '/secteurs/sculpteurs/' | relative_url }}" class="sc-card" style="--bg:#3A5038;--fg:#EDE8DF;--badge:rgba(237,232,223,0.15)">
+            <span class="sc-n">05</span>
+            <h3 class="sc-name">Sculpteurs</h3>
+            <span class="sc-badge">Volume · in situ</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
-        <li data-reveal data-reveal-delay="0.40">
-          <a href="{{ '/secteurs/photographes/' | relative_url }}" class="sector-card">
-            <span class="sector-n">06</span>
-            <h3 class="sector-name">Photographes</h3>
-            <p class="sector-desc">Des séries qui s'affichent vite et net, sur tous les écrans, sans trahir vos tirages.</p>
-            <span class="sector-arrow" aria-hidden="true">→</span>
+        <li class="sc-item">
+          <a href="{{ '/secteurs/photographes/' | relative_url }}" class="sc-card" style="--bg:#6B3FBE;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+            <span class="sc-n">06</span>
+            <h3 class="sc-name">Photographes</h3>
+            <span class="sc-badge">Séries · tirages</span>
+            <span class="sc-arrow" aria-hidden="true">→</span>
           </a>
         </li>
       </ul>
