@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charte Graphique — Aldjia Dev · Direction "Vernissage"</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================================================================
+       TOKENS — Direction "Vernissage"
+    ================================================================ */
+    :root {
+      --night:        #0C0C0A;
+      --night-2:      #1A1A17;
+      --night-3:      #2A2A26;
+      --paper:        #F7F4EF;
+      --paper-2:      #EDE9E0;
+      --paper-3:      #E2DDD3;
+      --ink:          #1A1814;
+      --ink-2:        #3A3630;
+      --ink-3:        #6B6558;
+      --ink-4:        #9A9488;
+      --cream:        #EDE8DF;
+      --cream-muted:  rgba(237, 232, 223, 0.55);
+      --copper:       #B8976A;
+      --copper-light: #D4B98A;
+      --copper-pale:  rgba(184, 151, 106, 0.10);
+      --copper-mid:   rgba(184, 151, 106, 0.25);
+      --border-light: rgba(26, 24, 20, 0.10);
+      --border-night: rgba(237, 232, 223, 0.12);
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--paper);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────── */
+    .section { padding: 5rem 0; }
+    .section--dark { background: var(--night); color: var(--cream); }
+    .section--paper { background: var(--paper); }
+    .section--paper-2 { background: var(--paper-2); }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--copper-mid);
+    }
+
+    /* ── Page header ────────────────────────────────────────────── */
+    .page-header {
+      background: var(--night);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .page-header .kicker {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .page-header h1 em { color: var(--copper); font-style: italic; }
+    .page-header p {
+      color: var(--cream-muted);
+      font-size: 0.875rem;
+      margin-top: 1rem;
+    }
+
+    /* ── Couleurs ───────────────────────────────────────────────── */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+    .swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 0.5px solid var(--border-light);
+    }
+    .swatch-color {
+      height: 80px;
+    }
+    .swatch-info {
+      padding: 0.75rem;
+      background: white;
+    }
+    .swatch-name {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .swatch-hex {
+      font-size: 0.75rem;
+      color: var(--ink-3);
+      font-family: 'SF Mono', monospace;
+    }
+    .swatch-role {
+      font-size: 0.6875rem;
+      color: var(--ink-4);
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    .swatches-dark .swatch { border-color: var(--border-night); }
+    .swatches-dark .swatch-info { background: var(--night-2); }
+    .swatches-dark .swatch-name { color: var(--cream); }
+    .swatches-dark .swatch-hex { color: var(--cream-muted); }
+    .swatches-dark .swatch-role { color: rgba(237,232,223,0.4); }
+
+    /* ── Typographie ────────────────────────────────────────────── */
+    .type-specimen { margin-bottom: 2.5rem; border-bottom: 0.5px solid var(--border-light); padding-bottom: 2.5rem; }
+    .type-specimen:last-child { border-bottom: none; }
+    .type-meta {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      color: var(--ink-4);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .type-meta span { color: var(--copper); font-weight: 500; }
+
+    .t-display {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+    .t-display em { color: var(--copper); font-style: italic; }
+
+    .t-h1 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+    .t-h2 {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .t-h2 em { color: var(--copper); font-style: italic; }
+
+    .t-h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .t-body {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--ink-3);
+      max-width: 58ch;
+    }
+
+    .t-small {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--ink-4);
+    }
+
+    .t-label {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+    }
+
+    /* Specimen sur fond sombre */
+    .t-display--light { color: var(--cream); }
+    .t-h1--light { color: var(--cream); }
+    .t-body--light { color: var(--cream-muted); }
+
+    /* ── Boutons ────────────────────────────────────────────────── */
+    .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 2rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.18s ease;
+    }
+
+    .btn--primary {
+      background: var(--copper);
+      color: var(--night);
+      padding: 0.875rem 1.75rem;
+      border-radius: 0;
+    }
+    .btn--primary:hover { background: var(--copper-light); }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--ink);
+      padding: 0.8125rem 1.75rem;
+      border-radius: 0;
+      border: 0.5px solid var(--ink-2);
+    }
+    .btn--outline:hover { border-color: var(--copper); color: var(--copper); }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--ink-3);
+      padding: 0.5rem 0;
+      border-bottom: 0.5px solid var(--border-light);
+      border-radius: 0;
+    }
+    .btn--ghost:hover { color: var(--ink); border-color: var(--copper); }
+
+    /* Sur fond sombre */
+    .btn--outline-light {
+      background: transparent;
+      color: var(--cream);
+      padding: 0.8125rem 1.75rem;
+      border-radius: 0;
+      border: 0.5px solid rgba(237,232,223,0.3);
+    }
+    .btn--outline-light:hover { border-color: var(--copper); color: var(--copper); }
+
+    .btn--copper-outline {
+      background: transparent;
+      color: var(--copper);
+      padding: 0.8125rem 1.75rem;
+      border-radius: 0;
+      border: 0.5px solid var(--copper-mid);
+    }
+    .btn--copper-outline:hover { background: var(--copper-pale); }
+
+    /* Arrow */
+    .btn-arrow { font-size: 1rem; transition: transform 0.18s ease; }
+    .btn:hover .btn-arrow { transform: translateX(4px); }
+
+    /* ── Nav preview ────────────────────────────────────────────── */
+    .nav-preview {
+      background: var(--night);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 0.5px solid var(--border-night);
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--copper); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(237,232,223,0.6);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--cream); }
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--copper);
+      text-decoration: none;
+      border: 0.5px solid var(--copper-mid);
+      padding: 0.5rem 1.25rem;
+      transition: all 0.15s;
+    }
+    .nav-cta:hover { background: var(--copper-pale); }
+
+    /* ── Hero preview ───────────────────────────────────────────── */
+    .hero-preview {
+      background: var(--night);
+      padding: 6rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 4rem;
+      align-items: end;
+    }
+    .hero-number {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.16em;
+      color: var(--copper);
+      margin-bottom: 2rem;
+    }
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: 3.75rem;
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      color: var(--cream);
+      margin-bottom: 2rem;
+    }
+    .hero-headline em { color: var(--copper); font-style: italic; }
+    .hero-sub {
+      font-size: 0.9375rem;
+      color: rgba(237,232,223,0.55);
+      line-height: 1.65;
+      max-width: 44ch;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; align-items: center; }
+    .hero-side {
+      border: 0.5px solid var(--border-night);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .hero-stat { border-left: 1.5px solid var(--copper); padding-left: 1rem; }
+    .hero-stat-n {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .hero-stat-l {
+      font-size: 0.75rem;
+      color: rgba(237,232,223,0.45);
+      letter-spacing: 0.08em;
+      margin-top: 0.25rem;
+    }
+
+    /* ── Cards ──────────────────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+    }
+    .card {
+      background: var(--paper);
+      padding: 2rem;
+      border: 0.5px solid var(--border-light);
+    }
+    .card-n {
+      font-family: var(--font-serif);
+      font-size: 0.875rem;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+    }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .card-body {
+      font-size: 0.8125rem;
+      color: var(--ink-3);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .card-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--ink-2);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--border-light);
+      padding-bottom: 0.125rem;
+      transition: all 0.15s;
+    }
+    .card-link:hover { color: var(--copper); border-color: var(--copper); }
+
+    /* Card dark */
+    .card--dark {
+      background: var(--night-2);
+      border-color: var(--border-night);
+    }
+    .card--dark .card-title { color: var(--cream); }
+    .card--dark .card-body { color: rgba(237,232,223,0.5); }
+    .card--dark .card-link { color: var(--cream-muted); border-color: var(--border-night); }
+    .card--dark .card-link:hover { color: var(--copper); border-color: var(--copper); }
+
+    /* ── Tags / Badges ──────────────────────────────────────────── */
+    .tags-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 0.375rem 0.75rem;
+      border-radius: 0;
+    }
+    .tag--copper { background: var(--copper-pale); color: var(--copper); border: 0.5px solid var(--copper-mid); }
+    .tag--ink { background: transparent; color: var(--ink-3); border: 0.5px solid var(--border-light); }
+    .tag--dark { background: rgba(237,232,223,0.06); color: rgba(237,232,223,0.6); border: 0.5px solid var(--border-night); }
+
+    /* ── Sections alternées ─────────────────────────────────────── */
+    .section-number {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.16em;
+      color: var(--copper);
+      margin-bottom: 1rem;
+    }
+    .divider {
+      height: 0.5px;
+      background: var(--border-light);
+      margin: 0;
+    }
+    .divider--night { background: var(--border-night); }
+
+    /* ── Testimonial ────────────────────────────────────────────── */
+    .testimonial {
+      border-left: 1.5px solid var(--copper);
+      padding: 1.5rem 2rem;
+      background: var(--copper-pale);
+    }
+    .testimonial blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .testimonial cite {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--copper);
+      font-style: normal;
+    }
+
+    /* ── Form preview ───────────────────────────────────────────── */
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.5rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: var(--paper);
+      border: 0.5px solid var(--border-light);
+      border-radius: 0;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-input:focus { border-color: var(--copper); }
+    .form-input::placeholder { color: var(--ink-4); }
+
+    /* ── Section navigation sticky ──────────────────────────────── */
+    .toc {
+      position: fixed;
+      top: 50%;
+      right: 1.5rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 100;
+    }
+    .toc a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-4);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .toc a::before {
+      content: '';
+      width: 16px;
+      height: 0.5px;
+      background: currentColor;
+      transition: width 0.15s;
+    }
+    .toc a:hover { color: var(--copper); }
+    .toc a:hover::before { width: 24px; }
+
+    @media (max-width: 900px) {
+      .toc { display: none; }
+      .hero-preview { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation TOC -->
+  <nav class="toc">
+    <a href="#couleurs">Couleurs</a>
+    <a href="#typo">Typo</a>
+    <a href="#boutons">Boutons</a>
+    <a href="#nav">Nav</a>
+    <a href="#hero">Hero</a>
+    <a href="#cards">Cards</a>
+    <a href="#ui">UI</a>
+  </nav>
+
+  <!-- En-tête de la charte -->
+  <header class="page-header">
+    <p class="kicker">Aldjia Dev — Charte Graphique</p>
+    <h1>Direction <em>Vernissage</em></h1>
+    <p>Palette · Typographie · Composants · Aperçus — à valider avant implémentation</p>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 1 — COULEURS
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper" id="couleurs">
+    <div class="container">
+      <p class="section-label">01 — Palette</p>
+
+      <p style="font-size:0.8125rem;color:var(--ink-3);margin-bottom:2.5rem;max-width:60ch;">
+        Un accent unique — le <strong style="color:var(--ink)">cuivre</strong> — évoque les cadres dorés, les plaques des galeries, les dorures de reliure.
+        Palette volontairement réduite : fond papier, profondeur nuit, texte encre.
+      </p>
+
+      <h3 style="font-family:var(--font-serif);font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:1.25rem;letter-spacing:-0.01em;">Fonds & textes</h3>
+      <div class="swatches" style="margin-bottom:2.5rem;">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#0C0C0A;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Night</span>
+            <span class="swatch-hex">#0C0C0A</span>
+            <span class="swatch-role">Hero, footer, sections dramatiques</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1A1A17;border-top:1px solid #333;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Night-2</span>
+            <span class="swatch-hex">#1A1A17</span>
+            <span class="swatch-role">Surfaces secondaires sombres</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F7F4EF;border-top:0.5px solid #ddd;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Paper</span>
+            <span class="swatch-hex">#F7F4EF</span>
+            <span class="swatch-role">Fond principal — papier d'archive</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#EDE9E0;border-top:0.5px solid #ccc;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Paper-2</span>
+            <span class="swatch-hex">#EDE9E0</span>
+            <span class="swatch-role">Sections alternées claires</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1A1814;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Ink</span>
+            <span class="swatch-hex">#1A1814</span>
+            <span class="swatch-role">Texte principal sur clair</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#6B6558;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Ink-3</span>
+            <span class="swatch-hex">#6B6558</span>
+            <span class="swatch-role">Texte secondaire, corps</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#EDE8DF;border-top:0.5px solid #ccc;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Cream</span>
+            <span class="swatch-hex">#EDE8DF</span>
+            <span class="swatch-role">Texte principal sur nuit</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:1.25rem;letter-spacing:-0.01em;">Accent cuivre</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#B8976A;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Copper</span>
+            <span class="swatch-hex">#B8976A</span>
+            <span class="swatch-role">Accent principal — cuivre/or</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#D4B98A;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Copper Light</span>
+            <span class="swatch-hex">#D4B98A</span>
+            <span class="swatch-role">Hover, variante claire</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:rgba(184,151,106,0.10);border-top:0.5px solid #ddd;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Copper Pale</span>
+            <span class="swatch-hex">rgba(184,151,106,.10)</span>
+            <span class="swatch-role">Surfaces teintées, fonds cards</span>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:rgba(184,151,106,0.25);border-top:0.5px solid #ddd;"></div>
+          <div class="swatch-info">
+            <span class="swatch-name">Copper Mid</span>
+            <span class="swatch-hex">rgba(184,151,106,.25)</span>
+            <span class="swatch-role">Bordures accentuées</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 2 — TYPOGRAPHIE
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper" id="typo">
+    <div class="container">
+      <p class="section-label">02 — Typographie</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:0.5px solid var(--border-light);">
+        <div>
+          <p class="t-label" style="margin-bottom:0.75rem;">Police titre</p>
+          <p style="font-family:var(--font-serif);font-size:2.5rem;color:var(--ink);letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.5rem;">Playfair Display</p>
+          <p style="font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--copper);">Playfair Display Italic</p>
+          <p style="font-size:0.75rem;color:var(--ink-4);margin-top:0.75rem;">Éditorial, magazine d'art, catalogue</p>
+        </div>
+        <div>
+          <p class="t-label" style="margin-bottom:0.75rem;">Police corps</p>
+          <p style="font-family:var(--font-sans);font-size:1.5rem;color:var(--ink);margin-bottom:0.5rem;">Inter Regular</p>
+          <p style="font-family:var(--font-sans);font-size:1.5rem;font-weight:500;color:var(--ink-2);">Inter Medium</p>
+          <p style="font-size:0.75rem;color:var(--ink-4);margin-top:0.75rem;">UI, navigation, labels, corps de texte</p>
+        </div>
+      </div>
+
+      <!-- Display -->
+      <div class="type-specimen">
+        <p class="type-meta">Display — <span>Playfair Display 400 · 4rem · tracking -0.03em</span></p>
+        <p class="t-display">Je crée des sites qui<br>servent <em>l'art</em> et la culture.</p>
+      </div>
+
+      <!-- H1 -->
+      <div class="type-specimen">
+        <p class="type-meta">H1 — <span>Playfair Display 400 · 2.5rem · tracking -0.025em</span></p>
+        <p class="t-h1">Développeuse web<br>spécialisée art & culture</p>
+      </div>
+
+      <!-- H2 -->
+      <div class="type-specimen">
+        <p class="type-meta">H2 — <span>Playfair Display 400 · 1.75rem · tracking -0.02em</span></p>
+        <p class="t-h2">Ce que je peux faire<br>pour votre <em>galerie</em></p>
+      </div>
+
+      <!-- H3 -->
+      <div class="type-specimen">
+        <p class="type-meta">H3 — <span>Playfair Display 500 · 1.25rem</span></p>
+        <p class="t-h3">Site vitrine pour commissaires-priseurs</p>
+      </div>
+
+      <!-- Body -->
+      <div class="type-specimen">
+        <p class="type-meta">Corps — <span>Inter 400 · 0.9375rem · line-height 1.7</span></p>
+        <p class="t-body">Je conçois et développe des sites web sur mesure pour les acteurs du monde de l'art et de la culture. Double formation Beaux-Arts et développement — je comprends vos enjeux esthétiques autant que techniques.</p>
+      </div>
+
+      <!-- Small + Label -->
+      <div class="type-specimen">
+        <p class="type-meta">Petit + Label — <span>Inter · 0.8125rem / 0.6875rem</span></p>
+        <p class="t-small" style="margin-bottom:1rem;">Depuis 2022 · Lille & remote · Ruby on Rails, Jekyll, Swift</p>
+        <p class="t-label">Secteurs d'activité</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typo sur fond sombre -->
+  <section style="background:var(--night);padding:4rem 0;">
+    <div class="container">
+      <p class="section-label" style="color:var(--copper);">02b — Typographie sur fond nuit</p>
+      <p class="t-display t-display--light" style="margin-bottom:1.5rem;">Sites qui inspirent<br>confiance <em style="color:var(--copper)">et désir.</em></p>
+      <p class="t-body t-body--light">Chaque site que je construis est pensé comme une expérience — pas un simple catalogue en ligne.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 3 — BOUTONS & CTA
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper" id="boutons">
+    <div class="container">
+      <p class="section-label">03 — Boutons & CTA</p>
+
+      <p style="font-size:0.8125rem;color:var(--ink-3);margin-bottom:2rem;">Sur fond clair :</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn--primary">Démarrer un projet <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn btn--outline">Voir les réalisations</a>
+        <a href="#" class="btn btn--copper-outline">En savoir plus</a>
+        <a href="#" class="btn btn--ghost">Lire l'article <span class="btn-arrow">→</span></a>
+      </div>
+
+      <p style="font-size:0.8125rem;color:var(--ink-3);margin:2rem 0 1rem;">Sur fond nuit :</p>
+      <div style="background:var(--night);padding:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+        <a href="#" class="btn btn--primary">Démarrer un projet <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn btn--outline-light">Voir les réalisations</a>
+        <a href="#" class="btn btn--copper-outline">En savoir plus</a>
+      </div>
+
+      <p style="font-size:0.75rem;color:var(--ink-4);margin-top:1rem;">Note design : <strong style="color:var(--ink-2);">border-radius: 0</strong> — angles francs, aucun arrondi. Caractère éditorial et précis.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 4 — NAVIGATION
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper-2" id="nav">
+    <div class="container">
+      <p class="section-label">04 — Navigation</p>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo">Aldjia<span>.</span>dev</span>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Accueil</a></li>
+        <li><a href="#">Réalisations</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">À propos</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Contact</a>
+    </div>
+    <div class="container" style="margin-top:1.5rem;">
+      <p style="font-size:0.75rem;color:var(--ink-4);">
+        Logo : Playfair Display — le point est cuivré. Nav : Inter 500 uppercase tracking. CTA en cuivre bordure.
+        Fond nuit permanent — la nav reste sombre même en scroll sur sections claires (sticky).
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 5 — HERO PREVIEW
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section--dark" id="hero" style="padding:0;">
+    <div class="container" style="padding-top:1.5rem;padding-bottom:1rem;">
+      <p class="section-label" style="color:var(--copper);">05 — Hero (aperçu sans Three.js)</p>
+    </div>
+    <div class="hero-preview">
+      <div>
+        <p class="hero-number">01 / Introduction</p>
+        <h1 class="hero-headline">
+          Je construis des sites<br>
+          qui donnent envie<br>
+          d'entrer dans la <em>galerie.</em>
+        </h1>
+        <p class="hero-sub">
+          Développeuse web freelance à Lille, spécialisée art & culture.
+          Double formation Beaux-Arts + développement — pour des sites
+          qui comprennent l'esthétique autant que la technique.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn--primary">Démarrer un projet <span class="btn-arrow">→</span></a>
+          <a href="#" class="btn btn--outline-light">Voir les réalisations</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-stat">
+          <p class="hero-stat-n">10+</p>
+          <p class="hero-stat-l">Années d'expérience</p>
+        </div>
+        <div style="height:0.5px;background:var(--border-night);"></div>
+        <div class="hero-stat">
+          <p class="hero-stat-n">Art & Culture</p>
+          <p class="hero-stat-l">Spécialité exclusive</p>
+        </div>
+        <div style="height:0.5px;background:var(--border-night);"></div>
+        <div class="hero-stat">
+          <p class="hero-stat-n">Lille</p>
+          <p class="hero-stat-l">& remote France entière</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider divider--night"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 6 — CARDS
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper" id="cards">
+    <div class="container">
+      <p class="section-label">06 — Cards & Grilles</p>
+
+      <p style="font-size:0.8125rem;color:var(--ink-3);margin-bottom:1.5rem;">Cards sur fond clair :</p>
+      <div class="cards-grid" style="margin-bottom:3rem;">
+        <div class="card">
+          <p class="card-n">01</p>
+          <h3 class="card-title">Galeries d'art</h3>
+          <p class="card-body">Sites vitrine élégants, gestion de collections, agenda des expositions.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <p class="card-n">02</p>
+          <h3 class="card-title">Maisons de ventes</h3>
+          <p class="card-body">Catalogues de vente, résultats, interface commissaire-priseur.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <p class="card-n">03</p>
+          <h3 class="card-title">Artistes & Portfolios</h3>
+          <p class="card-body">Portfolio sur mesure, gestion d'œuvres, galerie filtrable, prise de contact.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.8125rem;color:var(--ink-3);margin-bottom:1.5rem;">Cards sur fond nuit :</p>
+      <div class="cards-grid">
+        <div class="card card--dark">
+          <p class="card-n">01</p>
+          <h3 class="card-title">Galeries d'art</h3>
+          <p class="card-body">Sites vitrine élégants, gestion de collections, agenda des expositions.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+        <div class="card card--dark">
+          <p class="card-n">02</p>
+          <h3 class="card-title">Maisons de ventes</h3>
+          <p class="card-body">Catalogues de vente, résultats, interface commissaire-priseur.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+        <div class="card card--dark">
+          <p class="card-n">03</p>
+          <h3 class="card-title">Artistes & Portfolios</h3>
+          <p class="card-body">Portfolio sur mesure, gestion d'œuvres, galerie filtrable, prise de contact.</p>
+          <a href="#" class="card-link">En savoir plus →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 7 — ÉLÉMENTS UI
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="section section--paper" id="ui">
+    <div class="container">
+      <p class="section-label">07 — Éléments UI</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+        <div>
+          <p style="font-family:var(--font-serif);font-size:1rem;font-weight:500;margin-bottom:1.25rem;">Tags & Badges</p>
+          <div class="tags-row" style="margin-bottom:1.5rem;">
+            <span class="tag tag--copper">Ruby on Rails</span>
+            <span class="tag tag--copper">Jekyll</span>
+            <span class="tag tag--copper">Swift</span>
+          </div>
+          <div class="tags-row" style="margin-bottom:1.5rem;">
+            <span class="tag tag--ink">Galeries d'art</span>
+            <span class="tag tag--ink">Maisons de ventes</span>
+            <span class="tag tag--ink">Artistes</span>
+          </div>
+          <div style="background:var(--night);padding:1rem;">
+            <div class="tags-row">
+              <span class="tag tag--dark">SEO</span>
+              <span class="tag tag--dark">Accessibilité</span>
+              <span class="tag tag--dark">Performance</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-family:var(--font-serif);font-size:1rem;font-weight:500;margin-bottom:1.25rem;">Formulaire contact</p>
+          <div class="form-group">
+            <label class="form-label">Votre nom</label>
+            <input type="text" class="form-input" placeholder="Marie Dupont">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Votre projet</label>
+            <input type="text" class="form-input" placeholder="Site pour ma galerie…">
+          </div>
+          <a href="#" class="btn btn--primary" style="width:100%;justify-content:center;">Envoyer <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+
+      <div style="height:0.5px;background:var(--border-light);margin:3rem 0;"></div>
+
+      <!-- Testimonial -->
+      <p style="font-family:var(--font-serif);font-size:1rem;font-weight:500;margin-bottom:1.25rem;">Témoignage</p>
+      <div class="testimonial">
+        <blockquote>"Aldjia a parfaitement compris notre univers. Le site reflète l'identité de notre maison de ventes tout en étant moderne et fonctionnel."</blockquote>
+        <cite>— Mirabili Enchères, commissaires-priseurs · Lille</cite>
+      </div>
+
+      <div style="height:0.5px;background:var(--border-light);margin:3rem 0;"></div>
+
+      <!-- Règles de design -->
+      <p style="font-family:var(--font-serif);font-size:1rem;font-weight:500;margin-bottom:1.25rem;">Principes de design</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+        <div style="border-left:1.5px solid var(--copper);padding-left:1rem;">
+          <p style="font-size:0.6875rem;font-weight:500;letter-spacing:0.1em;color:var(--copper);margin-bottom:0.4rem;">ESPACEMENT</p>
+          <p style="font-size:0.8125rem;color:var(--ink-3);">Très généreux — respiration de galerie. Sections larges, marges importantes.</p>
+        </div>
+        <div style="border-left:1.5px solid var(--copper);padding-left:1rem;">
+          <p style="font-size:0.6875rem;font-weight:500;letter-spacing:0.1em;color:var(--copper);margin-bottom:0.4rem;">BORDURES</p>
+          <p style="font-size:0.8125rem;color:var(--ink-3);">0.5px, pas de radius. Angles francs, lignes fines — précision éditoriale.</p>
+        </div>
+        <div style="border-left:1.5px solid var(--copper);padding-left:1rem;">
+          <p style="font-size:0.6875rem;font-weight:500;letter-spacing:0.1em;color:var(--copper);margin-bottom:0.4rem;">CONTRASTE</p>
+          <p style="font-size:0.8125rem;color:var(--ink-3);">Alternance nuit/papier. L'impact vient du contraste, pas des ornements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer charte -->
+  <footer style="background:var(--night);padding:2.5rem;text-align:center;border-top:0.5px solid var(--border-night);">
+    <p style="font-family:var(--font-serif);font-size:0.9375rem;color:var(--cream-muted);">
+      Charte <em style="color:var(--copper);">Vernissage</em> — à valider avant implémentation
+    </p>
+    <p style="font-size:0.6875rem;color:rgba(237,232,223,0.3);margin-top:0.5rem;letter-spacing:0.08em;">
+      Playfair Display + Inter · Cuivre #B8976A · Nuit #0C0C0A · Papier #F7F4EF
+    </p>
+  </footer>
+
+</body>
+</html>
