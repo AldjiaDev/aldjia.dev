@@ -333,50 +333,17 @@ redirect_from:
     </div>
   </section>
 
-  <!-- ═══ CHAPITRE FINAL — Travaillons ensemble ═══════════ -->
-  <section data-ambient id="contact" aria-labelledby="contact-title">
-    <div class="cta-inner">
-      <h2 class="cta-title" id="contact-title" data-reveal data-reveal-delay="0">Travaillons<br><em>ensemble.</em></h2>
-      <p class="cta-sub" data-reveal data-reveal-delay="0.15">Je travaille exclusivement avec des acteurs du monde de l'art et de la culture. Prenons 30 minutes pour parler de votre projet, gratuitement et sans engagement.</p>
-      <div data-reveal data-reveal-delay="0.3">
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="cta-btn-primary">
-          Prendre rendez-vous — 30 min →
+  <!-- ═══ CHAPITRE FINAL — bouton 3D « Travaillons ensemble » ═══
+       Rendu Three.js (immersive.js) ; le lien HTML par-dessus porte le clic,
+       le clavier, l'accessibilité et le SEO. Bouton CSS si WebGL indisponible. -->
+  <section data-ambient id="contact" aria-label="Travaillons ensemble">
+    <div class="cta3d-sticky">
+      <div class="cta3d" id="cta3d">
+        <canvas id="cta3d-canvas" aria-hidden="true"></canvas>
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="cta3d-link" id="cta3d-link">
+          Travaillons ensemble<span class="sr-only"> : prendre rendez-vous, 30 minutes gratuites (nouvel onglet)</span>
         </a>
       </div>
-
-      <form class="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-reveal data-reveal-delay="0.4">
-        <p class="contact-form-intro">Ou décrivez votre projet, je réponds sous 48 h ouvrées.</p>
-        <input type="hidden" name="_next" value="{{ '/contact-merci/' | absolute_url }}">
-        <div class="sr-only" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-        <div class="form-row">
-          <label>
-            <span>Prénom</span>
-            <input type="text" name="prenom" autocomplete="given-name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-        </div>
-        <label>
-          <span>Type de projet</span>
-          <select name="type_projet">
-            <option value="">Sélectionner…</option>
-            <option value="audit">Audit web</option>
-            <option value="vitrine">Site vitrine</option>
-            <option value="editorial">Site éditorial</option>
-            <option value="application">Application métier</option>
-            <option value="autre">Autre</option>
-          </select>
-        </label>
-        <label>
-          <span>Votre projet</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="form-submit">Envoyer ma demande</button>
-      </form>
-
-      <a href="mailto:{{ site.email }}" class="cta-mail">{{ site.email }}</a>
     </div>
   </section>
 

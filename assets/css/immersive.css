@@ -512,40 +512,38 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    CTA — Travaillons ensemble
 ════════════════════════════════════════ */
-#contact {
-  background: #0E0C0A; padding: 9rem 2rem;
-  display: flex; align-items: center; justify-content: center; min-height: 85vh;
-  border-top: 1px solid rgba(237,232,223,0.10);
-  position: relative;
+/* Scène du bouton 3D : la section dure un peu plus d'un écran pour l'entrée au scroll */
+#contact { position: relative; height: 160vh; }
+.cta3d-sticky {
+  position: sticky; top: 0; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
 }
-#contact::before {
-  content: '';
-  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 80px; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(190,50,32,0.6), transparent);
+.cta3d {
+  position: relative; width: min(1100px, 100%);
+  height: clamp(260px, 38vw, 440px);
 }
-.cta-inner { max-width: 700px; width: 100%; text-align: center; }
-.cta-title {
-  font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 400; font-style: italic; color: #EDE8DF;
-  letter-spacing: -0.03em; line-height: 1.02; margin-bottom: 2rem;
+#cta3d-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* Lien réel, invisible, calé par immersive.js sur la silhouette du bouton 3D */
+.cta3d-link {
+  position: absolute; left: 50%; top: 50%; width: 0; height: 0;
+  border-radius: 999px; color: transparent; font-size: 1px; overflow: hidden;
+  text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
 }
-.cta-title em { color: #BE3220; font-style: italic; }
-.cta-sub { font-size: 1rem; color: rgba(237,232,223,0.42); line-height: 1.75; margin-bottom: 3rem; max-width: 44ch; margin-left: auto; margin-right: auto; }
-.cta-btn-primary {
-  display: inline-flex; align-items: center; gap: 0.75rem;
-  font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.02em;
-  background: #BE3220; color: #fff;
-  padding: 1.1rem 2.25rem; border-radius: 3rem; text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
+.cta3d-link:focus-visible { outline: 2px solid #F37E30; outline-offset: 6px; }
+
+/* Repli sans WebGL : beau bouton CSS en dégradé */
+.cta3d--fallback #cta3d-canvas { display: none; }
+.cta3d--fallback .cta3d-link {
+  left: 50% !important; top: 50% !important; width: auto !important; height: auto !important;
+  transform: translate(-50%, -50%); overflow: visible; white-space: nowrap;
+  font-size: clamp(1rem, 2.4vw, 1.5rem); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #fff; padding: 1.4rem 3rem;
+  background: linear-gradient(110deg, #F37E30, #BE3220 50%, #7845D0);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 12px 0 #5a1810, 0 24px 50px rgba(0,0,0,0.5);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
-.cta-btn-primary:hover { background: #9A2818; transform: translateY(-2px); }
-.cta-mail {
-  display: block; margin-top: 1.75rem;
-  font-size: 0.8rem; color: rgba(237,232,223,0.25);
-  text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s;
-}
-.cta-mail:hover { color: rgba(237,232,223,0.6); }
+.cta3d--fallback .cta3d-link:active { transform: translate(-50%, calc(-50% + 6px)) scale(0.98); box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 6px 0 #5a1810, 0 14px 30px rgba(0,0,0,0.5); }
 
 /* ════════════════════════════════════════
    S11 — TOOLKIT (fan cards)
@@ -860,41 +858,6 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   .conseils-arrow { font-size: 0.7em; }
 }
 
-/* Formulaire de contact */
-.contact-form {
-  display: flex; flex-direction: column; gap: 1.1rem;
-  margin: 4rem auto 0; max-width: 560px; text-align: left;
-}
-.contact-form-intro { font-size: 0.9rem; color: rgba(237,232,223,0.5); text-align: center; margin-bottom: 0.5rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
-.contact-form label { display: flex; flex-direction: column; gap: 0.45rem; }
-.contact-form label > span {
-  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(237,232,223,0.5);
-}
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%; font: inherit; font-size: 0.95rem; color: #EDE8DF;
-  background: rgba(237,232,223,0.04); border: 0.5px solid rgba(237,232,223,0.18);
-  border-radius: 10px; padding: 0.85rem 1rem;
-  transition: border-color 0.2s, background-color 0.2s;
-}
-.contact-form select { appearance: none; cursor: pointer; }
-.contact-form select option { color: #0E0C0A; }
-.contact-form textarea { resize: vertical; min-height: 7rem; }
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus { border-color: #F37E30; background: rgba(237,232,223,0.06); outline: none; }
-.form-submit {
-  margin-top: 0.5rem; font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer;
-  color: #EDE8DF; background: transparent;
-  border: 0.5px solid rgba(237,232,223,0.35); border-radius: 3rem; padding: 1rem 2rem;
-  transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
-}
-.form-submit:hover { background: rgba(237,232,223,0.08); border-color: #EDE8DF; }
-.form-submit:active { transform: scale(0.96); }
-
 /* Footer — contenu partagé avec les autres pages (_includes/footer-content.html) */
 .footer-band { grid-template-columns: 1.4fr repeat(4, auto); }
 .footer-nav a { padding: 0.3rem 0; margin-bottom: 0.15rem; }
@@ -917,7 +880,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 @media (max-width: 768px) {
   .std-section { padding: 6rem 1.25rem; }
-  .sector-grid, .form-row { grid-template-columns: 1fr; }
+  .sector-grid { grid-template-columns: 1fr; }
   .footer-band { grid-template-columns: 1fr 1fr; padding: 3.5rem 1.25rem 2.5rem; gap: 2rem 1.5rem; }
   .footer-nav a { padding: 0.65rem 0; margin: 0; }
   /* Le footer dépasse la hauteur d'écran : pas de révélation sticky sur mobile */
@@ -963,7 +926,6 @@ html, body { overflow-x: clip; }
     display: inline-block; padding-top: 0.75rem; padding-bottom: 0.75rem;
   }
   .aaf-link { padding-bottom: 0.5rem; }
-  .cta-mail { padding: 0.9rem 0; margin-top: 1rem; }
   .footer-cta-sub a { display: inline-block; padding: 0.8rem 0; }
   .footer-legal a { display: inline-block; padding: 0.8rem 0; margin: -0.8rem 0; }
 }

@@ -880,4 +880,188 @@
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
 
+
+  /* ══════════════════════════════════════════════════════════
+     BOUTON 3D « TRAVAILLONS ENSEMBLE » — section #contact
+     Pilule extrudée (dégradé de marque + reflets irisés) et texte 3D nacré.
+     Entrée pilotée par le scroll, flottement, inclinaison vers la souris, enfoncement au clic.
+     Le <a> par-dessus suit la silhouette projetée du bouton.
+  ══════════════════════════════════════════════════════════ */
+  (function initCta3D() {
+    const wrap    = document.getElementById('cta3d');
+    const cvs     = document.getElementById('cta3d-canvas');
+    const link    = document.getElementById('cta3d-link');
+    const section = document.getElementById('contact');
+    if (!wrap || !cvs || !link || !section) return;
+
+    const fallback = () => wrap.classList.add('cta3d--fallback');
+    let rdr;
+    try { rdr = new THREE.WebGLRenderer({ canvas: cvs, antialias: true, alpha: true }); }
+    catch (e) { fallback(); return; }
+    rdr.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    rdr.setClearColor(0x000000, 0);
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scn = new THREE.Scene();
+    const cam = new THREE.PerspectiveCamera(35, 1, 0.1, 50);
+    cam.position.z = 6;
+
+    function resize() {
+      const w = wrap.clientWidth, h = wrap.clientHeight;
+      rdr.setSize(w, h, false);
+      cam.aspect = w / h;
+      cam.updateProjectionMatrix();
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    // Matériau de la pilule : dégradé orange → vermillon → violet, lumière douce, reflets irisés
+    const pillMat = new THREE.ShaderMaterial({
+      uniforms: { uTime: { value: 0 }, uHover: { value: 0 }, uW: { value: 1 }, uOpacity: { value: 0 } },
+      vertexShader: `
+        varying vec3 vNormal; varying vec3 vViewDir; varying vec3 vPos;
+        void main() {
+          vec4 mv = modelViewMatrix * vec4(position, 1.0);
+          vNormal = normalize(normalMatrix * normal);
+          vViewDir = normalize(-mv.xyz);
+          vPos = position;
+          gl_Position = projectionMatrix * mv;
+        }`,
+      fragmentShader: `
+        uniform float uTime; uniform float uHover; uniform float uW; uniform float uOpacity;
+        varying vec3 vNormal; varying vec3 vViewDir; varying vec3 vPos;
+        void main() {
+          vec3 n = normalize(vNormal); vec3 v = normalize(vViewDir);
+          float g = clamp(vPos.x / uW + 0.5 + sin(uTime * 0.6) * 0.08 * (0.4 + uHover), 0.0, 1.0);
+          vec3 c1 = vec3(0.953, 0.494, 0.188), c2 = vec3(0.745, 0.196, 0.126), c3 = vec3(0.471, 0.271, 0.816);
+          vec3 base = g < 0.5 ? mix(c1, c2, g * 2.0) : mix(c2, c3, (g - 0.5) * 2.0);
+          vec3 L = normalize(vec3(0.35, 0.8, 0.6));
+          float diff = max(dot(n, L), 0.0) * 0.4 + 0.6;
+          float spec = pow(max(dot(reflect(-L, n), v), 0.0), 28.0) * (0.35 + 0.25 * uHover);
+          float fres = pow(1.0 - max(dot(n, v), 0.0), 2.0);
+          float hue = fract(fres * 1.5 + uTime * 0.1);
+          vec3 iri = clamp(abs(mod(hue * 6.0 + vec3(0.0, 4.0, 2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+          vec3 col = base * diff + iri * fres * (0.3 + 0.35 * uHover) + spec;
+          gl_FragColor = vec4(col, uOpacity);
+        }`,
+      transparent: true
+    });
+    // Texte : même nacre irisée que le nom du hero
+    const txtMat = new THREE.ShaderMaterial({
+      uniforms: { uTime: { value: 0 }, uOpacity: { value: 0 } },
+      vertexShader: iriMat.vertexShader,
+      fragmentShader: iriMat.fragmentShader,
+      transparent: true
+    });
+
+    const group = new THREE.Group();
+    scn.add(group);
+    let W = 0, H = 0, D = 0, ready = false;
+
+    function pill(w, h) {
+      const r = h / 2, sh = new THREE.Shape();
+      sh.moveTo(-w / 2 + r, -h / 2);
+      sh.lineTo(w / 2 - r, -h / 2);
+      sh.absarc(w / 2 - r, 0, r, -Math.PI / 2, Math.PI / 2, false);
+      sh.lineTo(-w / 2 + r, h / 2);
+      sh.absarc(-w / 2 + r, 0, r, Math.PI / 2, Math.PI * 1.5, false);
+      return sh;
+    }
+
+    new THREE.FontLoader().load(
+      'https://cdn.jsdelivr.net/npm/three@0.145.0/examples/fonts/helvetiker_bold.typeface.json',
+      font => {
+        const tg = new THREE.TextGeometry('TRAVAILLONS ENSEMBLE', {
+          font, size: 0.3, height: 0.06, curveSegments: 6,
+          bevelEnabled: true, bevelSize: 0.008, bevelThickness: 0.012, bevelSegments: 3
+        });
+        tg.computeBoundingBox(); tg.center();
+        const tw = tg.boundingBox.max.x - tg.boundingBox.min.x;
+        W = tw + 1.0; H = 0.95; D = 0.26;
+        const bevel = 0.08;
+        const pg = new THREE.ExtrudeGeometry(pill(W, H), {
+          depth: D, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel, bevelSegments: 8, curveSegments: 40
+        });
+        pg.center();
+        pillMat.uniforms.uW.value = W + bevel * 2;
+        const pm = new THREE.Mesh(pg, pillMat);
+        const tm = new THREE.Mesh(tg, txtMat);
+        tm.position.z = D / 2 + bevel + 0.04;
+        group.add(pm); group.add(tm);
+        ready = true;
+      },
+      undefined,
+      fallback
+    );
+
+    // Interaction (portée par le lien HTML)
+    let hover = 0, hoverT = 0, press = 0, pressT = 0;
+    const tilt = { x: 0, y: 0, tx: 0, ty: 0 };
+    link.addEventListener('pointerenter', () => { hoverT = 1; });
+    link.addEventListener('pointerleave', () => { hoverT = 0; pressT = 0; tilt.tx = tilt.ty = 0; });
+    link.addEventListener('pointermove', e => {
+      const r = link.getBoundingClientRect();
+      tilt.ty = ((e.clientX - r.left) / r.width - 0.5) * 0.5;
+      tilt.tx = ((e.clientY - r.top) / r.height - 0.5) * 0.5;
+    });
+    link.addEventListener('pointerdown', () => { pressT = 1; });
+    link.addEventListener('pointerup', () => { pressT = 0; });
+    link.addEventListener('focus', () => { hoverT = 1; });
+    link.addEventListener('blur', () => { hoverT = 0; });
+
+    let visible = false;
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(section);
+
+    // Lien HTML calé sur la silhouette projetée du bouton
+    const corners = [new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()];
+    function placeLink() {
+      const half = { x: W / 2 + 0.08, y: H / 2 + 0.08 };
+      let minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+      const cw = wrap.clientWidth, ch = wrap.clientHeight;
+      [[-1, -1], [1, -1], [1, 1], [-1, 1]].forEach(([sx, sy], i) => {
+        const p = corners[i].set(sx * half.x, sy * half.y, D / 2).applyMatrix4(group.matrixWorld).project(cam);
+        const x = (p.x + 1) / 2 * cw, y = (1 - p.y) / 2 * ch;
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+      });
+      link.style.left = minX + 'px'; link.style.top = minY + 'px';
+      link.style.width = (maxX - minX) + 'px'; link.style.height = (maxY - minY) + 'px';
+    }
+
+    const clk = new THREE.Clock();
+    (function loop() {
+      requestAnimationFrame(loop);
+      if (!visible || !ready) return;
+      const t = clk.getElapsedTime();
+
+      // Entrée au scroll : remonte, bascule vers l'avant et grandit
+      const p = reduced ? 1 : clamp((section.getBoundingClientRect().top * -1 + window.innerHeight * 0.9) / (window.innerHeight * 1.1), 0, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+
+      hover += (hoverT - hover) * 0.12;
+      press += (pressT - press) * 0.3;
+      tilt.x += (tilt.tx - tilt.x) * 0.1;
+      tilt.y += (tilt.ty - tilt.y) * 0.1;
+
+      // Tient dans la largeur visible (mobile)
+      const visH = 2 * cam.position.z * Math.tan(THREE.MathUtils.degToRad(cam.fov / 2));
+      const fit = Math.min(1, (visH * cam.aspect * 0.9) / (W + 0.2));
+
+      const float = reduced ? 0 : Math.sin(t * 1.3) * 0.05;
+      group.position.y = (1 - e) * -1.8 + float;
+      group.position.z = -press * 0.25;
+      group.rotation.x = (1 - e) * -1.15 + tilt.x * hover;
+      group.rotation.y = (1 - e) * 0.45 + tilt.y * hover + (reduced ? 0 : Math.sin(t * 0.7) * 0.04);
+      group.scale.setScalar(fit * (0.55 + 0.45 * e) * (1 + hover * 0.04 - press * 0.04));
+
+      pillMat.uniforms.uTime.value = t;   txtMat.uniforms.uTime.value = t;
+      pillMat.uniforms.uHover.value = hover;
+      pillMat.uniforms.uOpacity.value = e; txtMat.uniforms.uOpacity.value = e;
+      link.style.pointerEvents = e > 0.6 ? 'auto' : 'none';
+
+      group.updateMatrixWorld();
+      placeLink();
+      rdr.render(scn, cam);
+    }());
+  }());
+
 }());
