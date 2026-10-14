@@ -1428,14 +1428,30 @@ html, body { overflow-x: clip; }
 .post-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 4rem; }
 .post-tags li { padding: 0.35rem 0.8rem; border-radius: 2rem; font-size: 0.78rem; color: rgba(26,18,16,0.6); background: rgba(26,18,16,0.05); }
 .post-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(26,18,16,0.12); }
-.post-pager-link {
-  display: flex; flex-direction: column; gap: 0.35rem; padding: 1.1rem 1.25rem; border-radius: 16px; text-decoration: none;
-  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; line-height: 1.3; color: #1A1210;
-  background: rgba(26,18,16,0.04); transition: background-color 0.2s;
+/* Article précédent / suivant : cartes de couleur comme « Ma palette » */
+.post-pager { gap: 1.5rem; padding-top: 3rem; }
+.pager-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+  min-height: 230px; padding: 2rem 1.75rem; border-radius: 20px; text-align: center; text-decoration: none;
+  background: var(--bg); color: var(--fg);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 18px 40px rgba(26,18,16,0.25);
+  transform: translateY(var(--lift)) rotate(-2deg);
+  transition: --lift 0.35s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.35s;
 }
-.post-pager-link:hover { background: rgba(190,50,32,0.08); }
-.post-pager-link span { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #BE3220; }
-.post-pager-link--next { text-align: right; }
+.pager-card--next { transform: translateY(var(--lift)) rotate(2deg); }
+.pager-card:hover, .pager-card:focus-visible {
+  --lift: -14px; box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 30px 60px rgba(26,18,16,0.35);
+}
+.pager-card:focus-visible { outline: 2px solid #F37E30; outline-offset: 4px; }
+.pager-card:active { transform: translateY(var(--lift)) rotate(-2deg) scale(0.97); }
+.pager-badge {
+  padding: 0.35rem 0.9rem; border-radius: 2rem; background: var(--badge);
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em; white-space: nowrap;
+}
+.pager-title {
+  font-family: 'Inter', sans-serif; font-size: 1.35rem; font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1.15; text-wrap: balance;
+}
 
 @media (max-width: 992px) {
   .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1447,5 +1463,6 @@ html, body { overflow-x: clip; }
   .post-cover { transform: translateY(-2rem); margin-bottom: 2rem; }
   .post-body { font-size: 1rem; }
   .post-pager { grid-template-columns: 1fr; }
-  .post-pager-link--next { text-align: left; }
+  .pager-card, .pager-card--next { min-height: 180px; transform: translateY(var(--lift)) rotate(-1deg); }
+  .pager-card--next { transform: translateY(var(--lift)) rotate(1deg); }
 }

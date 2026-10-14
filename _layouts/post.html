@@ -41,10 +41,16 @@ layout: immersive
 
     <nav class="post-pager" aria-label="Navigation entre articles">
       {% if page.previous.url %}
-      <a class="post-pager-link" href="{{ page.previous.url | relative_url }}"><span>← Article précédent</span>{{ page.previous.title }}</a>
+      <a class="pager-card" href="{{ page.previous.url | relative_url }}" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+        <span class="pager-badge">← Article précédent</span>
+        <span class="pager-title">{{ page.previous.title }}</span>
+      </a>
       {% else %}<span></span>{% endif %}
       {% if page.next.url %}
-      <a class="post-pager-link post-pager-link--next" href="{{ page.next.url | relative_url }}"><span>Article suivant →</span>{{ page.next.title }}</a>
+      <a class="pager-card pager-card--next" href="{{ page.next.url | relative_url }}" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+        <span class="pager-badge">Article suivant →</span>
+        <span class="pager-title">{{ page.next.title }}</span>
+      </a>
       {% endif %}
     </nav>
   </div>
