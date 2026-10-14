@@ -26,7 +26,8 @@
     uniforms: {
       uTime:   { value: 0 },
       uMouse:  { value: new THREE.Vector2(0.5, 0.5) },
-      uScroll: { value: 0 }
+      uScroll: { value: 0 },
+      uDark:   { value: 0 }
     },
     vertexShader: `
       varying vec2 vUV;
@@ -35,6 +36,7 @@
     fragmentShader: `
       uniform float uTime;
       uniform float uScroll;
+      uniform float uDark;
       uniform vec2  uMouse;
       varying vec2  vUV;
 
@@ -70,6 +72,13 @@
         col = mix(col,c2,g2*0.70);
         col = mix(col,c3,g3*0.60);
         col = mix(col,c4,g4*0.55);
+        // Mode « fil rouge » : fond sombre + lueurs orange / violet / vermillon
+        vec3 amb = vec3(0.055, 0.047, 0.039);
+        amb += vec3(0.95, 0.45, 0.17) * exp(-dot(uv-b2,uv-b2)*3.2) * 0.17;
+        amb += vec3(0.47, 0.27, 0.82) * exp(-dot(uv-b1,uv-b1)*3.2) * 0.15;
+        amb += vec3(0.75, 0.20, 0.13) * g3 * 0.08;
+        col = mix(col, amb, uDark);
+
         col += fract(sin(dot(uv,vec2(127.1,311.7)))*43758.5)*0.008;
         gl_FragColor = vec4(col, 1.0);
       }
@@ -177,6 +186,38 @@
     }
   );
 
+  // ── Sculpture ambiante — fil rouge 3D dans les sections sombres ─────────
+  // Iridescence sur les bords seulement : le centre reste discret derrière le texte
+  const ambMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 }, uOpacity: { value: 0 } },
+    vertexShader: iriMat.vertexShader,
+    fragmentShader: `
+      uniform float uTime;
+      uniform float uOpacity;
+      varying vec3 vNormal;
+      varying vec3 vViewDir;
+      void main() {
+        float fresnel = pow(1.0 - max(dot(vNormal, vViewDir), 0.0), 1.8);
+        float hue = fract(fresnel * 1.4 + uTime * 0.08);
+        vec3 rgb = clamp(abs(mod(hue * 6.0 + vec3(0.0, 4.0, 2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+        vec3 col = mix(vec3(0.93, 0.91, 0.87) * 0.22, rgb, fresnel);
+        gl_FragColor = vec4(col, uOpacity * (0.3 + 0.7 * fresnel));
+      }
+    `,
+    transparent: true,
+    depthWrite: false
+  });
+  const ambMesh = new THREE.Mesh(new THREE.TorusKnotGeometry(0.62, 0.2, 220, 36, 2, 3), ambMat);
+  ambMesh.visible = false;
+  scene.add(ambMesh);
+
+  // Sections sombres où la scène reste visible (data-ambient) — on ne rend que si l'une est à l'écran
+  let ambientOn = 0;
+  const ambObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { ambientOn += e.isIntersecting ? 1 : (e.target.__amb ? -1 : 0); e.target.__amb = e.isIntersecting; });
+  });
+  document.querySelectorAll('[data-ambient]').forEach(el => ambObs.observe(el));
+
   // ── Mouse ──────────────────────────────────────────────────
   const tM = { x: 0, y: 0 }, cM = { x: 0, y: 0 };
   const mw = { nx: 0, ny: 0, wx: 0.5, wy: 0.5 };
@@ -199,12 +240,12 @@
   function tick() {
     requestAnimationFrame(tick);
 
-    // Fade out canvas after Three.js zone (hero 100vh + scroll zone 200vh)
+    // Après la zone Three.js (hero 100vh + scroll zone 200vh), la scène passe
+    // en mode sombre au lieu de disparaître : elle reste le décor des sections sombres
     const zoneEnd = window.innerHeight * 3.1;
-    const cOpacity = 1 - Math.max(0, Math.min(1, (scrollY - zoneEnd) / (window.innerHeight * 0.4)));
-    canvas.style.opacity = cOpacity;
-    if (cOpacity < 0.01) { canvas.style.visibility = 'hidden'; return; }
-    canvas.style.visibility = 'visible';
+    const dark = Math.max(0, Math.min(1, (scrollY - zoneEnd * 0.85) / (window.innerHeight * 0.6)));
+    const heroVisible = scrollY < zoneEnd + window.innerHeight * 0.4;
+    if (!heroVisible && ambientOn <= 0) return; // canvas entièrement recouvert : pas de rendu
 
     const t = clock.getElapsedTime();
     cM.x += (tM.x - cM.x) * 0.06;
@@ -248,6 +289,22 @@
       textGroup.rotation.y = Math.sin(t * 0.50) * 0.07 * floatAmt + cM.x * 0.18;
       textGroup.rotation.x = Math.sin(t * 0.38) * 0.04 * floatAmt - cM.y * 0.09;
       textGroup.rotation.z = Math.sin(t * 0.28) * 0.015 * floatAmt + sN * 0.018;
+    }
+
+    // ── Sculpture ambiante ──
+    bgMat.uniforms.uDark.value = dark;
+    ambMat.uniforms.uTime.value = t;
+    const mobile = window.innerWidth < 768;
+    ambMat.uniforms.uOpacity.value = dark * (mobile ? 0.4 : 0.65);
+    ambMesh.visible = dark > 0.01;
+    if (ambMesh.visible) {
+      const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      const visW = visH * camera.aspect;
+      ambMesh.scale.setScalar(mobile ? 0.6 : 1);
+      ambMesh.position.x = visW * (mobile ? 0.42 : 0.42) + cM.x * 0.15;
+      ambMesh.position.y = Math.sin(scrollY * 0.0006) * visH * 0.22 + Math.sin(t * 0.6) * 0.08 - cM.y * 0.1;
+      ambMesh.rotation.x = t * 0.15 + scrollY * 0.0009;
+      ambMesh.rotation.y = t * 0.22 + scrollY * 0.0006;
     }
 
     // Role labels
@@ -744,12 +801,20 @@
     ).join('');
   }
 
+  // Nav claire (texte sombre) seulement quand la section sous la nav a un fond clair
+  function bgLuminance(el) {
+    while (el && el !== document.documentElement) {
+      const m = getComputedStyle(el).backgroundColor.match(/rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?/);
+      if (m && (m[4] === undefined || +m[4] > 0.5)) return (0.299 * m[1] + 0.587 * m[2] + 0.114 * m[3]) / 255;
+      el = el.parentElement;
+    }
+    return 0; // transparent jusqu'en haut : scène Three.js sombre derrière
+  }
   function updateNav() {
-    const lightStart = tickerEl ? tickerEl.offsetTop - 60 : 99999;
-    const projetsEl  = document.getElementById('projets');
-    const lightEnd   = projetsEl ? projetsEl.offsetTop + projetsEl.offsetHeight - 60 : 99999;
-    if (scrollY > lightStart && scrollY < lightEnd) nav.classList.add('light');
-    else nav.classList.remove('light');
+    const r = nav.getBoundingClientRect();
+    const under = document.elementsFromPoint(innerWidth / 2, r.bottom + 4)
+      .find(el => !nav.contains(el) && el.id !== 'canvas' && !el.classList.contains('role-label'));
+    nav.classList.toggle('light', !!under && scrollY > innerHeight * 3 && bgLuminance(under) > 0.6);
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });

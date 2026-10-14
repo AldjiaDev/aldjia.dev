@@ -980,3 +980,11 @@ html, body { overflow-x: clip; }
   .projet-item { font-size: clamp(1.35rem, 6.2vw, 2rem); line-height: 1.9; }
   .proj-name { white-space: nowrap; }
 }
+
+/* ════════════════════════════════════════
+   FIL ROUGE 3D — les sections sombres laissent voir la scène Three.js
+   (fond sombre animé + sculpture iridescente, cf. immersive.js)
+════════════════════════════════════════ */
+[data-ambient],
+[data-ambient] #toolkit-sticky { background: transparent !important; }
+.std-section--alt[data-ambient] { background: rgba(237,232,223,0.025) !important; }
