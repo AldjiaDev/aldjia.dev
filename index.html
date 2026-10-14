@@ -6,19 +6,6 @@ last_modified_at: 2026-10-14
 redirect_from:
   - /demo-threejs.html
   - /demo-threejs/
-faq_items:
-  - q: "Combien coûte un site web pour une galerie ou un artiste ?"
-    a: "Un site vitrine démarre à 1 500 € HT, un site éditorial (galerie, institution) à 3 500 € HT, une application métier (maison de ventes) à 6 000 € HT. Un audit de votre site existant démarre à 250 € HT. Le périmètre exact est défini ensemble, sans engagement."
-  - q: "Est-ce que je pourrai gérer mon site seul après la livraison ?"
-    a: "Oui. Je conçois les sites pour que vous puissiez mettre à jour vos expositions, œuvres et actualités sans toucher au code. Une prise en main est incluse à la livraison."
-  - q: "Combien de temps dure un projet ?"
-    a: "Un site vitrine : 3 à 5 semaines. Un site éditorial : 6 à 10 semaines. Une application métier : 2 à 4 mois. Ces délais sont définis ensemble lors du premier échange."
-  - q: "Le référencement (SEO) est-il inclus ?"
-    a: "Oui, dans chaque projet : structure des pages, balises, données structurées Schema.org, performance et Core Web Vitals. L'objectif est que vos expositions, artistes et ventes apparaissent sur Google."
-  - q: "Travaillez-vous uniquement à Lille ?"
-    a: "Je suis basée à Lille et je travaille 100 % à distance : Lille, Hauts-de-France, Paris, Bruxelles, Montréal et partout en France. Tout se fait en visio, avec des points réguliers."
-  - q: "Que se passe-t-il après la mise en ligne ?"
-    a: "30 jours de support sont inclus. Ensuite, deux options : un forfait mensuel (350 € HT) pour l'hébergement, le suivi et les évolutions, ou un pack d'heures pour des besoins ponctuels."
 ---
 
 <!-- Libellés fixes (apparaissent pendant la zone de scroll) -->
@@ -37,7 +24,7 @@ faq_items:
     <ul class="nav-links">
       <li><a href="#parcours">parcours</a></li>
       <li><a href="#projets">réalisations</a></li>
-      <li><a href="#tarifs">tarifs</a></li>
+      <li><a href="{{ '/tarifs/' | relative_url }}">tarifs</a></li>
       <li class="nav-contact"><a href="#contact">contact</a></li>
     </ul>
   </div>
@@ -321,62 +308,6 @@ faq_items:
         {% endfor %}
       </div>
       <a href="https://www.google.com/search?q=Aldjia+Boughias" target="_blank" rel="noopener" class="text-link" data-reveal>Voir les avis sur Google ↗</a>
-    </div>
-  </section>
-
-  <!-- ═══ CHAPITRE 7 — Travailler ensemble : offres ══════ -->
-  <section data-ambient id="tarifs" class="std-section std-section--alt" aria-labelledby="tarifs-title">
-    <div class="std-inner">
-      <p class="about-label" data-reveal>Offres &amp; tarifs</p>
-      <h2 class="std-title" id="tarifs-title" data-reveal data-reveal-delay="0.1">Des prix clairs,<br><em>sans surprise.</em></h2>
-      <p class="std-lead" data-reveal data-reveal-delay="0.2">Des repères pour vous projeter. Le périmètre exact est défini ensemble lors d'un premier échange gratuit de 30 minutes.</p>
-
-      <ul class="offer-grid">
-        <li class="offer" data-reveal data-reveal-delay="0.05">
-          <span class="offer-tag">Commencer ici</span>
-          <h3 class="offer-name">Audit web</h3>
-          <p class="offer-price">250 € <span>HT · à partir de</span></p>
-          <p class="offer-desc">UX, SEO, performance et accessibilité de votre site actuel. Recommandations priorisées et appel de restitution.</p>
-        </li>
-        <li class="offer" data-reveal data-reveal-delay="0.12">
-          <h3 class="offer-name">Site vitrine</h3>
-          <p class="offer-price">1 500 € <span>HT · à partir de</span></p>
-          <p class="offer-desc">Portfolio, présentation, contact. En ligne en 3 à 5 semaines. Pour artistes et indépendants créatifs.</p>
-        </li>
-        <li class="offer offer--featured" data-reveal data-reveal-delay="0.19">
-          <span class="offer-tag">Le plus demandé</span>
-          <h3 class="offer-name">Site éditorial</h3>
-          <p class="offer-price">3 500 € <span>HT · à partir de</span></p>
-          <p class="offer-desc">Expositions, agenda, catalogue, actualités que vous gérez seul. Pour galeries et institutions.</p>
-        </li>
-        <li class="offer" data-reveal data-reveal-delay="0.26">
-          <h3 class="offer-name">Application métier</h3>
-          <p class="offer-price">6 000 € <span>HT · à partir de</span></p>
-          <p class="offer-desc">Back-office sur mesure, catalogue de lots, formulaire d'estimation. Pour maisons de ventes.</p>
-        </li>
-      </ul>
-
-      <p class="offer-included" data-reveal>Toujours inclus : SEO dès la conception · responsive · Core Web Vitals · prise en main · 30 jours de support</p>
-      <div class="link-row link-row--center" data-reveal>
-        <a href="{{ '/tarifs/' | relative_url }}" class="text-link">Détail des tarifs →</a>
-        <a href="{{ '/processus/' | relative_url }}" class="text-link">Comment je travaille →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FAQ ═══════════════════════════════════════════ -->
-  <section data-ambient id="faq" class="std-section" aria-labelledby="faq-title">
-    <div class="std-inner std-inner--narrow">
-      <p class="about-label" data-reveal>Questions fréquentes</p>
-      <h2 class="std-title" id="faq-title" data-reveal data-reveal-delay="0.1">Avant de <em>se lancer.</em></h2>
-      <div class="faq-list">
-        {% for item in page.faq_items %}
-        <details class="faq-item">
-          <summary>{{ item.q }}</summary>
-          <p>{{ item.a }}</p>
-        </details>
-        {% endfor %}
-      </div>
     </div>
   </section>
 
