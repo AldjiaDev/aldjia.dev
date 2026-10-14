@@ -565,15 +565,25 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 }
 .toolkit-stage {
   position: relative; flex: 1; width: 100%;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 2.5rem;
 }
 .tk-card {
+  --tx: 0px; --ty: 60px; --rot: 0deg;
   position: absolute;
-  width: 220px; height: 300px; border-radius: 20px;
+  width: 230px; height: 300px; border-radius: 20px;
   display: flex; flex-direction: column; align-items: center;
   justify-content: center; gap: 1rem; padding: 1.5rem;
   transform-origin: center 88%;
+  transform: translate(var(--tx), calc(var(--ty) + var(--lift))) rotate(var(--rot));
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 18px 40px rgba(0,0,0,0.35);
+  transition: --lift 0.35s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.35s;
   will-change: transform;
+}
+/* Même soulèvement au survol que les cartes « Pour qui » */
+.tk-card:hover {
+  --lift: -28px; z-index: 20 !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 30px 60px rgba(0,0,0,0.5);
 }
 .tk-card-name {
   font-family: 'Inter', sans-serif; font-size: 2rem;
@@ -830,6 +840,16 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   .sc-card { width: 100%; height: 190px; padding: 1.25rem 0.75rem; gap: 0.75rem; }
   .sc-name { font-size: 1.15rem; }
   .sc-badge { font-size: 0.62rem; padding: 0.3rem 0.6rem; white-space: normal; text-align: center; }
+
+  /* Ma palette : même grille */
+  #toolkit { height: auto; padding: 6rem 1.25rem; }
+  #toolkit-sticky { position: static; height: auto; padding: 0; overflow: visible; }
+  .toolkit-header { margin-bottom: 0; }
+  .toolkit-sub { display: none; }
+  .toolkit-stage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; padding-top: 0; }
+  .tk-card { position: static; width: 100%; height: 170px; padding: 1.25rem 0.75rem; transform: rotate(-1.5deg); }
+  .tk-card:nth-child(even) { transform: rotate(1.5deg) translateY(1rem); }
+  .tk-card-name { font-size: 1.3rem; }
 }
 
 /* Projets — lien vers toutes les réalisations */

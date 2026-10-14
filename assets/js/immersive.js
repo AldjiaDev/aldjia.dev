@@ -492,53 +492,49 @@
     return card;
   });
 
-  function updateToolkit() {
-    if (!toolkitSection) return;
-    const p = progress(toolkitSection);
-
-    // Phase 1 (0→0.45): groupe dev fan
-    // Phase 2 (0.45→0.55): transition
-    // Phase 3 (0.55→1.0): groupe art fan
-    const devCards  = TOOLKIT.filter(c => c.group === 0);
-    const artCards  = TOOLKIT.filter(c => c.group === 1);
-    const devEls    = cardEls.slice(0, devCards.length);
-    const artEls    = cardEls.slice(devCards.length);
-
-    const devP = clamp(p / 0.40, 0, 1);
-    const artP = clamp((p - 0.55) / 0.40, 0, 1);
-    const transP = clamp((p - 0.40) / 0.15, 0, 1);
-
-    // Subtitle
-    toolkitSub.style.opacity = (p > 0.40 && p < 0.60) ? 0 : 1;
-    if (p < 0.50) toolkitSub.textContent = GROUP_SUBS[0];
-    else          toolkitSub.textContent = GROUP_SUBS[1];
-
-    // Fan dev cards
-    const dN = devEls.length;
-    devEls.forEach((el, i) => {
-      const spread = (i - (dN - 1) / 2);
-      const rot = spread * 14 * devP;
-      const tx  = spread * 140 * devP;
-      const ty  = spread * spread * 7 * devP;
-      const fadeOut = clamp(transP * 2, 0, 1);
-      el.style.transform = `translate(${tx}px, ${ty}px) rotate(${rot}deg)`;
-      el.style.opacity   = 1 - fadeOut;
-      el.style.pointerEvents = fadeOut > 0.5 ? 'none' : 'auto';
-    });
-
-    // Fan art cards
-    const aN = artEls.length;
-    artEls.forEach((el, i) => {
-      const spread = (i - (aN - 1) / 2);
-      const rot = spread * 14 * artP;
-      const tx  = spread * 140 * artP;
-      const ty  = spread * spread * 7 * artP;
-      el.style.transform = `translate(${tx}px, ${ty}px) rotate(${rot}deg)`;
-      el.style.opacity   = clamp((p - 0.50) / 0.10, 0, 1);
+  // Même mécanique que les cartes « Pour qui » : --tx / --ty / --rot pilotées ici,
+  // le soulèvement au survol (--lift) est géré en CSS. Mobile : grille, pas d'éventail.
+  const tkMobile = window.matchMedia('(max-width: 768px)');
+  function fanCards(els, k, opacity) {
+    const n = els.length;
+    const e = 1 - Math.pow(1 - k, 3);
+    const gap = Math.min(165, (window.innerWidth - 300) / Math.max(n - 1, 1));
+    els.forEach((el, i) => {
+      const spread = i - (n - 1) / 2;
+      el.style.setProperty('--tx',  (spread * gap * e) + 'px');
+      el.style.setProperty('--ty',  (spread * spread * 9 * e + (1 - e) * 60) + 'px');
+      el.style.setProperty('--rot', (spread * 9 * e) + 'deg');
+      el.style.opacity = opacity;
+      el.style.pointerEvents = opacity < 0.5 ? 'none' : '';
     });
   }
 
+  function updateToolkit() {
+    if (!toolkitSection) return;
+    const devEls = cardEls.filter((_, i) => TOOLKIT[i].group === 0);
+    const artEls = cardEls.filter((_, i) => TOOLKIT[i].group === 1);
+
+    if (tkMobile.matches) {
+      cardEls.forEach(el => { el.style.removeProperty('--tx'); el.style.removeProperty('--ty'); el.style.removeProperty('--rot'); el.style.opacity = ''; el.style.pointerEvents = ''; });
+      return;
+    }
+    const p = progress(toolkitSection);
+
+    // Phase 1 (0→0.40) : éventail dev — Phase 2 (0.40→0.55) : bascule — Phase 3 (0.55→0.95) : éventail art
+    const devP   = clamp(p / 0.40, 0, 1);
+    const artP   = clamp((p - 0.55) / 0.40, 0, 1);
+    const transP = clamp((p - 0.40) / 0.15, 0, 1);
+
+    toolkitSub.style.opacity = (p > 0.40 && p < 0.60) ? 0 : 1;
+    toolkitSub.textContent = p < 0.50 ? GROUP_SUBS[0] : GROUP_SUBS[1];
+
+    fanCards(devEls, devP, 1 - clamp(transP * 2, 0, 1));
+    fanCards(artEls, artP, clamp((p - 0.50) / 0.10, 0, 1));
+  }
+
   window.addEventListener('scroll', updateToolkit, { passive: true });
+  window.addEventListener('resize', updateToolkit);
+  tkMobile.addEventListener('change', updateToolkit);
   updateToolkit();
 
   /* ══════════════════════════════════════════════════════════
