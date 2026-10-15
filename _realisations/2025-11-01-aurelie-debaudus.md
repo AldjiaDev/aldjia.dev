@@ -173,9 +173,9 @@ layout: default
 
       <div class="col-lg-5">
         <p class="kicker mb-3">Résultat</p>
-        <h2 class="section-title mb-4">Livré en 3 semaines, autonome dès le premier jour</h2>
+        <h2 class="section-title mb-4">Livré en 1 semaine, autonome dès le premier jour</h2>
         <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          Le site a été livré en 3 semaines. La charte typographique, douce et littéraire,
+          Le site a été livré en 1 semaine. La charte typographique, douce et littéraire,
           a été conçue sur mesure à partir de ses références visuelles. GitHub Pages assure
           l'hébergement — coût nul, disponibilité maximale.
         </p>
@@ -189,7 +189,7 @@ layout: default
         <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
           <div>
             <p class="kicker mb-1" style="font-size: .68rem;">Délai de livraison</p>
-            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">3 semaines de conception à mise en ligne</p>
+            <p class="muted mb-0" style="font-size: .92rem; line-height: 1.7;">1 semaine de conception à mise en ligne</p>
           </div>
           <div>
             <p class="kicker mb-1" style="font-size: .68rem;">Hébergement</p>
