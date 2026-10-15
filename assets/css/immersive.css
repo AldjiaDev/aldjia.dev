@@ -1651,3 +1651,40 @@ html, body { overflow-x: clip; }
 .audit-pill-dark { color: #1A1210; border-color: rgba(26,18,16,0.3); }
 .audit-pill-dark:hover { background: rgba(26,18,16,0.06); border-color: #1A1210; }
 @media (max-width: 992px) { .audit-ticket { max-width: 360px; transform: rotate(1deg); } }
+
+/* ════════════════════════════════════════
+   PAGE PROCESSUS
+════════════════════════════════════════ */
+.proc-glance { transform: rotate(-2deg); }
+.proc-glance-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem; }
+.proc-glance-list li { display: flex; gap: 0.9rem; align-items: baseline; font-size: 0.98rem; line-height: 1.4; color: #1A1210; }
+.proc-glance-list span { flex-shrink: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #BE3220; font-variant-numeric: tabular-nums; }
+.proc-intro .page-lead { margin: 0 auto 1.25rem; text-align: center; font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
+
+/* Frise des étapes : grands numéros en dégradé + ligne qui relie */
+.proc-steps { list-style: none; padding: 0; margin-top: 3.5rem; position: relative; }
+.proc-steps::before {
+  content: ''; position: absolute; left: 3.25rem; top: 1rem; bottom: 1rem; width: 2px;
+  background: linear-gradient(#F37E30, #BE3220 50%, #7845D0); opacity: 0.5;
+}
+.proc-step { position: relative; display: grid; grid-template-columns: 6.5rem 1fr; gap: 2rem; padding: 2.25rem 0; }
+.proc-step-n {
+  position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
+  width: 6.5rem; height: 6.5rem; border-radius: 50%; background: #0E0C0A; border: 1px solid rgba(237,232,223,0.14);
+  font-family: 'Playfair Display', serif; font-size: 2.6rem; line-height: 1;
+  background-image: linear-gradient(#0E0C0A, #0E0C0A);
+}
+.proc-step-n { color: transparent; -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #F37E30, #BE3220 55%, #7845D0) text, #0E0C0A; -webkit-background-clip: text, border-box; background-clip: text, border-box; }
+.proc-step-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.7rem, 3vw, 2.4rem); color: #EDE8DF; margin: 0.6rem 0 0.8rem; }
+.proc-step-text { max-width: 60ch; font-size: 1rem; line-height: 1.8; color: rgba(237,232,223,0.65); text-wrap: pretty; }
+.proc-step-meta {
+  display: inline-block; margin-top: 1.1rem; padding: 0.4rem 0.9rem; border-radius: 2rem;
+  font-size: 0.78rem; letter-spacing: 0.03em; color: #F37E30; background: rgba(243,126,48,0.1); border: 0.5px solid rgba(243,126,48,0.35);
+}
+@media (max-width: 768px) {
+  .proc-steps::before { left: 2rem; }
+  .proc-step { grid-template-columns: 4rem 1fr; gap: 1.1rem; padding: 1.5rem 0; }
+  .proc-step-n { width: 4rem; height: 4rem; font-size: 1.6rem; }
+  .proc-step-title { margin-top: 0.2rem; }
+}
