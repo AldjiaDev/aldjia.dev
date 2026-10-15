@@ -1,225 +1,145 @@
 ---
-layout: default
+layout: immersive
 title: "Audit web — UX, SEO & performance pour sites art & culture"
 description: "Audit complet de votre site web : UX, SEO on-page, performance et accessibilité. Recommandations priorisées et appel de restitution inclus. À partir de 250 € HT."
 permalink: /audit/
 schema_service_name: "Audit web"
+last_modified_at: 2026-10-15
 ---
 
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Service · Audit web</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Comprendre pourquoi votre site<br>ne performe pas.
-        </h1>
-        <p class="muted mb-5" style="font-size: 1.05rem; line-height: 1.8; max-width: 520px;">
-          Un audit structuré sur quatre axes — UX, SEO, performance et accessibilité —
-          pour identifier ce qui freine votre visibilité et votre conversion,
-          avec des recommandations concrètes classées par priorité.
-        </p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Commander l'audit
-          </a>
-          <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Poser une question
-          </a>
-        </div>
+<!-- ═══ EN-TÊTE + ticket de prix ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="audit-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>Service · Audit web</p>
+      <h1 class="page-title sect-title" id="audit-h1" data-reveal data-split-words>Comprendre pourquoi votre site <em>ne performe pas.</em></h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.5">Un audit structuré sur quatre axes (UX, SEO, performance et accessibilité) pour identifier ce qui freine votre visibilité et vos prises de contact, avec des recommandations concrètes classées par priorité.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.6">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Commander l'audit →</a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn-pill">Poser une question</a>
       </div>
-
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="padding: 2rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius);">
-          <p class="kicker mb-1" style="font-size: .65rem; color: var(--bordeaux);">Audit web</p>
-          <p style="font-family: 'Cormorant Garant', serif; font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: .25rem; line-height: 1.1;">250 €<span style="font-size: 1rem; font-weight: 400; color: var(--muted);"> HT · à partir de</span></p>
-          <p class="muted mb-0" style="font-size: .85rem; line-height: 1.6;">Livraison sous 5 jours ouvrés. Appel de restitution inclus.</p>
-        </div>
-      </div>
-
+    </div>
+    <div class="audit-ticket" data-reveal data-reveal-delay="0.3">
+      <p class="audit-ticket-k">Audit web</p>
+      <p class="audit-ticket-price">250 €<span>HT · à partir de</span></p>
+      <ul class="audit-ticket-list">
+        <li>Livré sous 5 jours ouvrés</li>
+        <li>Appel de restitution inclus</li>
+        <li>Sans engagement pour la suite</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- CE QUE COUVRE L'AUDIT -->
-<section style="padding: 72px 0; border-top: 1px solid var(--line);">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-4">
-        <p class="kicker mb-3">Périmètre</p>
-        <h2 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(1.8rem, 3vw, 2.6rem);
-          font-weight: 600;
-          line-height: 1.1;
-          letter-spacing: -0.02em;
-          margin-bottom: 1rem;
-        ">Quatre axes analysés en détail.</h2>
-        <p class="muted" style="font-size: .95rem; line-height: 1.8;">
-          Chaque point faible est documenté, expliqué et accompagné d'une recommandation.
-          Vous repartez avec un plan d'action, pas un rapport illisible.
-        </p>
-      </div>
-
-      <div class="col-lg-7 offset-lg-1">
-        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-
-          <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-2" style="font-size: .65rem;">01 — UX & parcours</p>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 0;">
-              Lisibilité, hiérarchie visuelle, navigation, appels à l'action — ce que vos visiteurs voient
-              et ce qui les empêche de passer à l'étape suivante.
-            </p>
-          </div>
-
-          <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-2" style="font-size: .65rem;">02 — SEO on-page</p>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 0;">
-              Titres, métadonnées, structure H1–H3, données structurées (Schema.org),
-              maillage interne et positionnement des pages clés.
-            </p>
-          </div>
-
-          <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-2" style="font-size: .65rem;">03 — Performance</p>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 0;">
-              Core Web Vitals (LCP, CLS, INP), poids des images, JavaScript bloquant,
-              cache et temps de chargement — en particulier sur mobile.
-            </p>
-          </div>
-
-          <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-2" style="font-size: .65rem;">04 — Accessibilité</p>
-            <p style="font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 0;">
-              Contraste des couleurs, navigation clavier, alternatives textes,
-              sémantique HTML — vérifications WCAG AA sur les pages principales.
-            </p>
-          </div>
-
-        </div>
-      </div>
+<!-- ═══ PÉRIMÈTRE — les 4 axes en cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" id="axes" class="fan-section" aria-labelledby="axes-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Périmètre</p>
+      <h2 class="secteurs-title" id="axes-titre">Quatre axes <em>analysés en détail.</em></h2>
+      <p class="secteurs-lead">Chaque point faible est documenté, expliqué et accompagné d'une recommandation. Vous repartez avec un plan d'action, pas un rapport illisible.</p>
     </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">01</span>
+          <h3 class="sc-name">UX &amp; parcours</h3>
+          <p class="sc-desc">Lisibilité, hiérarchie, navigation, appels à l'action : ce qui empêche vos visiteurs de passer à l'étape suivante.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">02</span>
+          <h3 class="sc-name">SEO on-page</h3>
+          <p class="sc-desc">Titres, métadonnées, structure H1–H3, données structurées, maillage interne et pages clés.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">03</span>
+          <h3 class="sc-name">Performance</h3>
+          <p class="sc-desc">Core Web Vitals, poids des images, JavaScript bloquant, cache : surtout sur mobile.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <span class="sc-n">04</span>
+          <h3 class="sc-name">Accessibilité</h3>
+          <p class="sc-desc">Contrastes, navigation clavier, textes alternatifs, sémantique : vérifications WCAG AA.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- LIVRABLE -->
-<section style="padding: 72px 0; border-top: 1px solid var(--line);">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Livrable</p>
-        <h2 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(1.8rem, 3vw, 2.6rem);
-          font-weight: 600;
-          line-height: 1.1;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">Un rapport que vous pouvez utiliser dès le lendemain.</h2>
-        <p class="muted mb-4" style="font-size: .95rem; line-height: 1.8;">
-          Document structuré avec captures d'écran annotées, niveau de priorité
-          (critique / important / améliorable) et recommandations actionnables.
-          Suivi d'un appel de 45 minutes pour répondre à vos questions.
-        </p>
-        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary">
-          Réserver l'audit
-        </a>
+<!-- ═══ LIVRABLE — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="livrable-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>Livrable</p>
+      <h2 class="page-h2" id="livrable-titre" data-reveal data-reveal-delay="0.1">Un rapport utilisable <em>dès le lendemain.</em></h2>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.2">Un document structuré avec captures d'écran annotées, niveau de priorité (critique, important, améliorable) et recommandations actionnables. Suivi d'un appel de 45 minutes pour répondre à toutes vos questions.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--cream">Réserver l'audit →</a>
       </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="display: flex; flex-direction: column; gap: .75rem;">
-          {% assign livrables = "Rapport PDF annoté avec captures d'écran,Recommandations classées par priorité,Score UX · SEO · Performance · Accessibilité,Appel de restitution de 45 min inclus,Réponses écrites aux questions post-appel" | split: "," %}
-          {% for item in livrables %}
-            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-              <span style="color: var(--bordeaux); font-size: .85rem; flex-shrink: 0; margin-top: .2rem;">✓</span>
-              <p class="mb-0" style="font-size: .95rem; color: var(--muted); line-height: 1.6;">{{ item }}</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-
     </div>
+    {% assign livrables = "Rapport PDF annoté avec captures d'écran|Recommandations classées par priorité|Score UX · SEO · Performance · Accessibilité|Appel de restitution de 45 min inclus|Réponses écrites aux questions après l'appel" | split: "|" %}
+    <ul class="audit-deliver" data-reveal data-reveal-delay="0.2">
+      {% for item in livrables %}<li>{{ item }}</li>{% endfor %}
+    </ul>
   </div>
 </section>
 
-<!-- POUR QUI -->
-<section style="padding: 72px 0; border-top: 1px solid var(--line);">
-  <div class="container">
-    <p class="kicker mb-4">Pour qui</p>
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-3">
-        <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); height: 100%;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">Galeries &amp; artistes</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.7;">Votre site existe depuis quelques années mais reste invisible sur Google. Vous voulez comprendre pourquoi avant d'investir dans une refonte.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); height: 100%;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">Maisons de ventes</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.7;">Vos pages de résultats ou de catalogues ne remontent pas sur les requêtes que vous ciblez. Un audit SEO ciblé révèle les points de blocage.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div style="padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); height: 100%;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">Institutions culturelles</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.7;">Accessibilité imposée par la loi, performance sur mobile, parcours visiteur — l'audit couvre les obligations et les bonnes pratiques.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div style="padding: 1.5rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); height: 100%;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem;">Avant une refonte</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.7;">L'audit avant refonte évite de reproduire les mêmes erreurs. Il sert de cahier des charges technique pour la nouvelle version.</p>
-        </div>
-      </div>
-
+<!-- ═══ POUR QUI — cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" id="audit-pour-qui" class="fan-section" aria-labelledby="audit-qui-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Pour qui</p>
+      <h2 class="secteurs-title" id="audit-qui-titre">Un audit, <em>pour quoi faire ?</em></h2>
     </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">01</span>
+          <h3 class="sc-name">Galeries &amp; artistes</h3>
+          <p class="sc-desc">Votre site existe mais reste invisible sur Google : comprendre pourquoi avant d'investir dans une refonte.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">02</span>
+          <h3 class="sc-name">Maisons de ventes</h3>
+          <p class="sc-desc">Vos catalogues ou résultats ne remontent pas sur les recherches visées : l'audit révèle les blocages.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#1A1210;--fg:#EDE8DF;--badge:rgba(237,232,223,0.12)">
+          <span class="sc-n">03</span>
+          <h3 class="sc-name">Institutions culturelles</h3>
+          <p class="sc-desc">Accessibilité imposée par la loi, mobile, parcours visiteur : obligations et bonnes pratiques.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">04</span>
+          <h3 class="sc-name">Avant une refonte</h3>
+          <p class="sc-desc">Ne pas reproduire les mêmes erreurs : l'audit sert de cahier des charges pour la nouvelle version.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- TARIF & CTA -->
-<section style="padding: 72px 0; border-top: 1px solid var(--line);">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7 text-center">
-        <p class="kicker mb-3">Tarif</p>
-        <p style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2rem, 4vw, 3rem);
-          font-weight: 600;
-          color: var(--ink);
-          margin-bottom: .5rem;
-          line-height: 1.1;
-        ">250 € HT <span style="font-size: 1.1rem; font-weight: 400; color: var(--muted);">à partir de</span></p>
-        <p class="muted mb-5" style="font-size: .95rem; line-height: 1.8;">
-          Le tarif exact dépend du nombre de pages analysées et de la complexité du site.
-          Je vous confirme le montant définitif après un premier échange de 15 minutes, sans engagement.
-        </p>
-        <div class="d-flex gap-3 flex-wrap justify-content-center">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Réserver l'audit
-          </a>
-          <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Poser une question
-          </a>
-        </div>
-      </div>
+<!-- ═══ TARIF — respiration crème ═══ -->
+<section class="std-section band-cream" aria-labelledby="audit-tarif">
+  <div class="std-inner pod-join">
+    <p class="about-label pod-join-label" data-reveal>Tarif</p>
+    <h2 class="page-h2 pod-join-title audit-price-big" id="audit-tarif" data-reveal data-reveal-delay="0.1">250 € <em>HT</em></h2>
+    <p class="audit-from" data-reveal data-reveal-delay="0.15">à partir de</p>
+    <p class="pod-join-text" data-reveal data-reveal-delay="0.2">Le tarif exact dépend du nombre de pages analysées et de la complexité du site. Je vous confirme le montant définitif après un premier échange de 15 minutes, sans engagement.</p>
+    <div class="about-actions audit-actions" data-reveal data-reveal-delay="0.3">
+      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Réserver l'audit →</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-pill audit-pill-dark">Poser une question</a>
     </div>
   </div>
 </section>
