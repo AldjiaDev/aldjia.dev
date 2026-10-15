@@ -1,0 +1,178 @@
+---
+layout: immersive
+---
+{% comment %}
+  Page secteur (galeries, artistes, maisons de ventes…) — même univers que l'accueil.
+  Tout le contenu est dans le front matter de la page (clé `secteur`).
+{% endcomment %}
+{% assign s = page.secteur %}
+
+<!-- ═══ EN-TÊTE ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="sect-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>{{ s.hero.kicker }}</p>
+      <h1 class="page-title sect-title" id="sect-h1" data-reveal data-split-words>{{ s.hero.title }}</h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.4">{{ s.hero.lead }}</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.5">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Prendre rendez-vous →</a>
+        <a href="#enjeux" class="btn-pill">Ce que je propose</a>
+      </div>
+    </div>
+    {% if s.hero.quote %}
+    <blockquote class="sect-quote" data-reveal data-reveal-delay="0.3">« {{ s.hero.quote }} »</blockquote>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ═══ ENJEUX — cartes en éventail, comme « Pour qui » ═══ -->
+{% assign cols = "#BE3220|#EDE8DF|rgba(237,232,223,0.16);#EDE8DF|#1A1210|rgba(26,18,16,0.1);#F37E30|#1A1210|rgba(26,18,16,0.12);#7845D0|#fff|rgba(255,255,255,0.18)" | split: ";" %}
+<section data-ambient data-fan data-fan-gap="255" id="enjeux" class="fan-section" aria-labelledby="enjeux-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">{{ s.enjeux.kicker }}</p>
+      <h2 class="secteurs-title" id="enjeux-titre">{{ s.enjeux.title }}</h2>
+      {% if s.enjeux.intro != "" %}<p class="secteurs-lead">{{ s.enjeux.intro }}</p>{% endif %}
+    </div>
+    <ul class="secteurs-stage">
+      {% for it in s.enjeux.items %}
+      {% assign c = forloop.index0 | modulo: 4 %}{% assign col = cols[c] | split: "|" %}
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--badge:{{ col[2] }}">
+          <span class="sc-n">0{{ forloop.index }}</span>
+          <h3 class="sc-name">{{ it.title }}</h3>
+          <p class="sc-desc">{{ it.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ CE QUE JE PROPOSE ═══ -->
+<section data-ambient class="page-section" aria-labelledby="services-titre">
+  <div class="page-inner page-cols">
+    <div>
+      <p class="about-label" data-reveal>{{ s.services.kicker }}</p>
+      <h2 class="page-h2" id="services-titre" data-reveal data-reveal-delay="0.1">{{ s.services.title }}</h2>
+      {% for p in s.services.paras %}<p class="page-text" data-reveal data-reveal-delay="0.15">{{ p }}</p>{% endfor %}
+    </div>
+    <ol class="sect-services" data-reveal data-reveal-delay="0.2">
+      {% for it in s.services.items %}
+      <li>
+        <h3>{{ it.label }}</h3>
+        <p>{{ it.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% if s.types %}
+<!-- ═══ TYPES (photographes…) — cartes de couleur ═══ -->
+<section data-ambient class="page-section page-section--tight" aria-labelledby="types-titre">
+  <div class="page-inner">
+    <p class="about-label" id="types-titre" data-reveal>{{ s.types.kicker }}</p>
+    <ul class="post-grid sect-types">
+      {% for it in s.types.items %}
+      {% assign c = forloop.index0 | modulo: 4 %}{% assign col = cols[c] | split: "|" %}
+      <li class="post-card-item" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.08 }}">
+        <div class="post-card sect-type" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--soft:{{ col[1] }}">
+          <h3 class="post-card-title">{{ it.title }}</h3>
+          <p class="post-card-desc">{{ it.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if s.profil %}
+<!-- ═══ POURQUOI MOI — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="profil-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>{{ s.profil.kicker }}</p>
+      <h2 class="page-h2" id="profil-titre" data-reveal data-reveal-delay="0.1">{{ s.profil.title }}</h2>
+      {% for p in s.profil.paras %}<p class="about-aaf-text" data-reveal data-reveal-delay="0.2">{{ p }}</p>{% endfor %}
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ '/about/' | relative_url }}" class="btn-pill btn-pill--cream">Mon parcours →</a>
+        <a href="https://galerie.artaufeminin.fr/" target="_blank" rel="noopener" class="btn-pill btn-pill--light">La galerie 3D ART AU FÉMININ ↗</a>
+      </div>
+    </div>
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ '/assets/images/artaufeminin.jpeg' | relative_url }}" alt="ART AU FÉMININ, média et galerie 3D fondés par Aldjia Boughias" width="1000" height="1000" loading="lazy">
+    </figure>
+  </div>
+</section>
+{% endif %}
+
+{% if s.realisation %}
+<!-- ═══ RÉALISATION ═══ -->
+{% assign proj = site.realisations | where: "url", s.realisation.url | first %}
+<section class="std-section band-cream" aria-labelledby="real-titre">
+  <div class="std-inner about-aaf-grid sect-real">
+    <div>
+      <p class="about-label pod-join-label sect-real-label" data-reveal>Réalisation · {{ s.realisation.meta }}</p>
+      <h2 class="page-h2 pod-join-title" id="real-titre" data-reveal data-reveal-delay="0.1">{{ s.realisation.title }}</h2>
+      <p class="pod-join-text sect-real-text" data-reveal data-reveal-delay="0.2">{{ s.realisation.text }}</p>
+      {% if s.realisation.tags.size > 0 %}
+      <ul class="tag-row sect-real-tags" data-reveal data-reveal-delay="0.25">{% for t in s.realisation.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {% endif %}
+      <div data-reveal data-reveal-delay="0.3">
+        <a href="{{ s.realisation.url | relative_url }}" class="btn-pill btn-pill--solid">Voir le cas client →</a>
+      </div>
+    </div>
+    {% if proj.image %}
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ proj.image | relative_url }}" alt="{{ s.realisation.title }}" loading="lazy">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if s.articles %}
+<!-- ═══ SUR LE BLOG ═══ -->
+{% assign acols = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#7845D0|#fff|rgba(255,255,255,0.75);#1A1210|#EDE8DF|rgba(237,232,223,0.6)" | split: ";" %}
+<section data-ambient class="page-section" aria-labelledby="blog-sect-titre">
+  <div class="page-inner">
+    <p class="about-label" data-reveal>Sur le blog</p>
+    <h2 class="page-h2" id="blog-sect-titre" data-reveal data-reveal-delay="0.1">Pour aller <em>plus loin.</em></h2>
+    <ul class="post-grid">
+      {% for a in s.articles %}
+      {% assign post = site.posts | where: "url", a.url | first %}
+      {% assign c = forloop.index0 | modulo: 4 %}{% assign col = acols[c] | split: "|" %}
+      <li class="post-card-item" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.08 }}">
+        <a href="{{ a.url | relative_url }}" class="post-card" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--soft:{{ col[2] }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy">{% endif %}
+          <h3 class="post-card-title">{{ a.title }}</h3>
+          <p class="post-card-desc">{{ a.text }}</p>
+          <span class="post-card-more">Lire →</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══ FAQ (même liste que les données structurées) ═══ -->
+{% if page.faq_items %}
+<section data-ambient class="page-section" aria-labelledby="faq-sect-titre">
+  <div class="page-inner page-inner--narrow">
+    <p class="about-label" data-reveal>Questions fréquentes</p>
+    <h2 class="page-h2" id="faq-sect-titre" data-reveal data-reveal-delay="0.1">{{ s.cta.title | default: "Avant de se lancer." }}</h2>
+    <div class="faq-list" data-reveal data-reveal-delay="0.2">
+      {% for item in page.faq_items %}
+      <details class="faq-item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+    {% if s.cta.text %}<p class="page-aside sect-cta-text" data-reveal>{{ s.cta.text }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}

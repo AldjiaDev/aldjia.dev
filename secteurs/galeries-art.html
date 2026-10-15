@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: secteur
 title: "Site web pour galerie d'art — Design & SEO intégrés"
 description: "Site web sur mesure pour galerie d'art : catalogue d'artistes, agenda des expositions, design soigné et SEO sectoriel intégré dès la conception. Formation Beaux-Arts."
 permalink: /secteurs/galeries-art/
 canonical: https://aldjia.dev/secteurs/galeries-art/
-last_modified_at: 2026-04-06
+last_modified_at: 2026-10-15
 image: /assets/images/site-web-galerie-art-og.jpg
 schema_service_name: "Création de site web pour galerie d'art"
 schema_service_description: "Conception et développement de sites web sur mesure pour galeries d'art : catalogue d'artistes, agenda des expositions, design soigné, SEO sectoriel intégré dès la conception."
@@ -19,294 +19,58 @@ faq_items:
     a: "Oui. SEO on-page, données structurées schema.org (VisualArtwork, Person, Event, LocalBusiness) et optimisation des Core Web Vitals sont intégrés à chaque projet, sans supplément."
   - q: "Peut-on gérer le catalogue d'artistes et d'œuvres sans développeur ?"
     a: "Oui. Je conçois un back-office simple et documenté pour que vous puissiez mettre à jour artistes, œuvres et expositions en totale autonomie, sans intervention technique."
+# Contenu de la page (rendu par _layouts/secteur.html)
+secteur:
+  hero:
+    kicker: Secteur · Galeries d'art
+    title: Sites web pour galeries d'art
+    lead: 'Je conçois des sites vitrines et des catalogues en ligne pour les galeries d''art : artistes représentés, expositions, agenda, actualités — avec un soin esthétique qui respecte l''univers de votre espace.'
+    quote: Une galerie d'art met en lumière des artistes et des œuvres. Son site doit faire de même — sans sacrifier la clarté à l'effet visuel, ni l'inverse.
+  enjeux:
+    kicker: Enjeux
+    title: Ce que votre site doit faire
+    intro: Le site d'une galerie n'est pas un portfolio générique. Il est la vitrine permanente de votre programmation, de vos artistes et de votre identité.
+    items:
+    - title: Catalogue artistes
+      text: 'Présentation soignée de chaque artiste représenté : biographie, démarche, œuvres disponibles — avec une navigation intuitive pour les collectionneurs.'
+    - title: Agenda des expositions
+      text: Expositions en cours, à venir, archives — avec visuels, textes de présentation et partage sur les réseaux. Une vitrine numérique de votre programmation.
+    - title: Design à votre image
+      text: Une galerie a une identité visuelle forte. Typographie, espace blanc, hiérarchie — le site reflète votre positionnement, pas un template.
+    - title: Référencement local & artistes
+      text: SEO structuré pour apparaître sur "galerie d'art contemporain [ville]", et pour que vos artistes soient trouvés par nom et technique.
+  services:
+    kicker: Services
+    title: Ce que je propose
+    paras:
+    - Formée aux Beaux-Arts avant de devenir développeuse, je comprends l'attention que vous portez à chaque accrochage, chaque vernissage, chaque communication — et je l'applique à votre présence en ligne.
+    - Je travaille principalement avec Jekyll pour les sites éditoriaux légers, et Ruby on Rails pour les galeries qui ont besoin d'un back-office pour gérer elles-mêmes leurs contenus.
+    items:
+    - label: Site vitrine éditorial
+      text: Design sur mesure, optimisé pour les images haute résolution, rapide à charger — pensé pour les collectionneurs qui découvrent votre galerie.
+    - label: Gestion autonome du contenu
+      text: Vous mettez à jour vos expositions, ajoutez des artistes et des œuvres sans passer par un développeur à chaque changement.
+    - label: SEO & performance
+      text: Balises structurées, images optimisées, balisage schema.org pour les œuvres — pour que Google comprenne et indexe correctement votre contenu.
+    - label: Refonte d'un site existant
+      text: Votre site actuel ne rend pas justice à votre galerie ? Je le modernise en préservant votre référencement existant.
+  profil:
+    kicker: Pourquoi travailler avec moi
+    title: Beaux-Arts + développement web
+    paras:
+    - La plupart des développeurs n'ont jamais mis les pieds dans une galerie autrement qu'en touriste. Moi, j'ai étudié l'histoire de l’art — je connais ce que signifie un catalogue raisonné, je comprends l'enjeu d'un accrochage, je sais ce qu'un galeriste attend d'une communication soignée.
+    - Cette double culture me permet de vous poser les bonnes questions dès le début et de livrer un site qui parle à votre public — collectionneurs, artistes, amateurs d'art, presse.
+  articles:
+  - url: /blog/site-internet-galerie-art/
+    title: Pourquoi le site d'une galerie d'art n'est pas un site comme les autres
+    text: Images, catalogue vivant, double public, SEO sectoriel — ce qu'un développeur généraliste ne saura pas anticiper.
+  - url: /blog/seo-galeries-art/
+    title: Comment apparaître sur Google quand un collectionneur cherche une œuvre
+    text: 'Le SEO pour galeries d''art : longue traîne, pages artistes, schema.org et blog éditorial.'
+  - url: /blog/refonte-site-web-galerie/
+    title: 'Refonte de site web pour une galerie d''art : par où commencer ?'
+    text: Migration SEO, audit des URLs existantes, données structurées — ce qu'il faut préserver avant de tout refaire.
+  cta:
+    title: Un projet pour votre galerie ?
+    text: 30 minutes d'échange pour comprendre vos besoins — sans engagement.
 ---
-
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Secteur · Galeries d'art</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Sites web pour galeries d'art
-        </h1>
-        <p class="muted mb-0" style="font-size: 1.05rem; line-height: 1.8; max-width: 500px;">
-          Je conçois des sites vitrines et des catalogues en ligne pour les galeries d'art :
-          artistes représentés, expositions, agenda, actualités —
-          avec un soin esthétique qui respecte l'univers de votre espace.
-        </p>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem;">
-          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.75; font-style: italic;">
-            "Une galerie d'art met en lumière des artistes et des œuvres.
-            Son site doit faire de même — sans sacrifier la clarté
-            à l'effet visuel, ni l'inverse."
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ENJEUX -->
-<section class="section bg-white-warm">
-  <div class="container">
-
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Enjeux</p>
-        <h2 class="section-title mb-0">Ce que votre site doit faire</h2>
-      </div>
-      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Le site d'une galerie n'est pas un portfolio générique.
-          Il est la vitrine permanente de votre programmation, de vos artistes et de votre identité.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-0">
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card pe-4">
-          <div class="sector-number">01</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Catalogue artistes</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Présentation soignée de chaque artiste représenté : biographie, démarche,
-            œuvres disponibles — avec une navigation intuitive pour les collectionneurs.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card px-lg-4">
-          <div class="sector-number">02</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Agenda des expositions</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Expositions en cours, à venir, archives — avec visuels, textes de présentation
-            et partage sur les réseaux. Une vitrine numérique de votre programmation.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card px-lg-4">
-          <div class="sector-number">03</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Design à votre image</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Une galerie a une identité visuelle forte. Typographie, espace blanc,
-            hiérarchie — le site reflète votre positionnement, pas un template.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card ps-lg-4">
-          <div class="sector-number">04</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Référencement local & artistes</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            SEO structuré pour apparaître sur "galerie d'art contemporain [ville]",
-            et pour que vos artistes soient trouvés par nom et technique.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CE QUE JE PROPOSE -->
-<section class="section">
-  <div class="container">
-    <div class="row g-5 align-items-start">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Services</p>
-        <h2 class="section-title mb-4">Ce que je propose</h2>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          Formée aux Beaux-Arts avant de devenir développeuse, je comprends
-          l'attention que vous portez à chaque accrochage, chaque vernissage,
-          chaque communication — et je l'applique à votre présence en ligne.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Je travaille principalement avec Jekyll pour les sites éditoriaux légers,
-          et Ruby on Rails pour les galeries qui ont besoin d'un back-office
-          pour gérer elles-mêmes leurs contenus.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Site vitrine éditorial</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Design sur mesure, optimisé pour les images haute résolution,
-              rapide à charger — pensé pour les collectionneurs qui découvrent votre galerie.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Gestion autonome du contenu</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Vous mettez à jour vos expositions, ajoutez des artistes et des œuvres
-              sans passer par un développeur à chaque changement.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">SEO & performance</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Balises structurées, images optimisées, balisage schema.org pour les œuvres —
-              pour que Google comprenne et indexe correctement votre contenu.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Refonte d'un site existant</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Votre site actuel ne rend pas justice à votre galerie ?
-              Je le modernise en préservant votre référencement existant.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DOUBLE PROFIL -->
-<section class="section bg-white-warm">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Pourquoi travailler avec moi</p>
-        <h2 class="section-title mb-4">Beaux-Arts + développement web</h2>
-        <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          La plupart des développeurs n'ont jamais mis les pieds dans une galerie autrement
-          qu'en touriste. Moi, j'ai étudié l'histoire de l’art — je connais ce que
-          signifie un catalogue raisonné, je comprends l'enjeu d'un accrochage,
-          je sais ce qu'un galeriste attend d'une communication soignée.
-        </p>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          Cette double culture me permet de vous poser les bonnes questions dès le début
-          et de livrer un site qui parle à votre public — collectionneurs, artistes,
-          amateurs d'art, presse.
-        </p>
-        <a href="{{ '/about' | relative_url }}" class="btn btn-outline-primary">
-          En savoir plus sur mon parcours
-        </a>
-      </div>
-
-      <div class="col-lg-5 offset-lg-1">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem;">
-          <p class="kicker mb-3" style="font-size: .68rem;">Art au Féminin — projet éditorial</p>
-          <p class="muted mb-3" style="font-size: .9rem; line-height: 1.7;">
-            Depuis 2019, je gère une plateforme dédiée aux artistes femmes dans l'histoire
-            de l’art — podcast, articles, sélections de livres. Un projet personnel
-            qui témoigne de mon engagement dans le monde de l’art au-delà du code.
-          </p>
-          <a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-             style="font-size: .875rem; color: var(--bordeaux); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">
-            Découvrir artaufeminin.fr →
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SUR LE BLOG -->
-<section class="section">
-  <div class="container">
-    <p class="kicker mb-4">Sur le blog</p>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a href="/blog/site-internet-galerie-art/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">
-              Pourquoi le site d'une galerie d'art n'est pas un site comme les autres
-            </h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Images, catalogue vivant, double public, SEO sectoriel — ce qu'un développeur généraliste ne saura pas anticiper.
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/seo-galeries-art/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">
-              Comment apparaître sur Google quand un collectionneur cherche une œuvre
-            </h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Le SEO pour galeries d'art : longue traîne, pages artistes, schema.org et blog éditorial.
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 mt-4 mt-md-0">
-        <a href="/blog/refonte-site-web-galerie/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">
-              Refonte de site web pour une galerie d'art : par où commencer ?
-            </h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Migration SEO, audit des URLs existantes, données structurées — ce qu'il faut préserver avant de tout refaire.
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" aria-labelledby="faq-galerie-titre">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <p class="kicker mb-3">FAQ</p>
-        <h2 id="faq-galerie-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
-        <div class="faq">
-          {% for item in page.faq_items %}
-          <details class="faq__item">
-            <summary class="faq__q">{{ item.q }}</summary>
-            <p class="faq__a">{{ item.a }}</p>
-          </details>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Contact</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2rem, 4vw, 3rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Un projet pour votre galerie ?
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes d'échange pour comprendre vos besoins — sans engagement.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank" rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block;">
-      Réserver un créneau
-    </a>
-    <p class="mt-4 mb-0" style="font-size: .85rem; color: rgba(247,244,239,.38); font-family: 'Cormorant Garant', serif; font-style: italic;">
-      Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-        style="color: rgba(247,244,239,.55); text-decoration: underline; text-underline-offset: 3px;">Art au Féminin</a>
-      · Développeuse spécialisée art &amp; culture depuis 2019
-    </p>
-  </div>
-</section>

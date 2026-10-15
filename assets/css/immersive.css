@@ -1560,3 +1560,38 @@ html, body { overflow-x: clip; }
 @media (max-width: 768px) {
   .pod-stats { gap: 1.5rem; }
 }
+
+/* ════════════════════════════════════════
+   PAGES SECTEURS (_layouts/secteur.html)
+════════════════════════════════════════ */
+.sect-hero-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 4rem; align-items: end; }
+.sect-title { font-size: clamp(2.8rem, 6.5vw, 6.2rem); }
+.sect-quote {
+  margin: 0 0 1rem; padding-left: 1.5rem; border-left: 2px solid #BE3220;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; line-height: 1.6;
+  color: rgba(237,232,223,0.75); text-wrap: pretty;
+}
+.sect-services { counter-reset: s; display: flex; flex-direction: column; }
+.sect-services li {
+  counter-increment: s; position: relative; padding: 1.4rem 0 1.4rem 3.5rem;
+  border-top: 0.5px solid rgba(237,232,223,0.14);
+}
+.sect-services li::before {
+  content: counter(s, decimal-leading-zero); position: absolute; left: 0; top: 1.5rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; color: #F37E30; font-variant-numeric: tabular-nums;
+}
+.sect-services h3 { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.35rem; color: #EDE8DF; margin-bottom: 0.4rem; }
+.sect-services p { font-size: 0.95rem; line-height: 1.7; color: rgba(237,232,223,0.62); text-wrap: pretty; }
+.sect-type { padding: 1.75rem 1.5rem; min-height: 220px; }
+.sect-type .post-card-desc { opacity: 0.85; }
+.sect-real-label { justify-content: flex-start; }
+.sect-real-text { margin-left: 0; text-align: left; }
+.sect-real { text-align: left; }
+.band-cream .sect-real-tags li { color: #1A1210; background: rgba(26,18,16,0.05); border-color: rgba(26,18,16,0.15); }
+.sect-cta-text { margin-top: 3rem; }
+.sc-card--text .sc-name { font-size: 1.35rem; }
+@media (max-width: 992px) {
+  .sect-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+/* Listes numérotées maison : pas de numéro navigateur en double */
+.sect-services, .num-list, .timeline { list-style: none; padding-left: 0; }

@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: secteur
 title: "Site web pour photographe — Portfolio en ligne sur mesure"
 description: "Portfolio sur mesure pour photographes : galeries d'images optimisées, protection des droits, espace client. Design soigné, performance et SEO inclus. Formation Beaux-Arts."
 permalink: /secteurs/photographes/
 canonical: https://aldjia.dev/secteurs/photographes/
-last_modified_at: 2026-04-06
+last_modified_at: 2026-10-15
 image: /assets/images/site-web-photographe-og.jpg
 schema_service_name: "Création de site web pour photographe"
 schema_service_description: "Création de sites portfolio sur mesure pour photographes : galeries d'images optimisées, protection des droits, espace client, SEO des séries et des reportages."
@@ -19,255 +19,53 @@ faq_items:
     a: "Oui. Les attributs alt des images, les noms de fichiers, les données structurées ImageObject et VisualArtwork, et les pages dédiées par série sont les leviers clés pour être trouvé sur Google Images et dans les résultats de recherche."
   - q: "Combien coûte un site portfolio pour un photographe ?"
     a: "Un site vitrine démarre à 1 500 € HT. Les fonctionnalités supplémentaires (espace client, commande en ligne, protection avancée) font évoluer le tarif. Un premier échange gratuit permet de cadrer le projet."
+# Contenu de la page (rendu par _layouts/secteur.html)
+secteur:
+  hero:
+    kicker: Secteur · Photographes
+    title: Sites web pour photographes
+    lead: Je conçois des sites portfolio sur mesure pour les photographes — galeries d'images rapides et soignées, présentation des séries, espace client et protection des droits. Un site qui met vos images en valeur sans les trahir.
+    quote: 'Le plus grand défi du site d''un photographe : que les images chargent vite, s''affichent grand, et restent protégées. Les trois à la fois.'
+  enjeux:
+    kicker: Enjeux
+    title: Ce que votre site doit faire
+    intro: Un site de photographe a des contraintes techniques précises — des images lourdes à afficher vite, des droits à protéger, des clients à rassurer.
+    items:
+    - title: Galeries optimisées
+      text: Images en haute résolution qui chargent rapidement sur mobile et desktop — sans sacrifier la qualité ni pénaliser le référencement.
+    - title: Protection des droits
+      text: Désactivation du clic droit, filigranes discrets, métadonnées EXIF intégrées — pour exposer votre travail sans le livrer à la copie.
+    - title: Espace client
+      text: Galeries privées accessibles par lien ou mot de passe pour partager les sélections avec vos clients — mariage, portrait, corporate.
+    - title: SEO de vos séries
+      text: Balises alt, données structurées pour les images, SEO local — pour apparaître sur "photographe mariage Lille" ou "photographe d'art contemporain".
+  services:
+    kicker: Services
+    title: Ce que je propose
+    paras:
+    - 'Je travaille principalement avec Jekyll pour les portfolios photographiques — c''est la technologie la plus adaptée : rapide, hébergement quasi gratuit, pas de base de données à pirater. Pour les photographes qui ont besoin d''un espace client ou d''une boutique, je développe des solutions Ruby on Rails sur mesure.'
+    - Ma formation en histoire de l’art me donne une sensibilité particulière à la mise en valeur des images — je comprends l'importance de la séquence, du rythme, de l'espace blanc.
+    items:
+    - label: Portfolio sur mesure
+      text: Design pensé à partir de votre travail et de vos séries — pas un template de photographe générique.
+    - label: Performance images
+      text: Optimisation technique des images (formats WebP, lazy loading, responsive) pour un site rapide même avec des fichiers lourds.
+    - label: Espace client privé
+      text: Galeries protégées par mot de passe pour partager vos sélections avec vos clients sans passer par WeTransfer ou Dropbox.
+    - label: SEO & visibilité locale
+      text: Structure optimisée pour que vous apparaissiez sur les requêtes locales et sur les types de photographie que vous pratiquez.
+  types:
+    kicker: Je travaille avec
+    items:
+    - title: Photographes d'art
+      text: Galeries de séries, statement artistique, expositions — un site qui parle aux collectionneurs, galeries et commissaires d'exposition.
+    - title: Photographes de mariage
+      text: Portfolio, tarifs, témoignages, espace de livraison privé — et un SEO local pour capter les futurs mariés de votre région.
+    - title: Photographes corporate
+      text: Portfolio professionnel, références, secteurs d'activité — pour convaincre les entreprises et les agences.
+    - title: Photographes de patrimoine
+      text: Séries documentaires, archives, collaboration avec institutions — un site qui respecte la profondeur et la rigueur du travail.
+  cta:
+    title: Un portfolio à la hauteur de vos images ?
+    text: 30 minutes d'échange pour parler de votre travail et de vos besoins — sans engagement.
 ---
-
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Secteur · Photographes</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Sites web pour photographes
-        </h1>
-        <p class="muted mb-0" style="font-size: 1.05rem; line-height: 1.8; max-width: 500px;">
-          Je conçois des sites portfolio sur mesure pour les photographes —
-          galeries d'images rapides et soignées, présentation des séries,
-          espace client et protection des droits.
-          Un site qui met vos images en valeur sans les trahir.
-        </p>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem;">
-          <p class="muted mb-0" style="font-size: .95rem; line-height: 1.75; font-style: italic;">
-            "Le plus grand défi du site d'un photographe :
-            que les images chargent vite, s'affichent grand,
-            et restent protégées. Les trois à la fois."
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ENJEUX -->
-<section class="section bg-white-warm">
-  <div class="container">
-
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Enjeux</p>
-        <h2 class="section-title mb-0">Ce que votre site doit faire</h2>
-      </div>
-      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Un site de photographe a des contraintes techniques précises —
-          des images lourdes à afficher vite, des droits à protéger,
-          des clients à rassurer.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-0">
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card pe-4">
-          <div class="sector-number">01</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Galeries optimisées</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Images en haute résolution qui chargent rapidement sur mobile et desktop —
-            sans sacrifier la qualité ni pénaliser le référencement.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card px-lg-4">
-          <div class="sector-number">02</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Protection des droits</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Désactivation du clic droit, filigranes discrets, métadonnées EXIF intégrées —
-            pour exposer votre travail sans le livrer à la copie.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card px-lg-4">
-          <div class="sector-number">03</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Espace client</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Galeries privées accessibles par lien ou mot de passe pour partager
-            les sélections avec vos clients — mariage, portrait, corporate.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="sector-card ps-lg-4">
-          <div class="sector-number">04</div>
-          <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">SEO de vos séries</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Balises alt, données structurées pour les images, SEO local —
-            pour apparaître sur "photographe mariage Lille" ou "photographe
-            d'art contemporain".
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CE QUE JE PROPOSE -->
-<section class="section">
-  <div class="container">
-    <div class="row g-5 align-items-start">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Services</p>
-        <h2 class="section-title mb-4">Ce que je propose</h2>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          Je travaille principalement avec Jekyll pour les portfolios photographiques —
-          c'est la technologie la plus adaptée : rapide, hébergement quasi gratuit,
-          pas de base de données à pirater.
-          Pour les photographes qui ont besoin d'un espace client ou d'une boutique,
-          je développe des solutions Ruby on Rails sur mesure.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Ma formation en histoire de l’art me donne une sensibilité particulière
-          à la mise en valeur des images — je comprends l'importance de la séquence,
-          du rythme, de l'espace blanc.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Portfolio sur mesure</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Design pensé à partir de votre travail et de vos séries —
-              pas un template de photographe générique.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Performance images</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Optimisation technique des images (formats WebP, lazy loading,
-              responsive) pour un site rapide même avec des fichiers lourds.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Espace client privé</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Galeries protégées par mot de passe pour partager vos sélections
-              avec vos clients sans passer par WeTransfer ou Dropbox.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">SEO & visibilité locale</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Structure optimisée pour que vous apparaissiez sur les requêtes
-              locales et sur les types de photographie que vous pratiquez.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TYPES DE PHOTOGRAPHES -->
-<section class="section bg-white-warm">
-  <div class="container">
-
-    <p class="kicker mb-4">Je travaille avec</p>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div style="border-top: 2px solid var(--bordeaux); padding-top: 1.5rem;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; margin-bottom: .5rem;">Photographes d'art</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Galeries de séries, statement artistique, expositions — un site qui parle
-            aux collectionneurs, galeries et commissaires d'exposition.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; margin-bottom: .5rem;">Photographes de mariage</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Portfolio, tarifs, témoignages, espace de livraison privé —
-            et un SEO local pour capter les futurs mariés de votre région.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; margin-bottom: .5rem;">Photographes corporate</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Portfolio professionnel, références, secteurs d'activité —
-            pour convaincre les entreprises et les agences.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div style="border-top: 2px solid var(--line); padding-top: 1.5rem;">
-          <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.15rem; font-weight: 600; margin-bottom: .5rem;">Photographes de patrimoine</h3>
-          <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-            Séries documentaires, archives, collaboration avec institutions —
-            un site qui respecte la profondeur et la rigueur du travail.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" aria-labelledby="faq-photo-titre">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <p class="kicker mb-3">FAQ</p>
-        <h2 id="faq-photo-titre" class="section-title mb-5">Questions <em>fréquentes</em></h2>
-        <div class="faq">
-          {% for item in page.faq_items %}
-          <details class="faq__item">
-            <summary class="faq__q">{{ item.q }}</summary>
-            <p class="faq__a">{{ item.a }}</p>
-          </details>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Contact</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2rem, 4vw, 3rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Un portfolio à la hauteur de vos images ?
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes d'échange pour parler de votre travail et de vos besoins — sans engagement.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank" rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block;">
-      Réserver un créneau
-    </a>
-    <p class="mt-4 mb-0" style="font-size: .85rem; color: rgba(247,244,239,.38); font-family: 'Cormorant Garant', serif; font-style: italic;">
-      Fondatrice d'<a href="{{ site.artaufeminin_url }}" target="_blank" rel="noopener"
-        style="color: rgba(247,244,239,.55); text-decoration: underline; text-underline-offset: 3px;">Art au Féminin</a>
-      · Développeuse spécialisée art &amp; culture depuis 2019
-    </p>
-  </div>
-</section>
