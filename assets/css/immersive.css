@@ -1536,3 +1536,27 @@ html, body { overflow-x: clip; }
   .projet-item { line-height: 1.15; }
   .proj-result { font-size: 0.8rem; white-space: normal; }
 }
+
+/* ════════════════════════════════════════
+   PAGE PODCASTS
+════════════════════════════════════════ */
+.pod-stats { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 2.5rem; }
+.pod-stats li { display: flex; flex-direction: column; gap: 0.3rem; }
+.pod-stats strong {
+  font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: 1;
+  color: #EDE8DF; font-variant-numeric: tabular-nums;
+}
+.pod-stats span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(237,232,223,0.5); }
+.pod-dz-img img { transform: rotate(-2deg); }
+.pod-card { padding: 1.6rem 1.25rem 1.4rem; min-height: 260px; }
+.pod-join { text-align: center; max-width: 760px; }
+.pod-join-label { justify-content: center; color: #BE3220; }
+.pod-join-label::after { display: none; }
+.pod-join-title { color: #1A1210; }
+.pod-join-text { margin: 0 auto 2.5rem; max-width: 52ch; font-size: 1.05rem; line-height: 1.8; color: rgba(26,18,16,0.7); text-wrap: pretty; }
+@media (max-width: 992px) {
+  .pod-dz-img { order: -1; max-width: 420px; }
+}
+@media (max-width: 768px) {
+  .pod-stats { gap: 1.5rem; }
+}
