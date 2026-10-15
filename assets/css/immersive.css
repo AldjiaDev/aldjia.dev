@@ -217,6 +217,14 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .word-section.phrase .word-reveal { font-size: clamp(3rem, 8vw, 8rem); }
+.word-section { padding: 0 1.5rem; }
+.word-reveal { line-height: 1.02; text-wrap: balance; }
+/* « du média » / « de la galerie » : petite ligne en italique au-dessus du nom */
+.word-small {
+  display: block; margin-bottom: 0.45em; line-height: 1.2;
+  font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;
+  font-size: 0.42em; letter-spacing: -0.01em; color: #BE3220;
+}
 .word-reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ════════════════════════════════════════
