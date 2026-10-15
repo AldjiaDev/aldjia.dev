@@ -1,296 +1,159 @@
 ---
-layout: default
+layout: immersive
 title: "Création de site web avec SEO — Art & culture"
 description: "Création de sites web avec SEO intégré pour galeries, artistes et maisons de ventes. Votre site conçu pour être trouvé sur Google dès le départ. Formation Beaux-Arts + Ruby on Rails."
 permalink: /creation-site-web-seo/
-last_modified_at: 2026-05-10
+last_modified_at: 2026-10-15
 ---
 
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Développement web · SEO</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Un site web qui se trouve<br>sur Google dès le départ.
-        </h1>
-        <p class="muted mb-5" style="font-size: 1.05rem; line-height: 1.8; max-width: 520px;">
-          Je conçois des sites pour les professionnels de l'art et de la culture
-          avec le SEO intégré dès la conception — pas ajouté en option après coup.
-          Chaque page est pensée pour être indexée, comprise et mise en avant par Google.
-        </p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Discutons de votre projet
-          </a>
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Voir les réalisations
-          </a>
-        </div>
+<!-- ═══ EN-TÊTE ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="seo-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>Développement web · SEO</p>
+      <h1 class="page-title sect-title" id="seo-h1" data-reveal data-split-words>Un site web qui se trouve <em>sur Google</em> dès le départ.</h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.5">Je conçois des sites pour les professionnels de l'art et de la culture avec le SEO intégré dès la conception, pas ajouté en option après coup. Chaque page est pensée pour être indexée, comprise et mise en avant par Google.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.6">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Discutons de votre projet →</a>
+        <a href="{{ '/realisations/' | relative_url }}" class="btn-pill">Voir les réalisations</a>
       </div>
-
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="padding: 1.25rem 1.5rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius);">
-            <p class="kicker mb-1" style="font-size: .65rem; color: var(--bordeaux);">SEO intégré</p>
-            <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.6;">Architecture, données structurées, vitesse — pensés dès la première ligne de code.</p>
-          </div>
-          <div style="padding: 1.25rem 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-1" style="font-size: .65rem;">Secteur art & culture</p>
-            <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.6;">Formation Beaux-Arts. Je comprends votre univers avant d'écrire la première ligne.</p>
-          </div>
-          <div style="padding: 1.25rem 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);">
-            <p class="kicker mb-1" style="font-size: .65rem;">Résultats durables</p>
-            <p class="mb-0" style="font-size: .9rem; color: var(--muted); line-height: 1.6;">Un site SEO bien fait continue de monter dans Google sans budget publicitaire.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
+    <ul class="seo-promises" data-reveal data-reveal-delay="0.4">
+      <li><strong>SEO intégré</strong><span>Architecture, données structurées, vitesse : pensés dès la première ligne de code.</span></li>
+      <li><strong>Secteur art &amp; culture</strong><span>Je comprends votre univers avant d'écrire la première ligne.</span></li>
+      <li><strong>Résultats durables</strong><span>Un site bien référencé continue de monter dans Google, sans budget publicitaire.</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- POURQUOI LE SEO DÈS LA CONCEPTION -->
-<section class="section bg-white-warm" aria-labelledby="seo-conception">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Approche</p>
-        <h2 id="seo-conception" class="section-title mb-4">Le SEO ne s'ajoute pas.<br>Il se conçoit.</h2>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          La plupart des sites sont construits d'abord, optimisés ensuite.
-          C'est la mauvaise approche — on corrige des problèmes d'architecture qui auraient pu être évités.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Je travaille différemment : les requêtes cibles, la structure des URLs,
-          les données structurées Schema.org et la vitesse de chargement
-          sont définis avant même que la première page soit codée.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Architecture & URLs</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Chaque page a une URL lisible, une hiérarchie de titres cohérente et un fil d'Ariane balisé pour Google.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Données structurées Schema.org</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Vos œuvres, artistes, expositions et événements sont balisés en JSON-LD — Google les comprend et peut les afficher en rich snippet.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Vitesse & Core Web Vitals</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Images optimisées, code léger, chargement rapide. La vitesse est un critère de ranking depuis 2021.</p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">SEO on-page & éditorial</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">Titres, meta descriptions, maillage interne — chaque élément est pensé pour que vos pages répondent aux requêtes de vos clients.</p>
-          </div>
-        </div>
-      </div>
-
+<!-- ═══ APPROCHE — les 4 piliers en cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" id="approche-seo" class="fan-section" aria-labelledby="approche-seo-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Approche</p>
+      <h2 class="secteurs-title" id="approche-seo-titre">Le SEO ne s'ajoute pas. <em>Il se conçoit.</em></h2>
+      <p class="secteurs-lead">La plupart des sites sont construits d'abord, optimisés ensuite. Je fais l'inverse : requêtes cibles, structure des URLs, données structurées et vitesse sont définies avant que la première page soit codée.</p>
     </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">01</span>
+          <h3 class="sc-name">Architecture &amp; URLs</h3>
+          <p class="sc-desc">Des URLs lisibles, une hiérarchie de titres cohérente et un fil d'Ariane balisé pour Google.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">02</span>
+          <h3 class="sc-name">Données structurées</h3>
+          <p class="sc-desc">Œuvres, artistes, expositions et événements balisés en Schema.org : Google les comprend et peut les mettre en avant.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">03</span>
+          <h3 class="sc-name">Vitesse &amp; Core Web Vitals</h3>
+          <p class="sc-desc">Images optimisées, code léger, chargement rapide : la vitesse compte dans le classement Google.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <span class="sc-n">04</span>
+          <h3 class="sc-name">SEO on-page &amp; éditorial</h3>
+          <p class="sc-desc">Titres, descriptions, maillage interne : chaque page répond aux recherches de vos visiteurs.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- POUR QUI -->
-<section class="section" aria-labelledby="seo-pour-qui">
-  <div class="container">
-
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Secteurs</p>
-        <h2 id="seo-pour-qui" class="section-title mb-0">Pour qui ?</h2>
-      </div>
-      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Chaque secteur de l'art et de la culture a ses propres requêtes, ses propres acheteurs, ses propres enjeux de référencement.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-0">
-
-      <div class="col-md-6 col-lg-3">
-        <a href="/secteurs/galeries-art/" style="text-decoration: none; color: inherit;">
-          <div class="sector-card pe-4">
-            <div class="sector-number">01</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Galeries d'art</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Catalogue d'artistes, agenda d'expositions, pages œuvres référencées sur Google.</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <a href="/secteurs/artistes/" style="text-decoration: none; color: inherit;">
-          <div class="sector-card px-lg-4">
-            <div class="sector-number">02</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Artistes</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Portfolio trouvable par les galeries, collectionneurs et curateurs qui cherchent votre nom.</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <a href="/secteurs/maisons-de-ventes/" style="text-decoration: none; color: inherit;">
-          <div class="sector-card px-lg-4">
-            <div class="sector-number">03</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Maisons de ventes</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Lots et vacations référencés, collectionneurs qui trouvent votre catalogue avant la vente.</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <a href="/secteurs/institutions-culturelles/" style="text-decoration: none; color: inherit;">
-          <div class="sector-card ps-lg-4">
-            <div class="sector-number">04</div>
-            <h3 style="font-size: 1.2rem; font-style: italic; margin-bottom: .4rem;">Institutions & créatifs</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Musées, fondations, photographes — visibilité Google pour vos événements et expositions.</p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-
-    </div>
+<!-- ═══ CE QUE LE SEO CHANGE — respiration crème ═══ -->
+<section class="std-section band-cream" aria-labelledby="seo-concret">
+  <div class="std-inner">
+    <p class="about-label pod-join-label seo-concret-label" data-reveal>Résultats</p>
+    <h2 class="page-h2 pod-join-title" id="seo-concret" data-reveal data-reveal-delay="0.1">Ce que le SEO <em>change concrètement.</em></h2>
+    <p class="pod-join-text seo-concret-lead" data-reveal data-reveal-delay="0.15">Un site beau mais invisible ne génère aucune opportunité. Le SEO, c'est ce qui transforme votre site en source de contacts entrants.</p>
+    <ol class="seo-compare">
+      <li class="seo-step seo-step--before" data-reveal data-reveal-delay="0.1">
+        <span class="seo-step-k">Sans SEO</span>
+        <p>Un collectionneur cherche « galerie art contemporain [ville] » sur Google. Il trouve vos concurrents. Pas vous. Votre site existe, mais personne ne le trouve.</p>
+      </li>
+      <li class="seo-step seo-step--after" data-reveal data-reveal-delay="0.2">
+        <span class="seo-step-k">Avec un SEO pensé dès le départ</span>
+        <p>Vous apparaissez en première page pour les recherches de votre secteur. Collectionneurs, curateurs et journalistes vous découvrent sans que vous payiez de publicité.</p>
+      </li>
+      <li class="seo-step seo-step--long" data-reveal data-reveal-delay="0.3">
+        <span class="seo-step-k">Sur le long terme</span>
+        <p>Contrairement à la publicité, le SEO ne s'arrête pas quand on coupe le budget. Un site bien référencé continue d'amener visites et contacts des mois et des années après sa mise en ligne.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
-<!-- CE QUE LE SEO CHANGE CONCRÈTEMENT -->
-<section class="section bg-white-warm" aria-labelledby="seo-concret">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-7 text-center">
-        <p class="kicker mb-3">Résultats</p>
-        <h2 id="seo-concret" class="section-title mb-3">Ce que le SEO change concrètement</h2>
-        <p class="muted" style="font-size: 1rem; line-height: 1.8;">
-          Un site beau mais invisible ne génère aucune opportunité.
-          Le SEO, c'est ce qui transforme votre site en source de contacts entrants.
-        </p>
-      </div>
+<!-- ═══ POUR QUI — cartes secteurs ═══ -->
+<section data-ambient data-fan id="seo-secteurs" class="fan-section" aria-labelledby="seo-pour-qui">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Secteurs</p>
+      <h2 class="secteurs-title" id="seo-pour-qui">Pour <em>qui ?</em></h2>
+      <p class="secteurs-lead">Chaque secteur de l'art et de la culture a ses propres recherches, ses propres publics, ses propres enjeux de référencement.</p>
     </div>
-
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-4">
-        <div style="padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius); height: 100%;">
-          <p class="kicker mb-3" style="font-size: .65rem;">Avant SEO</p>
-          <p style="font-size: .95rem; color: var(--muted); line-height: 1.75; margin: 0;">
-            Un collectionneur cherche "galerie art contemporain [ville]" sur Google.
-            Il trouve vos concurrents. Pas vous.
-            Votre site existe — mais personne ne le trouve.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div style="padding: 2rem; border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); height: 100%;">
-          <p class="kicker mb-3" style="font-size: .65rem; color: var(--bordeaux);">Après SEO</p>
-          <p style="font-size: .95rem; color: var(--muted); line-height: 1.75; margin: 0;">
-            Votre galerie apparaît en première page pour les requêtes de votre secteur.
-            Les collectionneurs, curateurs et journalistes vous découvrent
-            sans que vous ayez à payer de publicité.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div style="padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius); height: 100%;">
-          <p class="kicker mb-3" style="font-size: .65rem;">Sur le long terme</p>
-          <p style="font-size: .95rem; color: var(--muted); line-height: 1.75; margin: 0;">
-            Contrairement à la publicité, le SEO ne s'arrête pas quand on coupe le budget.
-            Un site bien référencé continue de générer des visites et des contacts
-            des mois et des années après sa mise en ligne.
-          </p>
-        </div>
-      </div>
-
-    </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <a href="{{ '/secteurs/galeries-art/' | relative_url }}" class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">01</span><h3 class="sc-name">Galeries d'art</h3>
+          <p class="sc-desc">Catalogue d'artistes, agenda d'expositions, pages œuvres trouvables sur Google.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/secteurs/artistes/' | relative_url }}" class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">02</span><h3 class="sc-name">Artistes</h3>
+          <p class="sc-desc">Un portfolio trouvé par les galeries, collectionneurs et curateurs qui cherchent votre nom.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/secteurs/maisons-de-ventes/' | relative_url }}" class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">03</span><h3 class="sc-name">Maisons de ventes</h3>
+          <p class="sc-desc">Lots et vacations référencés : les collectionneurs trouvent votre catalogue avant la vente.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="sc-item">
+        <a href="{{ '/secteurs/institutions-culturelles/' | relative_url }}" class="sc-card sc-card--text" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <span class="sc-n">04</span><h3 class="sc-name">Institutions &amp; créatifs</h3>
+          <p class="sc-desc">Musées, fondations, photographes : de la visibilité pour vos événements et expositions.</p>
+          <span class="sc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- ARTICLES LIÉS -->
-<section class="section" aria-labelledby="seo-articles">
-  <div class="container">
-    <div class="row align-items-end mb-5">
-      <div class="col">
-        <p class="kicker mb-2">Pour aller plus loin</p>
-        <h2 id="seo-articles" class="section-title mb-0">Articles sur le SEO pour l'art & la culture</h2>
-      </div>
-      <div class="col-auto d-none d-md-block">
-        <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-primary">Tous les articles</a>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a href="/blog/seo-galeries-art/" style="text-decoration: none; color: inherit;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">SEO · Galeries</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem;">Comment apparaître sur Google quand un collectionneur cherche une œuvre</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Architecture, données structurées, logique éditoriale — ce que les galeries font mal et comment y remédier.</p>
-          </div>
+<!-- ═══ ARTICLES LIÉS ═══ -->
+{% assign seo_articles = "/blog/seo-galeries-art/,/blog/prix-site-web-galerie-art/,/blog/site-internet-galerie-art/,/blog/portfolio-artiste-en-ligne/" | split: "," %}
+{% assign acols = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#7845D0|#fff|rgba(255,255,255,0.75);#1A1210|#EDE8DF|rgba(237,232,223,0.6)" | split: ";" %}
+<section data-ambient class="page-section" aria-labelledby="seo-articles">
+  <div class="page-inner">
+    <p class="about-label" data-reveal>Pour aller plus loin</p>
+    <h2 class="page-h2" id="seo-articles" data-reveal data-reveal-delay="0.1">Le SEO pour <em>l'art &amp; la culture.</em></h2>
+    <ul class="post-grid seo-articles-grid">
+      {% for u in seo_articles %}
+      {% assign post = site.posts | where: "url", u | first %}
+      {% if post %}
+      {% assign c = forloop.index0 | modulo: 4 %}{% assign col = acols[c] | split: "|" %}
+      <li class="post-card-item" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.08 }}">
+        <a href="{{ post.url | relative_url }}" class="post-card" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--soft:{{ col[2] }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy">{% endif %}
+          <h3 class="post-card-title">{{ post.title }}</h3>
+          <p class="post-card-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <span class="post-card-more">Lire →</span>
         </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/prix-site-web-galerie-art/" style="text-decoration: none; color: inherit;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Budget · Galeries</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem;">Combien coûte un site web pour une galerie d'art ou une maison de ventes ?</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Prix, fourchettes et ce qui fait vraiment varier le budget — sans détour.</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/site-internet-galerie-art/" style="text-decoration: none; color: inherit;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Site web · Galeries</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem;">Pourquoi le site d'une galerie d'art n'est pas un site comme les autres</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Images, catalogue vivant, double public — les contraintes spécifiques à anticiper dès la conception.</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/portfolio-artiste-en-ligne/" style="text-decoration: none; color: inherit;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Portfolio · Artistes</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: .75rem;">Portfolio artiste en ligne : ce que votre site doit vraiment faire</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Structure, SEO, fiches œuvres — pourquoi la plupart des portfolios d'artistes ne fonctionnent pas.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;" aria-label="Appel à l'action">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Votre projet</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2.2rem, 4vw, 3.5rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Prêt à être trouvé sur Google ?
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes d'échange pour faire le point sur vos besoins — sans engagement.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank"
-       rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block; transition: background .18s;">
-      Réserver un créneau
-    </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <p class="page-aside" data-reveal><a href="{{ '/blog/' | relative_url }}" class="text-link">Tous les articles →</a></p>
   </div>
 </section>

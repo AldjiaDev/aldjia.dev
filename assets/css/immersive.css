@@ -1595,3 +1595,33 @@ html, body { overflow-x: clip; }
 }
 /* Listes numérotées maison : pas de numéro navigateur en double */
 .sect-services, .num-list, .timeline { list-style: none; padding-left: 0; }
+
+/* ════════════════════════════════════════
+   PAGE CRÉATION SITE WEB SEO
+════════════════════════════════════════ */
+.seo-promises { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 0.5rem; }
+.seo-promises li { padding-left: 1.25rem; border-left: 2px solid #BE3220; }
+.seo-promises strong { display: block; margin-bottom: 0.25rem; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 1.2rem; color: #EDE8DF; }
+.seo-promises span { font-size: 0.9rem; line-height: 1.6; color: rgba(237,232,223,0.6); }
+
+.seo-concret-label, .seo-concret-lead { text-align: left; justify-content: flex-start; margin-left: 0; }
+.seo-compare { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.seo-step { padding: 2rem 1.75rem; border-radius: 20px; }
+.seo-step-k { display: inline-block; margin-bottom: 1rem; padding: 0.35rem 0.85rem; border-radius: 2rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.seo-step p { font-size: 1rem; line-height: 1.7; text-wrap: pretty; }
+.seo-step--before { background: rgba(26,18,16,0.05); color: rgba(26,18,16,0.6); }
+.seo-step--before .seo-step-k { background: rgba(26,18,16,0.08); color: rgba(26,18,16,0.6); }
+.seo-step--after { background: #BE3220; color: #EDE8DF; box-shadow: 0 20px 50px rgba(190,50,32,0.3); transform: translateY(-0.75rem); }
+.seo-step--after .seo-step-k { background: rgba(237,232,223,0.16); color: #EDE8DF; }
+.seo-step--long { background: #1A1210; color: rgba(237,232,223,0.8); }
+.seo-step--long .seo-step-k { background: rgba(243,126,48,0.18); color: #F37E30; }
+.seo-step--after.revealed { transform: translateY(-0.75rem); }
+.seo-articles-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 992px) {
+  .seo-compare { grid-template-columns: 1fr; }
+  .seo-step--after, .seo-step--after.revealed { transform: none; }
+  .seo-articles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  .seo-articles-grid { grid-template-columns: 1fr; }
+}
