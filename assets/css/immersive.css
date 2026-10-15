@@ -1531,6 +1531,7 @@ html, body { overflow-x: clip; }
 
 @media (max-width: 768px) {
   .hero-promise br, .auj-sub br { display: none; }
+  .auj-word { font-size: 15vw; padding: 0 1rem; }
   .hero-promise { font-size: 1.05rem; }
   .projet-item { line-height: 1.15; }
   .proj-result { font-size: 0.8rem; white-space: normal; }
