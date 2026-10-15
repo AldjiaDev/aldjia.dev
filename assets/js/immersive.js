@@ -249,7 +249,7 @@
 
     // Après la zone Three.js (hero 100vh + scroll zone 200vh), la scène passe
     // en mode sombre au lieu de disparaître : elle reste le décor des sections sombres
-    const zoneEnd = window.innerHeight * 3.1;
+    const zoneEnd = window.innerHeight * 2.3; // hero 100vh + zone 3D 120vh
     const dark = HAS_HERO ? Math.max(0, Math.min(1, (scrollY - zoneEnd * 0.85) / (window.innerHeight * 0.6))) : 1;
     const heroVisible = HAS_HERO && scrollY < zoneEnd + window.innerHeight * 0.4;
 
@@ -258,7 +258,7 @@
     cM.y += (tM.y - cM.y) * 0.06;
 
     // Scroll progress through the scroll zone (S2)
-    const sp = Math.min(1, Math.max(0, (scrollY - window.innerHeight * 0.5) / (window.innerHeight * 1.5)));
+    const sp = Math.min(1, Math.max(0, (scrollY - window.innerHeight * 0.35) / (window.innerHeight * 1.1)));
 
     bgMat.uniforms.uTime.value   = t;
     bgMat.uniforms.uMouse.value.set(mw.wx, 1 - mw.wy);
@@ -271,7 +271,7 @@
       const sN  = scrollY / vh; // scroll en unités viewport (0 = haut, 3 = fin zone)
 
       // Fade : disparaît seulement à la fin de la zone Three.js (~2.7-3.1 vh)
-      const scrollFade = 1 - Math.max(0, Math.min(1, (scrollY - vh * 2.7) / (vh * 0.35)));
+      const scrollFade = 1 - Math.max(0, Math.min(1, (scrollY - vh * 1.95) / (vh * 0.3)));
       iriMat.uniforms.uOpacity.value = scrollFade;
       textGroup.visible = scrollFade > 0.005;
 
@@ -291,7 +291,9 @@
 
       // Flottement + souris (s'atténue progressivement avec le scroll)
       const floatAmt = Math.max(0, 1 - sN * 0.3);
-      textGroup.position.y = moveY + Math.sin(t * 0.75) * 0.14 * floatAmt;
+      // Nom remonté pour laisser la place à la promesse (ordinateur)
+      const lift = window.innerWidth > 768 ? 0.38 : 0;
+      textGroup.position.y = lift + moveY + Math.sin(t * 0.75) * 0.14 * floatAmt;
       textGroup.rotation.y = Math.sin(t * 0.50) * 0.07 * floatAmt + cM.x * 0.18;
       textGroup.rotation.x = Math.sin(t * 0.38) * 0.04 * floatAmt - cM.y * 0.09;
       textGroup.rotation.z = Math.sin(t * 0.28) * 0.015 * floatAmt + sN * 0.018;
@@ -322,7 +324,7 @@
 
     // Role labels
     const labelIn  = Math.max(0, Math.min(1, (sp - 0.35) / 0.45));
-    const labelOut = Math.max(0, Math.min(1, 1 - (scrollY - window.innerHeight*2.2) / (window.innerHeight*0.6)));
+    const labelOut = Math.max(0, Math.min(1, 1 - (scrollY - window.innerHeight*1.55) / (window.innerHeight*0.45)));
     const lo = Math.min(labelIn, labelOut);
     if (roleDev) roleDev.style.opacity = lo;
     if (roleArt) roleArt.style.opacity = lo;
@@ -962,7 +964,7 @@
     const r = nav.getBoundingClientRect();
     const under = document.elementsFromPoint(innerWidth / 2, r.bottom + 4)
       .find(el => !nav.contains(el) && el.id !== 'canvas' && !el.classList.contains('role-label'));
-    nav.classList.toggle('light', !!under && (!HAS_HERO || scrollY > innerHeight * 3) && bgLuminance(under) > 0.6);
+    nav.classList.toggle('light', !!under && (!HAS_HERO || scrollY > innerHeight * 2.2) && bgLuminance(under) > 0.6);
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });

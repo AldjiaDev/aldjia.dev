@@ -11,7 +11,7 @@
       <li><a href="{{ '/' | relative_url }}#parcours">parcours</a></li>
       <li><a href="{{ '/' | relative_url }}#projets">réalisations</a></li>
       <li><a href="{{ '/tarifs/' | relative_url }}"{% if page.url == '/tarifs/' %} aria-current="page"{% endif %}>tarifs</a></li>
-      <li class="nav-contact"><a href="#contact">contact</a></li>
+      <li class="nav-contact"><a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="nav-rdv">Prendre rendez-vous<span class="sr-only"> (nouvel onglet)</span></a></li>
     </ul>
   </div>
 </nav>

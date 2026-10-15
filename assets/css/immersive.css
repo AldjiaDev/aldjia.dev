@@ -166,7 +166,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S2 — THREE.JS SCROLL ZONE (transparent)
 ════════════════════════════════════════ */
-#scroll-zone { height: 200vh; background: transparent; }
+#scroll-zone { height: 120vh; background: transparent; }
 #scroll-zone .sticky-inner {
   position: sticky; top: 0; height: 100vh; background: transparent;
 }
@@ -1486,4 +1486,52 @@ html, body { overflow-x: clip; }
   .abt-nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
   .abt-vbar { display: none; }
   .abt-num-item:last-child { grid-column: 1 / -1; }
+}
+
+/* ════════════════════════════════════════
+   MARKETING — promesse, RDV permanent, bascule client, résultats projets
+════════════════════════════════════════ */
+.hero-meta { bottom: 9vh; }
+.hero-promise {
+  max-width: 40ch; text-align: center; text-wrap: balance;
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem); line-height: 1.35; color: #fff;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.35);
+}
+
+/* Bouton RDV toujours visible dans la nav */
+#main-nav .nav-links a.nav-rdv,
+#main-nav.light .nav-links a.nav-rdv {
+  margin-left: 0.4rem; color: #fff; background: #BE3220; text-shadow: none;
+  box-shadow: 0 6px 18px rgba(190,50,32,0.4);
+  transition: background-color 0.2s, transform 0.15s;
+}
+#main-nav .nav-links a.nav-rdv:hover { background: #9A2818; }
+#main-nav .nav-links a.nav-rdv:active { transform: scale(0.96); }
+
+/* « Aujourd'hui, je mets les deux au service de… » */
+.auj-word { text-align: center; padding: 0 1.5rem; line-height: 1; }
+.auj-sub {
+  margin-top: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic;
+  font-size: clamp(1.4rem, 3.2vw, 2.8rem); line-height: 1.2; letter-spacing: -0.02em; color: #1A1210;
+  text-wrap: balance;
+}
+.auj-sub em { color: #BE3220; }
+
+/* Résultat concret sous chaque projet */
+.projet-item { line-height: 1.15; padding: 0.6rem 0; }
+.proj-result {
+  display: block; margin-top: 0.4rem;
+  font-family: 'Inter', sans-serif; font-style: normal; font-weight: 400;
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem); letter-spacing: 0.01em; color: rgba(237,232,223,0.78);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+}
+.projet-item.revealed .proj-result { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  .hero-promise br, .auj-sub br { display: none; }
+  .hero-promise { font-size: 1.05rem; }
+  .projet-item { line-height: 1.15; }
+  .proj-result { font-size: 0.8rem; white-space: normal; }
 }
