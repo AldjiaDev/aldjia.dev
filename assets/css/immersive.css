@@ -1688,3 +1688,25 @@ html, body { overflow-x: clip; }
   .proc-step-n { width: 4rem; height: 4rem; font-size: 1.6rem; }
   .proc-step-title { margin-top: 0.2rem; }
 }
+
+/* ════════════════════════════════════════
+   PAGES ZONES (_layouts/zone.html)
+════════════════════════════════════════ */
+.zone-ticket-list { margin-top: 0.5rem; padding-top: 0; border-top: 0; }
+.zone-side { display: flex; flex-direction: column; gap: 1.5rem; }
+.zone-list { transform: rotate(1.5deg); }
+.zone-cards { list-style: none; padding: 0; display: grid; gap: 1.25rem; }
+.zone-card { min-height: 0; align-items: flex-start; text-align: left; padding: 1.6rem 1.6rem; }
+.zone-card:nth-child(even) { transform: translateY(var(--lift)) rotate(1.5deg); }
+.zone-card .pager-title { font-size: 1.2rem; }
+.zone-card-text { font-size: 0.92rem; line-height: 1.6; opacity: 0.85; }
+.zone-links { list-style: none; padding: 0; border-top: 0.5px solid rgba(237,232,223,0.14); }
+.zone-links a {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 1.05rem 0.25rem; border-bottom: 0.5px solid rgba(237,232,223,0.14);
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
+  color: #EDE8DF; text-decoration: none; transition: color 0.2s, padding-left 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+.zone-links a span { font-family: 'Inter', sans-serif; font-style: normal; color: #F37E30; transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1); }
+.zone-links a:hover { color: #F37E30; padding-left: 0.75rem; }
+.zone-links a:hover span { transform: translateX(4px); }

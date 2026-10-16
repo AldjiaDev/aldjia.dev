@@ -1,295 +1,80 @@
 ---
-layout: default
+layout: zone
 title: "Développeuse web pour galeries et artistes à Paris (remote)"
 description: "Développeuse web spécialisée art & culture pour galeries, artistes et institutions culturelles parisiennes. Formation Beaux-Arts + Ruby on Rails. 100 % remote."
 permalink: /paris/
 canonical: https://aldjia.dev/paris/
-last_modified_at: 2026-06-01
+last_modified_at: 2026-10-15
 image: /assets/images/developpeur-web-paris-art-og.jpg
 schema_service_name: "Développement web art & culture pour Paris"
 schema_service_description: "Sites web et applications sur mesure pour les galeries d'art, artistes et institutions culturelles à Paris. Développeuse web freelance francophone, 100 % remote."
 schema_service_type: "Développement web"
 schema_service_audience: "Galeries d'art parisiennes, artistes, maisons de ventes, institutions culturelles"
+# Contenu de la page (rendu par _layouts/zone.html)
+zone:
+  blocks:
+  - kicker: Le marché de l'art à Paris
+    title: La capitale mondiale du marché de l'art
+    paras:
+    - Paris concentre une part significative du marché de l'art mondial. Le Marais et ses galeries d'art contemporain, Saint-Germain-des-Prés avec ses antiquaires et ses maisons spécialisées, les grandes maisons de ventes comme Drouot — la capitale française offre un écosystème culturel d'une densité exceptionnelle.
+    - Dans ce contexte compétitif, une présence en ligne soignée n'est pas un luxe. C'est ce qui permet à une galerie de quartier d'être trouvée par un collectionneur américain, ou à un artiste parisien d'être contacté par une institution étrangère.
+    cards:
+    - title: Galeries du Marais & de Saint-Germain
+      text: Les galeries parisiennes ont besoin de sites qui reflètent leur positionnement — catalogue d'artistes, agenda des expositions, design à la hauteur du travail présenté.
+    - title: Maisons de ventes & Drouot
+      text: Catalogues de lots, formulaires d'estimation, SEO structuré pour les objets et les ventes — les maisons de ventes parisiennes ont des besoins spécifiques que je maîtrise.
+    - title: Artistes & studios parisiens
+      text: Portfolios sur mesure pour les artistes plasticiens, photographes et illustrateurs qui veulent être trouvés sur Google par les galeristes, curateurs et collectionneurs.
+    - title: Institutions culturelles
+      text: Fondations, centres d'art, musées privés — des sites qui s'adressent à des publics multiples avec une architecture de l'information claire et un SEO robuste.
+  - kicker: Services
+    title: Ce que je propose pour vos projets parisiens
+    paras:
+    - Développement web, SEO et design — des projets livrés à distance avec le même soin qu'en présentiel.
+    cards:
+    - title: Portfolio artiste
+      text: Site portfolio sur mesure pour présenter votre travail aux collectionneurs, galeristes et institutions parisiennes.
+      url: /secteurs/artistes/
+    - title: Galerie d'art
+      text: Catalogue d'artistes, agenda d'expositions, design éditorial — un site qui fait honneur à votre programmation.
+      url: /secteurs/galeries-art/
+    - title: Maison de ventes
+      text: Catalogue de lots, estimation en ligne, SEO des vacations — pour les commissaires-priseurs parisiens.
+      url: /secteurs/maisons-de-ventes/
+    - title: Institution culturelle
+      text: Fondations, centres d'art, musées — des sites accessibles et bien référencés pour vos différents publics.
+      url: /secteurs/institutions-culturelles/
+  - kicker: Le remote, ça fonctionne
+    title: Travailler à distance sans perdre en qualité
+    paras:
+    - Tous mes projets se déroulent en remote ou en mode hybride. Ce n'est pas une contrainte — c'est une organisation qui permet de travailler avec des clients partout en France, sans les surcoûts d'un prestataire parisien.
+    - La phase de cadrage se fait en visio (30 à 60 minutes pour comprendre votre univers et vos objectifs). Les livrables sont présentés en partage d'écran, les retours sont traités rapidement. La relation client n'a rien à envier à un suivi en face à face.
+    cards:
+    - title: Clients accompagnés à distance
+      text: La grande majorité de mes projets sont menés entièrement en remote — de Paris à Bordeaux, de Lyon à Nantes. La distance n'a jamais été un obstacle à la qualité ni à la fluidité de la relation client.
+    - title: Double formation art & code
+      text: Formée aux Beaux-Arts avant d'apprendre à coder, je comprends votre univers sans que vous ayez à tout expliquer. C'est le vrai avantage de travailler avec une développeuse spécialisée art & culture.
+    links:
+    - label: Me contacter
+      url: /contact/
+  hero:
+    kicker: Freelance · Paris & remote
+    title: Développeuse web art & culture pour Paris, en remote
+    lead: 'Basée à Lille, je travaille régulièrement avec des galeries d''art, des artistes et des institutions culturelles parisiennes — en 100 % remote. La distance n''est pas un obstacle : elle est le mode de travail de la grande majorité de mes projets.'
+    aside:
+      title: Pourquoi travailler à distance
+      items:
+      - Cadrage initial en visio, puis suivi régulier tout au long du projet
+      - Tarifs sans surcoût lié à la localisation parisienne
+      - Réponse sous 48h, disponibilité flexible
+  articles:
+  - url: /blog/site-internet-galerie-art/
+    title: Pourquoi le site d'une galerie d'art n'est pas un site comme les autres
+    text: Images haute résolution, catalogue vivant, double public — les spécificités que les développeurs généralistes ne maîtrisent pas.
+  - url: /blog/portfolio-artiste-en-ligne/
+    title: 'Portfolio artiste en ligne : ce que votre site doit vraiment faire'
+    text: Structure, SEO, fiches œuvres — ce qui sépare un portfolio qui travaille pour vous d'un album photo en ligne.
+  cta:
+    title: Un projet à Paris ? Parlons-en en visio.
+    text: 30 minutes pour comprendre votre projet — sans engagement, en visio depuis n'importe où.
 ---
-
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Freelance · Paris & remote</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Développeuse web art &amp; culture<br>pour Paris, en remote
-        </h1>
-        <p class="muted mb-5" style="font-size: 1.05rem; line-height: 1.8; max-width: 520px;">
-          Basée à Lille, je travaille régulièrement avec des galeries d'art, des artistes
-          et des institutions culturelles parisiennes — en 100 % remote. La distance
-          n'est pas un obstacle : elle est le mode de travail de la grande majorité de mes projets.
-        </p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Prendre RDV en visio
-          </a>
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Voir le portfolio
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem;">
-          <p class="kicker mb-3" style="font-size: .68rem;">Pourquoi travailler à distance</p>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Cadrage initial en visio, puis suivi régulier tout au long du projet</p>
-            </div>
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Tarifs sans surcoût lié à la localisation parisienne</p>
-            </div>
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Réponse sous 48h, disponibilité flexible</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MARCHÉ DE L'ART PARISIEN -->
-<section class="section bg-white-warm" aria-labelledby="paris-marche">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Le marché de l'art à Paris</p>
-        <h2 id="paris-marche" class="section-title mb-4">La capitale mondiale du marché de l'art</h2>
-        <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          Paris concentre une part significative du marché de l'art mondial.
-          Le Marais et ses galeries d'art contemporain, Saint-Germain-des-Prés avec ses antiquaires
-          et ses maisons spécialisées, les grandes maisons de ventes comme Drouot — la capitale
-          française offre un écosystème culturel d'une densité exceptionnelle.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Dans ce contexte compétitif, une présence en ligne soignée n'est pas un luxe.
-          C'est ce qui permet à une galerie de quartier d'être trouvée par un collectionneur
-          américain, ou à un artiste parisien d'être contacté par une institution étrangère.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="border-left: 2px solid var(--bordeaux-mid); padding-left: 2rem; display: flex; flex-direction: column; gap: 1.75rem;">
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Galeries du Marais & de Saint-Germain</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Les galeries parisiennes ont besoin de sites qui reflètent leur
-              positionnement — catalogue d'artistes, agenda des expositions,
-              design à la hauteur du travail présenté.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Maisons de ventes & Drouot</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Catalogues de lots, formulaires d'estimation, SEO structuré pour les objets
-              et les ventes — les maisons de ventes parisiennes ont des besoins spécifiques
-              que je maîtrise.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Artistes & studios parisiens</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Portfolios sur mesure pour les artistes plasticiens, photographes et illustrateurs
-              qui veulent être trouvés sur Google par les galeristes, curateurs et collectionneurs.
-            </p>
-          </div>
-          <div>
-            <p class="kicker mb-1" style="font-size: .68rem;">Institutions culturelles</p>
-            <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-              Fondations, centres d'art, musées privés — des sites qui s'adressent
-              à des publics multiples avec une architecture de l'information claire et un SEO robuste.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CE QUE JE PROPOSE -->
-<section class="section" aria-labelledby="paris-services">
-  <div class="container">
-
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Services</p>
-        <h2 id="paris-services" class="section-title mb-0">Ce que je propose pour vos projets parisiens</h2>
-      </div>
-      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-        <p class="muted mb-0" style="font-size: .95rem; line-height: 1.7;">
-          Développement web, SEO et design — des projets livrés à distance avec
-          le même soin qu'en présentiel.
-        </p>
-      </div>
-    </div>
-
-    <div class="row g-0">
-      <div class="col-md-6 col-lg-3">
-        <a href="{{ '/secteurs/artistes' | relative_url }}" style="text-decoration: none; color: inherit;">
-          <div class="sector-card pe-4">
-            <div class="sector-number">01</div>
-            <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Portfolio artiste</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Site portfolio sur mesure pour présenter votre travail aux collectionneurs,
-              galeristes et institutions parisiennes.
-            </p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <a href="{{ '/secteurs/galeries-art' | relative_url }}" style="text-decoration: none; color: inherit;">
-          <div class="sector-card px-lg-4">
-            <div class="sector-number">02</div>
-            <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Galerie d'art</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Catalogue d'artistes, agenda d'expositions, design éditorial —
-              un site qui fait honneur à votre programmation.
-            </p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <a href="{{ '/secteurs/maisons-de-ventes' | relative_url }}" style="text-decoration: none; color: inherit;">
-          <div class="sector-card px-lg-4">
-            <div class="sector-number">03</div>
-            <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Maison de ventes</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Catalogue de lots, estimation en ligne, SEO des vacations —
-              pour les commissaires-priseurs parisiens.
-            </p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <a href="{{ '/secteurs/institutions-culturelles' | relative_url }}" style="text-decoration: none; color: inherit;">
-          <div class="sector-card ps-lg-4">
-            <div class="sector-number">04</div>
-            <h3 style="font-size: 1.15rem; font-style: italic; margin-bottom: .4rem;">Institution culturelle</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">
-              Fondations, centres d'art, musées — des sites accessibles
-              et bien référencés pour vos différents publics.
-            </p>
-            <p style="font-size: .78rem; color: var(--bordeaux); margin-top: auto; padding-top: .75rem; margin-bottom: 0; font-weight: 500;">Voir la page →</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- POURQUOI CHOISIR UNE FREELANCE DISTANTE -->
-<section class="section bg-white-warm" aria-labelledby="paris-remote">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-6">
-        <p class="kicker mb-3">Le remote, ça fonctionne</p>
-        <h2 id="paris-remote" class="section-title mb-4">Travailler à distance sans perdre en qualité</h2>
-        <p class="muted mb-3" style="font-size: 1rem; line-height: 1.8;">
-          Tous mes projets se déroulent en remote ou en mode hybride. Ce n'est pas
-          une contrainte — c'est une organisation qui permet de travailler
-          avec des clients partout en France, sans les surcoûts d'un prestataire parisien.
-        </p>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          La phase de cadrage se fait en visio (30 à 60 minutes pour comprendre votre univers
-          et vos objectifs). Les livrables sont présentés en partage d'écran, les retours
-          sont traités rapidement. La relation client n'a rien à envier à un suivi en face à face.
-        </p>
-        <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-primary">
-          Me contacter
-        </a>
-      </div>
-
-      <div class="col-lg-5 offset-lg-1">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem;">
-            <p class="kicker mb-2" style="font-size: .65rem;">Clients accompagnés à distance</p>
-            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">
-              La grande majorité de mes projets sont menés entièrement en remote —
-              de Paris à Bordeaux, de Lyon à Nantes. La distance n'a jamais été
-              un obstacle à la qualité ni à la fluidité de la relation client.
-            </p>
-          </div>
-          <div style="border: 1px solid var(--bordeaux-mid); background: var(--bordeaux-light); border-radius: var(--radius); padding: 1.5rem;">
-            <p class="kicker mb-2" style="font-size: .65rem;">Double formation art & code</p>
-            <p class="muted mb-0" style="font-size: .9rem; line-height: 1.7;">
-              Formée aux Beaux-Arts avant d'apprendre à coder, je comprends votre univers
-              sans que vous ayez à tout expliquer. C'est le vrai avantage de travailler
-              avec une développeuse spécialisée art & culture.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ARTICLES -->
-<section class="section">
-  <div class="container">
-    <p class="kicker mb-4">Sur le blog</p>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a href="/blog/site-internet-galerie-art/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">Pourquoi le site d'une galerie d'art n'est pas un site comme les autres</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Images haute résolution, catalogue vivant, double public — les spécificités que les développeurs généralistes ne maîtrisent pas.</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/portfolio-artiste-en-ligne/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">Portfolio artiste en ligne : ce que votre site doit vraiment faire</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Structure, SEO, fiches œuvres — ce qui sépare un portfolio qui travaille pour vous d'un album photo en ligne.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Contact · Paris</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2rem, 4vw, 3rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Un projet à Paris ?<br>Parlons-en en visio.
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes pour comprendre votre projet — sans engagement, en visio depuis n'importe où.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank" rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block;">
-      Réserver un créneau
-    </a>
-  </div>
-</section>

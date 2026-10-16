@@ -1,0 +1,164 @@
+---
+layout: immersive
+---
+{% comment %}
+  Page zone (Lille, Paris, Bruxelles…) — même univers que l'accueil.
+  Contenu dans le front matter (clé `zone`) : hero, blocks[], realisation, articles, cta.
+  Un bloc peut contenir : paras[], cards[] (avec ou sans url), links[], list{title, items[]}.
+{% endcomment %}
+{% assign z = page.zone %}
+{% assign cols = "#BE3220|#EDE8DF|rgba(237,232,223,0.16);#EDE8DF|#1A1210|rgba(26,18,16,0.1);#F37E30|#1A1210|rgba(26,18,16,0.12);#7845D0|#fff|rgba(255,255,255,0.18)" | split: ";" %}
+
+<!-- ═══ EN-TÊTE + ticket ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="zone-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>{{ z.hero.kicker }}</p>
+      <h1 class="page-title sect-title" id="zone-h1" data-reveal data-split-words>{{ z.hero.title }}</h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.4">{{ z.hero.lead }}</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.5">
+        <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Prendre rendez-vous →</a>
+        <a href="{{ '/realisations/' | relative_url }}" class="btn-pill">Voir les réalisations</a>
+      </div>
+    </div>
+    {% if z.hero.aside %}
+    <div class="audit-ticket" data-reveal data-reveal-delay="0.3">
+      <p class="audit-ticket-k">{{ z.hero.aside.title }}</p>
+      <ul class="audit-ticket-list zone-ticket-list">
+        {% for it in z.hero.aside.items %}<li>{{ it }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% for b in z.blocks %}
+{% assign linked = b.cards | where_exp: "c", "c.url" %}
+{% if b.cards and b.cards.size >= 4 %}
+<!-- ═══ Bloc en cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" class="fan-section" aria-labelledby="zb-{{ forloop.index }}">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      {% if b.kicker != "" %}<p class="about-label secteurs-label">{{ b.kicker }}</p>{% endif %}
+      <h2 class="secteurs-title" id="zb-{{ forloop.index }}">{{ b.title }}</h2>
+      {% if b.paras %}<p class="secteurs-lead">{{ b.paras | first }}</p>{% endif %}
+    </div>
+    <ul class="secteurs-stage">
+      {% for c in b.cards %}
+      {% assign k = forloop.index0 | modulo: 4 %}{% assign col = cols[k] | split: "|" %}
+      <li class="sc-item">
+        {% if c.url %}<a href="{{ c.url | relative_url }}" class="sc-card sc-card--text" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--badge:{{ col[2] }}">{% else %}<div class="sc-card sc-card--text" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--badge:{{ col[2] }}">{% endif %}
+          <span class="sc-n">0{{ forloop.index }}</span>
+          <h3 class="sc-name">{{ c.title }}</h3>
+          <p class="sc-desc">{{ c.text }}</p>
+          {% if c.url %}<span class="sc-arrow" aria-hidden="true">→</span></a>{% else %}</div>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% if b.paras.size > 1 %}
+<section data-ambient class="page-section page-section--tight" aria-label="{{ b.title }}">
+  <div class="page-inner page-inner--narrow proc-intro">
+    {% for p in b.paras offset: 1 %}<p class="page-lead" data-reveal>{{ p }}</p>{% endfor %}
+  </div>
+</section>
+{% endif %}
+{% else %}
+<!-- ═══ Bloc texte (+ liens, liste, petites cartes) ═══ -->
+<section data-ambient class="page-section" aria-labelledby="zb-{{ forloop.index }}">
+  <div class="page-inner page-cols">
+    <div>
+      {% if b.kicker != "" %}<p class="about-label" data-reveal>{{ b.kicker }}</p>{% endif %}
+      <h2 class="page-h2" id="zb-{{ forloop.index }}" data-reveal data-reveal-delay="0.1">{{ b.title }}</h2>
+      {% for p in b.paras %}<p class="page-text" data-reveal data-reveal-delay="0.15">{{ p }}</p>{% endfor %}
+    </div>
+    <div class="zone-side" data-reveal data-reveal-delay="0.2">
+      {% if b.list %}
+      <div class="audit-ticket zone-list">
+        <p class="audit-ticket-k">{{ b.list.title }}</p>
+        <ul class="audit-ticket-list">{% for it in b.list.items %}<li>{{ it }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% if b.cards %}
+      <ul class="zone-cards">
+        {% for c in b.cards %}
+        {% assign k = forloop.index0 | plus: 2 | modulo: 4 %}{% assign col = cols[k] | split: "|" %}
+        <li class="pager-card zone-card" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--badge:{{ col[2] }}">
+          <span class="pager-title">{{ c.title }}</span>
+          <span class="zone-card-text">{{ c.text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if b.links %}
+      <ul class="zone-links">
+        {% for l in b.links %}<li><a href="{{ l.url | relative_url }}">{{ l.label }}<span aria-hidden="true">→</span></a></li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+{% if z.realisation %}
+<!-- ═══ RÉALISATION — respiration vermillon ═══ -->
+{% assign r = z.realisation %}
+<section class="band-vermillion page-section about-aaf" aria-labelledby="zone-real">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>{{ r.kicker }}</p>
+      <h2 class="page-h2" id="zone-real" data-reveal data-reveal-delay="0.1">{{ r.title }}</h2>
+      {% for p in r.paras %}<p class="about-aaf-text" data-reveal data-reveal-delay="0.2">{{ p }}</p>{% endfor %}
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="{{ r.url | relative_url }}" class="btn-pill btn-pill--cream">Voir la réalisation →</a>
+      </div>
+    </div>
+    {% if r.image %}
+    <figure class="about-aaf-img" data-reveal data-reveal-delay="0.2">
+      <img src="{{ r.image | relative_url }}" alt="{{ r.title }}" loading="lazy">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if z.articles %}
+<!-- ═══ ARTICLES ═══ -->
+{% assign acols = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#7845D0|#fff|rgba(255,255,255,0.75);#1A1210|#EDE8DF|rgba(237,232,223,0.6)" | split: ";" %}
+<section data-ambient class="page-section" aria-labelledby="zone-blog">
+  <div class="page-inner">
+    <p class="about-label" data-reveal>Sur le blog</p>
+    <h2 class="page-h2" id="zone-blog" data-reveal data-reveal-delay="0.1">Pour aller <em>plus loin.</em></h2>
+    <ul class="post-grid">
+      {% for a in z.articles %}
+      {% assign post = site.posts | where: "url", a.url | first %}
+      {% assign k = forloop.index0 | modulo: 4 %}{% assign col = acols[k] | split: "|" %}
+      <li class="post-card-item" data-reveal data-reveal-delay="{{ forloop.index0 | times: 0.08 }}">
+        <a href="{{ a.url | relative_url }}" class="post-card" style="--bg:{{ col[0] }};--fg:{{ col[1] }};--soft:{{ col[2] }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy">{% endif %}
+          <h3 class="post-card-title">{{ a.title }}</h3>
+          <p class="post-card-desc">{{ a.text }}</p>
+          <span class="post-card-more">Lire →</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if z.cta %}
+<!-- ═══ APPEL FINAL — respiration crème ═══ -->
+<section class="std-section band-cream" aria-labelledby="zone-cta">
+  <div class="std-inner pod-join">
+    <h2 class="page-h2 pod-join-title" id="zone-cta" data-reveal>{{ z.cta.title }}</h2>
+    {% if z.cta.text %}<p class="pod-join-text" data-reveal data-reveal-delay="0.15">{{ z.cta.text }}</p>{% endif %}
+    <div class="about-actions audit-actions" data-reveal data-reveal-delay="0.25">
+      <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Réserver un créneau →</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-pill audit-pill-dark">Écrire un message</a>
+    </div>
+  </div>
+</section>
+{% endif %}

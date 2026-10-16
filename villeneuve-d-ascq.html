@@ -1,173 +1,48 @@
 ---
-layout: default
+layout: zone
 title: "Développeuse web à Villeneuve-d'Ascq — Sites web art & culture avec SEO"
 description: "Développeuse web freelance à Villeneuve-d'Ascq et dans la métropole lilloise. Sites web et portfolios pour galeries d'art, artistes et institutions culturelles. Référencement naturel inclus."
 permalink: /villeneuve-d-ascq/
-last_modified_at: 2026-05-17
+last_modified_at: 2026-10-15
+# Contenu de la page (rendu par _layouts/zone.html)
+zone:
+  blocks:
+  - kicker: Services
+    title: Ce que je propose près de chez vous
+    paras:
+    - Basée dans la métropole lilloise, je peux me déplacer à Villeneuve-d'Ascq et dans toute la région pour les phases de cadrage et de présentation. Le reste du projet se déroule en remote — comme avec la grande majorité de mes clients partout en France.
+    - Choisir un prestataire local, c'est la possibilité de se rencontrer, de construire une relation de confiance et de réagir vite — sans les délais et les coûts d'un prestataire parisien.
+    links:
+    - label: Sites web pour galeries d'art
+      url: /secteurs/galeries-art/
+    - label: Portfolios pour artistes
+      url: /secteurs/artistes/
+    - label: Sites web pour maisons de ventes
+      url: /secteurs/maisons-de-ventes/
+    - label: Sites web pour institutions culturelles
+      url: /secteurs/institutions-culturelles/
+    - label: Développeuse web en Hauts-de-France
+      url: /hauts-de-france/
+    - label: Création de site web avec SEO
+      url: /creation-site-web-seo/
+  hero:
+    kicker: Freelance · Villeneuve-d'Ascq & métropole
+    title: Développeuse web freelance à Villeneuve-d'Ascq
+    lead: Je suis développeuse web freelance basée dans la métropole lilloise, spécialisée dans la création de sites et d'applications pour le monde de l'art et de la culture. J'interviens à Villeneuve-d'Ascq, Lille, Roubaix, Tourcoing et en remote partout en France.
+    aside:
+      title: Disponibilité
+      items:
+      - Réunions en présentiel à Villeneuve-d'Ascq, Lille, Roubaix, Tourcoing et alentours
+      - Projets en remote pour toute la France
+      - Premier échange de 30 min offert, sans engagement
+  articles:
+  - url: /blog/seo-galeries-art/
+    title: Comment apparaître sur Google quand un collectionneur cherche une œuvre
+    text: 'SEO pour galeries et maisons de ventes : longue traîne, pages artistes, données structurées.'
+  - url: /blog/prix-site-web-galerie-art/
+    title: Combien coûte un site web pour une galerie d'art ou une maison de ventes ?
+    text: Fourchettes de prix, ce qui fait varier le budget — sans opacité.
+  cta:
+    title: Vous êtes dans la métropole ? Rencontrons-nous.
+    text: 30 minutes pour parler de votre projet — en visio ou en présentiel.
 ---
-
-<!-- HERO -->
-<section style="padding: 80px 0 64px;">
-  <div class="container">
-    <div class="row align-items-end g-5">
-      <div class="col-lg-7">
-        <p class="kicker mb-3">Freelance · Villeneuve-d'Ascq & métropole</p>
-        <h1 style="
-          font-family: 'Cormorant Garant', serif;
-          font-style: italic;
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-          font-weight: 600;
-          line-height: 1.05;
-          letter-spacing: -0.02em;
-          margin-bottom: 1.5rem;
-        ">
-          Développeuse web freelance<br>à Villeneuve-d'Ascq
-        </h1>
-        <p class="muted mb-5" style="font-size: 1.05rem; line-height: 1.8; max-width: 520px;">
-          Je suis développeuse web freelance basée dans la métropole lilloise,
-          spécialisée dans la création de sites et d'applications pour le monde
-          de l'art et de la culture. J'interviens à Villeneuve-d'Ascq, Lille,
-          Roubaix, Tourcoing et en remote partout en France.
-        </p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="{{ site.cal_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Prendre RDV
-          </a>
-          <a href="{{ '/realisations' | relative_url }}" class="btn btn-outline-primary btn-lg">
-            Voir le portfolio
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
-        <div style="border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem;">
-          <p class="kicker mb-3" style="font-size: .68rem;">Disponibilité</p>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Réunions en présentiel à Villeneuve-d'Ascq, Lille, Roubaix, Tourcoing et alentours</p>
-            </div>
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Projets en remote pour toute la France</p>
-            </div>
-            <div style="display: flex; align-items: flex-start; gap: .75rem;">
-              <span style="color: var(--bordeaux); font-size: .9rem; flex-shrink: 0; margin-top: .15rem;">—</span>
-              <p class="muted mb-0" style="font-size: .9rem; line-height: 1.6;">Premier échange de 30 min offert, sans engagement</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CE QUE JE PROPOSE -->
-<section class="section bg-white-warm" aria-labelledby="vda-services">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-
-      <div class="col-lg-5">
-        <p class="kicker mb-3">Services</p>
-        <h2 id="vda-services" class="section-title mb-4">Ce que je propose près de chez vous</h2>
-        <p class="muted mb-4" style="font-size: 1rem; line-height: 1.8;">
-          Basée dans la métropole lilloise, je peux me déplacer à Villeneuve-d'Ascq
-          et dans toute la région pour les phases de cadrage et de présentation.
-          Le reste du projet se déroule en remote — comme avec la grande majorité
-          de mes clients partout en France.
-        </p>
-        <p class="muted mb-0" style="font-size: 1rem; line-height: 1.8;">
-          Choisir un prestataire local, c'est la possibilité de se rencontrer,
-          de construire une relation de confiance et de réagir vite —
-          sans les délais et les coûts d'un prestataire parisien.
-        </p>
-      </div>
-
-      <div class="col-lg-6 offset-lg-1">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <a href="{{ '/secteurs/galeries-art' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card">
-              <span style="font-size: .95rem; color: var(--ink); font-weight: 500;">Sites web pour galeries d'art</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-          <a href="{{ '/secteurs/artistes' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card">
-              <span style="font-size: .95rem; color: var(--ink); font-weight: 500;">Portfolios pour artistes</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-          <a href="{{ '/secteurs/maisons-de-ventes' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card">
-              <span style="font-size: .95rem; color: var(--ink); font-weight: 500;">Sites web pour maisons de ventes</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-          <a href="{{ '/secteurs/institutions-culturelles' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card">
-              <span style="font-size: .95rem; color: var(--ink); font-weight: 500;">Sites web pour institutions culturelles</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-          <a href="{{ '/hauts-de-france' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card">
-              <span style="font-size: .95rem; color: var(--ink); font-weight: 500;">Développeuse web en Hauts-de-France</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-          <a href="{{ '/creation-site-web-seo' | relative_url }}" style="text-decoration: none;">
-            <div class="list-row-card list-row-card--active">
-              <span style="font-size: .95rem; color: var(--bordeaux); font-weight: 500;">Création de site web avec SEO</span>
-              <span style="color: var(--bordeaux); font-size: .85rem;">→</span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ARTICLES -->
-<section class="section">
-  <div class="container">
-    <p class="kicker mb-4">Sur le blog</p>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a href="/blog/seo-galeries-art/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">Comment apparaître sur Google quand un collectionneur cherche une œuvre</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">SEO pour galeries et maisons de ventes : longue traîne, pages artistes, données structurées.</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="/blog/prix-site-web-galerie-art/" style="text-decoration: none; display: block; height: 100%;">
-          <div class="home-article-card">
-            <p class="kicker mb-2" style="font-size: .65rem;">Article</p>
-            <h3 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; line-height: 1.3;">Combien coûte un site web pour une galerie d'art ou une maison de ventes ?</h3>
-            <p class="muted mb-0" style="font-size: .88rem; line-height: 1.6;">Fourchettes de prix, ce qui fait varier le budget — sans opacité.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="background: #2E2E2A;">
-  <div class="container text-center">
-    <p class="kicker mb-4" style="color: rgba(247,244,239,.72) !important;">Contact · Villeneuve-d'Ascq</p>
-    <h2 style="font-family: 'Cormorant Garant', serif; font-style: italic; font-size: clamp(2rem, 4vw, 3rem); color: rgba(247,244,239,.92); font-weight: 600; line-height: 1.1; margin-bottom: 1.5rem;">
-      Vous êtes dans la métropole ?<br>Rencontrons-nous.
-    </h2>
-    <p class="mb-5 maxw mx-auto" style="color: rgba(247,244,239,.58); font-size: 1rem; line-height: 1.75;">
-      30 minutes pour parler de votre projet — en visio ou en présentiel.
-    </p>
-    <a href="{{ site.cal_url }}"
-       target="_blank" rel="noopener"
-       style="background: rgba(247,244,239,.95); color: #2E2E2A !important; border: none; border-radius: 8px; padding: .75rem 2rem; font-size: .9rem; font-weight: 600; letter-spacing: .03em; display: inline-block;">
-      Réserver un créneau
-    </a>
-  </div>
-</section>
