@@ -529,7 +529,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
    CTA — Travaillons ensemble
 ════════════════════════════════════════ */
 /* Scène du bouton 3D : la section dure un peu plus d'un écran pour l'entrée au scroll */
-#contact { position: relative; height: 160vh; }
+#contact { position: relative; height: 130vh; }
 .cta3d-sticky {
   position: sticky; top: 0; height: 100vh;
   display: flex; align-items: center; justify-content: center;
@@ -654,11 +654,10 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
 /* ════════════════════════════════════════
    S13 — FIN / FOOTER  (blocs qui s'écartent)
 ════════════════════════════════════════ */
-#fin { height: 320vh; position: relative; }
-#fin-sticky {
-  position: sticky; top: 0; height: 100vh; overflow: hidden;
-  background: #0E0C0A;
-}
+/* Les portes s'écartent en plein écran sur un défilement court ; derrière elles,
+   la scène 3D d'ambiance (data-ambient) remplit l'écran au-dessus du footer. */
+#fin { height: 160vh; position: relative; }
+#fin-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; background: transparent; }
 /* Les deux blocs coulissants — même palette que "je les réunis." */
 .fin-blocks {
   position: absolute; inset: 0; display: flex; z-index: 2; pointer-events: none;
@@ -683,6 +682,7 @@ body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smooth
   display: flex; flex-direction: column; justify-content: flex-end;
   opacity: 0; will-change: opacity;
 }
+.fin-content .footer-band, .fin-content .footer-bottom { background: #0E0C0A; }
 .footer-band {
   padding: 4rem 5vw 3rem;
   display: grid; grid-template-columns: 1fr auto auto; gap: 4rem; align-items: start;
@@ -1710,3 +1710,4 @@ html, body { overflow-x: clip; }
 .zone-links a span { font-family: 'Inter', sans-serif; font-style: normal; color: #F37E30; transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1); }
 .zone-links a:hover { color: #F37E30; padding-left: 0.75rem; }
 .zone-links a:hover span { transform: translateX(4px); }
+

@@ -645,11 +645,11 @@
     if (!finSection || !finLeft) return;
     const p = progress(finSection);
     // Blocs glissent vers l'extérieur
-    const e = eio(clamp(p / 0.72, 0, 1));
+    const e = eio(clamp(p / 0.85, 0, 1));
     finLeft.style.transform  = `translateX(-${e * 52}vw)`;
     finRight.style.transform = `translateX(${e * 52}vw)`;
     // Contenu fade in légèrement décalé
-    finContent.style.opacity = eio(clamp((p - 0.12) / 0.4, 0, 1));
+    finContent.style.opacity = eio(clamp((p - 0.1) / 0.5, 0, 1));
   }
   window.addEventListener('scroll', updateFooter, { passive: true });
   window.addEventListener('resize', updateFooter,  { passive: true });
