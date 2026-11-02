@@ -17,7 +17,7 @@ last_modified_at: 2026-11-02
 
     <div class="audit-ticket lead-ticket" data-reveal data-reveal-delay="0.3">
       <p class="audit-ticket-k">Recevoir la checklist</p>
-      <form class="lead-form" id="lead-form" action="{{ site.mailerlite_form_action }}" method="post" novalidate>
+      <form class="lead-form" id="lead-form" action="{{ site.mailerlite_form_action }}" method="post" novalidate data-lead-form data-success="{{ '/checklist/merci/' | relative_url }}">
         <label for="lead-name">Prénom</label>
         <input type="text" id="lead-name" name="fields[name]" autocomplete="given-name" placeholder="Votre prénom">
         <label for="lead-email">Email</label>
@@ -29,7 +29,7 @@ last_modified_at: 2026-11-02
         <input type="hidden" name="ml-submit" value="1">
         <input type="hidden" name="anticsrf" value="true">
         <button type="submit" class="btn-pill btn-pill--solid">Recevoir la checklist →</button>
-        <p class="lead-status" id="lead-status" role="status" aria-live="polite"></p>
+        <p class="lead-status" role="status" aria-live="polite" data-lead-status></p>
       </form>
     </div>
   </div>
@@ -116,33 +116,4 @@ last_modified_at: 2026-11-02
   </div>
 </section>
 
-<script>
-(function () {
-  var form = document.getElementById('lead-form');
-  var status = document.getElementById('lead-status');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = form.querySelector('[name="fields[email]"]');
-    var consent = form.querySelector('[name="consent"]');
-    if (!email.value || !email.checkValidity()) { status.textContent = 'Indiquez une adresse email valide.'; email.focus(); return; }
-    if (!consent.checked) { status.textContent = 'Cochez la case de consentement pour recevoir la checklist.'; consent.focus(); return; }
-    if (!form.action || form.getAttribute('action') === '') { status.textContent = 'Le formulaire n’est pas encore actif. Écrivez-moi depuis la page contact.'; return; }
-    var btn = form.querySelector('button');
-    btn.disabled = true;
-    status.textContent = 'Envoi en cours…';
-    var data = new FormData(form);
-    data.delete('consent');
-    fetch(form.action, { method: 'POST', body: data })
-      .then(function (r) { return r.json(); })
-      .then(function (res) {
-        if (res && res.success) { window.location.href = '{{ "/checklist/merci/" | relative_url }}'; }
-        else { throw new Error(); }
-      })
-      .catch(function () {
-        btn.disabled = false;
-        status.textContent = 'L’envoi n’a pas fonctionné. Réessayez dans un instant, ou écrivez-moi depuis la page contact.';
-      });
-  });
-})();
-</script>
+<script src="{{ '/assets/js/lead-form.js' | relative_url }}" defer></script>
