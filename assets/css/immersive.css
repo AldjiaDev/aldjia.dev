@@ -1711,3 +1711,22 @@ html, body { overflow-x: clip; }
 .zone-links a:hover { color: #F37E30; padding-left: 0.75rem; }
 .zone-links a:hover span { transform: translateX(4px); }
 
+/* ════════════════════════════════════════
+   PAGE CHECKLIST (lead magnet)
+════════════════════════════════════════ */
+.lead-ticket { transform: rotate(-1.5deg); }
+.lead-form { display: flex; flex-direction: column; }
+.lead-form label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(26,18,16,0.6); margin: 0.9rem 0 0.4rem; }
+.lead-form input[type="text"], .lead-form input[type="email"] {
+  width: 100%; padding: 0.8rem 1rem; border-radius: 10px; font: inherit; font-size: 0.95rem; color: #1A1210;
+  background: #fff; border: 1px solid rgba(26,18,16,0.18); transition: border-color 0.2s;
+}
+.lead-form input:focus-visible { outline: 2px solid #BE3220; outline-offset: 1px; border-color: #BE3220; }
+.lead-form .lead-consent { display: flex; gap: 0.6rem; align-items: flex-start; margin: 1.1rem 0 1.25rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.5; color: rgba(26,18,16,0.7); cursor: pointer; }
+.lead-consent input { margin-top: 0.2rem; accent-color: #BE3220; flex-shrink: 0; width: 1rem; height: 1rem; }
+.lead-consent a { color: #BE3220; }
+.lead-form button { justify-content: center; cursor: pointer; }
+.lead-form button:disabled { opacity: 0.6; cursor: wait; }
+.lead-status { margin-top: 0.75rem; font-size: 0.85rem; color: #BE3220; min-height: 1.2em; }
+.lead-ticket-text { font-size: 0.95rem; line-height: 1.6; color: rgba(26,18,16,0.8); }
+@media (max-width: 992px) { .lead-ticket { transform: none; max-width: 420px; } }

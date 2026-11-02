@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Votre site d'artiste en 15 points — Aldjia Boughias</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  Source du PDF « checklist » (lead magnet).
+  Générer : Chrome headless → assets/pdf/checklist-site-artiste.pdf (voir README de ce dossier).
+-->
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #1A1210; --cream: #EDE8DF; --red: #BE3220; --orange: #F37E30; --violet: #7845D0; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; padding: 22mm 20mm 18mm; position: relative; overflow: hidden; page-break-after: always; background: var(--cream); }
+  .page:last-child { page-break-after: auto; }
+  .page--red { background: var(--red); color: var(--cream); }
+  .page--ink { background: var(--ink); color: var(--cream); }
+  .kicker { font-size: 8.5pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 6mm; }
+  .page--red .kicker, .page--ink .kicker { color: var(--cream); opacity: .75; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 46pt; line-height: 1.02; letter-spacing: -.02em; }
+  h1 em, h2 em { font-style: italic; }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 28pt; line-height: 1.1; letter-spacing: -.01em; margin-bottom: 5mm; }
+  p { font-size: 10.5pt; line-height: 1.65; margin-bottom: 4mm; max-width: 150mm; }
+  .lead { font-size: 13pt; line-height: 1.55; opacity: .85; }
+  .foot { position: absolute; left: 20mm; right: 20mm; bottom: 12mm; display: flex; justify-content: space-between; font-size: 8pt; letter-spacing: .06em; opacity: .55; }
+  .cover-mark { position: absolute; right: -30mm; bottom: -40mm; font-family: 'Playfair Display', serif; font-style: italic; font-size: 360pt; line-height: 1; opacity: .12; }
+  .cover-bottom { position: absolute; left: 20mm; bottom: 26mm; right: 20mm; }
+  .cover-bottom p { font-size: 11pt; opacity: .85; }
+
+  .item { display: grid; grid-template-columns: 9mm 1fr; gap: 4mm; padding: 4.2mm 0; border-top: .4pt solid rgba(26,18,16,.18); }
+  .item:last-of-type { border-bottom: .4pt solid rgba(26,18,16,.18); }
+  .box { width: 6.5mm; height: 6.5mm; border: 1.1pt solid var(--ink); border-radius: 1.2mm; margin-top: .6mm; }
+  .item h3 { font-size: 11pt; font-weight: 600; line-height: 1.35; margin-bottom: 1.2mm; }
+  .item h3 span { color: var(--red); font-variant-numeric: tabular-nums; margin-right: 1.5mm; }
+  .item p { font-size: 9.3pt; line-height: 1.55; margin: 0; opacity: .78; max-width: none; }
+  .item .how { display: block; margin-top: 1.2mm; font-size: 8.6pt; opacity: .9; }
+  .item .how b { color: var(--red); font-weight: 600; }
+
+  .score { display: grid; grid-template-columns: 1fr; gap: 5mm; margin-top: 8mm; }
+  .score div { padding: 6mm 7mm; border-radius: 4mm; }
+  .score .s1 { background: var(--cream); color: var(--ink); }
+  .score .s2 { background: var(--orange); color: var(--ink); }
+  .score .s3 { background: var(--violet); color: #fff; }
+  .score b { display: block; font-family: 'Playfair Display', serif; font-weight: 400; font-size: 18pt; margin-bottom: 1.5mm; }
+  .score p { margin: 0; font-size: 10pt; }
+  .total { display: inline-block; margin-top: 2mm; padding: 4mm 7mm; border: 1pt dashed rgba(237,232,223,.6); border-radius: 3mm; font-size: 12pt; }
+
+  .offer { margin-top: 8mm; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .offer div { background: var(--cream); color: var(--ink); border-radius: 4mm; padding: 7mm; }
+  .offer h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 17pt; margin-bottom: 2mm; }
+  .offer .price { font-size: 9pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 3mm; }
+  .offer p { font-size: 9.5pt; margin-bottom: 3mm; }
+  .offer a { color: var(--red); font-weight: 600; font-size: 9.5pt; text-decoration: none; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+
+<!-- 1 — COUVERTURE -->
+<section class="page page--red">
+  <p class="kicker">Checklist gratuite · aldjia.dev</p>
+  <h1>Votre site<br>d'artiste<br><em>en 15 points.</em></h1>
+  <p class="lead" style="margin-top: 10mm; max-width: 120mm;">La checklist pour vérifier, en dix minutes, si votre site vous fait trouver, convainc et donne envie de vous contacter.</p>
+  <div class="cover-mark">15</div>
+  <div class="cover-bottom">
+    <p><b>Aldjia Boughias</b> — développeuse web, fondatrice d'ART AU FÉMININ</p>
+  </div>
+</section>
+
+<!-- 2 — MODE D'EMPLOI -->
+<section class="page">
+  <p class="kicker">Avant de commencer</p>
+  <h2>Un site d'artiste a <em>trois missions.</em></h2>
+  <p class="lead">Être trouvé par ceux qui cherchent votre nom. Convaincre ceux qui découvrent votre travail. Donner envie de vous écrire, d'exposer ou d'acheter.</p>
+  <p>Cette checklist reprend ces trois missions en quinze points concrets. Ouvrez votre site sur votre téléphone — c'est là que la plupart de vos visiteurs le découvrent — et cochez chaque point que vous validez honnêtement. Si vous n'avez pas encore de site, utilisez-la comme cahier des charges.</p>
+  <p>Pas besoin de compétences techniques : chaque point se vérifie en moins d'une minute, et la ligne <b style="color: var(--red);">Comment vérifier</b> vous dit comment.</p>
+  <p>À la fin, comptez vos cases cochées : votre score vous indique par où commencer.</p>
+  <div style="margin-top: 14mm; padding: 7mm; border-radius: 4mm; background: var(--ink); color: var(--cream); max-width: 150mm;">
+    <p style="margin: 0; font-size: 10pt;">Je m'appelle Aldjia Boughias. J'ai fondé ART AU FÉMININ, un média consacré aux femmes artistes, puis j'ai conçu et développé sa galerie d'art en 3D. Aujourd'hui, je crée des sites pour les artistes, les galeries et les lieux culturels. Cette checklist rassemble ce que je vérifie en premier quand un artiste me montre son site.</p>
+  </div>
+  <div class="foot"><span>Votre site d'artiste en 15 points</span><span>aldjia.dev</span></div>
+</section>
+
+<!-- 3 — ÊTRE TROUVÉ -->
+<section class="page">
+  <p class="kicker">Mission 1 · Être trouvé</p>
+  <h2>Quand on cherche votre nom, <em>c'est vous qu'on trouve.</em></h2>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>01</span>Votre site sort en premier quand on tape votre nom sur Google</h3>
+    <p>Galeristes, journalistes et collectionneurs commencent tous par là. Si un homonyme, un vieil article ou votre Instagram passe avant votre site, vous perdez la main sur la première impression.</p>
+    <span class="how"><b>Comment vérifier</b> · Tapez votre nom d'artiste dans Google, en navigation privée.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>02</span>Votre nom et votre discipline apparaissent dans le titre de votre page d'accueil</h3>
+    <p>C'est le texte bleu affiché dans les résultats de Google. « Accueil » ou « Portfolio » ne dit rien ; « Prénom Nom — Sculptrice, Lille » dit tout.</p>
+    <span class="how"><b>Comment vérifier</b> · Regardez le texte affiché dans l'onglet de votre navigateur.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>03</span>Chaque série a sa propre page, avec une adresse lisible</h3>
+    <p>Une adresse comme votre-nom.fr/series/terres-noires peut apparaître dans Google sur « terres noires céramique ». Une galerie unique de 80 images, non.</p>
+    <span class="how"><b>Comment vérifier</b> · Cliquez sur une série : l'adresse dans la barre change-t-elle ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>04</span>Vos images ont des noms et des descriptions qui parlent</h3>
+    <p>« IMG_4521.jpg » n'apprend rien à Google. « terres-noires-gres-2025.jpg », accompagné d'un texte alternatif, rend vos œuvres trouvables dans Google Images et lisibles par les personnes malvoyantes.</p>
+    <span class="how"><b>Comment vérifier</b> · Clic droit sur une image → « Enregistrer l'image sous » : quel nom propose-t-elle ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>05</span>Votre site s'affiche en moins de trois secondes sur téléphone</h3>
+    <p>Des photos d'œuvres trop lourdes sont la première cause de lenteur. Au-delà de quelques secondes, une bonne partie des visiteurs repartent — et Google le remarque.</p>
+    <span class="how"><b>Comment vérifier</b> · Testez votre adresse sur pagespeed.web.dev, onglet « Mobile ».</span>
+  </div></div>
+
+  <div class="foot"><span>Votre site d'artiste en 15 points</span><span>aldjia.dev</span></div>
+</section>
+
+<!-- 4 — CONVAINCRE -->
+<section class="page">
+  <p class="kicker">Mission 2 · Convaincre</p>
+  <h2>Votre travail est présenté <em>comme il le mérite.</em></h2>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>06</span>On comprend en cinq secondes qui vous êtes et ce que vous faites</h3>
+    <p>Votre nom, votre discipline et une image forte, dès l'arrivée sur le site. Pas d'animation d'intro, pas de page vide « Entrer ».</p>
+    <span class="how"><b>Comment vérifier</b> · Montrez votre site cinq secondes à un proche, puis demandez-lui ce que vous faites.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>07</span>Chaque œuvre a un titre, une technique, des dimensions et une année</h3>
+    <p>C'est ce qu'un professionnel cherche en premier. Sans ces informations, une œuvre reste une jolie image.</p>
+    <span class="how"><b>Comment vérifier</b> · Ouvrez trois œuvres au hasard.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>08</span>Vos photos sont nettes, bien cadrées, sans reflets ni décor parasite</h3>
+    <p>Un visiteur juge votre travail sur la photo. Une sculpture mérite plusieurs angles ; une toile, une vue d'ensemble et un détail de la matière.</p>
+    <span class="how"><b>Comment vérifier</b> · Agrandissez une image sur grand écran.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>09</span>Votre démarche est écrite pour quelqu'un qui découvre votre travail</h3>
+    <p>Quelques paragraphes clairs, à la première personne, qui disent ce que vous cherchez — sans jargon de catalogue.</p>
+    <span class="how"><b>Comment vérifier</b> · Faites-la lire à une personne extérieure au monde de l'art.</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>10</span>Votre CV est à jour</h3>
+    <p>Formation, expositions, résidences, prix, presse, collections. Pour une galerie ou un jury, c'est un critère de sérieux.</p>
+    <span class="how"><b>Comment vérifier</b> · Votre dernière exposition y figure-t-elle ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>11</span>Votre actualité date de moins de six mois</h3>
+    <p>Une rubrique « À venir » annonçant une exposition de 2023 donne l'impression d'un site — et d'un artiste — à l'arrêt.</p>
+    <span class="how"><b>Comment vérifier</b> · Quelle est la date la plus récente sur votre site ?</span>
+  </div></div>
+
+  <div class="foot"><span>Votre site d'artiste en 15 points</span><span>aldjia.dev</span></div>
+</section>
+
+<!-- 5 — ÊTRE CONTACTÉ -->
+<section class="page">
+  <p class="kicker">Mission 3 · Être contacté</p>
+  <h2>Vous écrire, exposer ou acheter <em>est évident.</em></h2>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>12</span>Votre contact est accessible depuis chaque page</h3>
+    <p>Une adresse email professionnelle visible, ou un formulaire qui fonctionne. Un visiteur convaincu ne doit pas avoir à chercher.</p>
+    <span class="how"><b>Comment vérifier</b> · Envoyez-vous un message via votre propre site. Est-il bien arrivé ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>13</span>On sait comment acheter une œuvre</h3>
+    <p>Un prix, une mention « prix sur demande », une boutique ou une page « Acquérir une œuvre » : sans indication, beaucoup de visiteurs n'osent pas demander.</p>
+    <span class="how"><b>Comment vérifier</b> · Mettez-vous à la place d'un acheteur : savez-vous quoi faire ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>14</span>Votre site et votre Instagram se renvoient l'un à l'autre</h3>
+    <p>Le lien en bio mène à votre site, et votre site mène à Instagram. Instagram fait découvrir votre travail ; le site le présente et convertit.</p>
+    <span class="how"><b>Comment vérifier</b> · Où mène le lien de votre bio Instagram ?</span>
+  </div></div>
+
+  <div class="item"><div class="box"></div><div>
+    <h3><span>15</span>Votre nom de domaine est à votre nom, et vous en êtes propriétaire</h3>
+    <p>votre-nom.fr plutôt que votre-nom.wixsite.com. C'est votre adresse professionnelle pour les années à venir — elle doit vous appartenir, pas à une plateforme ou à un ancien prestataire.</p>
+    <span class="how"><b>Comment vérifier</b> · Regardez l'adresse de votre site, et à quel nom le domaine est enregistré.</span>
+  </div></div>
+
+  <div class="foot"><span>Votre site d'artiste en 15 points</span><span>aldjia.dev</span></div>
+</section>
+
+<!-- 6 — SCORE -->
+<section class="page page--ink">
+  <p class="kicker">Votre score</p>
+  <h2>Comptez vos <em>cases cochées.</em></h2>
+  <p class="total">Mon score : ______ / 15</p>
+  <div class="score">
+    <div class="s1"><b>13 à 15 — Un site qui travaille pour vous.</b><p>Bravo. Gardez votre actualité à jour, ajoutez vos nouvelles séries au fil de l'eau, et vérifiez cette liste une fois par an.</p></div>
+    <div class="s2"><b>8 à 12 — De bonnes bases, des points qui vous coûtent.</b><p>Votre site existe, mais certains manques freinent votre visibilité ou vos contacts. Commencez par les points de la mission 1 : ce sont ceux qui ont le plus d'effet.</p></div>
+    <div class="s3"><b>0 à 7 — Un site qui vous dessert.</b><p>Votre travail mérite mieux. Avant d'investir dans un nouveau site, faites le point sur ce qui bloque : c'est le rôle de l'audit, page suivante.</p></div>
+  </div>
+  <div class="foot"><span>Votre site d'artiste en 15 points</span><span>aldjia.dev</span></div>
+</section>
+
+<!-- 7 — ÉTAPE SUIVANTE -->
+<section class="page page--red">
+  <p class="kicker">Et maintenant ?</p>
+  <h2>Deux façons <em>d'aller plus loin.</em></h2>
+  <p class="lead">Certains points se corrigent en une après-midi, sans aide. D'autres demandent un regard extérieur ou un vrai chantier. Voici comment je peux vous aider.</p>
+  <div class="offer">
+    <div>
+      <p class="price">Échange gratuit · 30 min</p>
+      <h3>On regarde votre site ensemble.</h3>
+      <p>Vous m'envoyez votre score, on regarde votre site en visio, et je vous dis par quoi commencer. Sans engagement.</p>
+      <a href="https://aldjia.dev/contact/">Prendre rendez-vous → aldjia.dev/contact</a>
+    </div>
+    <div>
+      <p class="price">Audit · à partir de 250 € HT</p>
+      <h3>Un plan d'action complet.</h3>
+      <p>Visibilité sur Google, présentation, performance, accessibilité : un rapport priorisé et un appel de restitution de 45 minutes.</p>
+      <a href="https://aldjia.dev/audit/">Découvrir l'audit → aldjia.dev/audit</a>
+    </div>
+  </div>
+  <p style="margin-top: 14mm; font-size: 10pt; opacity: .85;">Vous recevrez aussi, une fois par mois, ma lettre sur les sites d'artistes : conseils concrets, retours de projets, exemples commentés. Un lien de désinscription figure dans chaque email.</p>
+  <div class="foot"><span>Aldjia Boughias · aldjia.boughias@gmail.com</span><span>aldjia.dev</span></div>
+</section>
+
+</body>
+</html>

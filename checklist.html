@@ -1,0 +1,148 @@
+---
+layout: immersive
+title: "Checklist gratuite : votre site d'artiste en 15 points"
+description: "Vérifiez en 10 minutes si votre site d'artiste vous fait trouver sur Google, convainc et donne envie de vous contacter. Checklist PDF gratuite, 15 points concrets."
+permalink: /checklist/
+last_modified_at: 2026-11-02
+---
+
+<!-- ═══ EN-TÊTE + formulaire ═══ -->
+<section data-ambient class="page-hero" aria-labelledby="checklist-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>Checklist gratuite · PDF</p>
+      <h1 class="page-title sect-title" id="checklist-h1" data-reveal data-split-words>Votre site d'artiste <em>en 15 points.</em></h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.4">Vérifiez en dix minutes si votre site vous fait trouver sur Google, présente votre travail comme il le mérite et donne envie de vous écrire. Quinze points concrets, chacun vérifiable en moins d'une minute, sans compétence technique.</p>
+    </div>
+
+    <div class="audit-ticket lead-ticket" data-reveal data-reveal-delay="0.3">
+      <p class="audit-ticket-k">Recevoir la checklist</p>
+      <form class="lead-form" id="lead-form" action="{{ site.mailerlite_form_action }}" method="post" novalidate>
+        <label for="lead-name">Prénom</label>
+        <input type="text" id="lead-name" name="fields[name]" autocomplete="given-name" placeholder="Votre prénom">
+        <label for="lead-email">Email</label>
+        <input type="email" id="lead-email" name="fields[email]" autocomplete="email" required aria-required="true" placeholder="votre@email.com">
+        <label class="lead-consent">
+          <input type="checkbox" name="consent" required aria-required="true">
+          <span>J'accepte de recevoir la checklist puis la lettre mensuelle d'Aldjia Boughias sur les sites d'artistes. Désinscription en un clic. <a href="{{ '/rgpd/' | relative_url }}">Confidentialité</a></span>
+        </label>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit" class="btn-pill btn-pill--solid">Recevoir la checklist →</button>
+        <p class="lead-status" id="lead-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LES 3 MISSIONS — cartes éventail ═══ -->
+<section data-ambient data-fan data-fan-gap="255" class="fan-section" aria-labelledby="missions-titre">
+  <div class="fan-sticky">
+    <div class="secteurs-header">
+      <p class="about-label secteurs-label">Ce que vous allez vérifier</p>
+      <h2 class="secteurs-title" id="missions-titre">Trois missions, <em>quinze points.</em></h2>
+      <p class="secteurs-lead">Un site d'artiste doit faire trois choses. La checklist vous dit, point par point, s'il les fait.</p>
+    </div>
+    <ul class="secteurs-stage">
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#BE3220;--fg:#EDE8DF;--badge:rgba(237,232,223,0.16)">
+          <span class="sc-n">01</span>
+          <h3 class="sc-name">Être trouvé</h3>
+          <p class="sc-desc">Quand un galeriste ou un collectionneur tape votre nom sur Google, c'est votre site qui sort. Cinq points.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#EDE8DF;--fg:#1A1210;--badge:rgba(26,18,16,0.1)">
+          <span class="sc-n">02</span>
+          <h3 class="sc-name">Convaincre</h3>
+          <p class="sc-desc">Vos œuvres, votre démarche et votre parcours sont présentés comme ils le méritent. Six points.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#F37E30;--fg:#1A1210;--badge:rgba(26,18,16,0.12)">
+          <span class="sc-n">03</span>
+          <h3 class="sc-name">Être contacté</h3>
+          <p class="sc-desc">Vous écrire, vous exposer ou acheter une œuvre est évident, depuis n'importe quelle page. Quatre points.</p>
+        </div>
+      </li>
+      <li class="sc-item">
+        <div class="sc-card sc-card--text" style="--bg:#7845D0;--fg:#fff;--badge:rgba(255,255,255,0.18)">
+          <span class="sc-n">15</span>
+          <h3 class="sc-name">Votre score</h3>
+          <p class="sc-desc">Comptez vos cases cochées : votre score vous dit par où commencer, et quoi laisser de côté.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ EXTRAIT — respiration vermillon ═══ -->
+<section class="band-vermillion page-section about-aaf" aria-labelledby="extrait-titre">
+  <div class="page-inner about-aaf-grid">
+    <div>
+      <p class="about-label about-label--light" data-reveal>Extrait</p>
+      <h2 class="page-h2" id="extrait-titre" data-reveal data-reveal-delay="0.1">Trois points <em>parmi les quinze.</em></h2>
+      <p class="about-aaf-text" data-reveal data-reveal-delay="0.2">Chaque point explique pourquoi il compte, et comment le vérifier vous-même en moins d'une minute.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.3">
+        <a href="#lead-form" class="btn-pill btn-pill--cream">Recevoir les 15 points →</a>
+      </div>
+    </div>
+    {% assign extraits = "Votre site sort en premier quand on tape votre nom sur Google|Chaque œuvre a un titre, une technique, des dimensions et une année|On sait comment acheter une œuvre" | split: "|" %}
+    <ul class="audit-deliver" data-reveal data-reveal-delay="0.2">
+      {% for item in extraits %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ QUI JE SUIS ═══ -->
+<section data-ambient class="page-section" aria-labelledby="qui-titre">
+  <div class="page-inner page-cols">
+    <div>
+      <p class="about-label" data-reveal>Pourquoi cette checklist</p>
+      <h2 class="page-h2" id="qui-titre" data-reveal data-reveal-delay="0.1">Ce que je vérifie <em>en premier.</em></h2>
+      <p class="page-text" data-reveal data-reveal-delay="0.15">J'ai fondé ART AU FÉMININ, un média consacré aux femmes artistes, puis conçu et développé sa galerie d'art en 3D. Aujourd'hui, je crée des sites pour les artistes, les galeries et les lieux culturels.</p>
+      <p class="page-text" data-reveal data-reveal-delay="0.15">Cette checklist rassemble ce que je regarde en premier quand un artiste me montre son site. Si vous n'en avez pas encore, elle vous servira de cahier des charges.</p>
+    </div>
+    <div class="zone-side" data-reveal data-reveal-delay="0.2">
+      <div class="audit-ticket zone-list">
+        <p class="audit-ticket-k">Ce que vous recevez</p>
+        <ul class="audit-ticket-list">
+          <li>Le PDF de 7 pages, à imprimer ou remplir à l'écran</li>
+          <li>Une lettre par mois sur les sites d'artistes</li>
+          <li>Aucune relance commerciale insistante</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var form = document.getElementById('lead-form');
+  var status = document.getElementById('lead-status');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.querySelector('[name="fields[email]"]');
+    var consent = form.querySelector('[name="consent"]');
+    if (!email.value || !email.checkValidity()) { status.textContent = 'Indiquez une adresse email valide.'; email.focus(); return; }
+    if (!consent.checked) { status.textContent = 'Cochez la case de consentement pour recevoir la checklist.'; consent.focus(); return; }
+    if (!form.action || form.getAttribute('action') === '') { status.textContent = 'Le formulaire n’est pas encore actif. Écrivez-moi depuis la page contact.'; return; }
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    status.textContent = 'Envoi en cours…';
+    var data = new FormData(form);
+    data.delete('consent');
+    fetch(form.action, { method: 'POST', body: data })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (res && res.success) { window.location.href = '{{ "/checklist/merci/" | relative_url }}'; }
+        else { throw new Error(); }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        status.textContent = 'L’envoi n’a pas fonctionné. Réessayez dans un instant, ou écrivez-moi depuis la page contact.';
+      });
+  });
+})();
+</script>
