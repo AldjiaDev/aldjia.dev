@@ -104,6 +104,9 @@ exclude:
   - yarn.lock
   - .env
   - .gitignore
+  - charte.html
+  - demo-blog.html
+  - linksold
 
 # Permaliens lisibles
 permalink: /blog/:title/

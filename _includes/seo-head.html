@@ -1,4 +1,4 @@
-<title>{% if page.title %}{{ page.title }} | {% endif %}Aldjia Dev</title>
+<title>{% if page.title contains "Aldjia Boughias" %}{{ page.title }}{% elsif page.title %}{{ page.title }} | Aldjia Boughias{% else %}Aldjia Boughias — Développeuse web · Art & Culture · Lille{% endif %}</title>
 <meta name="author" content="Aldjia Boughias" />
 <meta name="robots" content="{{ page.robots | default: 'index,follow' }}">
 <meta name="google-site-verification" content="YONtUfQTjoo8u2TkqnItrM2COezKDOOnUvM9g-V-t1k" />

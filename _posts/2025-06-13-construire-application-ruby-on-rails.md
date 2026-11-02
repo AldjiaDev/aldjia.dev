@@ -111,21 +111,12 @@ Déployer, c’est faire un pas décisif. Cela m’a appris à :
 - Gérer les **clés d’API**, les **variables d’environnement**
 - Lire des logs, corriger des erreurs inattendues
 
-<p style="text-align:center; margin-bottom: 2rem;">
-  <img src="/assets/images/quotety.jpg" alt="Illustration Ruby et Rails 1" width="1536" height="1024" style="max-width: 100%; border-radius: 10px;">
-</p>
-
-Mon projet est désormais en ligne : [quotety.aldjia.dev](https://quotety.aldjia.dev)
-C’est mon tout premier projet Ruby on Rails **entièrement réalisé seule**, du back-end à la mise en production.
+Ce projet, Quotety, a été mon tout premier projet Ruby on Rails **entièrement réalisé seule**, du back-end à la mise en production.
 
 Chaque fonctionnalité, chaque ligne de code, chaque ajustement visuel a été pensé avec soin.
-**C’est imparfait, oui ! Mais c’est vivant. Et surtout, j’en suis fière.**
+**C’était imparfait, oui ! Mais c’était vivant. Et surtout, j’en étais fière.**
 
-Ce projet marque une étape importante dans mon parcours, mais il ne s’arrête pas là.
-Je compte continuer à l’améliorer, à en perfectionner l’interface, et surtout : à y intégrer **de nouveaux services** inspirants. J’ai des idées plein la tête pour ce petit bébé et je suis impatiente de les concrétiser.
-
-J’ai également rédigé un article complet pour le présenter :
-👉 [Lire l’article sur Quotety](https://aldjia.dev/realisations/2025-06-12-quotety.html)
+Il a marqué une étape importante dans mon parcours : c’est sur cette base que je conçois aujourd’hui des sites et applications pour [galeries, artistes et maisons de ventes](/realisations/).
 
 
 ## Rails comme terrain d'entraînement et d’expression

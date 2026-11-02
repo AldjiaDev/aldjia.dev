@@ -124,6 +124,24 @@ layout: immersive
 </section>
 {% endif %}
 
+<!-- ═══ FAQ (même liste que les données structurées) ═══ -->
+{% if page.faq_items %}
+<section data-ambient class="page-section" aria-labelledby="zone-faq">
+  <div class="page-inner page-inner--narrow">
+    <p class="about-label" data-reveal>Questions fréquentes</p>
+    <h2 class="page-h2" id="zone-faq" data-reveal data-reveal-delay="0.1">{{ z.faq_title | default: "Avant de se lancer." }}</h2>
+    <div class="faq-list" data-reveal data-reveal-delay="0.2">
+      {% for item in page.faq_items %}
+      <details class="faq-item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if z.articles %}
 <!-- ═══ ARTICLES ═══ -->
 {% assign acols = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#7845D0|#fff|rgba(255,255,255,0.75);#1A1210|#EDE8DF|rgba(237,232,223,0.6)" | split: ";" %}
