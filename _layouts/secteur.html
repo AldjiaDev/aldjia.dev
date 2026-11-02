@@ -133,6 +133,12 @@ layout: immersive
 </section>
 {% endif %}
 
+{% if page.checklist_cta %}
+<section data-ambient class="page-section page-section--tight" aria-label="Checklist gratuite">
+  <div class="page-inner" data-reveal>{% include checklist-cta.html %}</div>
+</section>
+{% endif %}
+
 {% if s.articles %}
 <!-- ═══ SUR LE BLOG ═══ -->
 {% assign acols = "#EDE8DF|#1A1210|rgba(26,18,16,0.62);#F37E30|#1A1210|rgba(26,18,16,0.72);#7845D0|#fff|rgba(255,255,255,0.75);#1A1210|#EDE8DF|rgba(237,232,223,0.6)" | split: ";" %}

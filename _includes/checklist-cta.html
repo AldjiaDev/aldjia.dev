@@ -1,0 +1,15 @@
+{% comment %}
+  Encart « Checklist gratuite » (lead magnet) → /checklist/
+  Affiché à la fin des articles clients (layout post) et sur les pages secteur
+  qui ont `checklist_cta: true` dans leur front matter.
+{% endcomment %}
+{% unless page.url contains '/checklist/' %}
+<aside class="checklist-cta" aria-labelledby="checklist-cta-titre">
+  <div class="checklist-cta-text">
+    <p class="checklist-cta-k">Checklist gratuite · PDF</p>
+    <p class="checklist-cta-title" id="checklist-cta-titre">Votre site d'artiste <em>en 15 points.</em></p>
+    <p class="checklist-cta-desc">Vérifiez en dix minutes si votre site vous fait trouver sur Google, présente votre travail comme il le mérite et donne envie de vous écrire.</p>
+  </div>
+  <a href="{{ '/checklist/' | relative_url }}" class="btn-pill btn-pill--cream checklist-cta-btn">Recevoir la checklist →</a>
+</aside>
+{% endunless %}

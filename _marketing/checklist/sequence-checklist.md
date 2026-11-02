@@ -37,7 +37,8 @@ Et si vous avez deux minutes, **répondez à cet email avec votre score**. Je li
 Aldjia
 
 —
-Aldjia Boughias · développeuse web, fondatrice d'ART AU FÉMININ
+Aldjia Boughias · développeuse web art & culture
+Fondatrice du média et de la galerie ART AU FÉMININ
 aldjia.dev
 
 ---
