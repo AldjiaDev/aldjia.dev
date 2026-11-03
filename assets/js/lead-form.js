@@ -11,7 +11,7 @@
       var consent = form.querySelector('[name="consent"]');
       if (!email.value || !email.checkValidity()) { say('Indiquez une adresse email valide.'); email.focus(); return; }
       if (consent && !consent.checked) { say('Cochez la case de consentement pour recevoir la checklist.'); consent.focus(); return; }
-      if (!form.getAttribute('action')) { say('Le formulaire n’est pas encore actif. Écrivez-moi depuis la page contact.'); return; }
+      if (!form.getAttribute('action')) { say('Le formulaire n’est pas encore actif. Écrivez-moi à aldjia.boughias@gmail.com.'); return; }
       var btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       say('Envoi en cours…');
@@ -25,7 +25,7 @@
         })
         .catch(function () {
           btn.disabled = false;
-          say('L’envoi n’a pas fonctionné. Réessayez dans un instant, ou écrivez-moi depuis la page contact.');
+          say('L’envoi n’a pas fonctionné. Réessayez dans un instant, ou écrivez-moi à aldjia.boughias@gmail.com.');
         });
     });
   });

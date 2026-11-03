@@ -94,4 +94,4 @@ Ce que vous livrez aujourd'hui doit pouvoir grandir avec votre pratique — nouv
 
 ---
 
-Vous êtes artiste au Québec, à Montréal, à Lévis ou ailleurs au Canada francophone et vous cherchez une développeuse qui comprend votre univers ? Consultez [la page dédiée aux artistes](/secteurs/artistes/), regardez le [portfolio](/realisations/) ou [prenez rendez-vous](/contact/) pour un premier échange de 30 minutes — offert, sans engagement.
+Vous êtes artiste au Québec, à Montréal, à Lévis ou ailleurs au Canada francophone et vous cherchez une développeuse qui comprend votre univers ? Consultez [la page dédiée aux artistes](/secteurs/artistes/), regardez le [portfolio](/realisations/) ou [prenez rendez-vous]({{ site.cal_url }}) pour un premier échange de 30 minutes — offert, sans engagement.

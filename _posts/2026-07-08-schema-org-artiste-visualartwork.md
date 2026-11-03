@@ -152,4 +152,4 @@ C'est pourquoi je les intègre systématiquement dans les portfolios que je cré
 
 ---
 
-Pour en savoir plus sur la mise en pratique, lisez notre article sur [comment référencer son nom d'artiste sur Google](/blog/referencer-nom-artiste-google/). Ou [consultez les tarifs](/tarifs/) et [prenez rendez-vous](/contact/) pour discuter de votre projet.
+Pour en savoir plus sur la mise en pratique, lisez notre article sur [comment référencer son nom d'artiste sur Google](/blog/referencer-nom-artiste-google/). Ou [consultez les tarifs](/tarifs/) et [prenez rendez-vous]({{ site.cal_url }}) pour discuter de votre projet.
