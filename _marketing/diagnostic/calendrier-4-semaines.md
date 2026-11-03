@@ -13,7 +13,7 @@
 | Semaine | Thème | LinkedIn mardi | Instagram mercredi | LinkedIn jeudi |
 |---|---|---|---|---|
 | 0 · jeudi 5 nov. | Avant-première | — | **Jeudi 5, 17 h 15** · Carrousel « Votre site travaille-t-il pour vous ? » (Figma) | — |
-| 1 · 9–15 nov. | Lancement | Le diagnostic est en ligne | Jeudi 12 · story : repartage du carrousel | L'erreur du titre de page |
+| 1 · 9–15 nov. | Lancement | Le diagnostic est en ligne | **Jeudi 12, 17 h 15** · Carrousel « Etsy, ou votre propre site ? » (voir carrousel-vendre-oeuvres.md) | L'erreur du titre de page |
 | 2 · 16–22 nov. | Être trouvé | Pourquoi je fais des sites pour l'art | Carrousel « Ce qu'Instagram ne fera jamais pour vous » | Instagram ne remplace pas un site |
 | 3 · 23–29 nov. | Convaincre | Cas Bérénice Auger | Carrousel « La fiche œuvre idéale » | Une galerie de 80 images n'est pas un portfolio |
 | 4 · 30 nov.–6 déc. | Être contacté | Cas Aurélie de Baudus | Citation cliente (Sophie Tiercelin) | Les 6 pages d'un site d'artiste |
@@ -50,7 +50,7 @@ J'ai créé un diagnostic gratuit pour faire le point : 8 questions à cocher, 2
 ## Jeudi 5 novembre · 17 h 15 · Instagram — Carrousel (avant-première)
 
 > Publié en avance, dès que le test final du diagnostic est validé (sinon : jeudi 12, le 11 étant férié).
-> Jeudi 12 à 17 h 30 : repartager le carrousel en story pour ceux qui l'ont manqué.
+> Jeudi 12 : place au carrousel « Etsy, ou votre propre site ? » (fichier carrousel-vendre-oeuvres.md).
 
 → Les 7 visuels du fichier Figma « Carrousel — Diagnostic site ».
 → Légende et textes alternatifs : `carrousel-diagnostic.md`.
