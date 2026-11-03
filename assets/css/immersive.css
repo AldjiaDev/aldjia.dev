@@ -1805,3 +1805,9 @@ html, body { overflow-x: clip; }
 @media (max-width: 600px) {
   .title-oneline { white-space: normal; text-wrap: balance; font-size: clamp(2.1rem, 9vw, 2.6rem) !important; }
 }
+
+/* Pages légales (layout legal) */
+.legal-hero { min-height: 60vh; }
+.legal-updated { margin-top: 1.25rem; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(237,232,223,0.55); }
+.legal-body h2 { counter-increment: none; }
+.legal-body .legal-note { padding: 1.25rem 1.5rem; border-radius: 16px; background: rgba(190,50,32,0.07); border-left: 3px solid #BE3220; }

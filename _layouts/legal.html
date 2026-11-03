@@ -1,0 +1,24 @@
+---
+layout: immersive
+---
+{% comment %}
+  Pages légales (confidentialité, accessibilité) dans l'univers du site :
+  en-tête sur la scène 3D, puis page crème lisible comme les articles.
+  Front matter : kicker, heading, lead, updated.
+{% endcomment %}
+<section data-ambient class="page-hero post-hero-head legal-hero" aria-labelledby="legal-h1">
+  <div class="page-hero-inner page-inner--narrow">
+    <p class="about-label" data-reveal>{{ page.kicker }}</p>
+    <h1 class="post-h1" id="legal-h1" data-reveal data-split-words>{{ page.heading }}</h1>
+    {% if page.lead %}<p class="page-lead" data-reveal data-reveal-delay="0.4">{{ page.lead }}</p>{% endif %}
+    {% if page.updated %}<p class="legal-updated" data-reveal data-reveal-delay="0.5">{{ page.updated }}</p>{% endif %}
+  </div>
+</section>
+
+<article class="band-cream post-paper">
+  <div class="post-paper-inner">
+    <div class="post-body legal-body">
+      {{ content }}
+    </div>
+  </div>
+</article>
