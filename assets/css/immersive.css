@@ -1811,3 +1811,10 @@ html, body { overflow-x: clip; }
 .legal-updated { margin-top: 1.25rem; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(237,232,223,0.55); }
 .legal-body h2 { counter-increment: none; }
 .legal-body .legal-note { padding: 1.25rem 1.5rem; border-radius: 16px; background: rgba(190,50,32,0.07); border-left: 3px solid #BE3220; }
+
+/* Page FAQ : questions regroupées par thème */
+.faq-page { padding-top: 3rem; }
+.faq-group + .faq-group { margin-top: 4.5rem; }
+.faq-group-title { margin-bottom: 0; }
+.faq-item p a { color: #F37E30; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.faq-item p a:hover { color: #EDE8DF; }
