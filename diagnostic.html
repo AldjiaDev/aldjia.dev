@@ -1,0 +1,199 @@
+---
+layout: immersive
+title: "Diagnostic gratuit : votre site vous fait-il trouver ?"
+description: "8 questions, 2 minutes : découvrez si votre site d'artiste, de galerie ou de maison de ventes vous fait trouver sur Google et donne envie de vous contacter. Résultat immédiat et priorités personnalisées."
+permalink: /diagnostic/
+last_modified_at: 2026-11-03
+---
+
+<!-- ═══ EN-TÊTE ═══ -->
+<section data-ambient class="page-hero diag-hero" aria-labelledby="diag-h1">
+  <div class="page-hero-inner sect-hero-grid">
+    <div>
+      <p class="about-label" data-reveal>Diagnostic gratuit · 2 minutes</p>
+      <h1 class="page-title sect-title" id="diag-h1" data-reveal data-split-words>Votre site vous fait-il <em>trouver ?</em></h1>
+      <p class="page-lead" data-reveal data-reveal-delay="0.4">Huit questions à cocher, sans compétence technique. Vous obtenez votre profil tout de suite, puis vos priorités détaillées et la checklist complète par email.</p>
+      <div class="about-actions" data-reveal data-reveal-delay="0.5">
+        <a href="#diagnostic" class="btn-pill btn-pill--solid">Commencer le diagnostic →</a>
+      </div>
+    </div>
+    <div class="audit-ticket" data-reveal data-reveal-delay="0.3">
+      <p class="audit-ticket-k">Pour qui</p>
+      <ul class="audit-ticket-list zone-ticket-list">
+        <li>Artistes et ateliers</li>
+        <li>Galeries et lieux d'exposition</li>
+        <li>Maisons de ventes</li>
+        <li>Institutions et associations culturelles</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LE DIAGNOSTIC ═══ -->
+<section data-ambient class="page-section diag-section" id="diagnostic" aria-label="Diagnostic">
+  <div class="page-inner page-inner--narrow">
+    <div class="diag-card" id="diag-app" aria-live="polite">
+      <noscript><p>Le diagnostic a besoin de JavaScript. Vous pouvez aussi <a href="{{ '/checklist/' | relative_url }}">recevoir la checklist</a> ou <a href="{{ site.cal_url }}">prendre rendez-vous</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var ACTION = '{{ site.mailerlite_diagnostic_action }}';
+  var RGPD = '{{ "/rgpd/" | relative_url }}';
+  var CAL = '{{ site.cal_url }}';
+
+  // Questions — kind: "qualif" (hors score) ou "score" (Oui 2 / En partie 1 / Non 0)
+  var Q = [
+    { id: 'profil', kind: 'qualif', text: 'Vous êtes…', options: [
+      'Artiste (peinture, sculpture, photo, illustration…)', 'Galerie ou lieu d’exposition', 'Maison de ventes', 'Institution ou association culturelle' ] },
+    { id: 'site', kind: 'qualif', text: 'Votre site aujourd’hui ?', options: [
+      'Je n’ai pas de site', 'Un site sur une plateforme (Wix, Squarespace, Cargo…)', 'Un site WordPress', 'Un site fait sur mesure' ] },
+    { id: 'google', kind: 'score', text: 'Quand on tape votre nom (ou celui de votre structure) sur Google, votre site sort-il en premier ?',
+      priority: 'Être trouvé quand on tape votre nom sur Google' },
+    { id: 'oeuvres', kind: 'score', text: 'Vos œuvres ou vos lots sont-ils présentés avec titre, technique, dimensions et de bonnes photos ?',
+      priority: 'Présenter vos œuvres avec toutes leurs informations et de bonnes photos' },
+    { id: 'autonomie', kind: 'score', text: 'Pouvez-vous ajouter une œuvre, une exposition ou une vente vous-même, sans aide ?',
+      priority: 'Pouvoir mettre votre site à jour vous-même' },
+    { id: 'contact', kind: 'score', text: 'Un visiteur sait-il en un coup d’œil comment vous contacter ou acheter ?',
+      priority: 'Rendre le contact et l’achat évidents' },
+    { id: 'echeance', kind: 'qualif', text: 'Quand aimeriez-vous que votre site évolue ?', options: [
+      'Dès que possible', 'Dans les 3 mois', 'Dans l’année', 'Je me renseigne' ] },
+    { id: 'budget', kind: 'qualif', text: 'Avez-vous un budget en tête ?', options: [
+      'Pas encore', 'Moins de 1 500 €', 'De 1 500 à 3 500 €', 'Plus de 3 500 €' ] }
+  ];
+  var SCORE_OPTIONS = ['Oui', 'En partie', 'Non / je ne sais pas'];
+  var POINTS = [2, 1, 0];
+
+  var PROFILES = {
+    travaille: { title: 'Un site qui travaille pour vous', text: 'Votre site remplit l’essentiel de ses missions. L’enjeu maintenant : garder l’avance en le faisant vivre, et vérifier qu’il continue d’attirer les bonnes personnes.' },
+    echappe:   { title: 'Des contacts qui vous échappent', text: 'Les bases sont là, mais certains points freinent votre visibilité ou vos prises de contact. Bonne nouvelle : ce sont souvent des corrections ciblées.' },
+    dessert:   { title: 'Un site qui vous dessert', text: 'Votre travail mérite mieux que ce que votre site en montre aujourd’hui. Avant d’investir, il faut savoir précisément ce qui bloque, et par quoi commencer.' },
+    depart:    { title: 'Point de départ', text: 'Tout est à construire, et c’est une chance : vous pouvez concevoir dès le départ un site pensé pour être trouvé, pour convaincre et pour vous faire écrire.' }
+  };
+
+  var app = document.getElementById('diag-app');
+  var answers = {};
+  var step = 0;
+
+  function visibleQuestions() {
+    // Sans site, les questions de diagnostic n'ont pas d'objet
+    return Q.filter(function (q) { return !(q.kind === 'score' && answers.site === 0); });
+  }
+
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  function renderQuestion() {
+    var qs = visibleQuestions();
+    var q = qs[step];
+    var opts = q.kind === 'score' ? SCORE_OPTIONS : q.options;
+    var html = '<div class="diag-progress" role="progressbar" aria-valuemin="1" aria-valuemax="' + qs.length + '" aria-valuenow="' + (step + 1) + '" aria-label="Question ' + (step + 1) + ' sur ' + qs.length + '"><span style="width:' + Math.round((step + 1) / qs.length * 100) + '%"></span></div>';
+    html += '<p class="diag-count">Question ' + (step + 1) + ' sur ' + qs.length + '</p>';
+    html += '<fieldset class="diag-q"><legend class="diag-q-text" tabindex="-1">' + esc(q.text) + '</legend><div class="diag-options">';
+    opts.forEach(function (o, i) {
+      var checked = answers[q.id] === i ? ' aria-pressed="true"' : ' aria-pressed="false"';
+      html += '<button type="button" class="diag-option" data-i="' + i + '"' + checked + '>' + esc(o) + '</button>';
+    });
+    html += '</div></fieldset>';
+    if (step > 0) html += '<button type="button" class="diag-back">← Question précédente</button>';
+    app.innerHTML = html;
+    app.querySelectorAll('.diag-option').forEach(function (b) {
+      b.addEventListener('click', function () {
+        answers[q.id] = +b.dataset.i;
+        var qs2 = visibleQuestions();
+        if (step < qs2.length - 1) { step++; renderQuestion(); }
+        else { renderResult(); }
+      });
+    });
+    var back = app.querySelector('.diag-back');
+    if (back) back.addEventListener('click', function () { step--; renderQuestion(); });
+    var legend = app.querySelector('.diag-q-text');
+    if (legend && renderQuestion.started) legend.focus({ preventScroll: true });
+    renderQuestion.started = true;
+  }
+
+  function compute() {
+    var noSite = answers.site === 0;
+    var score = 0, prio = [];
+    Q.forEach(function (q) {
+      if (q.kind !== 'score' || noSite) return;
+      var p = POINTS[answers[q.id]];
+      score += p;
+      if (p < 2) prio.push({ text: q.priority, p: p });
+    });
+    prio.sort(function (a, b) { return a.p - b.p; }); // les « Non » d'abord
+    var key = noSite ? 'depart' : score >= 7 ? 'travaille' : score >= 4 ? 'echappe' : 'dessert';
+    var priorities = noSite
+      ? ['Choisir l’outil adapté à votre pratique', 'Structurer vos contenus : œuvres, démarche, parcours', 'Penser Google dès la conception']
+      : prio.length ? prio.map(function (x) { return x.text; })
+      : ['Faire vivre votre site : actualité, nouvelles séries', 'Suivre vos visites et vos recherches Google'];
+    var hot = (answers.echeance === 0 || answers.echeance === 1) && (answers.budget === 2 || answers.budget === 3);
+    return { key: key, score: noSite ? null : score, priorities: priorities, hot: hot };
+  }
+
+  function renderResult() {
+    var r = compute();
+    var prof = PROFILES[r.key];
+    var html = '<p class="diag-count">Votre résultat' + (r.score !== null ? ' · ' + r.score + ' / 8' : '') + '</p>';
+    html += '<h2 class="diag-result-title" tabindex="-1">' + esc(prof.title) + '</h2>';
+    html += '<p class="diag-result-text">' + esc(prof.text) + '</p>';
+    html += '<p class="diag-prio-k">Votre première priorité</p><p class="diag-prio">' + esc(r.priorities[0]) + '</p>';
+    html += '<form class="lead-form diag-form" novalidate>';
+    html += '<p class="diag-form-k">Recevez vos priorités détaillées et la checklist complète</p>';
+    html += '<label for="diag-name">Prénom</label><input type="text" id="diag-name" name="fields[name]" autocomplete="given-name" placeholder="Votre prénom">';
+    html += '<label for="diag-email">Email</label><input type="email" id="diag-email" name="fields[email]" autocomplete="email" required aria-required="true" placeholder="votre@email.com">';
+    html += '<label class="lead-consent"><input type="checkbox" name="consent" required aria-required="true"><span>J’accepte de recevoir mon diagnostic puis la lettre mensuelle d’Aldjia Boughias sur les sites d’artistes. Désinscription en un clic. <a href="' + RGPD + '">Confidentialité</a></span></label>';
+    html += '<button type="submit" class="btn-pill btn-pill--solid">Recevoir mon diagnostic →</button>';
+    html += '<p class="lead-status" role="status" aria-live="polite"></p></form>';
+    html += '<button type="button" class="diag-back diag-restart">Recommencer le diagnostic</button>';
+    app.innerHTML = html;
+    app.querySelector('.diag-result-title').focus({ preventScroll: true });
+    app.querySelector('.diag-restart').addEventListener('click', function () { answers = {}; step = 0; renderQuestion(); });
+
+    var form = app.querySelector('.diag-form');
+    var status = form.querySelector('.lead-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = form.querySelector('#diag-email');
+      var consent = form.querySelector('[name="consent"]');
+      if (!email.value || !email.checkValidity()) { status.textContent = 'Indiquez une adresse email valide.'; email.focus(); return; }
+      if (!consent.checked) { status.textContent = 'Cochez la case de consentement pour recevoir votre diagnostic.'; consent.focus(); return; }
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; status.textContent = 'Envoi en cours…';
+      var label = function (id) { var q = Q.filter(function (x) { return x.id === id; })[0]; return q.options[answers[id]]; };
+      var data = new FormData();
+      data.append('fields[email]', email.value);
+      data.append('fields[name]', form.querySelector('#diag-name').value);
+      data.append('fields[profil]', label('profil'));
+      data.append('fields[site_actuel]', label('site'));
+      if (r.score !== null) data.append('fields[score_diagnostic]', r.score);
+      data.append('fields[resultat]', prof.title);
+      data.append('fields[priorites]', r.priorities.join(' · '));
+      data.append('fields[echeance]', label('echeance'));
+      data.append('fields[budget]', label('budget'));
+      data.append('fields[contact_prometteur]', r.hot ? 'oui' : 'non');
+      data.append('ml-submit', '1');
+      data.append('anticsrf', 'true');
+      fetch(ACTION, { method: 'POST', body: data })
+        .then(function (res) { return res.json(); })
+        .then(function (res) { if (res && res.success) renderDone(); else throw new Error(); })
+        .catch(function () {
+          btn.disabled = false;
+          status.textContent = 'L’envoi n’a pas fonctionné. Réessayez dans un instant, ou écrivez-moi depuis la page contact.';
+        });
+    });
+  }
+
+  function renderDone() {
+    app.innerHTML = '<p class="diag-count">C’est envoyé</p>'
+      + '<h2 class="diag-result-title" tabindex="-1">Vérifiez votre boîte mail.</h2>'
+      + '<p class="diag-result-text">Cliquez sur le lien de confirmation que vous venez de recevoir : votre diagnostic détaillé et la checklist arrivent juste après. Pensez à regarder dans les courriers indésirables ou l’onglet « Promotions ».</p>'
+      + '<p class="diag-result-text">Vous voulez en parler sans attendre ? On regarde votre site ensemble, 30 minutes en visio, gratuitement.</p>'
+      + '<a href="' + CAL + '" target="_blank" rel="noopener" class="btn-pill btn-pill--solid">Réserver un créneau →</a>';
+    app.querySelector('.diag-result-title').focus({ preventScroll: true });
+  }
+
+  renderQuestion();
+})();
+</script>

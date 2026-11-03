@@ -1745,3 +1745,43 @@ html, body { overflow-x: clip; }
 @media (max-width: 768px) {
   .checklist-cta { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.75rem 1.5rem; }
 }
+
+/* ════════════════════════════════════════
+   PAGE DIAGNOSTIC (quiz)
+════════════════════════════════════════ */
+.diag-section { padding-top: 2rem; scroll-margin-top: 5rem; }
+.diag-card {
+  padding: 2.5rem 2.5rem 2rem; border-radius: 24px; background: #EDE8DF; color: #1A1210;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4); scroll-margin-top: 7rem;
+}
+.diag-progress { height: 6px; border-radius: 3px; background: rgba(26,18,16,0.1); overflow: hidden; margin-bottom: 1.25rem; }
+.diag-progress span { display: block; height: 100%; background: #BE3220; border-radius: 3px; transition: width 0.35s cubic-bezier(0.2, 0, 0, 1); }
+.diag-count { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #BE3220; margin-bottom: 1rem; }
+.diag-q { border: 0; padding: 0; margin: 0; min-width: 0; }
+.diag-q-text { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.2vw, 2.1rem); line-height: 1.2; margin-bottom: 1.75rem; padding: 0; outline: none; text-wrap: balance; }
+.diag-options { display: grid; gap: 0.75rem; }
+.diag-option {
+  display: block; width: 100%; text-align: left; padding: 1rem 1.25rem; border-radius: 14px; cursor: pointer;
+  font: inherit; font-size: 1rem; line-height: 1.4; color: #1A1210;
+  background: #fff; border: 1px solid rgba(26,18,16,0.15);
+  transition: border-color 0.15s, background-color 0.15s, transform 0.15s;
+}
+.diag-option:hover { border-color: #BE3220; background: #FFF8F2; }
+.diag-option:active { transform: scale(0.99); }
+.diag-option:focus-visible { outline: 2px solid #BE3220; outline-offset: 2px; }
+.diag-option[aria-pressed="true"] { border-color: #BE3220; background: #FBE9E4; }
+.diag-back {
+  margin-top: 1.5rem; padding: 0.5rem 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.88rem; color: rgba(26,18,16,0.6); text-decoration: underline; text-underline-offset: 3px;
+}
+.diag-back:hover { color: #1A1210; }
+.diag-result-title { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.1; margin-bottom: 1rem; outline: none; }
+.diag-result-text { font-size: 1.02rem; line-height: 1.7; color: rgba(26,18,16,0.8); margin-bottom: 1.25rem; max-width: 60ch; }
+.diag-prio-k { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26,18,16,0.55); margin: 1.5rem 0 0.4rem; }
+.diag-prio { font-size: 1.1rem; font-weight: 600; margin-bottom: 0; }
+.diag-form { margin-top: 2rem; padding-top: 1.75rem; border-top: 1px dashed rgba(26,18,16,0.2); max-width: 480px; }
+.diag-form-k { font-weight: 600; font-size: 1rem; margin-bottom: 0.25rem; }
+.diag-restart { display: block; }
+@media (max-width: 768px) {
+  .diag-card { padding: 1.75rem 1.25rem 1.5rem; border-radius: 18px; }
+}

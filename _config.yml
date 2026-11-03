@@ -48,6 +48,8 @@ cal_url: "https://cal.com/aldjia-boughias/rendez-vous-de-30-minutes?"
 # MailerLite : formulaire intégré « Checklist site d'artiste » → coller ici l'URL d'envoi
 # (attribut action du formulaire HTML intégré, ex : https://assets.mailerlite.com/jsonp/123456/forms/789012/subscribe)
 mailerlite_form_action: "https://assets.mailerlite.com/jsonp/2762295/forms/203032508913157164/subscribe"
+# MailerLite : formulaire intégré « Diagnostic site — aldjia.dev » (page /diagnostic/)
+mailerlite_diagnostic_action: "https://assets.mailerlite.com/jsonp/2762295/forms/203102092468946041/subscribe"
 linkedin_url: https://www.linkedin.com/in/aldjia-boughias-ba6447346/
 github_url: https://github.com/AldjiaDev
 instagram_url: https://www.instagram.com/graines_de_nouvelles/
