@@ -1731,19 +1731,22 @@ html, body { overflow-x: clip; }
 .lead-ticket-text { font-size: 0.95rem; line-height: 1.6; color: rgba(26,18,16,0.8); }
 @media (max-width: 992px) { .lead-ticket { transform: none; max-width: 420px; } }
 
-/* Encart « Checklist gratuite » (articles clients, pages secteur) */
-.checklist-cta {
-  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+/* Encart « Diagnostic gratuit » (articles clients, pages secteur) */
+.diag-cta {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem;
   margin: 4rem 0 0; padding: 2.25rem 2.5rem; border-radius: 22px;
   background: #BE3220; color: #EDE8DF; box-shadow: 0 20px 50px rgba(26,18,16,0.18);
 }
-.checklist-cta-k { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(237,232,223,0.7); margin-bottom: 0.6rem; }
-.checklist-cta-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.1; margin-bottom: 0.75rem; color: #EDE8DF; }
-.checklist-cta-desc { font-size: 0.98rem; line-height: 1.6; color: rgba(237,232,223,0.82); max-width: 46ch; margin: 0; }
-.checklist-cta-btn { flex-shrink: 0; }
-.post-body + .checklist-cta { margin-top: 3.5rem; }
+.diag-cta-k { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(237,232,223,0.7); margin-bottom: 0.6rem; }
+.diag-cta-title { font-family: 'Playfair Display', serif; font-size: min(2.2rem, calc((100vw - 7rem) / 14.6)); white-space: nowrap; line-height: 1.1; margin-bottom: 0.75rem; color: #EDE8DF; }
+.diag-cta-desc { font-size: 0.98rem; line-height: 1.6; color: rgba(237,232,223,0.82); max-width: 46ch; margin: 0; }
+.diag-cta-btn { flex-shrink: 0; }
+.post-body + .diag-cta { margin-top: 3.5rem; }
 @media (max-width: 768px) {
-  .checklist-cta { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.75rem 1.5rem; }
+  .diag-cta { padding: 1.75rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  .diag-cta-title { white-space: normal; font-size: 1.7rem; }
 }
 
 /* ════════════════════════════════════════
@@ -1793,3 +1796,12 @@ html, body { overflow-x: clip; }
   text-shadow: 0 1px 10px rgba(0,0,0,0.35); padding: 0.5rem 0; transition: color 0.2s;
 }
 .hero-diag:hover { color: #fff; text-decoration-color: #fff; }
+
+/* Titre « Votre site travaille-t-il pour vous ? » sur une seule ligne :
+   la taille suit la largeur d'écran (le texte mesure ~14,5 em). */
+.title-oneline { white-space: nowrap; font-size: min(var(--one-max, 4.5rem), calc((100vw - 4rem) / 14.6)) !important; text-wrap: nowrap; }
+.pod-join--wide { max-width: 1120px; }
+.pod-join--wide .pod-join-text { max-width: 60ch; }
+@media (max-width: 600px) {
+  .title-oneline { white-space: normal; text-wrap: balance; font-size: clamp(2.1rem, 9vw, 2.6rem) !important; }
+}

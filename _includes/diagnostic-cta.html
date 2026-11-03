@@ -1,0 +1,15 @@
+{% comment %}
+  Encart « Diagnostic gratuit » → /diagnostic/
+  Affiché à la fin des articles clients (layout post) et sur les pages secteur
+  qui ont `diagnostic_cta: true` dans leur front matter.
+{% endcomment %}
+{% unless page.url contains '/diagnostic/' %}
+<aside class="diag-cta" aria-labelledby="diag-cta-titre">
+  <div class="diag-cta-text">
+    <p class="diag-cta-k">Diagnostic gratuit · 2 minutes</p>
+    <p class="diag-cta-title" id="diag-cta-titre">Votre site travaille-t-il <em>pour vous ?</em></p>
+    <p class="diag-cta-desc">Visibilité sur Google, présentation de vos œuvres, prises de contact : 8 questions à cocher, votre profil tout de suite et vos priorités par email.</p>
+  </div>
+  <a href="{{ '/diagnostic/' | relative_url }}" class="btn-pill btn-pill--cream diag-cta-btn">Faire le diagnostic →</a>
+</aside>
+{% endunless %}
