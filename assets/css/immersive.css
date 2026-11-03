@@ -1785,3 +1785,11 @@ html, body { overflow-x: clip; }
 @media (max-width: 768px) {
   .diag-card { padding: 1.75rem 1.25rem 1.5rem; border-radius: 18px; }
 }
+
+/* Accueil : lien secondaire vers le diagnostic, sous « Démarrer un projet » */
+.hero-diag {
+  font-size: 0.8rem; letter-spacing: 0.02em; color: rgba(255,255,255,0.75);
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,0.35);
+  text-shadow: 0 1px 10px rgba(0,0,0,0.35); padding: 0.5rem 0; transition: color 0.2s;
+}
+.hero-diag:hover { color: #fff; text-decoration-color: #fff; }
